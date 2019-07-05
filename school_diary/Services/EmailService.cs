@@ -1,30 +1,20 @@
-﻿using school_diary.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Net.Mail;
-using System.Web.Http;
+using System.Web;
 
-namespace school_diary.Controllers
+namespace school_diary.Services
 {
-    public class ExampleController : ApiController
+    public class EmailService : IEmailService
     {
-        IExampleService exampleService;
-
-        public ExampleController(IExampleService exampleService)
-        {
-            this.exampleService = exampleService;
-        }
-
-        public void PostSendMail()
+        public void SendEmail(string emailAddress)
         {
             string subject = "Testing testing";
             string body = "Pozdrav sa casa ;)";
             string FromMail = ConfigurationManager.AppSettings["username"];
-            string emailTo = "borisav.ignjatov@gmail.com";
+            string emailTo = emailAddress;
             MailMessage mail = new MailMessage();
             SmtpClient SmtpServer = new SmtpClient(ConfigurationManager.AppSettings["smtpServer"]);
             mail.From = new MailAddress(FromMail);
