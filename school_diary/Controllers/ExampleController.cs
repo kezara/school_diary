@@ -12,12 +12,12 @@ namespace school_diary.Controllers
 {
     public class ExampleController : ApiController
     {
-        IExampleService exampleService;
+        //IExampleService exampleService;
 
-        public ExampleController(IExampleService exampleService)
-        {
-            this.exampleService = exampleService;
-        }
+        //public ExampleController(IExampleService exampleService)
+        //{
+        //    this.exampleService = exampleService;
+        //}
 
         public void PostSendMail()
         {

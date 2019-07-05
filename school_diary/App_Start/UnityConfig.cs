@@ -20,14 +20,14 @@ namespace school_diary
 
             // e.g. container.RegisterType<ITestService, TestService>();
             container.RegisterType<IUnitOfWork, UnitOfWork>();
-            container.RegisterType<IGenericRepository<ExampleModel>, GenericRepository<ExampleModel>>();
-            //container.RegisterType<IGenericRepository<CategoryModel>, GenericRepository<CategoryModel>>();
+            //container.RegisterType<IGenericRepository<ExampleModel>, GenericRepository<ExampleModel>>();
+            container.RegisterType<IGenericRepository<ClassRoom>, GenericRepository<ClassRoom>>();
             //container.RegisterType<IGenericRepository<OfferModel>, GenericRepository<OfferModel>>();
             //container.RegisterType<IGenericRepository<BillModel>, GenericRepository<BillModel>>();
             //container.RegisterType<IGenericRepository<VoucherModel>, GenericRepository<VoucherModel>>();
             container.RegisterType<DbContext, DataAccessContext>(new HierarchicalLifetimeManager());
-            container.RegisterType<IExampleService, ExampleService>();
-            //container.RegisterType<ICategoriesService, CategoriesService>();
+            //container.RegisterType<IExampleService, ExampleService>();
+            container.RegisterType<IClassRoomsService, ClassRoomsService>();
             //container.RegisterType<IOffersService, OffersService>();
             //container.RegisterType<IBillsService, BillsService>();
             //container.RegisterType<IVouchersService, VouchersService>();

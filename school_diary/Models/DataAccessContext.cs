@@ -14,7 +14,7 @@ namespace school_diary.Models
             //Database.SetInitializer<DataAccessContext>(new DataAccessContextInitializer());
         }
 
-        public DbSet<ExampleModel> ExampleModels { get; set; }
+        public DbSet<ClassRoom> ClassRooms { get; set; }
         //public DbSet<CategoryModel> CategoryModels { get; set; }
         //public DbSet<OfferModel> OfferModels { get; set; }
         //public DbSet<BillModel> BillModels { get; set; }

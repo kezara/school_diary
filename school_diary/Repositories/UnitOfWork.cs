@@ -17,10 +17,10 @@ namespace school_diary.Repositories
             this.context = context;
         }
 
-        [Dependency]
-        public IGenericRepository<ExampleModel> ExampleRepository { get; set; }
         //[Dependency]
-        //public IGenericRepository<CategoryModel> CategoryRepository { get; set; }
+        //public IGenericRepository<ExampleModel> ExampleRepository { get; set; }
+        [Dependency]
+        public IGenericRepository<ClassRoom> ClassRoomsRepository { get; set; }
         //[Dependency]
         //public IGenericRepository<OfferModel> OfferRepository { get; set; }
         //[Dependency]
