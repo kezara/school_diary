@@ -1,5 +1,8 @@
-﻿using school_diary.Models;
+﻿using school_diary.DTOs.ClassRoomDTO;
+using school_diary.Models;
 using school_diary.Repositories;
+using school_diary.Utilities.Exceptions;
+using school_diary.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +21,7 @@ namespace school_diary.Services
 
         public ClassRoom CreateClassRoom(ClassRoom newClass)
         {
+            //ClassRoom newClass = ConverterDTO.SimpleDTOConverter<ClassRoom>(newClassDTO);
             db.ClassRoomsRepository.Insert(newClass);
             db.Save();
             return newClass;
@@ -26,10 +30,10 @@ namespace school_diary.Services
         public ClassRoom DeleteClassRoom(int id)
         {
             ClassRoom classRoom = GetClassRoomByID(id);
-            //if (classRoom == null)
-            //{
-            //    throw 
-            //}
+            if (classRoom == null)
+            {
+                throw new UserNotFoundException();
+            }
             db.ClassRoomsRepository.Delete(id);
             db.Save();
             return classRoom;

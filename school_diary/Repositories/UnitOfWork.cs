@@ -17,16 +17,24 @@ namespace school_diary.Repositories
             this.context = context;
         }
 
-        //[Dependency]
-        //public IGenericRepository<ExampleModel> ExampleRepository { get; set; }
+        [Dependency]
+        public IGenericRepository<Admin> AdminsRepository { get; set; }
         [Dependency]
         public IGenericRepository<ClassRoom> ClassRoomsRepository { get; set; }
-        //[Dependency]
-        //public IGenericRepository<OfferModel> OfferRepository { get; set; }
-        //[Dependency]
-        //public IGenericRepository<BillModel> BillRepository { get; set; }
-        //[Dependency]
-        //public IGenericRepository<VoucherModel> VoucherRepository { get; set; }
+        [Dependency]
+        public IGenericRepository<Grade> GradesRepository { get; set; }
+        [Dependency]
+        public IGenericRepository<Parent> ParentsRepository { get; set; }
+        [Dependency]
+        public IGenericRepository<Student> StudentsRepository { get; set; }
+        [Dependency]
+        public IGenericRepository<Subject> SubjectsRepository { get; set; }
+        [Dependency]
+        public IGenericRepository<Teach> TeachsRepository { get; set; }
+        [Dependency]
+        public IGenericRepository<Teacher> TeachersRepository { get; set; }
+        [Dependency]
+        public IGenericRepository<User> UsersRepository { get; set; }
 
 
         public void Save()

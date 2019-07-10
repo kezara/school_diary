@@ -1,4 +1,5 @@
-﻿using school_diary.Models;
+﻿using school_diary.DTOs.ClassRoomDTO;
+using school_diary.Models;
 using System.Collections.Generic;
 
 namespace school_diary.Services

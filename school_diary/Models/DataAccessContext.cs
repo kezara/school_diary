@@ -15,9 +15,14 @@ namespace school_diary.Models
         }
 
         public DbSet<ClassRoom> ClassRooms { get; set; }
-        //public DbSet<CategoryModel> CategoryModels { get; set; }
-        //public DbSet<OfferModel> OfferModels { get; set; }
-        //public DbSet<BillModel> BillModels { get; set; }
-        //public DbSet<VoucherModel> VoucherModels { get; set; }
+        public DbSet<Admin> Admins { get; set; }
+        public DbSet<Grade> Grades { get; set; }
+        public DbSet<Parent> Parents { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Subject> Subjects { get; set; }
+        public DbSet<Teach> Teachs { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<User> Users { get; set; }
+
     }
 }

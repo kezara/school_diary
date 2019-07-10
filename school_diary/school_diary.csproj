@@ -53,7 +53,14 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.6.5\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -119,8 +126,17 @@
   <ItemGroup>
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminsController.cs" />
     <Compile Include="Controllers\ClassRoomsController.cs" />
     <Compile Include="Controllers\ExampleController.cs" />
+    <Compile Include="Controllers\ParentsController.cs" />
+    <Compile Include="Controllers\StudentsController.cs" />
+    <Compile Include="Controllers\SubjectsController.cs" />
+    <Compile Include="Controllers\TeachersController.cs" />
+    <Compile Include="Controllers\TeachsController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="DTOs\ClassRoomDTO\ClassRoomTeacherDTO.cs" />
+    <Compile Include="Filters\ValidatemodelAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -140,10 +156,30 @@
     <Compile Include="Repositories\IGenericRepository.cs" />
     <Compile Include="Repositories\IUnitOfWork.cs" />
     <Compile Include="Repositories\UnitOfWork.cs" />
+    <Compile Include="Services\AdminsService.cs" />
     <Compile Include="Services\ClassRoomsService.cs" />
     <Compile Include="Services\EmailService.cs" />
+    <Compile Include="Services\GradesService.cs" />
+    <Compile Include="Services\IAdminsService.cs" />
     <Compile Include="Services\IClassRoomsService.cs" />
     <Compile Include="Services\IEmailService.cs" />
+    <Compile Include="Services\IGradesService.cs" />
+    <Compile Include="Services\IParentsService.cs" />
+    <Compile Include="Services\IStudentsService.cs" />
+    <Compile Include="Services\ISubjectsService.cs" />
+    <Compile Include="Services\ITeachersService.cs" />
+    <Compile Include="Services\ITeachsService.cs" />
+    <Compile Include="Services\IUsersService.cs" />
+    <Compile Include="Services\ParentsService.cs" />
+    <Compile Include="Services\StudentsService.cs" />
+    <Compile Include="Services\SubjectsService.cs" />
+    <Compile Include="Services\TeachersService.cs" />
+    <Compile Include="Services\TeachsService.cs" />
+    <Compile Include="Services\UsersService.cs" />
+    <Compile Include="Utilities\ConverterDTO.cs" />
+    <Compile Include="Utilities\Exceptions\BadRequestException.cs" />
+    <Compile Include="Utilities\Exceptions\UnauthorizedException.cs" />
+    <Compile Include="Utilities\Exceptions\UserNotFoundException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -156,8 +192,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Filters\" />
-    <Folder Include="Utilities\Exceptions\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,5 +1,8 @@
-﻿using school_diary.Models;
+﻿using NLog;
+using school_diary.DTOs.ClassRoomDTO;
+using school_diary.Models;
 using school_diary.Services;
+using school_diary.Utilities.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +16,7 @@ namespace school_diary.Controllers
     [RoutePrefix("api/class")]
     public class ClassRoomsController : ApiController
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         IClassRoomsService classRoomsService;
         public ClassRoomsController(IClassRoomsService classRoomsService)
         {
@@ -22,6 +26,7 @@ namespace school_diary.Controllers
         [Route("")]
         public IEnumerable<ClassRoom> GetAllClasses()
         {
+            logger.Info("Getting all class rooms");
             return classRoomsService.GetAllClassRooms();
         }
 
@@ -29,39 +34,23 @@ namespace school_diary.Controllers
         [ResponseType(typeof(ClassRoom))]
         public IHttpActionResult PostClassRoom(ClassRoom classRoom)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest();
-            }
-
             try
             {
                 ClassRoom classCreated = classRoomsService.CreateClassRoom(classRoom);
-                if (classCreated == null)
-                {
-                    return BadRequest("ClassRoom hasn't been created");
-                }
-
                 return Created("", classCreated);
             }
-            catch (Exception e)
+            catch (UserNotFoundException)
             {
 
                 return NotFound();
 
             }
-
         }
 
         [Route("{id}")]
         [ResponseType(typeof(ClassRoom))]
         public IHttpActionResult PutClassRoom(int id, ClassRoom updtClass)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest();
-            }
-
             try
             {
                 ClassRoom classUpdated = classRoomsService.UpdateClassRoom(id, updtClass);
@@ -84,18 +73,15 @@ namespace school_diary.Controllers
         [ResponseType(typeof(ClassRoom))]
         public IHttpActionResult DeleteClass(int id)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                return BadRequest();
+                ClassRoom classDeleted = classRoomsService.DeleteClassRoom(id);
+                return Ok(classDeleted);
             }
-
-            ClassRoom classDeleted = classRoomsService.DeleteClassRoom(id);
-            if (classDeleted == null)
+            catch (UserNotFoundException)
             {
-                return NotFound();
+                return NotFound();         
             }
-
-            return Ok(classDeleted);
         }
     }
 }

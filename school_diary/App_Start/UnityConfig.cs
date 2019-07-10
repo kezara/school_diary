@@ -20,17 +20,25 @@ namespace school_diary
 
             // e.g. container.RegisterType<ITestService, TestService>();
             container.RegisterType<IUnitOfWork, UnitOfWork>();
-            //container.RegisterType<IGenericRepository<ExampleModel>, GenericRepository<ExampleModel>>();
+            container.RegisterType<IGenericRepository<Admin>, GenericRepository<Admin>>();
             container.RegisterType<IGenericRepository<ClassRoom>, GenericRepository<ClassRoom>>();
-            //container.RegisterType<IGenericRepository<OfferModel>, GenericRepository<OfferModel>>();
-            //container.RegisterType<IGenericRepository<BillModel>, GenericRepository<BillModel>>();
-            //container.RegisterType<IGenericRepository<VoucherModel>, GenericRepository<VoucherModel>>();
+            container.RegisterType<IGenericRepository<Grade>, GenericRepository<Grade>>();
+            container.RegisterType<IGenericRepository<Parent>, GenericRepository<Parent>>();
+            container.RegisterType<IGenericRepository<Student>, GenericRepository<Student>>();
+            container.RegisterType<IGenericRepository<Subject>, GenericRepository<Subject>>();
+            container.RegisterType<IGenericRepository<Teach>, GenericRepository<Teach>>();
+            container.RegisterType<IGenericRepository<Teacher>, GenericRepository<Teacher>>();
+            container.RegisterType<IGenericRepository<User>, GenericRepository<User>>();
             container.RegisterType<DbContext, DataAccessContext>(new HierarchicalLifetimeManager());
-            //container.RegisterType<IExampleService, ExampleService>();
+            container.RegisterType<IAdminsService, AdminsService>();
             container.RegisterType<IClassRoomsService, ClassRoomsService>();
-            //container.RegisterType<IOffersService, OffersService>();
-            //container.RegisterType<IBillsService, BillsService>();
-            //container.RegisterType<IVouchersService, VouchersService>();
+            container.RegisterType<IGradesService, GradesService>();
+            container.RegisterType<IParentsService, ParentsService>();
+            container.RegisterType<IStudentsService, StudentsService>();
+            container.RegisterType<ISubjectsService, SubjectsService>();
+            container.RegisterType<ITeachsService, TeachsService>();
+            container.RegisterType<ITeachersService, TeachersService>();
+            container.RegisterType<IUsersService, UsersService>();
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
