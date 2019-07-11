@@ -1,0 +1,4 @@
+2019-07-06 23:16:20.2070|INFO|school_diary.Controllers.ClassRoomsController|Getting all class rooms
+2019-07-06 23:21:00.5107|INFO|school_diary.Controllers.ClassRoomsController|Getting all class rooms
+2019-07-06 23:21:01.2913|INFO|school_diary.Controllers.ClassRoomsController|Getting all class rooms
+2019-07-06 23:36:16.9421|INFO|school_diary.Controllers.ClassRoomsController|Getting all class rooms

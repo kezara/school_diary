@@ -12,6 +12,7 @@ using System.Web.Http.Description;
 
 namespace school_diary.Controllers
 {
+    [RoutePrefix("api/students")]
     public class StudentsController : ApiController
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
