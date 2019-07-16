@@ -34,7 +34,9 @@ namespace school_diary.Repositories
         [Dependency]
         public IGenericRepository<Teacher> TeachersRepository { get; set; }
         [Dependency]
-        public IGenericRepository<User> UsersRepository { get; set; }
+        public IGenericRepository<AppUser> UsersRepository { get; set; }
+        [Dependency]
+        public IAuthRepository AuthRepository { get; set; }
 
 
         public void Save()

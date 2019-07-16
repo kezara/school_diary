@@ -1,5 +1,4 @@
-﻿using school_diary.DTOs.ClassRoomDTO;
-using school_diary.Models;
+﻿using school_diary.Models;
 using school_diary.Repositories;
 using school_diary.Utilities.Exceptions;
 using school_diary.Utilities;

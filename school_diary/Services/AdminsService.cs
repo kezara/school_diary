@@ -43,7 +43,7 @@ namespace school_diary.Services
 
         public Admin GetAdminByID(int id)
         {
-            return db.AdminsRepository.GetByID(id);
+            return (Admin)db.AdminsRepository.GetByID(id);
         }
 
         public Admin UpdateAdmin(int id, Admin adminToUpdt)

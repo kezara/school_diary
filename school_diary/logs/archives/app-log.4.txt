@@ -1,0 +1,6 @@
+2019-07-11 21:57:20.6250|INFO|school_diary.Controllers.UsersController|Getting all users
+2019-07-11 21:57:41.5355|INFO|school_diary.Controllers.UsersController|Getting all users
+2019-07-11 21:59:01.7970|INFO|school_diary.Controllers.UsersController|Getting all users
+2019-07-11 22:00:13.0871|INFO|school_diary.Controllers.UsersController|Getting all users
+2019-07-11 22:13:26.8603|INFO|school_diary.Controllers.UsersController|Getting all users
+2019-07-11 22:24:03.7844|INFO|school_diary.Controllers.UsersController|Getting all users

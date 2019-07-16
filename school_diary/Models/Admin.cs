@@ -5,10 +5,9 @@ using System.Web;
 
 namespace school_diary.Models
 {
-    public class Admin
+    public class Admin : AppUser
     {
-        public int Id { get; set; }
-        public string Email { get; set; }
+        //public int Id { get; set; }
         //public User Admins { get; set; }
         //public int? AdminID { get; set; }
     }

@@ -11,9 +11,11 @@ namespace school_diary.Services
     public class StudentsService : IStudentsService
     {
         IUnitOfWork db;
-        public StudentsService(IUnitOfWork db)
+        IAppUsersService usersService;
+        public StudentsService(IUnitOfWork db, IAppUsersService usersService)
         {
             this.db = db;
+            this.usersService = usersService;
         }
 
         public Student CreateStudent(Student newStudent)
@@ -51,7 +53,7 @@ namespace school_diary.Services
             Student student = GetStudentByID(id);
 
             student.Id = studentToUpdt.Id;
-            student.Students = studentToUpdt.Students;
+            //student.Students = studentToUpdt.Students;
             db.StudentsRepository.Update(student);
             db.Save();
             return studentToUpdt;

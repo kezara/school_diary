@@ -10,10 +10,10 @@ namespace school_diary.Repositories
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
-        internal DataAccessContext context;
+        internal DbContext context;
         internal DbSet<TEntity> dbSet;
 
-        public GenericRepository(DataAccessContext context)
+        public GenericRepository(DbContext context)
         {
             this.context = context;
             this.dbSet = context.Set<TEntity>();

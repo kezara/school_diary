@@ -6,13 +6,10 @@ using System.Web;
 
 namespace school_diary.Models
 {
-    public class Parent
+    public class Parent : AppUser
     {
-        public int Id { get; set; }
-        public string Email { get; set; }
-        //public virtual User Parents { get; set; }
-        //public int? ParentID { get; set; }
-        //[JsonIgnore]
-        //public virtual ICollection<Student> Students { get; set; }
+        public override string Email { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<Student> Students { get; set; }
     }
 }

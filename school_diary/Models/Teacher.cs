@@ -7,14 +7,14 @@ using System.Web;
 
 namespace school_diary.Models
 {
-    public class Teacher
+    public class Teacher : AppUser
     {
-        public int Id { get; set; }
-        //public virtual User Teachers { get; set; }
-        [NotMapped]
-        public int? TeacherID { get; set; }
+        //public int Id { get; set; }
+        //public virtual AppUser Teachers { get; set; }
+        //[NotMapped]
+        //public int? TeacherID { get; set; }
         //[JsonIgnore]
-        //public virtual ICollection<Teach> Teaches { get; set; }
+        public virtual ICollection<Teach> Teaches { get; set; }
         //[JsonIgnore]
         //public virtual ICollection<Grade> Grades { get; set; }
         //[JsonIgnore]

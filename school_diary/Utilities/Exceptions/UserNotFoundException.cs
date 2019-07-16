@@ -7,8 +7,9 @@ namespace school_diary.Utilities.Exceptions
 {
     public class UserNotFoundException : Exception
     {
-        public UserNotFoundException()
+        public UserNotFoundException():base("Requested user doesn't exists.")
         {
+
         }
     }
 }

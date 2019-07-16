@@ -11,13 +11,25 @@ namespace school_diary.Services
     public class TeachersService : ITeachersService
     {
         IUnitOfWork db;
-        public TeachersService(IUnitOfWork db)
+        IAppUsersService usersService;
+        public TeachersService(IUnitOfWork db, IAppUsersService usersService)
         {
             this.db = db;
+            this.usersService = usersService;
         }
 
         public Teacher CreateTeacher(Teacher newTeacher)
         {
+            try
+            {
+                //AppUser teacher = usersService.GetUserByID((int)newTeacher.TeacherID);
+                //newTeacher.Teachers = teacher;
+            }
+            catch (UserNotFoundException)
+            {
+                throw new UserNotFoundException();
+            }
+            
             //ClassRoom newClass = ConverterDTO.SimpleDTOConverter<ClassRoom>(newClassDTO);
             db.TeachersRepository.Insert(newTeacher);
             db.Save();
@@ -51,7 +63,7 @@ namespace school_diary.Services
             Teacher teacher = GetTeacherByID(id);
 
             teacher.Id = teacherToUpdt.Id;
-            teacher.TeacherID = teacherToUpdt.TeacherID;
+            //teacher.TeacherID = teacherToUpdt.TeacherID;
             //teacher.Teachers = teacherToUpdt.Teachers;
             db.TeachersRepository.Update(teacher);
             db.Save();

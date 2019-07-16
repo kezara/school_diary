@@ -40,9 +40,7 @@ namespace school_diary.Controllers
             }
             catch (UserNotFoundException)
             {
-
                 return NotFound();
-
             }
         }
 
