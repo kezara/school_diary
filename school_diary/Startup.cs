@@ -28,6 +28,7 @@ namespace school_diary
 
             HttpConfiguration config = new HttpConfiguration();
             config.DependencyResolver = new UnityDependencyResolver(container);
+            config.Formatters.JsonFormatter.SerializerSettings.DateFormatString = "dd-MM-yyyy";
 
             WebApiConfig.Register(config);
             app.UseWebApi(config);

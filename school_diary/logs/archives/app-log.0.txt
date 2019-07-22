@@ -1,15 +1,5 @@
-2019-07-15 02:12:14.4851|INFO|school_diary.Controllers.AppUsersController|Admin gets all parents
-2019-07-15 02:12:34.2248|INFO|school_diary.Controllers.AppUsersController|Admin gets all users
-2019-07-15 02:12:42.7037|INFO|school_diary.Controllers.AppUsersController|Admin gets all students
-2019-07-15 02:37:32.3870|INFO|school_diary.Controllers.AppUsersController|Admin gets all parents
-2019-07-15 02:38:49.3969|INFO|school_diary.Controllers.AppUsersController|Admin gets all parents
-2019-07-15 02:39:12.1500|INFO|school_diary.Controllers.AppUsersController|Admin gets all admins
-2019-07-15 02:39:23.2236|INFO|school_diary.Controllers.AppUsersController|Admin gets all users
-2019-07-15 02:39:29.4715|INFO|school_diary.Controllers.AppUsersController|Admin gets all users
-2019-07-15 02:49:11.6721|INFO|school_diary.Controllers.AppUsersController|Admin gets all users
-2019-07-15 02:49:56.9146|INFO|school_diary.Controllers.AppUsersController|Admin gets all parents
-2019-07-15 12:11:06.7327|INFO|school_diary.Controllers.AppUsersController|Admin gets user by username
-2019-07-15 12:11:23.4896|INFO|school_diary.Controllers.AppUsersController|Admin gets user by username
-2019-07-15 12:11:33.4350|INFO|school_diary.Controllers.AppUsersController|Admin gets user by username
-2019-07-15 12:13:00.3660|INFO|school_diary.Controllers.AppUsersController|Admin gets user by username
-2019-07-15 13:10:02.2663|INFO|school_diary.Controllers.AppUsersController|Admin gets all users
+2019-07-19 00:07:26.0517|INFO|school_diary.Controllers.StudentsController|Getting all students
+2019-07-19 00:18:22.1167|INFO|school_diary.Controllers.StudentsController|Getting all students
+2019-07-19 00:20:01.3954|INFO|school_diary.Controllers.StudentsController|Getting all students
+2019-07-19 00:20:27.2730|INFO|school_diary.Controllers.StudentsController|Getting all students
+2019-07-19 17:23:38.2320|INFO|school_diary.Controllers.StudentsController|Getting all students

@@ -51,7 +51,7 @@ namespace school_diary.Services
             Grade grade = GetGradeByID(id);
 
             grade.Id = gradeToUpdt.Id;
-            grade.GradeDesc = gradeToUpdt.GradeDesc;
+            //grade.GradeDesc = gradeToUpdt.GradeDesc;
             grade.GradeValue = gradeToUpdt.GradeValue;
             db.GradesRepository.Update(grade);
             db.Save();

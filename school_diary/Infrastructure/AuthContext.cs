@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
-using Project_Repository.Models;
+//using Project_Repository.Models;
 using school_diary.Models;
 using System;
 using System.Collections.Generic;

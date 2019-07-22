@@ -26,9 +26,9 @@ namespace school_diary.Services
             return newStudent;
         }
 
-        public Student DeleteStudent(int id)
+        public Student DeleteStudent(string id)
         {
-            Student student = GetStudentByID(id);
+            Student student = GetStudentByUserName(id);
             if (student == null)
             {
                 throw new UserNotFoundException();
@@ -43,16 +43,20 @@ namespace school_diary.Services
             return db.StudentsRepository.Get();
         }
 
-        public Student GetStudentByID(int id)
+        public Student GetStudentByUserName(string username)
         {
-            return db.StudentsRepository.GetByID(id);
+            return db.StudentsRepository.Get(filter: s => s.UserName == username).FirstOrDefault();
         }
 
-        public Student UpdateStudent(int id, Student studentToUpdt)
+        public Student UpdateStudent(string username, Student studentToUpdt)
         {
-            Student student = GetStudentByID(id);
+            Student student = GetStudentByUserName(username);
 
-            student.Id = studentToUpdt.Id;
+            //student.Id = studentToUpdt.Id;
+            student.UserName = studentToUpdt.UserName;
+            //student.TeacherUN = studentToUpdt.TeacherUN;
+            //student.Grades = studentToUpdt.Grades;
+            //student.SubjectID = studentToUpdt.SubjectID;
             //student.Students = studentToUpdt.Students;
             db.StudentsRepository.Update(student);
             db.Save();

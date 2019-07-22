@@ -50,8 +50,8 @@ namespace school_diary.Services
         {
             Teach teach = GetTeachByID(id);
 
-            teach.Id = teachToUpdt.Id;
-            teach.Fond = teachToUpdt.Fond;
+           // teach.Id = teachToUpdt.Id;
+            //teach.Fond = teachToUpdt.Fond;
             db.TeachsRepository.Update(teach);
             db.Save();
             return teachToUpdt;

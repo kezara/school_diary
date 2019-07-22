@@ -46,13 +46,13 @@ namespace school_diary.Controllers
             }
         }
 
-        [Route("{id}")]
+        [Route("{username}")]
         [ResponseType(typeof(Student))]
-        public IHttpActionResult PutStudent(int id, Student updtStudent)
+        public IHttpActionResult PutStudent(string username, Student updtStudent)
         {
             try
             {
-                Student studentUpdated = studentsService.UpdateStudent(id, updtStudent);
+                Student studentUpdated = studentsService.UpdateStudent(username, updtStudent);
                 if (studentUpdated == null)
                 {
                     return NotFound();
@@ -68,13 +68,13 @@ namespace school_diary.Controllers
 
         }
 
-        [Route("{id}")]
+        [Route("{username}")]
         [ResponseType(typeof(Student))]
-        public IHttpActionResult DeleteStudent(int id)
+        public IHttpActionResult DeleteStudent(string username)
         {
             try
             {
-                Student studentDeleted = studentsService.DeleteStudent(id);
+                Student studentDeleted = studentsService.DeleteStudent(username);
                 return Ok(studentDeleted);
             }
             catch (UserNotFoundException)

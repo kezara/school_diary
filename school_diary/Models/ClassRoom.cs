@@ -12,8 +12,9 @@ namespace school_diary.Models
         public int Year { get; set; }
         public string ClassName { get; set; }
         //[JsonIgnore]
-        //public virtual ICollection<Teacher> Teachers { get; set; }
-        //[JsonIgnore]
-        //public virtual ICollection<Subject> Subjects { get; set; }
+        //public Teacher Teachers { get; set; }
+        //public Teach Teaches { get; set; }
+        [JsonIgnore]
+        public ICollection<Student> Students { get; set; }
     }
 }
