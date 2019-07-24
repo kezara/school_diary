@@ -22,12 +22,71 @@ namespace school_diary.Controllers
             this.gradesService = gradesService;
         }
 
+        //Authorize(Roles = "admins")]
         [Route("")]
-        public IEnumerable<Grade> GetAllGrades()
+        public IHttpActionResult GetAllGrades()
         {
             logger.Info("Getting all Grades");
-            return gradesService.GetAllGrades();
+            return Ok(gradesService.GetAllGrades());
         }
+
+        //[Authorize(Roles = "admins")]
+        //[Authorize(Roles = "teachers")]
+        //[Authorize(Roles = "students")]
+        //[Authorize(Roles = "parents")]
+        //[Route("by-username/{username}")]
+        //public IHttpActionResult GetGradesByUserName(string username)
+        //{
+        //    try
+        //    {
+        //        IEnumerable<Grade> grade = gradesService.GetGradeByStudentUserName(username);
+        //        return Ok(grade);
+        //    }
+        //    catch (UserNotFoundException)
+        //    {
+        //        return NotFound();
+        //    }
+        //    catch
+        //    {
+        //        return BadRequest();
+        //    }
+        //}
+
+        //[Route("by-name/{name}")]
+        //public IHttpActionResult GetGradesByName(string name)
+        //{
+        //    try
+        //    {
+        //        IEnumerable<Grade> grade = gradesService.GetGradeByStudentName(name);
+        //        return Ok(grade);
+        //    }
+        //    catch (UserNotFoundException)
+        //    {
+        //        return NotFound();
+        //    }
+        //    catch
+        //    {
+        //        return BadRequest();
+        //    }
+        //}
+
+        //[Route("by-lastname/{lastName}")]
+        //public IHttpActionResult GetGradesByLastName(string lastName)
+        //{
+        //    try
+        //    {
+        //        IEnumerable<Grade> grade = gradesService.GetGradeByStudentLastName(lastName);
+        //        return Ok(grade);
+        //    }
+        //    catch (UserNotFoundException)
+        //    {
+        //        return NotFound();
+        //    }
+        //    catch
+        //    {
+        //        return BadRequest();
+        //    }
+        //}
 
         [Route("")]
         [ResponseType(typeof(Grade))]
@@ -46,41 +105,41 @@ namespace school_diary.Controllers
             }
         }
 
-        [Route("{id}")]
-        [ResponseType(typeof(Grade))]
-        public IHttpActionResult PutGrade(int id, Grade updtGrade)
-        {
-            try
-            {
-                Grade gradeUpdated = gradesService.UpdateGrade(id, updtGrade);
-                if (gradeUpdated == null)
-                {
-                    return NotFound();
-                }
+        //[Route("{id}")]
+        //[ResponseType(typeof(Grade))]
+        //public IHttpActionResult PutGrade(string username, Grade updtGrade)
+        //{
+        //    try
+        //    {
+        //        Grade gradeUpdated = gradesService.UpdateGrade(username, updtGrade);
+        //        if (gradeUpdated == null)
+        //        {
+        //            return NotFound();
+        //        }
 
-                return Ok(gradeUpdated);
-            }
-            catch (Exception)
-            {
+        //        return Ok(gradeUpdated);
+        //    }
+        //    catch (Exception)
+        //    {
 
-                return BadRequest();
-            }
+        //        return BadRequest();
+        //    }
 
-        }
+        //}
 
-        [Route("{id}")]
-        [ResponseType(typeof(Grade))]
-        public IHttpActionResult DeleteGrade(int id)
-        {
-            try
-            {
-                Grade gradeDeleted = gradesService.DeleteGrade(id);
-                return Ok(gradeDeleted);
-            }
-            catch (UserNotFoundException)
-            {
-                return NotFound();
-            }
-        }
+        //[Route("{id}")]
+        //[ResponseType(typeof(Grade))]
+        //public IHttpActionResult DeleteGrade(string username)
+        //{
+        //    try
+        //    {
+        //        Grade gradeDeleted = gradesService.DeleteGrade(username);
+        //        return Ok(gradeDeleted);
+        //    }
+        //    catch (UserNotFoundException)
+        //    {
+        //        return NotFound();
+        //    }
+        //}
     }
 }

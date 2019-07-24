@@ -94,37 +94,37 @@ namespace school_diary.Models
             //make some classRooms
             var classRooms = new List<ClassRoom>
             {
-                new ClassRoom { Id = 1, Year = 5, ClassName = "V-1" },
-                new ClassRoom { Id = 2, Year = 5, ClassName = "V-2" },
-                new ClassRoom { Id = 3, Year = 6, ClassName = "VI-1" },
-                new ClassRoom { Id = 4,Year = 6, ClassName = "VI-2" },
-                new ClassRoom { Id = 5,Year = 7, ClassName = "VII-1" },
-                new ClassRoom { Id = 6,Year = 7, ClassName = "VII-2" },
-                new ClassRoom { Id = 7,Year = 8, ClassName = "VIII-1" },
-                new ClassRoom { Id = 8,Year = 8, ClassName = "VIII-2" }
+                new ClassRoom { Id = 1,  ClassName = "V-1" },
+                new ClassRoom { Id = 2,  ClassName = "V-2" },
+                new ClassRoom { Id = 3,  ClassName = "VI-1" },
+                new ClassRoom { Id = 4, ClassName = "VI-2" },
+                new ClassRoom { Id = 5, ClassName = "VII-1" },
+                new ClassRoom { Id = 6, ClassName = "VII-2" },
+                new ClassRoom { Id = 7, ClassName = "VIII-1" },
+                new ClassRoom { Id = 8, ClassName = "VIII-2" }
             };
 
             context.ClassRooms.AddRange(classRooms);
 
             //make some students with parents and classrooms
-            var students = new List<Student>
-            {
-                new Student { UserName = "aleksastudent", PasswordHash = HashedPassword("test123"), FirstName = "Aleksa", LastName = "Ignjatov",
-                Parents = new List<Parent>()
-                {
-                    parents.Find(p => p.UserName == "brankicaparent")
-                }, ClassRooms = classRooms.Find(x => x.ClassName == "V-1") },
-                new Student { UserName = "petarstudent", PasswordHash = HashedPassword("test123"), FirstName = "Petar", LastName = "Ignjatov",
-                Parents = new List<Parent>()
-                {
-                    parents.Find(p => p.UserName == "brankicaparent")
-                }, ClassRooms = classRooms.Find(x => x.ClassName == "V-1")},
-                new Student { UserName = "strahinjastudent", PasswordHash = HashedPassword("test123"), FirstName = "Strahinja", LastName = "Nikolic",
-                Parents = new List<Parent>()
-                {
-                    parents.Find(p => p.UserName == "djordjeparent"),
-                    parents.Find(p => p.UserName == "gabrijelaparent")
-                }, ClassRooms = classRooms.Find(x => x.ClassName == "V-2")
+            //var students = new List<Student>
+            //{
+            //    new Student { UserName = "aleksastudent", PasswordHash = HashedPassword("test123"), FirstName = "Aleksa", LastName = "Ignjatov",
+            //    Parents = new List<Parent>()
+            //    {
+            //        parents.Find(p => p.UserName == "brankicaparent")
+            //    }, ClassRooms = classRooms.Find(x => x.ClassName == "V-1") },
+            //    new Student { UserName = "petarstudent", PasswordHash = HashedPassword("test123"), FirstName = "Petar", LastName = "Ignjatov",
+            //    Parents = new List<Parent>()
+            //    {
+            //        parents.Find(p => p.UserName == "brankicaparent")
+            //    }, ClassRooms = classRooms.Find(x => x.ClassName == "V-1")},
+            //    new Student { UserName = "strahinjastudent", PasswordHash = HashedPassword("test123"), FirstName = "Strahinja", LastName = "Nikolic",
+            //    Parents = new List<Parent>()
+            //    {
+            //        parents.Find(p => p.UserName == "djordjeparent"),
+            //        parents.Find(p => p.UserName == "gabrijelaparent")
+            //    }, ClassRooms = classRooms.Find(x => x.ClassName == "V-2")
                 //, Teachs = new List<Teach>()
                 //{
                 //    teachs.Find(x => x.Subjects.SubjectName == "Matematika 5" && x.TeacherUserName == "nikolateacher"),
@@ -132,13 +132,13 @@ namespace school_diary.Models
                 //    teachs.Find(x => x.Subjects.SubjectName == "Likovno 5" && x.TeacherUserName == "milicateacher"),
                 //    teachs.Find(x => x.Subjects.SubjectName == "Srpski jezik i knjizevnost 5" && x.TeacherUserName == "brankicateacher"),
                 //}
-                },
-                new Student { UserName = "filipstudent", PasswordHash = HashedPassword("test123"), FirstName = "Filip", LastName = "Antanasijevic",
-                Parents = new List<Parent>()
-                {
-                    parents.Find(p => p.UserName == "goranparent"),
-                    parents.Find(p => p.UserName == "jelenaparent")
-                }, ClassRooms = classRooms.Find(x => x.ClassName == "V-2")
+                //},
+                //new Student { UserName = "filipstudent", PasswordHash = HashedPassword("test123"), FirstName = "Filip", LastName = "Antanasijevic",
+                //Parents = new List<Parent>()
+                //{
+                //    parents.Find(p => p.UserName == "goranparent"),
+                //    parents.Find(p => p.UserName == "jelenaparent")
+                //}, ClassRooms = classRooms.Find(x => x.ClassName == "V-2")
                 //, Teachs = new List<Teach>()
                 //{
                 //    teachs.Find(x => x.Subjects.SubjectName == "Matematika 5" && x.TeacherUserName == "cabateacher"),
@@ -146,78 +146,78 @@ namespace school_diary.Models
                 //    teachs.Find(x => x.Subjects.SubjectName == "Likovno 5" && x.TeacherUserName == "milicateacher"),
                 //    teachs.Find(x => x.Subjects.SubjectName == "Srpski jezik i knjizevnost 5" && x.TeacherUserName == "branislavteacher"),
                 //}
-                },
-                new Student { UserName = "ivastudent", PasswordHash = HashedPassword("test123"), FirstName = "Iva", LastName = "Antanasijevic",
-                Parents = new List<Parent>()
-                {
-                    parents.Find(p => p.UserName == "goranparent"),
-                    parents.Find(p => p.UserName == "jelenaparent")
-                } , ClassRooms = classRooms.Find(x => x.ClassName == "VI-2")},
-                new Student { UserName = "aleksandarstudent", PasswordHash = HashedPassword("test123"), FirstName = "Aleksandar", LastName = "Djordjevic" ,
-                Parents = new List<Parent>()
-                {
-                    parents.Find(p => p.UserName == "branislavparent"),
-                    parents.Find(p => p.UserName == "ivanaparent")
-                } , ClassRooms = classRooms.Find(x => x.ClassName == "VI-2")},
-                new Student { UserName = "vukasinstudent", PasswordHash = HashedPassword("test123"), FirstName = "Vukasin", LastName = "Djordjevic",
-                Parents = new List<Parent>()
-                {
-                    parents.Find(p => p.UserName == "branislavparent"),
-                    parents.Find(p => p.UserName == "ivanaparent")
-                }, ClassRooms = classRooms.Find(x => x.ClassName == "VII-2")},
-                new Student { UserName = "urosstudent", PasswordHash = HashedPassword("test123"), FirstName = "Uros", LastName = "Backulic",
-                Parents = new List<Parent>()
-                {
-                    parents.Find(p => p.UserName == "zeljkoparent"),
-                    parents.Find(p => p.UserName == "marijaparent")
-                }, ClassRooms = classRooms.Find(x => x.ClassName == "VII-2")},
-                new Student { UserName = "vukasinpstudent", PasswordHash = HashedPassword("test123"), FirstName = "Vukasin", LastName = "Pavlica",
-                Parents = new List<Parent>()
-                {
-                    parents.Find(p => p.UserName == "jelenapparent")
-                }, ClassRooms = classRooms.Find(x => x.ClassName == "VIII-2")},
-                new Student { UserName = "milosstudent", PasswordHash = HashedPassword("test123"), FirstName = "Milos", LastName = "Miskovic",
-                Parents = new List<Parent>()
-                {
-                    parents.Find(p => p.UserName == "milanparent"),
-                    parents.Find(p => p.UserName == "milenaparent")
-                }, ClassRooms = classRooms.Find(x => x.ClassName == "VIII-2")},
-                new Student { UserName = "dunjastudent", PasswordHash = HashedPassword("test123"), FirstName = "Dunja", LastName = "Miskovic",
-                Parents = new List<Parent>()
-                {
-                    parents.Find(p => p.UserName == "milanparent"),
-                    parents.Find(p => p.UserName == "milenaparent")
-                } , ClassRooms = classRooms.Find(x => x.ClassName == "VI-1")},
-                new Student { UserName = "vukasinzstudent", PasswordHash = HashedPassword("test123"), FirstName = "Vukasin", LastName = "Zirovic",
-                Parents = new List<Parent>()
-                {
-                    parents.Find(p => p.UserName == "stanislavparent"),
-                    parents.Find(p => p.UserName == "cicaparent")
-                }, ClassRooms = classRooms.Find(x => x.ClassName == "VI-1")},
-                new Student { UserName = "teastudent", PasswordHash = HashedPassword("test123"), FirstName = "Tea", LastName = "Zirovic",
-                Parents = new List<Parent>()
-                {
-                    parents.Find(p => p.UserName == "stanislavparent"),
-                    parents.Find(p => p.UserName == "cicaparent")
-                } , ClassRooms = classRooms.Find(x => x.ClassName == "VII-1")},
-                new Student { UserName = "miastudent", PasswordHash = HashedPassword("test123"), FirstName = "Mia", LastName = "Zirovic",
-                Parents = new List<Parent>()
-                {
-                    parents.Find(p => p.UserName == "sandraparent")
-                } , ClassRooms = classRooms.Find(x => x.ClassName == "VII-1")},
-                new Student { UserName = "dariostudent", PasswordHash = HashedPassword("test123"), FirstName = "Mia", LastName = "Zirovic",
-                Parents = new List<Parent>()
-                {
-                    parents.Find(p => p.UserName == "sandraparent")
-                } , ClassRooms = classRooms.Find(x => x.ClassName == "VIII-1")},
-                new Student { UserName = "veljkostudent", PasswordHash = HashedPassword("test123"), FirstName = "Mia", LastName = "Zirovic",
-                Parents = new List<Parent>()
-                {
-                    parents.Find(p => p.UserName == "sandraparent")
-                } , ClassRooms = classRooms.Find(x => x.ClassName == "VIII-1")}
-            };
-            students.ForEach(a => manager.Create(a));
-            students.ForEach(a => manager.AddToRole(a.Id, returnUserRole(a)));
+            //    },
+            //    new Student { UserName = "ivastudent", PasswordHash = HashedPassword("test123"), FirstName = "Iva", LastName = "Antanasijevic",
+            //    Parents = new List<Parent>()
+            //    {
+            //        parents.Find(p => p.UserName == "goranparent"),
+            //        parents.Find(p => p.UserName == "jelenaparent")
+            //    } , ClassRooms = classRooms.Find(x => x.ClassName == "VI-2")},
+            //    new Student { UserName = "aleksandarstudent", PasswordHash = HashedPassword("test123"), FirstName = "Aleksandar", LastName = "Djordjevic" ,
+            //    Parents = new List<Parent>()
+            //    {
+            //        parents.Find(p => p.UserName == "branislavparent"),
+            //        parents.Find(p => p.UserName == "ivanaparent")
+            //    } , ClassRooms = classRooms.Find(x => x.ClassName == "VI-2")},
+            //    new Student { UserName = "vukasinstudent", PasswordHash = HashedPassword("test123"), FirstName = "Vukasin", LastName = "Djordjevic",
+            //    Parents = new List<Parent>()
+            //    {
+            //        parents.Find(p => p.UserName == "branislavparent"),
+            //        parents.Find(p => p.UserName == "ivanaparent")
+            //    }, ClassRooms = classRooms.Find(x => x.ClassName == "VII-2")},
+            //    new Student { UserName = "urosstudent", PasswordHash = HashedPassword("test123"), FirstName = "Uros", LastName = "Backulic",
+            //    Parents = new List<Parent>()
+            //    {
+            //        parents.Find(p => p.UserName == "zeljkoparent"),
+            //        parents.Find(p => p.UserName == "marijaparent")
+            //    }, ClassRooms = classRooms.Find(x => x.ClassName == "VII-2")},
+            //    new Student { UserName = "vukasinpstudent", PasswordHash = HashedPassword("test123"), FirstName = "Vukasin", LastName = "Pavlica",
+            //    Parents = new List<Parent>()
+            //    {
+            //        parents.Find(p => p.UserName == "jelenapparent")
+            //    }, ClassRooms = classRooms.Find(x => x.ClassName == "VIII-2")},
+            //    new Student { UserName = "milosstudent", PasswordHash = HashedPassword("test123"), FirstName = "Milos", LastName = "Miskovic",
+            //    Parents = new List<Parent>()
+            //    {
+            //        parents.Find(p => p.UserName == "milanparent"),
+            //        parents.Find(p => p.UserName == "milenaparent")
+            //    }, ClassRooms = classRooms.Find(x => x.ClassName == "VIII-2")},
+            //    new Student { UserName = "dunjastudent", PasswordHash = HashedPassword("test123"), FirstName = "Dunja", LastName = "Miskovic",
+            //    Parents = new List<Parent>()
+            //    {
+            //        parents.Find(p => p.UserName == "milanparent"),
+            //        parents.Find(p => p.UserName == "milenaparent")
+            //    } , ClassRooms = classRooms.Find(x => x.ClassName == "VI-1")},
+            //    new Student { UserName = "vukasinzstudent", PasswordHash = HashedPassword("test123"), FirstName = "Vukasin", LastName = "Zirovic",
+            //    Parents = new List<Parent>()
+            //    {
+            //        parents.Find(p => p.UserName == "stanislavparent"),
+            //        parents.Find(p => p.UserName == "cicaparent")
+            //    }, ClassRooms = classRooms.Find(x => x.ClassName == "VI-1")},
+            //    new Student { UserName = "teastudent", PasswordHash = HashedPassword("test123"), FirstName = "Tea", LastName = "Zirovic",
+            //    Parents = new List<Parent>()
+            //    {
+            //        parents.Find(p => p.UserName == "stanislavparent"),
+            //        parents.Find(p => p.UserName == "cicaparent")
+            //    } , ClassRooms = classRooms.Find(x => x.ClassName == "VII-1")},
+            //    new Student { UserName = "miastudent", PasswordHash = HashedPassword("test123"), FirstName = "Mia", LastName = "Zirovic",
+            //    Parents = new List<Parent>()
+            //    {
+            //        parents.Find(p => p.UserName == "sandraparent")
+            //    } , ClassRooms = classRooms.Find(x => x.ClassName == "VII-1")},
+            //    new Student { UserName = "dariostudent", PasswordHash = HashedPassword("test123"), FirstName = "Dario", LastName = "Zirovic",
+            //    Parents = new List<Parent>()
+            //    {
+            //        parents.Find(p => p.UserName == "sandraparent")
+            //    } , ClassRooms = classRooms.Find(x => x.ClassName == "VIII-1")},
+            //    new Student { UserName = "veljkostudent", PasswordHash = HashedPassword("test123"), FirstName = "Mia", LastName = "Zirovic",
+            //    Parents = new List<Parent>()
+            //    {
+            //        parents.Find(p => p.UserName == "sandraparent")
+            //    } , ClassRooms = classRooms.Find(x => x.ClassName == "VIII-1")}
+            //};
+            //students.ForEach(a => manager.Create(a));
+            //students.ForEach(a => manager.AddToRole(a.Id, returnUserRole(a)));
 
             //make some subjects
             var subjects = new List<Subject>
@@ -244,153 +244,106 @@ namespace school_diary.Models
             context.Subjects.AddRange(subjects);
 
             //make some teachs
-            var teachs = new List<Teach>
-            {
-                new Teach { WeeklyFond = 6, Subjects = subjects.Find(s => s.SubjectName == "Matematika 5"), Teachers = teachers.Find(t => t.UserName == "cabateacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "aleksastudent" && s.UserName == "petarstudent")
-                } },
-                new Teach { WeeklyFond = 6, Subjects = subjects.Find(s => s.SubjectName == "Matematika 5"), Teachers = teachers.Find(t => t.UserName == "nikolateacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "strahinjastudent" && s.UserName == "filipstudent")
-                } },
-                new Teach { WeeklyFond = 6, Subjects = subjects.Find(s => s.SubjectName == "Matematika 6"), Teachers = teachers.Find(t => t.UserName == "nikolateacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "dunjastudent" && s.UserName == "vukasinzstudent")
-                } },
-                new Teach { WeeklyFond = 6, Subjects = subjects.Find(s => s.SubjectName == "Matematika 6"), Teachers = teachers.Find(t => t.UserName == "cabateacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "ivastudent" && s.UserName == "aleksandarstudent")
-                } },
-                new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Matematika 7"), Teachers = teachers.Find(t => t.UserName == "nikolateacher") ,
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "teastudent" && s.UserName == "miastudent")
-                } },
-                new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Matematika 7"), Teachers = teachers.Find(t => t.UserName == "cabateacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "vukasinstudent" && s.UserName == "urosstudent")
-                } },
-                new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Matematika 8"), Teachers = teachers.Find(t => t.UserName == "nikolateacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "dariostudent" && s.UserName == "veljkostudent")
-                } },
-                new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Matematika 8"), Teachers = teachers.Find(t => t.UserName == "cabateacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "vukasinpstudent" && s.UserName == "milosstudent")
-                } },
-                new Teach { WeeklyFond = 6, Subjects = subjects.Find(s => s.SubjectName == "Srpski jezik i knjizevnost 5"), Teachers = teachers.Find(t => t.UserName == "brankicateacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "aleksastudent" && s.UserName == "petarstudent")
-                } },
-                new Teach { WeeklyFond = 6, Subjects = subjects.Find(s => s.SubjectName == "Srpski jezik i knjizevnost 5"), Teachers = teachers.Find(t => t.UserName == "branislavteacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "strahinjastudent" && s.UserName == "filipstudent")
-                } },
-                new Teach { WeeklyFond = 6, Subjects = subjects.Find(s => s.SubjectName == "Srpski jezik i knjizevnost 6"), Teachers = teachers.Find(t => t.UserName == "brankicateacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "dunjastudent" && s.UserName == "vukasinzstudent")
-                } },
-                new Teach { WeeklyFond = 6, Subjects = subjects.Find(s => s.SubjectName == "Srpski jezik i knjizevnost 6"), Teachers = teachers.Find(t => t.UserName == "branislavteacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "ivastudent" && s.UserName == "aleksandarstudent")
-                } },
-                new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Srpski jezik i knjizevnost 7"), Teachers = teachers.Find(t => t.UserName == "brankicateacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "teastudent" && s.UserName == "miastudent")
-                } },
-                new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Srpski jezik i knjizevnost 7"), Teachers = teachers.Find(t => t.UserName == "branislavteacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "vukasinstudent" && s.UserName == "urosstudent")
-                } },
-                new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Srpski jezik i knjizevnost 8"), Teachers = teachers.Find(t => t.UserName == "brankicateacher") ,
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "dariostudent" && s.UserName == "veljkostudent")
-                } },
-                new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Srpski jezik i knjizevnost 8"), Teachers = teachers.Find(t => t.UserName == "branislavteacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "vukasinpstudent" && s.UserName == "milosstudent")
-                } },
-                new Teach { WeeklyFond = 2, Subjects = subjects.Find(s => s.SubjectName == "Muzicko 5"), Teachers = teachers.Find(t => t.UserName == "radmilateacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "aleksastudent" && s.UserName == "petarstudent" && s.UserName == "strahinjastudent" && s.UserName == "filipstudent")
-                } },
-                new Teach { WeeklyFond = 1, Subjects = subjects.Find(s => s.SubjectName == "Muzicko 6"), Teachers = teachers.Find(t => t.UserName == "radmilateacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "dunjastudent" && s.UserName == "vukasinzstudent" && s.UserName == "ivastudent" && s.UserName == "aleksandarstudent")
-                } },
-                new Teach { WeeklyFond = 2, Subjects = subjects.Find(s => s.SubjectName == "Likovno 5"), Teachers = teachers.Find(t => t.UserName == "milicateacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "aleksastudent" && s.UserName == "petarstudent" && s.UserName == "vukasinzstudent" && s.UserName == "strahinjastudent" && s.UserName == "filipstudent" && s.UserName == "teastudent")
-                } },
-                new Teach { WeeklyFond = 2, Subjects = subjects.Find(s => s.SubjectName == "Likovno 6"), Teachers = teachers.Find(t => t.UserName == "milicateacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "dunjastudent" && s.UserName == "vukasinzstudent" && s.UserName == "ivastudent" && s.UserName == "aleksandarstudent")
-                } },
-                new Teach { WeeklyFond = 1, Subjects = subjects.Find(s => s.SubjectName == "Likovno 7"), Teachers = teachers.Find(t => t.UserName == "milicateacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "teastudent" && s.UserName == "miastudent" && s.UserName == "vukasinstudent" && s.UserName == "urosstudent")
-                } },
-                new Teach { WeeklyFond = 1, Subjects = subjects.Find(s => s.SubjectName == "Likovno 8"), Teachers = teachers.Find(t => t.UserName == "milicateacher") ,
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "dariostudent" && s.UserName == "veljkostudent" &&s.UserName == "vukasinpstudent" && s.UserName == "milosstudent")
-                } },
-                new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Hemija 7"), Teachers = teachers.Find(t => t.UserName == "radoteacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "teastudent" && s.UserName == "miastudent"&& s.UserName == "vukasinstudent" && s.UserName == "urosstudent")
-                } },
-                new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Hemija 8"), Teachers = teachers.Find(t => t.UserName == "radoteacher") ,
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "dariostudent" && s.UserName == "veljkostudent" && s.UserName == "vukasinpstudent" && s.UserName == "milosstudent")
-                } },
-                new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Biologija 7"), Teachers = teachers.Find(t => t.UserName == "ikonovteacher"),
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "teastudent" && s.UserName == "miastudent"&& s.UserName == "vukasinstudent" && s.UserName == "urosstudent")
-                } },
-                new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Biologija 8"), Teachers = teachers.Find(t => t.UserName == "ikonovteacher") ,
-                Students = new List<Student>()
-                {
-                    students.Find(s => s.UserName == "dariostudent" && s.UserName == "veljkostudent" && s.UserName == "vukasinpstudent" && s.UserName == "milosstudent")
-                } }
-            };
-            context.Teachs.AddRange(teachs);
+            //var teachs = new List<Teach>
+            //{
+            //    new Teach { WeeklyFond = 6, Subjects = subjects.Find(s => s.SubjectName == "Matematika 5"), Teachers = teachers.Find(t => t.UserName == "cabateacher"),
+            //    Students = students.Find(s => s.UserName == "aleksastudent" && s.UserName == "petarstudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "V-1") },
+            //    new Teach { WeeklyFond = 6, Subjects = subjects.Find(s => s.SubjectName == "Matematika 5"), Teachers = teachers.Find(t => t.UserName == "nikolateacher"),
+            //    Students = students.Find(s => s.UserName == "strahinjastudent" && s.UserName == "filipstudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "V-2")  },
+            //    new Teach { WeeklyFond = 6, Subjects = subjects.Find(s => s.SubjectName == "Matematika 6"), Teachers = teachers.Find(t => t.UserName == "nikolateacher"),
+            //    Students = students.Find(s => s.UserName == "dunjastudent" && s.UserName == "vukasinzstudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "VI-1")  },
+            //    new Teach { WeeklyFond = 6, Subjects = subjects.Find(s => s.SubjectName == "Matematika 6"), Teachers = teachers.Find(t => t.UserName == "cabateacher"),
+            //    Students = students.Find(s => s.UserName == "ivastudent" && s.UserName == "aleksandarstudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "VI-2")  },
+            //    new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Matematika 7"), Teachers = teachers.Find(t => t.UserName == "nikolateacher") ,
+            //    Students = students.Find(s => s.UserName == "teastudent" && s.UserName == "miastudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "VII-1") },
+            //    new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Matematika 7"), Teachers = teachers.Find(t => t.UserName == "cabateacher"),
+            //    Students = students.Find(s => s.UserName == "vukasinstudent" && s.UserName == "urosstudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "VII-2") },
+            //    new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Matematika 8"), Teachers = teachers.Find(t => t.UserName == "nikolateacher"),
+            //    Students = students.Find(s => s.UserName == "dariostudent" && s.UserName == "veljkostudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "VIII-1") },
+            //    new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Matematika 8"), Teachers = teachers.Find(t => t.UserName == "cabateacher"),
+            //    Students = students.Find(s => s.UserName == "vukasinpstudent" && s.UserName == "milosstudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "VIII-2") },
+            //    new Teach { WeeklyFond = 6, Subjects = subjects.Find(s => s.SubjectName == "Srpski jezik i knjizevnost 5"), Teachers = teachers.Find(t => t.UserName == "brankicateacher"),
+            //    Students = students.Find(s => s.UserName == "aleksastudent" && s.UserName == "petarstudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "V-1") },
+            //    new Teach { WeeklyFond = 6, Subjects = subjects.Find(s => s.SubjectName == "Srpski jezik i knjizevnost 5"), Teachers = teachers.Find(t => t.UserName == "branislavteacher"),
+            //    Students = students.Find(s => s.UserName == "strahinjastudent" && s.UserName == "filipstudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "V-2") },
+            //    new Teach { WeeklyFond = 6, Subjects = subjects.Find(s => s.SubjectName == "Srpski jezik i knjizevnost 6"), Teachers = teachers.Find(t => t.UserName == "brankicateacher"),
+            //    Students = students.Find(s => s.UserName == "dunjastudent" && s.UserName == "vukasinzstudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "VI-1") },
+            //    new Teach { WeeklyFond = 6, Subjects = subjects.Find(s => s.SubjectName == "Srpski jezik i knjizevnost 6"), Teachers = teachers.Find(t => t.UserName == "branislavteacher"),
+            //    Students = students.Find(s => s.UserName == "ivastudent" && s.UserName == "aleksandarstudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "VI-2") },
+            //    new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Srpski jezik i knjizevnost 7"), Teachers = teachers.Find(t => t.UserName == "brankicateacher"),
+            //    Students = students.Find(s => s.UserName == "teastudent" && s.UserName == "miastudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "VII-1") },
+            //    new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Srpski jezik i knjizevnost 7"), Teachers = teachers.Find(t => t.UserName == "branislavteacher"),
+            //    Students = students.Find(s => s.UserName == "vukasinstudent" && s.UserName == "urosstudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "VII-2") },
+            //    new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Srpski jezik i knjizevnost 8"), Teachers = teachers.Find(t => t.UserName == "brankicateacher") ,
+            //    Students = students.Find(s => s.UserName == "dariostudent" && s.UserName == "veljkostudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "VIII-1") },
+            //    new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Srpski jezik i knjizevnost 8"), Teachers = teachers.Find(t => t.UserName == "branislavteacher"),
+            //    Students = students.Find(s => s.UserName == "vukasinpstudent" && s.UserName == "milosstudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "VIII-2") },
+            //    new Teach { WeeklyFond = 2, Subjects = subjects.Find(s => s.SubjectName == "Muzicko 5"), Teachers = teachers.Find(t => t.UserName == "radmilateacher"),
+            //    Students = students.Find(s => s.UserName == "aleksastudent" && s.UserName == "petarstudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "V-1") },
+            //    new Teach { WeeklyFond = 2, Subjects = subjects.Find(s => s.SubjectName == "Muzicko 5"), Teachers = teachers.Find(t => t.UserName == "radmilateacher"),
+            //    Students = students.Find(s => s.UserName == "strahinjastudent" && s.UserName == "filipstudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "V-2") },
+            //    new Teach { WeeklyFond = 1, Subjects = subjects.Find(s => s.SubjectName == "Muzicko 6"), Teachers = teachers.Find(t => t.UserName == "radmilateacher"),
+            //    Students = students.Find(s => s.UserName == "dunjastudent" && s.UserName == "vukasinzstudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "VI-1")  },
+            //    new Teach { WeeklyFond = 1, Subjects = subjects.Find(s => s.SubjectName == "Muzicko 6"), Teachers = teachers.Find(t => t.UserName == "radmilateacher"),
+            //    Students = students.Find(s => s.UserName == "ivastudent" && s.UserName == "aleksandarstudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "VI-2")  },
+            //    new Teach { WeeklyFond = 2, Subjects = subjects.Find(s => s.SubjectName == "Likovno 5"), Teachers = teachers.Find(t => t.UserName == "milicateacher"),
+            //    Students = students.Find(s => s.UserName == "aleksastudent" && s.UserName == "petarstudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "V-1") },
+            //    new Teach { WeeklyFond = 2, Subjects = subjects.Find(s => s.SubjectName == "Likovno 5"), Teachers = teachers.Find(t => t.UserName == "milicateacher"),
+            //    Students = students.Find(s => s.UserName == "aleksastudent" && s.UserName == "petarstudent"), ClassRooms = classRooms.Find(c=>c.ClassName == "V-2") },
+            //    //new Teach { WeeklyFond = 2, Subjects = subjects.Find(s => s.SubjectName == "Likovno 6"), Teachers = teachers.Find(t => t.UserName == "milicateacher"),
+            //    //Students = new List<Student>()
+            //    //{
+            //    //    students.Find(s => s.UserName == "dunjastudent" && s.UserName == "vukasinzstudent" && s.UserName == "ivastudent" && s.UserName == "aleksandarstudent")
+            //    //} },
+            //    //new Teach { WeeklyFond = 1, Subjects = subjects.Find(s => s.SubjectName == "Likovno 7"), Teachers = teachers.Find(t => t.UserName == "milicateacher"),
+            //    //Students = new List<Student>()
+            //    //{
+            //    //    students.Find(s => s.UserName == "teastudent" && s.UserName == "miastudent" && s.UserName == "vukasinstudent" && s.UserName == "urosstudent")
+            //    //} },
+            //    //new Teach { WeeklyFond = 1, Subjects = subjects.Find(s => s.SubjectName == "Likovno 8"), Teachers = teachers.Find(t => t.UserName == "milicateacher") ,
+            //    //Students = new List<Student>()
+            //    //{
+            //    //    students.Find(s => s.UserName == "dariostudent" && s.UserName == "veljkostudent" &&s.UserName == "vukasinpstudent" && s.UserName == "milosstudent")
+            //    //} },
+            //    //new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Hemija 7"), Teachers = teachers.Find(t => t.UserName == "radoteacher"),
+            //    //Students = new List<Student>()
+            //    //{
+            //    //    students.Find(s => s.UserName == "teastudent" && s.UserName == "miastudent"&& s.UserName == "vukasinstudent" && s.UserName == "urosstudent")
+            //    //} },
+            //    //new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Hemija 8"), Teachers = teachers.Find(t => t.UserName == "radoteacher") ,
+            //    //Students = new List<Student>()
+            //    //{
+            //    //    students.Find(s => s.UserName == "dariostudent" && s.UserName == "veljkostudent" && s.UserName == "vukasinpstudent" && s.UserName == "milosstudent")
+            //    //} },
+            //    //new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Biologija 7"), Teachers = teachers.Find(t => t.UserName == "ikonovteacher"),
+            //    //Students = new List<Student>()
+            //    //{
+            //    //    students.Find(s => s.UserName == "teastudent" && s.UserName == "miastudent"&& s.UserName == "vukasinstudent" && s.UserName == "urosstudent")
+            //    //} },
+            //    //new Teach { WeeklyFond = 4, Subjects = subjects.Find(s => s.SubjectName == "Biologija 8"), Teachers = teachers.Find(t => t.UserName == "ikonovteacher") ,
+            //    //Students = new List<Student>()
+            //    //{
+            //    //    students.Find(s => s.UserName == "dariostudent" && s.UserName == "veljkostudent" && s.UserName == "vukasinpstudent" && s.UserName == "milosstudent")
+            //    //} }
+            //};
+            //context.Teachs.AddRange(teachs);
 
             //make some grades
-            var grades = new List<Grade>
-            {
-                new Grade { GradeValue = 1, Students = students.Find(s => s.UserName == "dariostudent"), Subjects = subjects.Find(u => u.SubjectName == "Matematika 8")},
-                new Grade { GradeValue = 1, Students = students.Find(s => s.UserName == "dariostudent"), Subjects = subjects.Find(u => u.SubjectName == "Matematika 8")},
-                new Grade { GradeValue = 1, Students = students.Find(s => s.UserName == "vukasinstudent"), Subjects = subjects.Find(u => u.SubjectName == "Hemija 7")}
-                //new Grade { GradeValue = 2, GradeDesc = "Dovoljan"},
-                //new Grade { GradeValue = 3, GradeDesc = "Dobar"},
-                //new Grade { GradeValue = 4, GradeDesc = "Vrlo dobar"},
-                //new Grade { GradeValue = 5, GradeDesc = "Odlican"}
-            };
-            context.Grades.AddRange(grades);
+            //var grades = new List<Grade>
+            //{
+            //    new Grade { GradeValue = 1, Teaches = teachs.Find(t => t.Teachers.UserName == "nikolateacher" && t.Subjects.SubjectName == "Matematika 8" && t.Students.UserName == "dariostudent")},
+            //    new Grade { GradeValue = 1, Teaches = teachs.Find(t => t.Teachers.UserName == "nikolateacher" && t.Subjects.SubjectName == "Matematika 8" && t.Students.UserName == "dariostudent")},
+            //    //new Grade { GradeValue = 1, Students = students.Find(s => s.UserName == "miastudent"), Teaches = teachs.Find(t => t.Teachers.UserName == "radoteacher" && t.Subjects.SubjectName == "Hemija 7")},
+            //    new Grade { GradeValue = 2, Teaches = teachs.Find(t => t.Teachers.UserName == "cabateacher" && t.Subjects.SubjectName == "Matematika 5" && t.Students.UserName == "aleksastudent")},
+            //    new Grade { GradeValue = 2, Teaches = teachs.Find(t => t.Teachers.UserName == "nikolateacher" && t.Subjects.SubjectName == "Matematika 5" && t.Students.UserName == "filipstudent")},
+                //new Grade { GradeValue = 3, Students = students.Find(s => s.UserName == "dunjastudent"), Teaches = teachs.Find(t => t.Teachers.UserName == "nikolateacher" && t.Subjects.SubjectName == "Matematika 6")},
+                //new Grade { GradeValue = 3, Students = students.Find(s => s.UserName == "aleksandarstudent"), Teaches = teachs.Find(t => t.Teachers.UserName == "cabateacher" && t.Subjects.SubjectName == "Matematika 6")},
+                //new Grade { GradeValue = 4, Students = students.Find(s => s.UserName == "teastudent"), Teaches = teachs.Find(t => t.Teachers.UserName == "nikolateacher" && t.Subjects.SubjectName == "Matematika 7")},
+                //new Grade { GradeValue = 4, Students = students.Find(s => s.UserName == "miastudent"), Teaches = teachs.Find(t => t.Teachers.UserName == "nikolateacher" && t.Subjects.SubjectName == "Matematika 7")},
+                //new Grade { GradeValue = 5, Students = students.Find(s => s.UserName == "aleksastudent"), Teaches = teachs.Find(t => t.Teachers.UserName == "brankicateacher" && t.Subjects.SubjectName == "Srpski jezik i knjizevnost 5")},
+                //new Grade { GradeValue = 5, Students = students.Find(s => s.UserName == "teastudent"), Teaches = teachs.Find(t => t.Teachers.UserName == "radoteacher" && t.Subjects.SubjectName == "Hemija 7")}
+            //};
+            //context.Grades.AddRange(grades);
 
 
 

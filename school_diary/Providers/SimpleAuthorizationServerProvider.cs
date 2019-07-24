@@ -46,7 +46,6 @@ namespace school_diary.Providers
 
             var identity = new ClaimsIdentity(context.Options.AuthenticationType);
             identity.AddClaim(new Claim(ClaimTypes.Email, context.UserName));
-            identity.AddClaim(new Claim(ClaimTypes.GivenName, context.UserName));
             identity.AddClaim(new Claim(ClaimTypes.Name, ((AppUser)user)?.FirstName));
             identity.AddClaim(new Claim(ClaimTypes.Surname, ((AppUser)user)?.LastName));
             identity.AddClaim(new Claim(ClaimTypes.Role, string.Join(",", roles)));

@@ -14,14 +14,21 @@ namespace school_diary.Models
         //public DateTime GradeDate { get; set; }
         [Range(1,5, ErrorMessage ="Ocena ne moze biti manja od 1, ni veca od 5!!!")]
         public int GradeValue { get; set; }
+        [JsonIgnore]
+        public ICollection<TeachClassStudentGrade> TeClStGrs { get; set; }
+        [JsonIgnore]
+        public ICollection<Student> Students { get; set; }
+        [JsonIgnore]
+        public ICollection<Teach> Teachs { get; set; }
+        //public virtual Teach Teachs { get; set; }
         //public DateTime InsertTime { get; set; }
         //[JsonIgnore]
         //public virtual ICollection<Subject> Subjects { get; set; }
         //[JsonIgnore]
-        public Student Students { get; set; }
+        //public virtual Student Students { get; set; }
         //[NotMapped]
         //public string StudentUserName { get; set; }
-        public Subject Subjects { get; set; }
+        //public virtual Subject Subjects { get; set; }
         //[NotMapped]
         //public int SubjectID { get; set; }
     }

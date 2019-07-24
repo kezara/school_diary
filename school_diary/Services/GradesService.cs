@@ -24,38 +24,87 @@ namespace school_diary.Services
             return newGrade;
         }
 
-        public Grade DeleteGrade(int id)
-        {
-            Grade grade = GetGradeByID(id);
-            if (grade == null)
-            {
-                throw new UserNotFoundException();
-            }
-            db.GradesRepository.Delete(id);
-            db.Save();
-            return grade;
-        }
+        //public Grade DeleteGrade(string username)
+        //{
+        //    Grade grade = GetGradeByStudentUserName(username);
+        //    if (grade == null)
+        //    {
+        //        throw new UserNotFoundException();
+        //    }
+        //    db.GradesRepository.Delete(username);
+        //    db.Save();
+        //    return grade;
+        //}
 
         public IEnumerable<Grade> GetAllGrades()
         {
             return db.GradesRepository.Get();
         }
 
-        public Grade GetGradeByID(int id)
-        {
-            return db.GradesRepository.GetByID(id);
-        }
+        //public IEnumerable<Grade> GetGradeByStudentUserName(string username)
+        //{
+        //    IEnumerable<Grade> grade = db.GradesRepository.Get(filter: x => x.
+        //    if (grade.Count() < 1)
+        //    {
+        //        throw new UserNotFoundException();
+        //    }
+        //    return grade;
+        //}
 
-        public Grade UpdateGrade(int id, Grade gradeToUpdt)
-        {
-            Grade grade = GetGradeByID(id);
+        //public IEnumerable<Grade> GetGradeByStudentName(string name)
+        //{
+        //    IEnumerable<Grade> grade = db.GradesRepository.Get(filter: x => x.T
+        //    if (grade.Count() < 1)
+        //    {
+        //        throw new UserNotFoundException();
+        //    }
+        //    return grade;
+        //}
 
-            grade.Id = gradeToUpdt.Id;
-            //grade.GradeDesc = gradeToUpdt.GradeDesc;
-            grade.GradeValue = gradeToUpdt.GradeValue;
-            db.GradesRepository.Update(grade);
-            db.Save();
-            return gradeToUpdt;
-        }
+        //public IEnumerable<Grade> GetGradeByStudentLastName(string lastName)
+        //{
+        //    IEnumerable<Grade> grade = db.GradesRepository.Get(filter: x => x.Teaches.Students.LastName == lastName);
+        //    if (grade.Count() < 1)
+        //    {
+        //        throw new UserNotFoundException();
+        //    }
+        //    return grade;
+        //}
+
+        //public IEnumerable<Grade> GetGradeByStudentNameSurname(string name, string surname)
+        //{
+        //    IEnumerable<Grade> grade = db.GradesRepository.Get(filter: x => x.Teaches.Students.FirstName == name && x.Teaches.Students.LastName == surname);
+        //    if (grade.Count() < 1)
+        //    {
+        //        throw new UserNotFoundException();
+        //    }
+        //    return grade;
+        //}
+
+        /***********************************
+        * ovo mozda moze da se resi sa DTO *
+        ***********************************/
+        //public IEnumerable<Grade> GetGradeByStudentNameSurnameParentName(string name, string surname, string parentName)
+        //{
+        //    IEnumerable<Grade> grade = db.GradesRepository.Get(filter: x => x.Students.FirstName == name && x.Students.LastName == surname && x.Students.Parents.Any(parentName));
+
+        //    if (grade.Count() < 1)
+        //    {
+        //        throw new UserNotFoundException();
+        //    }
+        //    return grade;
+        //}
+
+        //public Grade UpdateGrade(string username, Grade gradeToUpdt)
+        //{
+        //    Grade grade = db.GradesRepository.Get(filter: x => x.Teaches.Students.UserName == username && x.GradeValue == gradeToUpdt.GradeValue && x.Id == gradeToUpdt.Id).FirstOrDefault();
+
+        //    //grade.Id = gradeToUpdt.Id;
+        //    ////grade.GradeDesc = gradeToUpdt.GradeDesc;
+        //    //grade.GradeValue = gradeToUpdt.GradeValue;
+        //    //db.GradesRepository.Update(grade);
+        //    db.Save();
+        //    return gradeToUpdt;
+        //}
     }
 }

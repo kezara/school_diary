@@ -8,6 +8,7 @@ namespace school_diary.Models
 {
     public class Parent : AppUser
     {
+
         [JsonIgnore]
         public virtual ICollection<Student> Students { get; set; }
     }

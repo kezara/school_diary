@@ -12,7 +12,7 @@ namespace school_diary.Models
         [JsonIgnore]
         public virtual ICollection<Teach> Teachs { get; set; }
         //[JsonIgnore]
-        //public virtual ICollection<Student> Students { get; set; }
+        public virtual Student Students { get; set; }
         //[JsonIgnore]
         //public virtual ICollection<ClassRoom> ClassRooms { get; set; }
     }

@@ -10,10 +10,11 @@ namespace school_diary.Models
     public class Student : AppUser
     {
         //public int? StudentID { get; set; }
-        public virtual ClassRoom ClassRooms { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<ClassRoom> ClassRooms { get; set; }
         //[NotMapped]
         //public int? ClassRoomID { get; set; }
-        public virtual Teach Teachs { get; set; }
+        //public virtual ICollection<Teach> Teachs { get; set; }
         //[NotMapped]
         //public int? TeachsID { get; set; }
         //public virtual Subject Subjects { get; set; }
@@ -23,7 +24,10 @@ namespace school_diary.Models
         //[NotMapped]
         //public string TeacherUN { get; set; }
         [JsonIgnore]
-        public ICollection<Grade> Grades { get; set; }
+        public ICollection<TeachClassStudent> TeachClassStudents { get; set; }
+        //[JsonIgnore]
+        //public virtual ICollection<Grade> Grades { get; set; }
+        public Grade Grades { get; set; }
         //[JsonIgnore]
         public virtual ICollection<Parent> Parents { get; set; }
     }

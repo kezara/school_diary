@@ -53,7 +53,7 @@ namespace school_diary.Services
             ClassRoom classRoom = GetClassRoomByID(id);
 
             classRoom.Id = classToUpdt.Id;
-            classRoom.Year = classToUpdt.Year;
+            //classRoom.Year = classToUpdt.Year;
             classRoom.ClassName = classToUpdt.ClassName;
             //classRoom.Subjects = classRoom.Subjects;
             //classRoom.Teachers = classRoom.Teachers;

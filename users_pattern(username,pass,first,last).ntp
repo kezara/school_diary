@@ -1,2 +1,0 @@
-var user$0 = new $1 { UserName = "$2", PasswordHash = HashedPassword("test123"), FirstName = "$3", LastName = "$4" };
-            users.Add(user$0);

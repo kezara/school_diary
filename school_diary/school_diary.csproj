@@ -179,9 +179,13 @@
     <Compile Include="Models\DTOs\UserDTO.cs" />
     <Compile Include="Models\Grade.cs" />
     <Compile Include="Models\Parent.cs" />
+    <Compile Include="Models\Semestar.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Subject.cs" />
     <Compile Include="Models\Teach.cs" />
+    <Compile Include="Models\TeachClass.cs" />
+    <Compile Include="Models\TeachClassStudent.cs" />
+    <Compile Include="Models\TeachClassStudentGrade.cs" />
     <Compile Include="Models\Teacher.cs" />
     <Compile Include="Models\AppUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

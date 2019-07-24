@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Session xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Data>0,Admin,borisavadmin,Borisav,Ignjatov
+1,Admin,ivanadmin,Ivan,Miljkovic
+2,Student,aleksastudent,Aleksa,Ignjatov
+4,Student,petarstudent,Petar,Ignjatov
+7,Student,strahinjastudent,Strahinja,Nikolic
+10,Student,filipstudent,Filip,Antanasijevic
+11,Student,ivastudent,Iva,Antanasijevic
+12,Teacher,nikolateacher,Nikola,Vajdic
+13,Teacher,cabateacher,Caba,Varga
+14,Teacher,brankicateacher,Brankica,Kuzmanovic
+15,Teacher,branislavteacher,Branislav,Kukic
+16,Teacher,radmilateacher,Radmila,Dajic
+17,Teacher,milicateacher,Milica,Barbaric
+18,Teacher,marinateacher,Marina,Petrovic
+19,Teacher,radoteacher,Rado,Maksimovic
+20,Teacher,ikonovteacher,Radmila,Ikonov
+21,Teacher,ivicateacher,Ivica,Tuskan
+22,Student,aleksandarstudent,Aleksandar,Djordjevic
+23,Student,vukasinstudent,Vukasin,Djordjevic
+24,Student,urosstudent,Uros,Backulic
+25,Student,vukasinpstudent,Vukasin,Pavlica
+26,Student,milosstudent,Milos,Miskovic
+27,Student,dunjastudent,Dunja,Miskovic
+28,Student,vukasinzstudent,Vukasin,Zirovic
+29,Student,teastudent,Tea,Zirovic
+30,Student,miastudent,Mia,Zirovic</Data>
+  <Pattern>var user$0 = new $1 { UserName = "$2", PasswordHash = HashedPassword("test123"), FirstName = "$3", LastName = "$4" };
+            users.Add(user$0);</Pattern>
+  <RowDelimiter>\n</RowDelimiter>
+  <ColumnDelimiter>,</ColumnDelimiter>
+</Session>
