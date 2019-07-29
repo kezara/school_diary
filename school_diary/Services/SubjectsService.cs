@@ -41,6 +41,8 @@ namespace school_diary.Services
             return db.SubjectsRepository.Get();
         }
 
+        //public IEnumerable<Subject> GetGradesOfSubject(fillter: x => x.Subject.Name)
+
         public Subject GetSubjectByID(int id)
         {
             return db.SubjectsRepository.GetByID(id);

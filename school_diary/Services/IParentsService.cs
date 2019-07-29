@@ -10,9 +10,9 @@ namespace school_diary.Services
     public interface IParentsService
     {
         IEnumerable<Parent> GetAllParents();
-        Parent GetParentByID(int id);
+        Parent GetParentByUserName(string username);
         Parent CreateParent(Parent newParent);
-        Parent UpdateParent(int id, Parent parentToUpdt);
-        Parent DeleteParent(int id);
+        //Parent UpdateParent(int id, Parent parentToUpdt);
+        //Parent DeleteParent(int id);
     }
 }

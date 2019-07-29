@@ -1,25 +1,36 @@
-2019-07-16 00:02:01.2371|INFO|school_diary.Controllers.AppUsersController|Admin gets all users
-2019-07-16 00:02:48.1306|INFO|school_diary.Controllers.AppUsersController|Admin gets all users
-2019-07-16 01:12:29.3043|INFO|school_diary.Controllers.AppUsersController|Admin gets all users
-2019-07-16 01:12:58.5835|INFO|school_diary.Controllers.AppUsersController|Admin gets all users
-2019-07-16 02:14:09.7052|INFO|school_diary.Controllers.AppUsersController|Admin gets all users
-2019-07-16 02:14:56.6598|INFO|school_diary.Controllers.AppUsersController|Admin gets all users
-2019-07-16 02:15:45.9134|INFO|school_diary.Controllers.AppUsersController|Admin gets all users
-2019-07-16 02:17:25.3674|INFO|school_diary.Controllers.AppUsersController|Admin gets all users
-2019-07-16 02:28:07.7927|INFO|school_diary.Controllers.AppUsersController|Admin gets all users
-2019-07-16 02:28:21.4785|INFO|school_diary.Controllers.AppUsersController|Admin gets all parents
-2019-07-16 02:28:50.1760|INFO|school_diary.Controllers.AppUsersController|Admin gets all teachers
-2019-07-16 02:29:04.7035|INFO|school_diary.Controllers.AppUsersController|Admin gets all students
-2019-07-16 11:48:59.7594|INFO|school_diary.Controllers.AppUsersController|Admin gets all users
-2019-07-16 11:49:24.9281|INFO|school_diary.Controllers.AppUsersController|Admin gets all users
-2019-07-16 11:50:03.8929|INFO|school_diary.Controllers.AppUsersController|Admin gets all users
-2019-07-16 15:38:16.8288|INFO|school_diary.Controllers.AppUsersController|Admin gets all users
-2019-07-16 15:39:04.8153|INFO|school_diary.Controllers.AppUsersController|Admin gets all users
-2019-07-16 15:39:25.2176|INFO|school_diary.Controllers.AppUsersController|Admin gets all parents
-2019-07-16 15:39:46.8036|INFO|school_diary.Controllers.AppUsersController|Admin gets all students
-2019-07-16 15:43:25.7751|INFO|school_diary.Controllers.AppUsersController|Admin gets all students
-2019-07-16 17:36:32.5846|INFO|school_diary.Controllers.AppUsersController|Admin gets all students
-2019-07-16 18:03:12.9988|INFO|school_diary.Controllers.AdminsController|Getting all admins
-2019-07-16 18:03:58.0090|INFO|school_diary.Controllers.StudentsController|Getting all students
-2019-07-16 19:08:03.6412|INFO|school_diary.Controllers.StudentsController|Getting all students
-2019-07-16 19:08:42.3457|INFO|school_diary.Controllers.StudentsController|Getting all students
+2019-07-22 10:35:00.7857|INFO|school_diary.Controllers.StudentsController|Getting all students
+2019-07-22 10:35:48.5770|INFO|school_diary.Controllers.StudentsController|Getting all students
+2019-07-22 10:40:35.7510|INFO|school_diary.Controllers.StudentsController|Getting all students
+2019-07-22 10:44:02.8202|INFO|school_diary.Controllers.StudentsController|Getting all students
+2019-07-22 10:45:26.7927|INFO|school_diary.Controllers.StudentsController|Getting all students
+2019-07-22 12:19:06.5035|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 12:22:40.7509|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 13:30:40.5684|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 13:31:04.1607|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 13:33:08.3425|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 13:34:52.0496|INFO|school_diary.Controllers.StudentsController|Getting all students
+2019-07-22 13:38:01.4785|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 13:38:24.2133|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 13:43:35.5929|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 13:46:16.0054|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 13:48:57.3176|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 13:51:47.1944|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 14:04:46.8859|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 14:07:59.4756|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 14:08:22.3685|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 14:21:59.5147|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 14:24:06.3768|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 14:27:49.2435|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 14:28:17.4839|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 14:29:31.9471|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 14:32:25.9192|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 14:37:56.5621|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 14:38:58.6101|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 14:39:33.3957|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 15:03:07.6076|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 15:13:41.4309|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 15:29:22.9843|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 15:30:43.7921|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 15:48:38.7204|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 15:53:45.2839|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-22 23:47:55.6680|INFO|school_diary.Controllers.GradesController|Getting all Grades

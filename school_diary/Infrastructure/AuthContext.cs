@@ -24,17 +24,20 @@ namespace school_diary.Infrastructure
             modelBuilder.Entity<Parent>().ToTable("Parent");
             modelBuilder.Entity<Teacher>().ToTable("Teacher");
             modelBuilder.Entity<Student>().ToTable("Student");
+            modelBuilder.Entity<StudentDepartment>()
+                .HasRequired(t => t.Students)
+                .WithOptional(t => t.StudentDepartments);
         }
 
-        public DbSet<ClassRoom> ClassRooms { get; set; }
+        public DbSet<Department> Departments { get; set; }
         //public DbSet<Admin> Admins { get; set; }
+        public DbSet<Mark> Marks { get; set; }
         public DbSet<Grade> Grades { get; set; }
         //public DbSet<Parent> Parents { get; set; }
-        //public DbSet<Student> Students { get; set; }
         public DbSet<Subject> Subjects { get; set; }
-        public DbSet<Teach> Teachs { get; set; }
-        //public DbSet<Teacher> Teachers { get; set; }
-        //public DbSet<AppUser> Users { get; set; }
+        public DbSet<Teach> Teaches { get; set; }
+        public DbSet<SubjectGrade> SubjectGrades { get; set; }
+        public DbSet<StudentDepartment> StudentDepartments { get; set; }
 
     }
 }

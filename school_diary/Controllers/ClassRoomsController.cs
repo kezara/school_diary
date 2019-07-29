@@ -16,26 +16,26 @@ namespace school_diary.Controllers
     public class ClassRoomsController : ApiController
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
-        IClassRoomsService classRoomsService;
-        public ClassRoomsController(IClassRoomsService classRoomsService)
+        IDepartmentsService classRoomsService;
+        public ClassRoomsController(IDepartmentsService classRoomsService)
         {
             this.classRoomsService = classRoomsService;
         }
 
         [Route("")]
-        public IEnumerable<ClassRoom> GetAllClasses()
+        public IEnumerable<Department> GetAllClasses()
         {
             logger.Info("Getting all class rooms");
-            return classRoomsService.GetAllClassRooms();
+            return classRoomsService.GetAllDepartments();
         }
 
         [Route("")]
-        [ResponseType(typeof(ClassRoom))]
-        public IHttpActionResult PostClassRoom(ClassRoom classRoom)
+        [ResponseType(typeof(Department))]
+        public IHttpActionResult PostClassRoom(Department classRoom)
         {
             try
             {
-                ClassRoom classCreated = classRoomsService.CreateClassRoom(classRoom);
+                Department classCreated = classRoomsService.CreateDepartment(classRoom);
                 return Created("", classCreated);
             }
             catch (UserNotFoundException)
@@ -47,12 +47,12 @@ namespace school_diary.Controllers
         }
 
         [Route("{id}")]
-        [ResponseType(typeof(ClassRoom))]
-        public IHttpActionResult PutClassRoom(int id, ClassRoom updtClass)
+        [ResponseType(typeof(Department))]
+        public IHttpActionResult PutClassRoom(int id, Department updtClass)
         {
             try
             {
-                ClassRoom classUpdated = classRoomsService.UpdateClassRoom(id, updtClass);
+                Department classUpdated = classRoomsService.UpdateDepartment(id, updtClass);
                 if (classUpdated == null)
                 {
                     return NotFound();
@@ -69,12 +69,12 @@ namespace school_diary.Controllers
         }
 
         [Route("{id}")]
-        [ResponseType(typeof(ClassRoom))]
+        [ResponseType(typeof(Department))]
         public IHttpActionResult DeleteClass(int id)
         {
             try
             {
-                ClassRoom classDeleted = classRoomsService.DeleteClassRoom(id);
+                Department classDeleted = classRoomsService.DeleteDepartment(id);
                 return Ok(classDeleted);
             }
             catch (UserNotFoundException)

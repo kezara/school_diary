@@ -1,0 +1,1116 @@
+﻿<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SchoolDiaryDbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:devart="http://devart.com/schemas/edml/StorageSchemaExtensions/1.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="SchoolDiaryDbEntitiesStoreContainer">
+          <EntitySet Name="__Migrationhistories" EntityType="SchoolDiaryDbModel.Store.__MigrationHistory" store:Type="Tables" Schema="dbo" Table="__MigrationHistory" />
+          <EntitySet Name="AdminUsers" EntityType="SchoolDiaryDbModel.Store.AdminUser" store:Type="Tables" Schema="dbo" Table="AdminUser" />
+          <EntitySet Name="AppUsers" EntityType="SchoolDiaryDbModel.Store.AppUser" store:Type="Tables" Schema="dbo" Table="AppUser" />
+          <EntitySet Name="AspNetRoles" EntityType="SchoolDiaryDbModel.Store.AspNetRoles" store:Type="Tables" Schema="dbo" Table="AspNetRoles" />
+          <EntitySet Name="AspNetUserClaims" EntityType="SchoolDiaryDbModel.Store.AspNetUserClaims" store:Type="Tables" Schema="dbo" Table="AspNetUserClaims" />
+          <EntitySet Name="AspNetUserLogins" EntityType="SchoolDiaryDbModel.Store.AspNetUserLogins" store:Type="Tables" Schema="dbo" Table="AspNetUserLogins" />
+          <EntitySet Name="AspNetUserRoles" EntityType="SchoolDiaryDbModel.Store.AspNetUserRoles" store:Type="Tables" Schema="dbo" Table="AspNetUserRoles" />
+          <EntitySet Name="Departments" EntityType="SchoolDiaryDbModel.Store.Departments" store:Type="Tables" Schema="dbo" Table="Departments" />
+          <EntitySet Name="Grades" EntityType="SchoolDiaryDbModel.Store.Grades" store:Type="Tables" Schema="dbo" Table="Grades" />
+          <EntitySet Name="Marks" EntityType="SchoolDiaryDbModel.Store.Marks" store:Type="Tables" Schema="dbo" Table="Marks" />
+          <EntitySet Name="Parents" EntityType="SchoolDiaryDbModel.Store.Parent" store:Type="Tables" Schema="dbo" Table="Parent" />
+          <EntitySet Name="ParentStudents" EntityType="SchoolDiaryDbModel.Store.ParentStudents" store:Type="Tables" Schema="dbo" Table="ParentStudents" />
+          <EntitySet Name="Students" EntityType="SchoolDiaryDbModel.Store.Student" store:Type="Tables" Schema="dbo" Table="Student" />
+          <EntitySet Name="SubjectGrades" EntityType="SchoolDiaryDbModel.Store.SubjectGrades" store:Type="Tables" Schema="dbo" Table="SubjectGrades" />
+          <EntitySet Name="Subjects" EntityType="SchoolDiaryDbModel.Store.Subjects" store:Type="Tables" Schema="dbo" Table="Subjects" />
+          <EntitySet Name="Teachers" EntityType="SchoolDiaryDbModel.Store.Teacher" store:Type="Tables" Schema="dbo" Table="Teacher" />
+          <EntitySet Name="Teaches" EntityType="SchoolDiaryDbModel.Store.Teaches" store:Type="Tables" Schema="dbo" Table="Teaches" />
+          <AssociationSet Name="FK_dboAdminUser_dboAppUser_Id" Association="SchoolDiaryDbModel.Store.FK_dboAdminUser_dboAppUser_Id">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="AdminUser" EntitySet="AdminUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboAspNetUserClaims_dboAppUser_UserId" Association="SchoolDiaryDbModel.Store.FK_dboAspNetUserClaims_dboAppUser_UserId">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboAspNetUserLogins_dboAppUser_UserId" Association="SchoolDiaryDbModel.Store.FK_dboAspNetUserLogins_dboAppUser_UserId">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboAspNetUserRoles_dboAspNetRoles_RoleId" Association="SchoolDiaryDbModel.Store.FK_dboAspNetUserRoles_dboAspNetRoles_RoleId">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboAspNetUserRoles_dboAppUser_UserId" Association="SchoolDiaryDbModel.Store.FK_dboAspNetUserRoles_dboAppUser_UserId">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboDepartments_dboGrades_Grades_Id" Association="SchoolDiaryDbModel.Store.FK_dboDepartments_dboGrades_Grades_Id">
+            <End Role="Grades" EntitySet="Grades" />
+            <End Role="Departments" EntitySet="Departments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboMarks_dboStudent_Students_Id" Association="SchoolDiaryDbModel.Store.FK_dboMarks_dboStudent_Students_Id">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Marks" EntitySet="Marks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboMarks_dboTeaches_Teaches_Id" Association="SchoolDiaryDbModel.Store.FK_dboMarks_dboTeaches_Teaches_Id">
+            <End Role="Teaches" EntitySet="Teaches" />
+            <End Role="Marks" EntitySet="Marks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboParent_dboAppUser_Id" Association="SchoolDiaryDbModel.Store.FK_dboParent_dboAppUser_Id">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="Parent" EntitySet="Parents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboParentStudents_dboParent_Parent_Id" Association="SchoolDiaryDbModel.Store.FK_dboParentStudents_dboParent_Parent_Id">
+            <End Role="Parent" EntitySet="Parents" />
+            <End Role="ParentStudents" EntitySet="ParentStudents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboParentStudents_dboStudent_Student_Id" Association="SchoolDiaryDbModel.Store.FK_dboParentStudents_dboStudent_Student_Id">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="ParentStudents" EntitySet="ParentStudents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboStudent_dboAppUser_Id" Association="SchoolDiaryDbModel.Store.FK_dboStudent_dboAppUser_Id">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="Student" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboStudent_dboDepartments_Departments_Id" Association="SchoolDiaryDbModel.Store.FK_dboStudent_dboDepartments_Departments_Id">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="Student" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboSubjectGrades_dboGrades_Grades_Id" Association="SchoolDiaryDbModel.Store.FK_dboSubjectGrades_dboGrades_Grades_Id">
+            <End Role="Grades" EntitySet="Grades" />
+            <End Role="SubjectGrades" EntitySet="SubjectGrades" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboSubjectGrades_dboSubjects_Subjects_Id" Association="SchoolDiaryDbModel.Store.FK_dboSubjectGrades_dboSubjects_Subjects_Id">
+            <End Role="Subjects" EntitySet="Subjects" />
+            <End Role="SubjectGrades" EntitySet="SubjectGrades" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboTeacher_dboAppUser_Id" Association="SchoolDiaryDbModel.Store.FK_dboTeacher_dboAppUser_Id">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="Teacher" EntitySet="Teachers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboTeaches_dboDepartments_Departments_Id" Association="SchoolDiaryDbModel.Store.FK_dboTeaches_dboDepartments_Departments_Id">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="Teaches" EntitySet="Teaches" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboTeaches_dboSubjects_Subjects_Id" Association="SchoolDiaryDbModel.Store.FK_dboTeaches_dboSubjects_Subjects_Id">
+            <End Role="Subjects" EntitySet="Subjects" />
+            <End Role="Teaches" EntitySet="Teaches" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboTeaches_dboTeacher_Teachers_Id" Association="SchoolDiaryDbModel.Store.FK_dboTeaches_dboTeacher_Teachers_Id">
+            <End Role="Teacher" EntitySet="Teachers" />
+            <End Role="Teaches" EntitySet="Teaches" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="ContextKey" Type="nvarchar" Nullable="false" MaxLength="300" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" Nullable="false" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="AdminUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="AppUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="datetime" />
+          <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="ClaimType" Type="nvarchar(max)" />
+          <Property Name="ClaimValue" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="ProviderKey" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="UserId" Type="nvarchar" Nullable="false" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="AspNetUserRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="RoleId" Type="nvarchar" Nullable="false" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="Departments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentName" Type="nvarchar(max)" />
+          <Property Name="Grades_Id" Type="int" />
+        </EntityType>
+        <EntityType Name="Grades">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GradeYear" Type="int" Nullable="false" />
+          <Property Name="GradeEnrolment" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Marks">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MarkValue" Type="int" Nullable="false" />
+          <Property Name="Students_Id" Type="nvarchar" MaxLength="128" />
+          <Property Name="Teaches_Id" Type="int" />
+        </EntityType>
+        <EntityType Name="Parent">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="ParentStudents">
+          <Key>
+            <PropertyRef Name="Parent_Id" />
+            <PropertyRef Name="Student_Id" />
+          </Key>
+          <Property Name="Parent_Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Student_Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Departments_Id" Type="int" />
+        </EntityType>
+        <EntityType Name="SubjectGrades">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Grades_Id" Type="int" />
+          <Property Name="Subjects_Id" Type="int" />
+        </EntityType>
+        <EntityType Name="Subjects">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SubjectName" Type="nvarchar(max)" />
+          <Property Name="SubjectFond" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Teacher">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="Teaches">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Departments_Id" Type="int" />
+          <Property Name="Subjects_Id" Type="int" />
+          <Property Name="Teachers_Id" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <Association Name="FK_dboAdminUser_dboAppUser_Id">
+          <End Role="AppUser" Type="SchoolDiaryDbModel.Store.AppUser" Multiplicity="1" />
+          <End Role="AdminUser" Type="SchoolDiaryDbModel.Store.AdminUser" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AdminUser">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboAspNetUserClaims_dboAppUser_UserId">
+          <End Role="AppUser" Type="SchoolDiaryDbModel.Store.AppUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="SchoolDiaryDbModel.Store.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboAspNetUserLogins_dboAppUser_UserId">
+          <End Role="AppUser" Type="SchoolDiaryDbModel.Store.AppUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="SchoolDiaryDbModel.Store.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboAspNetUserRoles_dboAspNetRoles_RoleId">
+          <End Role="AspNetRoles" Type="SchoolDiaryDbModel.Store.AspNetRoles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="SchoolDiaryDbModel.Store.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetRoles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboAspNetUserRoles_dboAppUser_UserId">
+          <End Role="AppUser" Type="SchoolDiaryDbModel.Store.AppUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="SchoolDiaryDbModel.Store.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboDepartments_dboGrades_Grades_Id">
+          <End Role="Grades" Type="SchoolDiaryDbModel.Store.Grades" Multiplicity="0..1" />
+          <End Role="Departments" Type="SchoolDiaryDbModel.Store.Departments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grades">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Departments">
+              <PropertyRef Name="Grades_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboMarks_dboStudent_Students_Id">
+          <End Role="Student" Type="SchoolDiaryDbModel.Store.Student" Multiplicity="0..1" />
+          <End Role="Marks" Type="SchoolDiaryDbModel.Store.Marks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Marks">
+              <PropertyRef Name="Students_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboMarks_dboTeaches_Teaches_Id">
+          <End Role="Teaches" Type="SchoolDiaryDbModel.Store.Teaches" Multiplicity="0..1" />
+          <End Role="Marks" Type="SchoolDiaryDbModel.Store.Marks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teaches">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Marks">
+              <PropertyRef Name="Teaches_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboParent_dboAppUser_Id">
+          <End Role="AppUser" Type="SchoolDiaryDbModel.Store.AppUser" Multiplicity="1" />
+          <End Role="Parent" Type="SchoolDiaryDbModel.Store.Parent" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Parent">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboParentStudents_dboParent_Parent_Id">
+          <End Role="Parent" Type="SchoolDiaryDbModel.Store.Parent" Multiplicity="1" />
+          <End Role="ParentStudents" Type="SchoolDiaryDbModel.Store.ParentStudents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parent">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ParentStudents">
+              <PropertyRef Name="Parent_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboParentStudents_dboStudent_Student_Id">
+          <End Role="Student" Type="SchoolDiaryDbModel.Store.Student" Multiplicity="1" />
+          <End Role="ParentStudents" Type="SchoolDiaryDbModel.Store.ParentStudents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ParentStudents">
+              <PropertyRef Name="Student_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboStudent_dboAppUser_Id">
+          <End Role="AppUser" Type="SchoolDiaryDbModel.Store.AppUser" Multiplicity="1" />
+          <End Role="Student" Type="SchoolDiaryDbModel.Store.Student" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboStudent_dboDepartments_Departments_Id">
+          <End Role="Departments" Type="SchoolDiaryDbModel.Store.Departments" Multiplicity="0..1" />
+          <End Role="Student" Type="SchoolDiaryDbModel.Store.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="Departments_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboSubjectGrades_dboGrades_Grades_Id">
+          <End Role="Grades" Type="SchoolDiaryDbModel.Store.Grades" Multiplicity="0..1" />
+          <End Role="SubjectGrades" Type="SchoolDiaryDbModel.Store.SubjectGrades" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grades">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SubjectGrades">
+              <PropertyRef Name="Grades_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboSubjectGrades_dboSubjects_Subjects_Id">
+          <End Role="Subjects" Type="SchoolDiaryDbModel.Store.Subjects" Multiplicity="0..1" />
+          <End Role="SubjectGrades" Type="SchoolDiaryDbModel.Store.SubjectGrades" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subjects">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SubjectGrades">
+              <PropertyRef Name="Subjects_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboTeacher_dboAppUser_Id">
+          <End Role="AppUser" Type="SchoolDiaryDbModel.Store.AppUser" Multiplicity="1" />
+          <End Role="Teacher" Type="SchoolDiaryDbModel.Store.Teacher" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Teacher">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboTeaches_dboDepartments_Departments_Id">
+          <End Role="Departments" Type="SchoolDiaryDbModel.Store.Departments" Multiplicity="0..1" />
+          <End Role="Teaches" Type="SchoolDiaryDbModel.Store.Teaches" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Teaches">
+              <PropertyRef Name="Departments_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboTeaches_dboSubjects_Subjects_Id">
+          <End Role="Subjects" Type="SchoolDiaryDbModel.Store.Subjects" Multiplicity="0..1" />
+          <End Role="Teaches" Type="SchoolDiaryDbModel.Store.Teaches" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subjects">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Teaches">
+              <PropertyRef Name="Subjects_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboTeaches_dboTeacher_Teachers_Id">
+          <End Role="Teacher" Type="SchoolDiaryDbModel.Store.Teacher" Multiplicity="0..1" />
+          <End Role="Teaches" Type="SchoolDiaryDbModel.Store.Teaches" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teacher">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Teaches">
+              <PropertyRef Name="Teachers_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SchoolDiaryDbModel" Alias="Self" d4p1:ViewGeneration="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:devart="http://devart.com/schemas/edml/ConceptualSchemaExtensions/1.0" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" annotation:UseStrongSpatialTypes="false" xmlns:d4p1="http://devart.com/schemas/edml/ConceptualSchemaExtensions/1.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SchoolDiaryDbEntities" annotation:LazyLoadingEnabled="true" ed:Guid="ddc47042-0bb0-407d-8bd9-f8fe6418b861">
+          <EntitySet Name="MigrationHistories" EntityType="SchoolDiaryDbModel.MigrationHistory" />
+          <EntitySet Name="AdminUsers" EntityType="SchoolDiaryDbModel.AdminUser" />
+          <EntitySet Name="AppUsers" EntityType="SchoolDiaryDbModel.AppUser" />
+          <EntitySet Name="AspNetRoles" EntityType="SchoolDiaryDbModel.AspNetRole" />
+          <EntitySet Name="AspNetUserClaims" EntityType="SchoolDiaryDbModel.AspNetUserClaim" />
+          <EntitySet Name="AspNetUserLogins" EntityType="SchoolDiaryDbModel.AspNetUserLogin" />
+          <EntitySet Name="Departments" EntityType="SchoolDiaryDbModel.Department" />
+          <EntitySet Name="Grades" EntityType="SchoolDiaryDbModel.Grade" />
+          <EntitySet Name="Marks" EntityType="SchoolDiaryDbModel.Mark" />
+          <EntitySet Name="Parents" EntityType="SchoolDiaryDbModel.Parent" />
+          <EntitySet Name="Students" EntityType="SchoolDiaryDbModel.Student" />
+          <EntitySet Name="SubjectGrades" EntityType="SchoolDiaryDbModel.SubjectGrade" />
+          <EntitySet Name="Subjects" EntityType="SchoolDiaryDbModel.Subject" />
+          <EntitySet Name="Teachers" EntityType="SchoolDiaryDbModel.Teacher" />
+          <EntitySet Name="Teaches" EntityType="SchoolDiaryDbModel.Teach" />
+          <AssociationSet Name="FK_dboAdminUser_dboAppUser_IdSet" Association="SchoolDiaryDbModel.FK_dboAdminUser_dboAppUser_Id">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="AdminUser" EntitySet="AdminUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboAspNetUserClaims_dboAppUser_UserIdSet" Association="SchoolDiaryDbModel.FK_dboAspNetUserClaims_dboAppUser_UserId">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboAspNetUserLogins_dboAppUser_UserIdSet" Association="SchoolDiaryDbModel.FK_dboAspNetUserLogins_dboAppUser_UserId">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboDepartments_dboGrades_Grades_IdSet" Association="SchoolDiaryDbModel.FK_dboDepartments_dboGrades_Grades_Id">
+            <End Role="Grade" EntitySet="Grades" />
+            <End Role="Departments" EntitySet="Departments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboMarks_dboStudent_Students_IdSet" Association="SchoolDiaryDbModel.FK_dboMarks_dboStudent_Students_Id">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Marks" EntitySet="Marks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboMarks_dboTeaches_Teaches_IdSet" Association="SchoolDiaryDbModel.FK_dboMarks_dboTeaches_Teaches_Id">
+            <End Role="Teach" EntitySet="Teaches" />
+            <End Role="Marks" EntitySet="Marks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboParent_dboAppUser_IdSet" Association="SchoolDiaryDbModel.FK_dboParent_dboAppUser_Id">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="Parent" EntitySet="Parents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboStudent_dboAppUser_IdSet" Association="SchoolDiaryDbModel.FK_dboStudent_dboAppUser_Id">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="Student" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboStudent_dboDepartments_Departments_IdSet" Association="SchoolDiaryDbModel.FK_dboStudent_dboDepartments_Departments_Id">
+            <End Role="Department" EntitySet="Departments" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboSubjectGrades_dboGrades_Grades_IdSet" Association="SchoolDiaryDbModel.FK_dboSubjectGrades_dboGrades_Grades_Id">
+            <End Role="Grade" EntitySet="Grades" />
+            <End Role="SubjectGrades" EntitySet="SubjectGrades" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboSubjectGrades_dboSubjects_Subjects_IdSet" Association="SchoolDiaryDbModel.FK_dboSubjectGrades_dboSubjects_Subjects_Id">
+            <End Role="Subject" EntitySet="Subjects" />
+            <End Role="SubjectGrades" EntitySet="SubjectGrades" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboTeacher_dboAppUser_IdSet" Association="SchoolDiaryDbModel.FK_dboTeacher_dboAppUser_Id">
+            <End Role="AppUser" EntitySet="AppUsers" />
+            <End Role="Teacher" EntitySet="Teachers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboTeaches_dboDepartments_Departments_IdSet" Association="SchoolDiaryDbModel.FK_dboTeaches_dboDepartments_Departments_Id">
+            <End Role="Department" EntitySet="Departments" />
+            <End Role="Teaches" EntitySet="Teaches" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboTeaches_dboSubjects_Subjects_IdSet" Association="SchoolDiaryDbModel.FK_dboTeaches_dboSubjects_Subjects_Id">
+            <End Role="Subject" EntitySet="Subjects" />
+            <End Role="Teaches" EntitySet="Teaches" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dboTeaches_dboTeacher_Teachers_IdSet" Association="SchoolDiaryDbModel.FK_dboTeaches_dboTeacher_Teachers_Id">
+            <End Role="Teacher" EntitySet="Teachers" />
+            <End Role="Teaches" EntitySet="Teaches" />
+          </AssociationSet>
+          <AssociationSet Name="AspNetRole_AppUserSet" Association="SchoolDiaryDbModel.AspNetRole_AppUser">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AppUsers" EntitySet="AppUsers" />
+          </AssociationSet>
+          <AssociationSet Name="Parent_StudentSet" Association="SchoolDiaryDbModel.Parent_Student">
+            <End Role="Parents" EntitySet="Parents" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="MigrationHistory" ed:Guid="9cfc3abc-18ab-41c4-b9e3-84960c95d335">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" Unicode="true" ed:ValidateMaxLength="150" ed:ValidateRequired="true" ed:Guid="9f8bf62a-6b7e-4fd5-89db-8203dfcccdb6" />
+          <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" Unicode="true" ed:ValidateMaxLength="300" ed:ValidateRequired="true" ed:Guid="01b32ca0-657b-42f4-8104-f9b91f1173a1" />
+          <Property Name="Model" Type="Binary" Nullable="false" ed:ValidateRequired="true" ed:Guid="e1e9886a-fc83-439a-83b4-89b5347bb063" />
+          <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" Unicode="true" ed:ValidateMaxLength="32" ed:ValidateRequired="true" ed:Guid="79dd78a8-1909-414b-9457-e6311db7f10b" />
+        </EntityType>
+        <EntityType Name="AdminUser" ed:Guid="ac9bd272-0540-457d-a6b5-19ae8f8ad72e">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" Unicode="true" ed:ValidateMaxLength="128" ed:ValidateRequired="true" ed:Guid="7e42b02e-c52e-4376-ad4e-92bcaea2fa68" />
+          <NavigationProperty Name="AppUser" Relationship="SchoolDiaryDbModel.FK_dboAdminUser_dboAppUser_Id" FromRole="AdminUser" ToRole="AppUser" ed:Guid="1605dd06-e58c-44b2-bb48-cfb4f29c1548" />
+        </EntityType>
+        <EntityType Name="AppUser" ed:Guid="64da752e-5dcd-4132-88dd-700e0f235460">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" Unicode="true" ed:ValidateMaxLength="128" ed:ValidateRequired="true" ed:Guid="2cbcc121-529b-4bae-8c91-af17232188fb" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="100" Unicode="true" ed:ValidateMaxLength="100" ed:ValidateRequired="true" ed:Guid="c3bb73e4-a686-4a24-93f6-1cd7920c1729" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="100" Unicode="true" ed:ValidateMaxLength="100" ed:ValidateRequired="true" ed:Guid="bd6de362-1529-4721-8396-c6cc2409e9fb" />
+          <Property Name="Email" Type="String" MaxLength="256" Unicode="true" ed:ValidateMaxLength="256" ed:ValidateRequired="false" ed:Guid="42884312-b70b-4187-98ed-35e2c4ca9a4d" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" ed:ValidateRequired="true" ed:Guid="55de0fd5-5742-4f78-947b-906462cbf090" />
+          <Property Name="PasswordHash" Type="String" Unicode="true" ed:ValidateRequired="false" ed:Guid="0c859da7-3d7b-442f-93f9-cfd621723d97" />
+          <Property Name="SecurityStamp" Type="String" Unicode="true" ed:ValidateRequired="false" ed:Guid="538be6f1-c78a-4a05-862c-cc9f012f365d" />
+          <Property Name="PhoneNumber" Type="String" Unicode="true" ed:ValidateRequired="false" ed:Guid="d1d496a9-e1b1-4731-a6a3-93eccb172718" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" ed:ValidateRequired="true" ed:Guid="bd866359-6b8f-4177-b47c-4fe218d97878" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" ed:ValidateRequired="true" ed:Guid="e6447e19-e106-4275-9e29-5c887f9648bf" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" ed:ValidateRequired="false" ed:Guid="d90ee9c6-5446-435d-8701-2428feb3300c" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" ed:ValidateRequired="true" ed:Guid="4babb06b-815f-4c52-9127-0e92a19c0516" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" ed:ValidateRequired="true" ed:Guid="02986330-a3cb-40a0-96a2-5b2e752cb11d" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" ed:ValidateMaxLength="256" ed:ValidateRequired="true" ed:Guid="429f32ac-3be5-4e29-86bf-af3fa08b2efe" />
+          <NavigationProperty Name="AdminUser" Relationship="SchoolDiaryDbModel.FK_dboAdminUser_dboAppUser_Id" FromRole="AppUser" ToRole="AdminUser" ed:Guid="5ebaedb7-c709-455d-96cd-4f2c5567b295" />
+          <NavigationProperty Name="AspNetUserClaims" Relationship="SchoolDiaryDbModel.FK_dboAspNetUserClaims_dboAppUser_UserId" FromRole="AppUser" ToRole="AspNetUserClaims" ed:Guid="aec7b82f-f3cf-41f9-985d-03cf4c3832a3" />
+          <NavigationProperty Name="AspNetUserLogins" Relationship="SchoolDiaryDbModel.FK_dboAspNetUserLogins_dboAppUser_UserId" FromRole="AppUser" ToRole="AspNetUserLogins" ed:Guid="5090aa55-dac6-4505-a6ca-e77edc26b210" />
+          <NavigationProperty Name="Parent" Relationship="SchoolDiaryDbModel.FK_dboParent_dboAppUser_Id" FromRole="AppUser" ToRole="Parent" ed:Guid="e6e8a73f-887d-4fb4-9026-f987f0d95f32" />
+          <NavigationProperty Name="Student" Relationship="SchoolDiaryDbModel.FK_dboStudent_dboAppUser_Id" FromRole="AppUser" ToRole="Student" ed:Guid="c3a45368-274a-45d9-91c4-79d7dcf7ffc4" />
+          <NavigationProperty Name="Teacher" Relationship="SchoolDiaryDbModel.FK_dboTeacher_dboAppUser_Id" FromRole="AppUser" ToRole="Teacher" ed:Guid="c631cb39-5731-479f-8610-5592ce8da22c" />
+          <NavigationProperty Name="AspNetRoles" Relationship="SchoolDiaryDbModel.AspNetRole_AppUser" FromRole="AppUsers" ToRole="AspNetRoles" ed:Guid="5f604600-0f6f-4cda-ae27-8eaf8ecafdf4" />
+        </EntityType>
+        <EntityType Name="AspNetRole" ed:Guid="cbf6b21b-5a48-4298-82b2-6826f585fffc">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" Unicode="true" ed:ValidateMaxLength="128" ed:ValidateRequired="true" ed:Guid="eb4f1825-aec9-4704-a6b6-54a6957e794f" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" Unicode="true" ed:ValidateMaxLength="256" ed:ValidateRequired="true" ed:Guid="adad5715-b681-44eb-9325-6e86ed586635" />
+          <NavigationProperty Name="AppUsers" Relationship="SchoolDiaryDbModel.AspNetRole_AppUser" FromRole="AspNetRoles" ToRole="AppUsers" ed:Guid="1ad59512-2c90-41c0-94d5-4e2fcf8950d6" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaim" ed:Guid="06438a09-01a0-46d6-8cdd-72013767fe71">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" ed:ValidateRequired="true" ed:Guid="4ed01acf-1ad9-43f6-b844-2c3aa624b93a" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" Unicode="true" ed:ValidateMaxLength="128" ed:ValidateRequired="true" ed:Guid="4d847ef0-d347-4deb-aeed-9a1eaf4dea67" />
+          <Property Name="ClaimType" Type="String" Unicode="true" ed:ValidateRequired="false" ed:Guid="4415db1f-b079-4323-bcb5-bc0a5f27bdf3" />
+          <Property Name="ClaimValue" Type="String" Unicode="true" ed:ValidateRequired="false" ed:Guid="afb85a0b-b407-4221-892b-1991583e80a7" />
+          <NavigationProperty Name="AppUser" Relationship="SchoolDiaryDbModel.FK_dboAspNetUserClaims_dboAppUser_UserId" FromRole="AspNetUserClaims" ToRole="AppUser" ed:Guid="fdf29396-98d5-4605-a1b6-c436b4fcb2df" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogin" ed:Guid="452b3697-4066-42b0-8447-58e820ab01bb">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" Unicode="true" ed:ValidateMaxLength="128" ed:ValidateRequired="true" ed:Guid="0b008d76-d406-4d36-a880-a9da25d6fd12" />
+          <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" Unicode="true" ed:ValidateMaxLength="128" ed:ValidateRequired="true" ed:Guid="831b3e68-4de6-4c02-80fa-454209dc772d" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" Unicode="true" ed:ValidateMaxLength="128" ed:ValidateRequired="true" ed:Guid="91f03346-f9cb-4188-83bf-1edac8e21cd1" />
+          <NavigationProperty Name="AppUser" Relationship="SchoolDiaryDbModel.FK_dboAspNetUserLogins_dboAppUser_UserId" FromRole="AspNetUserLogins" ToRole="AppUser" ed:Guid="3eef7238-9036-4ec2-b52e-01f0ae41ad6c" />
+        </EntityType>
+        <EntityType Name="Department" ed:Guid="e3d4cb64-2ef7-4899-b07c-30a3a10aa202">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" ed:ValidateRequired="true" ed:Guid="4beffe5d-5966-4ded-8c4c-997bf91831e7" />
+          <Property Name="DepartmentName" Type="String" Unicode="true" ed:ValidateRequired="false" ed:Guid="b9d085a5-4665-4a7a-8867-3ca925d7bcce" />
+          <Property Name="GradesId" Type="Int32" ed:ValidateRequired="false" ed:Guid="c16cf23c-c418-41f3-b424-ce692c5bf134" />
+          <NavigationProperty Name="Grade" Relationship="SchoolDiaryDbModel.FK_dboDepartments_dboGrades_Grades_Id" FromRole="Departments" ToRole="Grade" ed:Guid="09933cb5-bef8-4bb3-bbb6-02592bf0e221" />
+          <NavigationProperty Name="Students" Relationship="SchoolDiaryDbModel.FK_dboStudent_dboDepartments_Departments_Id" FromRole="Department" ToRole="Students" ed:Guid="d3050d51-559e-489d-9b09-a29d005cc143" />
+          <NavigationProperty Name="Teaches" Relationship="SchoolDiaryDbModel.FK_dboTeaches_dboDepartments_Departments_Id" FromRole="Department" ToRole="Teaches" ed:Guid="b3aff069-fbbe-4e3f-94e7-6d9a16ebdad6" />
+        </EntityType>
+        <EntityType Name="Grade" ed:Guid="f7d2b0a9-e96b-4993-a2bb-de257700f9da">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" ed:ValidateRequired="true" ed:Guid="8950f532-e8e2-4436-9f84-d6cc292301f0" />
+          <Property Name="GradeYear" Type="Int32" Nullable="false" ed:ValidateRequired="true" ed:Guid="873b9f03-e5ec-4004-81dd-c364e897584e" />
+          <Property Name="GradeEnrolment" Type="DateTime" Nullable="false" ed:ValidateRequired="true" ed:Guid="13786e72-39eb-4467-b678-a8b758dcdd3e" />
+          <NavigationProperty Name="Departments" Relationship="SchoolDiaryDbModel.FK_dboDepartments_dboGrades_Grades_Id" FromRole="Grade" ToRole="Departments" ed:Guid="7af299ae-cce4-4028-a66a-69bd33acb233" />
+          <NavigationProperty Name="SubjectGrades" Relationship="SchoolDiaryDbModel.FK_dboSubjectGrades_dboGrades_Grades_Id" FromRole="Grade" ToRole="SubjectGrades" ed:Guid="f28238e1-3556-4026-b9a3-d1c24f3a8e09" />
+        </EntityType>
+        <EntityType Name="Mark" ed:Guid="0e5ae86a-14d9-415a-87ed-f9fa81de1569">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" ed:ValidateRequired="true" ed:Guid="49673fe4-260e-4b7e-b018-c4f2d708d6f5" />
+          <Property Name="MarkValue" Type="Int32" Nullable="false" ed:ValidateRequired="true" ed:Guid="6820293e-8f1f-4db5-a1d3-3ff164751831" />
+          <Property Name="StudentsId" Type="String" MaxLength="128" Unicode="true" ed:ValidateMaxLength="128" ed:ValidateRequired="false" ed:Guid="d058a984-7eec-4b83-893c-263f24364ce7" />
+          <Property Name="TeachesId" Type="Int32" ed:ValidateRequired="false" ed:Guid="80aed2dd-7024-4432-9f34-593a20276f07" />
+          <NavigationProperty Name="Student" Relationship="SchoolDiaryDbModel.FK_dboMarks_dboStudent_Students_Id" FromRole="Marks" ToRole="Student" ed:Guid="5038a0dc-7cd1-455f-8d1c-9ca027bdb01d" />
+          <NavigationProperty Name="Teach" Relationship="SchoolDiaryDbModel.FK_dboMarks_dboTeaches_Teaches_Id" FromRole="Marks" ToRole="Teach" ed:Guid="37e51d5c-cff6-4822-8eac-a8a20364afe8" />
+        </EntityType>
+        <EntityType Name="Parent" ed:Guid="e99e397b-7c9f-4087-8567-5f621524f1f9">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" Unicode="true" ed:ValidateMaxLength="128" ed:ValidateRequired="true" ed:Guid="de300cd9-55d3-4bd3-8f61-782508c8d44c" />
+          <NavigationProperty Name="AppUser" Relationship="SchoolDiaryDbModel.FK_dboParent_dboAppUser_Id" FromRole="Parent" ToRole="AppUser" ed:Guid="66be8d16-2a18-4062-b5ca-576c7ec6199c" />
+          <NavigationProperty Name="Students" Relationship="SchoolDiaryDbModel.Parent_Student" FromRole="Parents" ToRole="Students" ed:Guid="27b3f39d-97f1-4c37-a24a-69461a421f09" />
+        </EntityType>
+        <EntityType Name="Student" ed:Guid="f4152d87-34c3-49cf-92c1-569594d042ae">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" Unicode="true" ed:ValidateMaxLength="128" ed:ValidateRequired="true" ed:Guid="60180b56-b3b9-4b14-9354-a7f5f122e645" />
+          <Property Name="DepartmentsId" Type="Int32" ed:ValidateRequired="false" ed:Guid="387fc93c-95a8-4292-9dc1-34b36db72125" />
+          <NavigationProperty Name="Marks" Relationship="SchoolDiaryDbModel.FK_dboMarks_dboStudent_Students_Id" FromRole="Student" ToRole="Marks" ed:Guid="400d4b96-7914-4e88-bbdc-886c0e496151" />
+          <NavigationProperty Name="AppUser" Relationship="SchoolDiaryDbModel.FK_dboStudent_dboAppUser_Id" FromRole="Student" ToRole="AppUser" ed:Guid="4e1c3526-a411-40ad-a158-9ff057b84704" />
+          <NavigationProperty Name="Department" Relationship="SchoolDiaryDbModel.FK_dboStudent_dboDepartments_Departments_Id" FromRole="Students" ToRole="Department" ed:Guid="2220d409-4b25-4100-a46e-c2454fa401e1" />
+          <NavigationProperty Name="Parents" Relationship="SchoolDiaryDbModel.Parent_Student" FromRole="Students" ToRole="Parents" ed:Guid="608bccf4-5ac5-4fdf-a53b-9c1d80920add" />
+        </EntityType>
+        <EntityType Name="SubjectGrade" ed:Guid="542586fa-87ef-4485-bbae-fe5aa4cb2228">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" ed:ValidateRequired="true" ed:Guid="1a50e9b0-d3a8-4ed6-b7fb-8089146da686" />
+          <Property Name="GradesId" Type="Int32" ed:ValidateRequired="false" ed:Guid="5784887b-36eb-4c03-924e-6c07952b8f83" />
+          <Property Name="SubjectsId" Type="Int32" ed:ValidateRequired="false" ed:Guid="be93f948-0b78-4bf8-a6a4-da8cfc77def8" />
+          <NavigationProperty Name="Grade" Relationship="SchoolDiaryDbModel.FK_dboSubjectGrades_dboGrades_Grades_Id" FromRole="SubjectGrades" ToRole="Grade" ed:Guid="66281be5-408a-425c-a6f5-3cccfeb87711" />
+          <NavigationProperty Name="Subject" Relationship="SchoolDiaryDbModel.FK_dboSubjectGrades_dboSubjects_Subjects_Id" FromRole="SubjectGrades" ToRole="Subject" ed:Guid="9becc84b-0a37-4af1-b564-269d53504d0c" />
+        </EntityType>
+        <EntityType Name="Subject" ed:Guid="970d8c46-dae1-492c-a5de-b0715e25deb6">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" ed:ValidateRequired="true" ed:Guid="9dac83a6-fc88-469d-8df4-7f6e7a50c313" />
+          <Property Name="SubjectName" Type="String" Unicode="true" ed:ValidateRequired="false" ed:Guid="138c5ae9-352d-431f-b28b-a5a518802127" />
+          <Property Name="SubjectFond" Type="Int32" Nullable="false" ed:ValidateRequired="true" ed:Guid="c64a1121-fb04-4777-af50-b71ec1f51716" />
+          <NavigationProperty Name="SubjectGrades" Relationship="SchoolDiaryDbModel.FK_dboSubjectGrades_dboSubjects_Subjects_Id" FromRole="Subject" ToRole="SubjectGrades" ed:Guid="3d7c5213-b91d-436f-839a-6d43637447a4" />
+          <NavigationProperty Name="Teaches" Relationship="SchoolDiaryDbModel.FK_dboTeaches_dboSubjects_Subjects_Id" FromRole="Subject" ToRole="Teaches" ed:Guid="d8d8fc4e-1e3d-4bbf-a67d-cf2e8f7c0811" />
+        </EntityType>
+        <EntityType Name="Teacher" ed:Guid="c74741a7-9d59-4815-9b06-4166866f9767">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" Unicode="true" ed:ValidateMaxLength="128" ed:ValidateRequired="true" ed:Guid="610b153a-057c-47eb-a13a-cc509a526c24" />
+          <NavigationProperty Name="AppUser" Relationship="SchoolDiaryDbModel.FK_dboTeacher_dboAppUser_Id" FromRole="Teacher" ToRole="AppUser" ed:Guid="1519235f-ddec-412b-80ca-dcaac728160a" />
+          <NavigationProperty Name="Teaches" Relationship="SchoolDiaryDbModel.FK_dboTeaches_dboTeacher_Teachers_Id" FromRole="Teacher" ToRole="Teaches" ed:Guid="e536b46e-4bcb-4744-a374-a7bbfde5e214" />
+        </EntityType>
+        <EntityType Name="Teach" ed:Guid="5fb27cee-e650-4d10-80bd-3c14369b2992">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" ed:ValidateRequired="true" ed:Guid="be284b7d-638c-4db8-b380-bcb94904fcb3" />
+          <Property Name="DepartmentsId" Type="Int32" ed:ValidateRequired="false" ed:Guid="4ce730f0-e1fb-422b-ae0e-7fe6f1e29ed4" />
+          <Property Name="SubjectsId" Type="Int32" ed:ValidateRequired="false" ed:Guid="f5ecf1f8-f156-4259-a37f-25dfc2b6fdbd" />
+          <Property Name="TeachersId" Type="String" MaxLength="128" Unicode="true" ed:ValidateMaxLength="128" ed:ValidateRequired="false" ed:Guid="7057b0bc-c168-4fbe-8151-b619591e5050" />
+          <NavigationProperty Name="Marks" Relationship="SchoolDiaryDbModel.FK_dboMarks_dboTeaches_Teaches_Id" FromRole="Teach" ToRole="Marks" ed:Guid="31afde25-634b-49de-81ef-04da0598c017" />
+          <NavigationProperty Name="Department" Relationship="SchoolDiaryDbModel.FK_dboTeaches_dboDepartments_Departments_Id" FromRole="Teaches" ToRole="Department" ed:Guid="83b64a46-a95b-4823-9d95-7fd9d5ed8b53" />
+          <NavigationProperty Name="Subject" Relationship="SchoolDiaryDbModel.FK_dboTeaches_dboSubjects_Subjects_Id" FromRole="Teaches" ToRole="Subject" ed:Guid="62d5bf9c-3961-4f6a-b259-7988b1e17b50" />
+          <NavigationProperty Name="Teacher" Relationship="SchoolDiaryDbModel.FK_dboTeaches_dboTeacher_Teachers_Id" FromRole="Teaches" ToRole="Teacher" ed:Guid="55124ddb-0859-4d52-a08f-99e3a16f7e3f" />
+        </EntityType>
+        <Association Name="FK_dboAdminUser_dboAppUser_Id" ed:Guid="0d3f9282-b969-4c2a-b407-996be270dbc1">
+          <End Role="AppUser" Type="SchoolDiaryDbModel.AppUser" Multiplicity="1" />
+          <End Role="AdminUser" Type="SchoolDiaryDbModel.AdminUser" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AdminUser">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboAspNetUserClaims_dboAppUser_UserId" ed:Guid="dbec230a-6208-411a-ae46-2c23dffc2fbd">
+          <End Role="AppUser" Type="SchoolDiaryDbModel.AppUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="SchoolDiaryDbModel.AspNetUserClaim" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboAspNetUserLogins_dboAppUser_UserId" ed:Guid="e367d69e-175c-4997-b305-ddd390f9457b">
+          <End Role="AppUser" Type="SchoolDiaryDbModel.AppUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="SchoolDiaryDbModel.AspNetUserLogin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboDepartments_dboGrades_Grades_Id" ed:Guid="cd853d6c-e4a1-4c64-8d2c-107cd415de64">
+          <End Role="Grade" Type="SchoolDiaryDbModel.Grade" Multiplicity="0..1" />
+          <End Role="Departments" Type="SchoolDiaryDbModel.Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grade">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Departments">
+              <PropertyRef Name="GradesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboMarks_dboStudent_Students_Id" ed:Guid="8520024e-5a10-439d-8a0c-42e2f9cbb87b">
+          <End Role="Student" Type="SchoolDiaryDbModel.Student" Multiplicity="0..1" />
+          <End Role="Marks" Type="SchoolDiaryDbModel.Mark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Marks">
+              <PropertyRef Name="StudentsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboMarks_dboTeaches_Teaches_Id" ed:Guid="aa4b646e-d2ea-4fc1-9b12-4d272802b8e9">
+          <End Role="Teach" Type="SchoolDiaryDbModel.Teach" Multiplicity="0..1" />
+          <End Role="Marks" Type="SchoolDiaryDbModel.Mark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teach">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Marks">
+              <PropertyRef Name="TeachesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboParent_dboAppUser_Id" ed:Guid="9507308b-8486-4c32-8207-2d2b0dd6e13a">
+          <End Role="AppUser" Type="SchoolDiaryDbModel.AppUser" Multiplicity="1" />
+          <End Role="Parent" Type="SchoolDiaryDbModel.Parent" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Parent">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboStudent_dboAppUser_Id" ed:Guid="56ae97e0-9476-4690-9eeb-b35f3dc28e12">
+          <End Role="AppUser" Type="SchoolDiaryDbModel.AppUser" Multiplicity="1" />
+          <End Role="Student" Type="SchoolDiaryDbModel.Student" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboStudent_dboDepartments_Departments_Id" ed:Guid="faa46d75-a3e9-4749-a615-3ce9b86bef89">
+          <End Role="Department" Type="SchoolDiaryDbModel.Department" Multiplicity="0..1" />
+          <End Role="Students" Type="SchoolDiaryDbModel.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="DepartmentsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboSubjectGrades_dboGrades_Grades_Id" ed:Guid="34edf1b8-8a47-4877-940d-8e960e4dca34">
+          <End Role="Grade" Type="SchoolDiaryDbModel.Grade" Multiplicity="0..1" />
+          <End Role="SubjectGrades" Type="SchoolDiaryDbModel.SubjectGrade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grade">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SubjectGrades">
+              <PropertyRef Name="GradesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboSubjectGrades_dboSubjects_Subjects_Id" ed:Guid="7e33c586-6bce-4a96-8a72-70de35cb846c">
+          <End Role="Subject" Type="SchoolDiaryDbModel.Subject" Multiplicity="0..1" />
+          <End Role="SubjectGrades" Type="SchoolDiaryDbModel.SubjectGrade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subject">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SubjectGrades">
+              <PropertyRef Name="SubjectsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboTeacher_dboAppUser_Id" ed:Guid="9c3c6370-407d-42dc-8c2f-2feb60448e55">
+          <End Role="AppUser" Type="SchoolDiaryDbModel.AppUser" Multiplicity="1" />
+          <End Role="Teacher" Type="SchoolDiaryDbModel.Teacher" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Teacher">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboTeaches_dboDepartments_Departments_Id" ed:Guid="562f8544-f7ed-47a9-9472-cce6a297fbad">
+          <End Role="Department" Type="SchoolDiaryDbModel.Department" Multiplicity="0..1" />
+          <End Role="Teaches" Type="SchoolDiaryDbModel.Teach" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Teaches">
+              <PropertyRef Name="DepartmentsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboTeaches_dboSubjects_Subjects_Id" ed:Guid="f24fd133-30cd-485b-8b10-4803bf353377">
+          <End Role="Subject" Type="SchoolDiaryDbModel.Subject" Multiplicity="0..1" />
+          <End Role="Teaches" Type="SchoolDiaryDbModel.Teach" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subject">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Teaches">
+              <PropertyRef Name="SubjectsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dboTeaches_dboTeacher_Teachers_Id" ed:Guid="f0d637e9-c119-4416-ad36-b52c93e25684">
+          <End Role="Teacher" Type="SchoolDiaryDbModel.Teacher" Multiplicity="0..1" />
+          <End Role="Teaches" Type="SchoolDiaryDbModel.Teach" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teacher">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Teaches">
+              <PropertyRef Name="TeachersId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AspNetRole_AppUser" ed:Guid="360e6257-80e0-4c5c-b111-bb7fa0a7ca73">
+          <End Role="AspNetRoles" Type="SchoolDiaryDbModel.AspNetRole" Multiplicity="*" />
+          <End Role="AppUsers" Type="SchoolDiaryDbModel.AppUser" Multiplicity="*" />
+        </Association>
+        <Association Name="Parent_Student" ed:Guid="212db51f-0939-4549-93cc-da262a759e9c">
+          <End Role="Parents" Type="SchoolDiaryDbModel.Parent" Multiplicity="*" />
+          <End Role="Students" Type="SchoolDiaryDbModel.Student" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- MSL content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SchoolDiaryDbEntitiesStoreContainer" CdmEntityContainer="SchoolDiaryDbEntities">
+          <EntitySetMapping Name="MigrationHistories">
+            <EntityTypeMapping TypeName="SchoolDiaryDbModel.MigrationHistory">
+              <MappingFragment StoreEntitySet="__Migrationhistories">
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AdminUsers">
+            <EntityTypeMapping TypeName="SchoolDiaryDbModel.AdminUser">
+              <MappingFragment StoreEntitySet="AdminUsers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AppUsers">
+            <EntityTypeMapping TypeName="SchoolDiaryDbModel.AppUser">
+              <MappingFragment StoreEntitySet="AppUsers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetRoles">
+            <EntityTypeMapping TypeName="SchoolDiaryDbModel.AspNetRole">
+              <MappingFragment StoreEntitySet="AspNetRoles">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserClaims">
+            <EntityTypeMapping TypeName="SchoolDiaryDbModel.AspNetUserClaim">
+              <MappingFragment StoreEntitySet="AspNetUserClaims">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserLogins">
+            <EntityTypeMapping TypeName="SchoolDiaryDbModel.AspNetUserLogin">
+              <MappingFragment StoreEntitySet="AspNetUserLogins">
+                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Departments">
+            <EntityTypeMapping TypeName="SchoolDiaryDbModel.Department">
+              <MappingFragment StoreEntitySet="Departments">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="GradesId" ColumnName="Grades_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Grades">
+            <EntityTypeMapping TypeName="SchoolDiaryDbModel.Grade">
+              <MappingFragment StoreEntitySet="Grades">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="GradeYear" ColumnName="GradeYear" />
+                <ScalarProperty Name="GradeEnrolment" ColumnName="GradeEnrolment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Marks">
+            <EntityTypeMapping TypeName="SchoolDiaryDbModel.Mark">
+              <MappingFragment StoreEntitySet="Marks">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="MarkValue" ColumnName="MarkValue" />
+                <ScalarProperty Name="StudentsId" ColumnName="Students_Id" />
+                <ScalarProperty Name="TeachesId" ColumnName="Teaches_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Parents">
+            <EntityTypeMapping TypeName="SchoolDiaryDbModel.Parent">
+              <MappingFragment StoreEntitySet="Parents">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="SchoolDiaryDbModel.Student">
+              <MappingFragment StoreEntitySet="Students">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DepartmentsId" ColumnName="Departments_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubjectGrades">
+            <EntityTypeMapping TypeName="SchoolDiaryDbModel.SubjectGrade">
+              <MappingFragment StoreEntitySet="SubjectGrades">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="GradesId" ColumnName="Grades_Id" />
+                <ScalarProperty Name="SubjectsId" ColumnName="Subjects_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Subjects">
+            <EntityTypeMapping TypeName="SchoolDiaryDbModel.Subject">
+              <MappingFragment StoreEntitySet="Subjects">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+                <ScalarProperty Name="SubjectFond" ColumnName="SubjectFond" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teachers">
+            <EntityTypeMapping TypeName="SchoolDiaryDbModel.Teacher">
+              <MappingFragment StoreEntitySet="Teachers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teaches">
+            <EntityTypeMapping TypeName="SchoolDiaryDbModel.Teach">
+              <MappingFragment StoreEntitySet="Teaches">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DepartmentsId" ColumnName="Departments_Id" />
+                <ScalarProperty Name="SubjectsId" ColumnName="Subjects_Id" />
+                <ScalarProperty Name="TeachersId" ColumnName="Teachers_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="AspNetRole_AppUserSet" TypeName="SchoolDiaryDbModel.AspNetRole_AppUser" StoreEntitySet="AspNetUserRoles">
+            <EndProperty Name="AspNetRoles">
+              <ScalarProperty Name="Id" ColumnName="RoleId" />
+            </EndProperty>
+            <EndProperty Name="AppUsers">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Parent_StudentSet" TypeName="SchoolDiaryDbModel.Parent_Student" StoreEntitySet="ParentStudents">
+            <EndProperty Name="Parents">
+              <ScalarProperty Name="Id" ColumnName="Parent_Id" />
+            </EndProperty>
+            <EndProperty Name="Students">
+              <ScalarProperty Name="Id" ColumnName="Student_Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="CopyToOutputDirectory" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <edmx:Diagrams>
+      <Diagram Name="Main" />
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -20,9 +20,9 @@ namespace school_diary.Repositories
         [Dependency]
         public IGenericRepository<Admin> AdminsRepository { get; set; }
         [Dependency]
-        public IGenericRepository<ClassRoom> ClassRoomsRepository { get; set; }
+        public IGenericRepository<Department> DepartmentsRepository { get; set; }
         [Dependency]
-        public IGenericRepository<Grade> GradesRepository { get; set; }
+        public IGenericRepository<Mark> MarksRepository { get; set; }
         [Dependency]
         public IGenericRepository<Parent> ParentsRepository { get; set; }
         [Dependency]
@@ -30,11 +30,15 @@ namespace school_diary.Repositories
         [Dependency]
         public IGenericRepository<Subject> SubjectsRepository { get; set; }
         [Dependency]
-        public IGenericRepository<Teach> TeachsRepository { get; set; }
+        public IGenericRepository<Teach> TeachesRepository { get; set; }
         [Dependency]
         public IGenericRepository<Teacher> TeachersRepository { get; set; }
         [Dependency]
         public IGenericRepository<AppUser> UsersRepository { get; set; }
+        [Dependency]
+        public IGenericRepository<Grade> GradesRepository { get; set; }
+        [Dependency]
+        public IGenericRepository<SubjectGrade> SubjectGradesRepository { get; set; }
         [Dependency]
         public IAuthRepository AuthRepository { get; set; }
 

@@ -3,7 +3,7 @@ using school_diary.Models;
 
 namespace school_diary.Services
 {
-    public interface ITeachsService
+    public interface ITeachesService
     {
         Teach CreateTeach(Teach newTeach);
         Teach DeleteTeach(int id);

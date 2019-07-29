@@ -1,5 +1,6 @@
 ﻿using NLog;
 using school_diary.Models;
+using school_diary.Models.DTOs;
 using school_diary.Services;
 using school_diary.Utilities.Exceptions;
 using System;
@@ -29,41 +30,44 @@ namespace school_diary.Controllers
             return studentsService.GetAllStudents();
         }
 
-        [Route("")]
-        [ResponseType(typeof(Student))]
-        public IHttpActionResult PostStudent(Student student)
-        {
-            try
-            {
-                Student studentCreated = studentsService.CreateStudent(student);
-                return Created("", studentCreated);
-            }
-            catch (UserNotFoundException)
-            {
+        //[Route("")]
+        //[ResponseType(typeof(Student))]
+        //public IHttpActionResult PostStudent(Student student)
+        //{
+        //    try
+        //    {
+        //        Student studentCreated = studentsService.CreateStudent(student);
+        //        return Created("", studentCreated);
+        //    }
+        //    catch (UserNotFoundException)
+        //    {
 
-                return NotFound();
+        //        return NotFound();
 
-            }
-        }
+        //    }
+        //}
 
         [Route("{username}")]
         [ResponseType(typeof(Student))]
-        public IHttpActionResult PutStudent(string username, Student updtStudent)
+        public IHttpActionResult PutStudentInClass(string username, StudentDTOInClass updtStudent)
         {
             try
             {
-                Student studentUpdated = studentsService.UpdateStudent(username, updtStudent);
-                if (studentUpdated == null)
+                if (username != updtStudent.UserName)
                 {
-                    return NotFound();
+                    throw new BadRequestException();
                 }
-
+                StudentDTOOutClass studentUpdated = studentsService.AddStudentToClass(username, updtStudent);
                 return Ok(studentUpdated);
             }
-            catch (Exception)
+            catch (BadRequestException)
             {
 
                 return BadRequest();
+            }
+            catch (UserNotFoundException)
+            {
+                return NotFound();
             }
 
         }

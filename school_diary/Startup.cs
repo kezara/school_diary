@@ -62,24 +62,29 @@ namespace school_diary
             container.RegisterType<IGenericRepository<Parent>, GenericRepository<Parent>>();
             container.RegisterType<IGenericRepository<Student>, GenericRepository<Student>>();
             container.RegisterType<IGenericRepository<Teacher>, GenericRepository<Teacher>>();
+            container.RegisterType<IGenericRepository<Grade>, GenericRepository<Grade>>();
+            container.RegisterType<IGenericRepository<SubjectGrade>, GenericRepository<SubjectGrade>>();
             container.RegisterType<IAuthRepository, AuthRepository>();
 
             container.RegisterType<IUserService, UserService>();
-            container.RegisterType<IGenericRepository<ClassRoom>, GenericRepository<ClassRoom>>();
-            container.RegisterType<IGenericRepository<Grade>, GenericRepository<Grade>>();
+            container.RegisterType<IGenericRepository<Department>, GenericRepository<Department>>();
+            container.RegisterType<IGenericRepository<Mark>, GenericRepository<Mark>>();
             container.RegisterType<IGenericRepository<Subject>, GenericRepository<Subject>>();
             container.RegisterType<IGenericRepository<Teach>, GenericRepository<Teach>>();
             container.RegisterType<IGenericRepository<AppUser>, GenericRepository<AppUser>>();
             container.RegisterType<DbContext, AuthContext>(new HierarchicalLifetimeManager());
-            container.RegisterType<IClassRoomsService, ClassRoomsService>();
-            container.RegisterType<IGradesService, GradesService>();
+            container.RegisterType<IDepartmentsService, DepartmentsService>();
+            container.RegisterType<IMarksService, MarksService>();
             container.RegisterType<IAdminsService, AdminsService>();
             container.RegisterType<IParentsService, ParentsService>();
             container.RegisterType<IStudentsService, StudentsService>();
             container.RegisterType<ISubjectsService, SubjectsService>();
-            container.RegisterType<ITeachsService, TeachsService>();
+            container.RegisterType<ITeachesService, TeachesService>();
             container.RegisterType<ITeachersService, TeachersService>();
+            container.RegisterType<ISubjectGradesService, SubjectGradesService>();
             container.RegisterType<IAppUsersService, AppUsersService>();
+            container.RegisterType<IGradeService, GradeService>();
+
             return container;
         }
     }

@@ -11,18 +11,18 @@ namespace school_diary.Models
     {
         public int Id { get; set; }
         public string SubjectName { get; set; }
+        public int SubjectFond { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<SubjectGrade> SubjectGrades { get; set; }
         // public int WeeklyFond { get; set; }
-        //public int Semester { get; set; }
         //public virtual Teach Fond { get; set; }
         //[NotMapped]
         //public int? FondID { get; set; }
         //[JsonIgnore]
         //public virtual ICollection<Student> Students { get; set; }
-        [JsonIgnore]
-        public virtual ICollection<Teach> Teachs { get; set; }
-        [JsonIgnore]
-        public ICollection<Semestar> Semestars { get; set; }
         //[JsonIgnore]
-        //public ICollection<Grade> Grades { get; set; }
+        //public ICollection<Semestar> Marks { get; set; }
+        //[JsonIgnore]
+        //public ICollection<Grade> Marks { get; set; }
     }
 }

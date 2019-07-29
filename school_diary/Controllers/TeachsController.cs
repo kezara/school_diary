@@ -16,8 +16,8 @@ namespace school_diary.Controllers
     public class TeachsController : ApiController
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
-        ITeachsService teachsService;
-        public TeachsController(ITeachsService teachsService)
+        ITeachesService teachsService;
+        public TeachsController(ITeachesService teachsService)
         {
             this.teachsService = teachsService;
         }

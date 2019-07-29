@@ -46,42 +46,42 @@ namespace school_diary.Controllers
             }
         }
 
-        [Route("{id}")]
-        [ResponseType(typeof(Parent))]
-        public IHttpActionResult PutParent(int id, Parent updtParent)
-        {
-            try
-            {
-                Parent parentUpdated = parentsService.UpdateParent(id, updtParent);
-                if (parentUpdated == null)
-                {
-                    return NotFound();
-                }
+        //[Route("{id}")]
+        //[ResponseType(typeof(Parent))]
+        //public IHttpActionResult PutParent(int id, Parent updtParent)
+        //{
+        //    try
+        //    {
+        //        Parent parentUpdated = parentsService.UpdateParent(id, updtParent);
+        //        if (parentUpdated == null)
+        //        {
+        //            return NotFound();
+        //        }
 
-                return Ok(parentUpdated);
-            }
-            catch (Exception)
-            {
+        //        return Ok(parentUpdated);
+        //    }
+        //    catch (Exception)
+        //    {
 
-                return BadRequest();
-            }
+        //        return BadRequest();
+        //    }
 
-        }
+        //}
 
-        [Route("{id}")]
-        [ResponseType(typeof(Parent))]
-        public IHttpActionResult DeleteParent(int id)
-        {
-            try
-            {
-                Parent parentDeleted = parentsService.DeleteParent(id);
-                return Ok(parentDeleted);
-            }
-            catch (UserNotFoundException)
-            {
-                return NotFound();
-            }
-        }
+        //[Route("{id}")]
+        //[ResponseType(typeof(Parent))]
+        //public IHttpActionResult DeleteParent(int id)
+        //{
+        //    try
+        //    {
+        //        Parent parentDeleted = parentsService.DeleteParent(id);
+        //        return Ok(parentDeleted);
+        //    }
+        //    catch (UserNotFoundException)
+        //    {
+        //        return NotFound();
+        //    }
+        //}
 
     }
 }

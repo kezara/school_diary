@@ -1,4 +1,5 @@
 ﻿using school_diary.Models;
+using school_diary.Models.DTOs;
 using school_diary.Repositories;
 using school_diary.Utilities.Exceptions;
 using System;
@@ -11,20 +12,22 @@ namespace school_diary.Services
     public class StudentsService : IStudentsService
     {
         IUnitOfWork db;
-        IAppUsersService usersService;
-        public StudentsService(IUnitOfWork db, IAppUsersService usersService)
+        IDepartmentsService departmentsService;
+        IParentsService parentsService;
+        public StudentsService(IUnitOfWork db, IDepartmentsService departmentsService, IParentsService parentsService)
         {
             this.db = db;
-            this.usersService = usersService;
+            this.departmentsService = departmentsService;
+            this.parentsService = parentsService;
         }
 
-        public Student CreateStudent(Student newStudent)
-        {
-            //ClassRoom newClass = ConverterDTO.SimpleDTOConverter<ClassRoom>(newClassDTO);
-            db.StudentsRepository.Insert(newStudent);
-            db.Save();
-            return newStudent;
-        }
+        //public Student CreateStudent(Student newStudent)
+        //{
+        //    //ClassRoom newClass = ConverterDTO.SimpleDTOConverter<ClassRoom>(newClassDTO);
+        //    db.StudentsRepository.Insert(newStudent);
+        //    db.Save();
+        //    return newStudent;
+        //}
 
         public Student DeleteStudent(string id)
         {
@@ -45,22 +48,48 @@ namespace school_diary.Services
 
         public Student GetStudentByUserName(string username)
         {
-            return db.StudentsRepository.Get(filter: s => s.UserName == username).FirstOrDefault();
+            Student student = db.StudentsRepository.Get(filter: s => s.UserName == username).FirstOrDefault();
+            if (student == null)
+            {
+                throw new UserNotFoundException();
+            }
+            return student;
         }
 
-        public Student UpdateStudent(string username, Student studentToUpdt)
+        public StudentDTOOutClass AddStudentToClass(string username, StudentDTOInClass studentToUpdt)
         {
-            Student student = GetStudentByUserName(username);
-
-            //student.Id = studentToUpdt.Id;
-            student.UserName = studentToUpdt.UserName;
-            //student.TeacherUN = studentToUpdt.TeacherUN;
-            //student.Grades = studentToUpdt.Grades;
-            //student.SubjectID = studentToUpdt.SubjectID;
-            //student.Students = studentToUpdt.Students;
-            db.StudentsRepository.Update(student);
-            db.Save();
-            return studentToUpdt;
+            try
+            {
+                Student student = GetStudentByUserName(username);
+                //Department department = departmentsService.GetDepartmentByID(studentToUpdt.DepartmentID);
+                Parent mother = parentsService.GetParentByUserName(studentToUpdt.MotherUserName);
+                Parent father = parentsService.GetParentByUserName(studentToUpdt.FatherUserName);
+                ICollection<Parent> parents = new HashSet<Parent>();
+                parents.Add(mother);
+                parents.Add(father);
+                //student.StudentDepartments = department;
+                student.Parents = parents;
+                db.StudentsRepository.Update(student);
+                db.Save();
+                StudentDTOOutClass studentDTOOutClass = new StudentDTOOutClass()
+                {
+                    ClassName = student.StudentDepartments.Departments.DepartmentName,
+                    FirstName = student.FirstName,
+                    LastName = student.LastName,
+                    UserName = student.UserName,
+                    MotherName = mother.FirstName,
+                    MotherSurname = mother.LastName,
+                    MotherUserName = mother.UserName,
+                    FatherName = father.FirstName,
+                    FatherSurname = father.LastName,
+                    FatherUserName = father.UserName
+                };
+                return studentDTOOutClass;
+            }
+            catch (UserNotFoundException)
+            {
+                throw new UserNotFoundException();
+            }
         }
     }
 }

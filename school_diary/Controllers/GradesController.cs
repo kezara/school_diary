@@ -1,5 +1,6 @@
 ﻿using NLog;
 using school_diary.Models;
+using school_diary.Models.DTOs;
 using school_diary.Services;
 using school_diary.Utilities.Exceptions;
 using System;
@@ -16,8 +17,8 @@ namespace school_diary.Controllers
     public class GradesController : ApiController
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
-        IGradesService gradesService;
-        public GradesController(IGradesService gradesService)
+        IMarksService gradesService;
+        public GradesController(IMarksService gradesService)
         {
             this.gradesService = gradesService;
         }
@@ -26,31 +27,31 @@ namespace school_diary.Controllers
         [Route("")]
         public IHttpActionResult GetAllGrades()
         {
-            logger.Info("Getting all Grades");
-            return Ok(gradesService.GetAllGrades());
+            logger.Info("Getting all Marks");
+            return Ok(gradesService.GetAllMarks());
         }
 
         //[Authorize(Roles = "admins")]
         //[Authorize(Roles = "teachers")]
         //[Authorize(Roles = "students")]
         //[Authorize(Roles = "parents")]
-        //[Route("by-username/{username}")]
-        //public IHttpActionResult GetGradesByUserName(string username)
-        //{
-        //    try
-        //    {
-        //        IEnumerable<Grade> grade = gradesService.GetGradeByStudentUserName(username);
-        //        return Ok(grade);
-        //    }
-        //    catch (UserNotFoundException)
-        //    {
-        //        return NotFound();
-        //    }
-        //    catch
-        //    {
-        //        return BadRequest();
-        //    }
-        //}
+        [Route("by-username/{username}")]
+        public IHttpActionResult GetGradesByUserName(string username)
+        {
+            try
+            {
+                IEnumerable<MarkDTO> grade = gradesService.GetMarkByStudentUserName(username);
+                return Ok(grade);
+            }
+            catch (UserNotFoundException)
+            {
+                return NotFound();
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
 
         //[Route("by-name/{name}")]
         //public IHttpActionResult GetGradesByName(string name)
@@ -89,12 +90,12 @@ namespace school_diary.Controllers
         //}
 
         [Route("")]
-        [ResponseType(typeof(Grade))]
-        public IHttpActionResult PostGrade(Grade grade)
+        [ResponseType(typeof(Mark))]
+        public IHttpActionResult PostGrade(Mark grade)
         {
             try
             {
-                Grade gradeCreated = gradesService.CreateGrade(grade);
+                Mark gradeCreated = gradesService.CreateMark(grade);
                 return Created("", gradeCreated);
             }
             catch (UserNotFoundException)

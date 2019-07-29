@@ -8,10 +8,10 @@ using System.Web;
 
 namespace school_diary.Services
 {
-    public class TeachsService : ITeachsService
+    public class TeachesService : ITeachesService
     {
         IUnitOfWork db;
-        public TeachsService(IUnitOfWork db)
+        public TeachesService(IUnitOfWork db)
         {
             this.db = db;
         }
@@ -19,7 +19,7 @@ namespace school_diary.Services
         public Teach CreateTeach(Teach newTeach)
         {
             //ClassRoom newClass = ConverterDTO.SimpleDTOConverter<ClassRoom>(newClassDTO);
-            db.TeachsRepository.Insert(newTeach);
+            db.TeachesRepository.Insert(newTeach);
             db.Save();
             return newTeach;
         }
@@ -31,19 +31,19 @@ namespace school_diary.Services
             {
                 throw new UserNotFoundException();
             }
-            db.TeachsRepository.Delete(id);
+            db.TeachesRepository.Delete(id);
             db.Save();
             return teach;
         }
 
         public IEnumerable<Teach> GetAllTeach()
         {
-            return db.TeachsRepository.Get();
+            return db.TeachesRepository.Get();
         }
 
         public Teach GetTeachByID(int id)
         {
-            return db.TeachsRepository.GetByID(id);
+            return db.TeachesRepository.GetByID(id);
         }
 
         public Teach UpdateTeach(int id, Teach teachToUpdt)
@@ -52,7 +52,7 @@ namespace school_diary.Services
 
            // teach.Id = teachToUpdt.Id;
             //teach.Fond = teachToUpdt.Fond;
-            db.TeachsRepository.Update(teach);
+            db.TeachesRepository.Update(teach);
             db.Save();
             return teachToUpdt;
         }

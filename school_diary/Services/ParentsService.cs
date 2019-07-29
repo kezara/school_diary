@@ -24,37 +24,37 @@ namespace school_diary.Services
             return newParent;
         }
 
-        public Parent DeleteParent(int id)
-        {
-            Parent parent = GetParentByID(id);
-            if (parent == null)
-            {
-                throw new UserNotFoundException();
-            }
-            db.ParentsRepository.Delete(id);
-            db.Save();
-            return parent;
-        }
+        //public Parent DeleteParent(int id)
+        //{
+        //    Parent parent = GetParentByID(id);
+        //    if (parent == null)
+        //    {
+        //        throw new UserNotFoundException();
+        //    }
+        //    db.ParentsRepository.Delete(id);
+        //    db.Save();
+        //    return parent;
+        //}
 
         public IEnumerable<Parent> GetAllParents()
         {
             return db.ParentsRepository.Get();
         }
 
-        public Parent GetParentByID(int id)
+        public Parent GetParentByUserName(string username)
         {
-            return db.ParentsRepository.GetByID(id);
+            return db.ParentsRepository.Get(filter: x => x.UserName == username).FirstOrDefault();
         }
 
-        public Parent UpdateParent(int id, Parent parentToUpdt)
-        {
-            Parent parent = GetParentByID(id);
+        //public Parent UpdateParent(int id, Parent parentToUpdt)
+        //{
+        //    Parent parent = GetParentByID(id);
 
-            parent.Id = parentToUpdt.Id;
-            parent.Email = parentToUpdt.Email;
-            db.ParentsRepository.Update(parent);
-            db.Save();
-            return parentToUpdt;
-        }
+        //    parent.Id = parentToUpdt.Id;
+        //    parent.Email = parentToUpdt.Email;
+        //    db.ParentsRepository.Update(parent);
+        //    db.Save();
+        //    return parentToUpdt;
+        //}
     }
 }
