@@ -5,9 +5,9 @@ using System.Web;
 
 namespace school_diary.Utilities.Exceptions
 {
-    public class UserNotFoundException : Exception
+    public class StudentNotFoundException : Exception
     {
-        public UserNotFoundException(string message) : base(message)
+        public StudentNotFoundException(string message) : base(message)
         {
 
         }

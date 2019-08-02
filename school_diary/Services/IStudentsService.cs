@@ -7,9 +7,10 @@ namespace school_diary.Services
     public interface IStudentsService
     {
         //Student CreateStudent(Student newStudent);
-        Student DeleteStudent(string id);
-        IEnumerable<Student> GetAllStudents();
-        Student GetStudentByUserName(string username);
-        StudentDTOOutClass AddStudentToClass(string username, StudentDTOInClass studentToUpdt);
+       // StudentDTOOut DeleteStudent(string id);
+        IEnumerable<StudentDTOOut> GetAllStudents();
+        StudentDTOOutSingle GetStudentById(string id);
+        //Student GetStudentByUserName(string username);
+        //StudentDTOOut AddStudentToClass(string username, StudentDTOIn studentToUpdt);
     }
 }

@@ -58,13 +58,13 @@ namespace school_diary.Services
                     //markDTO.Teaches.SubjectName = x.Teaches.Subjects.SubjectName;
                     //markDTO.Teaches.StudentName = x.Teaches.e;
                     //markDTO.Teaches.StudentSurname = x.Teaches.StudentSubjects.Students.LastName;
-                    markDTO.Teaches.TeacherName = x.Teaches.Teachers.FirstName;
-                    markDTO.Teaches.TeacherSurname = x.Teaches.Teachers.LastName;
+                    //markDTO.Teaches.TeacherName = x.Teaches.Teachers.FirstName;
+                   // markDTO.Teaches.TeacherSurname = x.Teaches.Teachers.LastName;
                     return markDTO;
                 });
             if (mark.Count() < 1)
             {
-                throw new UserNotFoundException();
+                throw new UserNotFoundException($"This student with username {username} does not have any mark!!!");
             }
 
             return mark;

@@ -29,7 +29,7 @@ namespace school_diary.Services
             Teach teach = GetTeachByID(id);
             if (teach == null)
             {
-                throw new UserNotFoundException();
+                throw new UserNotFoundException($"Theach with ID {id} does not exists!!!");
             }
             db.TeachesRepository.Delete(id);
             db.Save();

@@ -7,6 +7,8 @@ namespace school_diary.Services
     public interface IUserService
     {
         Task<IdentityResult> RegisterAdminUser(UserDTO userModel);
+
+        //sAdminDTOOut UpdateAdmin(string id, AdminDTOIn adminUpd);
         Task<IdentityResult> RegisterParent(UserDTO userModel);
         Task<IdentityResult> RegisterStudent(UserDTO userModel);
         Task<IdentityResult> RegisterTeacher(UserDTO userModel);

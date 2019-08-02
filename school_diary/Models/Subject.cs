@@ -13,7 +13,7 @@ namespace school_diary.Models
         public string SubjectName { get; set; }
         public int SubjectFond { get; set; }
         [JsonIgnore]
-        public virtual ICollection<SubjectGrade> SubjectGrades { get; set; }
+        public virtual ICollection<Teach> Teaches { get; set; }
         // public int WeeklyFond { get; set; }
         //public virtual Teach Fond { get; set; }
         //[NotMapped]

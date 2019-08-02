@@ -20,16 +20,11 @@ namespace school_diary.Services
 
         public Teacher CreateTeacher(Teacher newTeacher)
         {
-            try
-            {
+            
                 //AppUser teacher = usersService.GetUserByID((int)newTeacher.TeacherID);
                 //newTeacher.Teachers = teacher;
-            }
-            catch (UserNotFoundException)
-            {
-                throw new UserNotFoundException();
-            }
-            
+           
+                        
             //ClassRoom newClass = ConverterDTO.SimpleDTOConverter<ClassRoom>(newClassDTO);
             db.TeachersRepository.Insert(newTeacher);
             db.Save();
@@ -41,7 +36,7 @@ namespace school_diary.Services
             Teacher teacher = GetTeacherByID(id);
             if (teacher == null)
             {
-                throw new UserNotFoundException();
+                throw new UserNotFoundException($"Teacher with id {id} is not at this school, try somwhere else");
             }
             db.AdminsRepository.Delete(id);
             db.Save();

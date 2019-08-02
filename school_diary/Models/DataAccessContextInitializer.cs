@@ -533,7 +533,7 @@ namespace school_diary.Models
                 }
             };
             manager.Create(student6);
-            manager.AddToRole(student5.Id, "students");
+            manager.AddToRole(student6.Id, "students");
 
             var student7 = new Student()
             {
@@ -646,7 +646,7 @@ namespace school_diary.Models
                 LastName = "Djordjevic",
                 Parents = new List<Parent>()
                 {
-                    parents.Find(p => p.UserName == "branislavparent"),
+                    parents.Find(p => p.UserName == "baneparent"),
                     parents.Find(p => p.UserName == "ivanaparent")
                 }
             };
@@ -661,7 +661,7 @@ namespace school_diary.Models
                 LastName = "Djordjevic",
                 Parents = new List<Parent>()
                 {
-                    parents.Find(p => p.UserName == "branislavparent"),
+                    parents.Find(p => p.UserName == "baneparent"),
                     parents.Find(p => p.UserName == "ivanaparent")
                 }
             };
@@ -800,7 +800,7 @@ namespace school_diary.Models
             var teach1 = new Teach()
             {
                 Teachers = teacher1,
-                SubjectGrades = subjectgrade1,
+                Subject = subject1,
                 StudentDepartments = studentdepartment1
             };
             context.Teaches.Add(teach1);
@@ -808,7 +808,7 @@ namespace school_diary.Models
             var teach2 = new Teach()
             {
                 Teachers = teacher1,
-                SubjectGrades = subjectgrade1,
+                Subject = subject1,
                 StudentDepartments = studentdepartment2
             };
             context.Teaches.Add(teach2);
@@ -816,577 +816,1168 @@ namespace school_diary.Models
             var teach3 = new Teach()
             {
                 Teachers = teacher2,
-                SubjectGrades = subjectgrade1,
+                Subject = subject1,
                 StudentDepartments = studentdepartment3
             };
             context.Teaches.Add(teach3);
             var teach4 = new Teach()
             {
                 Teachers = teacher2,
-                SubjectGrades = subjectgrade1,
+                Subject = subject1,
                 StudentDepartments = studentdepartment4
             };
             context.Teaches.Add(teach4);
             var teach5 = new Teach()
             {
                 Teachers = teacher3,
-                SubjectGrades = subjectgrade2,
+                Subject = subject2,
                 StudentDepartments = studentdepartment1
             };
             context.Teaches.Add(teach5);
             var teach6 = new Teach()
             {
                 Teachers = teacher3,
-                SubjectGrades = subjectgrade2,
+                Subject = subject2,
                 StudentDepartments = studentdepartment2
             };
             context.Teaches.Add(teach6);
             var teach7 = new Teach()
             {
                 Teachers = teacher4,
-                SubjectGrades = subjectgrade2,
+                Subject = subject2,
                 StudentDepartments = studentdepartment3
             };
             context.Teaches.Add(teach7);
             var teach8 = new Teach()
             {
                 Teachers = teacher4,
-                SubjectGrades = subjectgrade2,
+                Subject = subject2,
                 StudentDepartments = studentdepartment4
             };
             context.Teaches.Add(teach8);
             var teach9 = new Teach()
             {
                 Teachers = teacher5,
-                SubjectGrades = subjectgrade3,
+                Subject = subject3,
                 StudentDepartments = studentdepartment1
             };
             context.Teaches.Add(teach9);
             var teach10 = new Teach()
             {
                 Teachers = teacher5,
-                SubjectGrades = subjectgrade3,
+                Subject = subject3,
                 StudentDepartments = studentdepartment2
             };
             context.Teaches.Add(teach10);
             var teach11 = new Teach()
             {
                 Teachers = teacher5,
-                SubjectGrades = subjectgrade3,
+                Subject = subject3,
                 StudentDepartments = studentdepartment3
             };
             context.Teaches.Add(teach11);
             var teach12 = new Teach()
             {
                 Teachers = teacher5,
-                SubjectGrades = subjectgrade3,
+                Subject = subject3,
                 StudentDepartments = studentdepartment4
             };
             context.Teaches.Add(teach12);
             var teach13 = new Teach()
             {
                 Teachers = teacher6,
-                SubjectGrades = subjectgrade4,
+                Subject = subject4,
                 StudentDepartments = studentdepartment1
             };
             context.Teaches.Add(teach13);
             var teach14 = new Teach()
             {
                 Teachers = teacher6,
-                SubjectGrades = subjectgrade4,
+                Subject = subject4,
                 StudentDepartments = studentdepartment2
             };
             context.Teaches.Add(teach14);
             var teach15 = new Teach()
             {
                 Teachers = teacher6,
-                SubjectGrades = subjectgrade4,
+                Subject = subject4,
                 StudentDepartments = studentdepartment3
             };
             context.Teaches.Add(teach15);
             var teach16 = new Teach()
             {
                 Teachers = teacher6,
-                SubjectGrades = subjectgrade4,
+                Subject = subject4,
                 StudentDepartments = studentdepartment4
             };
             context.Teaches.Add(teach16);
             var teach17 = new Teach()
             {
                 Teachers = teacher1,
-                SubjectGrades = subjectgrade1,
+                Subject = subject1,
                 StudentDepartments = studentdepartment5
             };
             context.Teaches.Add(teach17);
             var teach18 = new Teach()
             {
                 Teachers = teacher1,
-                SubjectGrades = subjectgrade1,
+                Subject = subject1,
                 StudentDepartments = studentdepartment6
             };
             context.Teaches.Add(teach18);
             var teach19 = new Teach()
             {
                 Teachers = teacher2,
-                SubjectGrades = subjectgrade1,
+                Subject = subject1,
                 StudentDepartments = studentdepartment7
             };
             context.Teaches.Add(teach19);
             var teach20 = new Teach()
             {
                 Teachers = teacher2,
-                SubjectGrades = subjectgrade1,
+                Subject = subject1,
                 StudentDepartments = studentdepartment8
             };
             context.Teaches.Add(teach20);
             var teach21 = new Teach()
             {
                 Teachers = teacher3,
-                SubjectGrades = subjectgrade5,
+                Subject = subject5,
                 StudentDepartments = studentdepartment5
             };
             context.Teaches.Add(teach21);
             var teach22 = new Teach()
             {
                 Teachers = teacher3,
-                SubjectGrades = subjectgrade5,
+                Subject = subject5,
                 StudentDepartments = studentdepartment6
             };
             context.Teaches.Add(teach22);
             var teach23 = new Teach()
             {
                 Teachers = teacher4,
-                SubjectGrades = subjectgrade5,
+                Subject = subject5,
                 StudentDepartments = studentdepartment7
             };
             context.Teaches.Add(teach23);
             var teach24 = new Teach()
             {
                 Teachers = teacher4,
-                SubjectGrades = subjectgrade5,
+                Subject = subject5,
                 StudentDepartments = studentdepartment8
             };
             context.Teaches.Add(teach24);
             var teach25 = new Teach()
             {
                 Teachers = teacher5,
-                SubjectGrades = subjectgrade6,
+                Subject = subject6,
                 StudentDepartments = studentdepartment5
             };
             context.Teaches.Add(teach25);
             var teach26 = new Teach()
             {
                 Teachers = teacher5,
-                SubjectGrades = subjectgrade6,
+                Subject = subject6,
                 StudentDepartments = studentdepartment6
             };
             context.Teaches.Add(teach26);
             var teach27 = new Teach()
             {
                 Teachers = teacher5,
-                SubjectGrades = subjectgrade6,
+                Subject = subject6,
                 StudentDepartments = studentdepartment7
             };
             context.Teaches.Add(teach27);
             var teach28 = new Teach()
             {
                 Teachers = teacher5,
-                SubjectGrades = subjectgrade6,
+                Subject = subject6,
                 StudentDepartments = studentdepartment8
             };
             context.Teaches.Add(teach28);
             var teach29 = new Teach()
             {
                 Teachers = teacher6,
-                SubjectGrades = subjectgrade7,
+                Subject = subject7,
                 StudentDepartments = studentdepartment5
             };
             context.Teaches.Add(teach29);
             var teach30 = new Teach()
             {
                 Teachers = teacher6,
-                SubjectGrades = subjectgrade7,
+                Subject = subject7,
                 StudentDepartments = studentdepartment6
             };
             context.Teaches.Add(teach30);
             var teach31 = new Teach()
             {
                 Teachers = teacher6,
-                SubjectGrades = subjectgrade7,
+                Subject = subject7,
                 StudentDepartments = studentdepartment7
             };
             context.Teaches.Add(teach31);
             var teach32 = new Teach()
             {
                 Teachers = teacher6,
-                SubjectGrades = subjectgrade7,
+                Subject = subject7,
                 StudentDepartments = studentdepartment8
             };
             context.Teaches.Add(teach32);
             var teach33 = new Teach()
             {
                 Teachers = teacher7,
-                SubjectGrades = subjectgrade9,
+                Subject = subject9,
                 StudentDepartments = studentdepartment5
             };
             context.Teaches.Add(teach33);
             var teach34 = new Teach()
             {
                 Teachers = teacher7,
-                SubjectGrades = subjectgrade9,
+                Subject = subject9,
                 StudentDepartments = studentdepartment6
             };
             context.Teaches.Add(teach34);
             var teach35 = new Teach()
             {
                 Teachers = teacher7,
-                SubjectGrades = subjectgrade9,
+                Subject = subject9,
                 StudentDepartments = studentdepartment7
             };
             context.Teaches.Add(teach35);
             var teach36 = new Teach()
             {
                 Teachers = teacher7,
-                SubjectGrades = subjectgrade9,
+                Subject = subject9,
                 StudentDepartments = studentdepartment8
             };
             context.Teaches.Add(teach36);
             var teach37 = new Teach()
             {
                 Teachers = teacher1,
-                SubjectGrades = subjectgrade1,
+                Subject = subject1,
                 StudentDepartments = studentdepartment9
             };
             context.Teaches.Add(teach37);
             var teach38 = new Teach()
             {
                 Teachers = teacher1,
-                SubjectGrades = subjectgrade1,
+                Subject = subject1,
                 StudentDepartments = studentdepartment10
             };
             context.Teaches.Add(teach38);
             var teach39 = new Teach()
             {
                 Teachers = teacher2,
-                SubjectGrades = subjectgrade1,
+                Subject = subject1,
                 StudentDepartments = studentdepartment11
             };
             context.Teaches.Add(teach39);
             var teach40 = new Teach()
             {
                 Teachers = teacher2,
-                SubjectGrades = subjectgrade1,
+                Subject = subject1,
                 StudentDepartments = studentdepartment12
             };
             context.Teaches.Add(teach40);
             var teach41 = new Teach()
             {
                 Teachers = teacher3,
-                SubjectGrades = subjectgrade5,
+                Subject = subject5,
                 StudentDepartments = studentdepartment9
             };
             context.Teaches.Add(teach41);
             var teach42 = new Teach()
             {
                 Teachers = teacher3,
-                SubjectGrades = subjectgrade5,
+                Subject = subject5,
                 StudentDepartments = studentdepartment10
             };
             context.Teaches.Add(teach42);
             var teach43 = new Teach()
             {
                 Teachers = teacher4,
-                SubjectGrades = subjectgrade5,
+                Subject = subject5,
                 StudentDepartments = studentdepartment11
             };
             context.Teaches.Add(teach43);
             var teach44 = new Teach()
             {
                 Teachers = teacher4,
-                SubjectGrades = subjectgrade5,
+                Subject = subject5,
                 StudentDepartments = studentdepartment12
             };
             context.Teaches.Add(teach44);
             var teach45 = new Teach()
             {
                 Teachers = teacher5,
-                SubjectGrades = subjectgrade6,
+                Subject = subject6,
                 StudentDepartments = studentdepartment9
             };
             context.Teaches.Add(teach45);
             var teach46 = new Teach()
             {
                 Teachers = teacher5,
-                SubjectGrades = subjectgrade6,
+                Subject = subject6,
                 StudentDepartments = studentdepartment10
             };
             context.Teaches.Add(teach46);
             var teach47 = new Teach()
             {
                 Teachers = teacher5,
-                SubjectGrades = subjectgrade6,
+                Subject = subject6,
                 StudentDepartments = studentdepartment11
             };
             context.Teaches.Add(teach47);
             var teach48 = new Teach()
             {
                 Teachers = teacher5,
-                SubjectGrades = subjectgrade6,
+                Subject = subject6,
                 StudentDepartments = studentdepartment12
             };
             context.Teaches.Add(teach48);
             var teach49 = new Teach()
             {
                 Teachers = teacher6,
-                SubjectGrades = subjectgrade7,
+                Subject = subject7,
                 StudentDepartments = studentdepartment9
             };
             context.Teaches.Add(teach49);
             var teach50 = new Teach()
             {
                 Teachers = teacher6,
-                SubjectGrades = subjectgrade7,
+                Subject = subject7,
                 StudentDepartments = studentdepartment10
             };
             context.Teaches.Add(teach50);
             var teach51 = new Teach()
             {
                 Teachers = teacher6,
-                SubjectGrades = subjectgrade7,
+                Subject = subject7,
                 StudentDepartments = studentdepartment11
             };
             context.Teaches.Add(teach51);
             var teach52 = new Teach()
             {
                 Teachers = teacher6,
-                SubjectGrades = subjectgrade7,
+                Subject = subject7,
                 StudentDepartments = studentdepartment12
             };
             context.Teaches.Add(teach52);
             var teach53 = new Teach()
             {
                 Teachers = teacher7,
-                SubjectGrades = subjectgrade9,
+                Subject = subject9,
                 StudentDepartments = studentdepartment9
             };
             context.Teaches.Add(teach53);
             var teach54 = new Teach()
             {
                 Teachers = teacher7,
-                SubjectGrades = subjectgrade9,
+                Subject = subject9,
                 StudentDepartments = studentdepartment10
             };
             context.Teaches.Add(teach54);
             var teach55 = new Teach()
             {
                 Teachers = teacher7,
-                SubjectGrades = subjectgrade9,
+                Subject = subject9,
                 StudentDepartments = studentdepartment11
             };
             context.Teaches.Add(teach55);
             var teach56 = new Teach()
             {
                 Teachers = teacher7,
-                SubjectGrades = subjectgrade9,
+                Subject = subject9,
                 StudentDepartments = studentdepartment12
             };
             context.Teaches.Add(teach56);
             var teach57 = new Teach()
             {
                 Teachers = teacher8,
-                SubjectGrades = subjectgrade8,
+                Subject = subject8,
                 StudentDepartments = studentdepartment9
             };
             context.Teaches.Add(teach57);
             var teach58 = new Teach()
             {
                 Teachers = teacher8,
-                SubjectGrades = subjectgrade8,
+                Subject = subject8,
                 StudentDepartments = studentdepartment10
             };
             context.Teaches.Add(teach58);
             var teach59 = new Teach()
             {
                 Teachers = teacher8,
-                SubjectGrades = subjectgrade8,
+                Subject = subject8,
                 StudentDepartments = studentdepartment11
             };
             context.Teaches.Add(teach59);
             var teach60 = new Teach()
             {
                 Teachers = teacher8,
-                SubjectGrades = subjectgrade8,
+                Subject = subject8,
                 StudentDepartments = studentdepartment12
             };
             context.Teaches.Add(teach60);
             var teach61 = new Teach()
             {
                 Teachers = teacher1,
-                SubjectGrades = subjectgrade1,
+                Subject = subject1,
                 StudentDepartments = studentdepartment13
             };
             context.Teaches.Add(teach61);
             var teach62 = new Teach()
             {
                 Teachers = teacher1,
-                SubjectGrades = subjectgrade1,
+                Subject = subject1,
                 StudentDepartments = studentdepartment14
             };
             context.Teaches.Add(teach62);
             var teach63 = new Teach()
             {
                 Teachers = teacher2,
-                SubjectGrades = subjectgrade1,
+                Subject = subject1,
                 StudentDepartments = studentdepartment15
             };
             context.Teaches.Add(teach63);
             var teach64 = new Teach()
             {
                 Teachers = teacher2,
-                SubjectGrades = subjectgrade1,
+                Subject = subject1,
                 StudentDepartments = studentdepartment16
             };
             context.Teaches.Add(teach64);
             var teach65 = new Teach()
             {
                 Teachers = teacher3,
-                SubjectGrades = subjectgrade5,
+                Subject = subject5,
                 StudentDepartments = studentdepartment13
             };
             context.Teaches.Add(teach65);
             var teach66 = new Teach()
             {
                 Teachers = teacher3,
-                SubjectGrades = subjectgrade5,
+                Subject = subject5,
                 StudentDepartments = studentdepartment14
             };
             context.Teaches.Add(teach66);
             var teach67 = new Teach()
             {
                 Teachers = teacher4,
-                SubjectGrades = subjectgrade5,
+                Subject = subject5,
                 StudentDepartments = studentdepartment15
             };
             context.Teaches.Add(teach67);
             var teach68 = new Teach()
             {
                 Teachers = teacher4,
-                SubjectGrades = subjectgrade5,
+                Subject = subject5,
                 StudentDepartments = studentdepartment16
             };
             context.Teaches.Add(teach68);
             var teach69 = new Teach()
             {
                 Teachers = teacher5,
-                SubjectGrades = subjectgrade6,
+                Subject = subject6,
                 StudentDepartments = studentdepartment13
             };
             context.Teaches.Add(teach69);
             var teach70 = new Teach()
             {
                 Teachers = teacher5,
-                SubjectGrades = subjectgrade6,
+                Subject = subject6,
                 StudentDepartments = studentdepartment14
             };
             context.Teaches.Add(teach70);
             var teach71 = new Teach()
             {
                 Teachers = teacher5,
-                SubjectGrades = subjectgrade6,
+                Subject = subject6,
                 StudentDepartments = studentdepartment15
             };
             context.Teaches.Add(teach71);
             var teach72 = new Teach()
             {
                 Teachers = teacher5,
-                SubjectGrades = subjectgrade6,
+                Subject = subject6,
                 StudentDepartments = studentdepartment16
             };
             context.Teaches.Add(teach72);
             var teach73 = new Teach()
             {
                 Teachers = teacher6,
-                SubjectGrades = subjectgrade7,
+                Subject = subject7,
                 StudentDepartments = studentdepartment13
             };
             context.Teaches.Add(teach73);
             var teach74 = new Teach()
             {
                 Teachers = teacher6,
-                SubjectGrades = subjectgrade7,
+                Subject = subject7,
                 StudentDepartments = studentdepartment14
             };
             context.Teaches.Add(teach74);
             var teach75 = new Teach()
             {
                 Teachers = teacher6,
-                SubjectGrades = subjectgrade7,
+                Subject = subject7,
                 StudentDepartments = studentdepartment15
             };
             context.Teaches.Add(teach75);
             var teach76 = new Teach()
             {
                 Teachers = teacher6,
-                SubjectGrades = subjectgrade7,
+                Subject = subject7,
                 StudentDepartments = studentdepartment16
             };
             context.Teaches.Add(teach76);
             var teach77 = new Teach()
             {
                 Teachers = teacher7,
-                SubjectGrades = subjectgrade9,
+                Subject = subject9,
                 StudentDepartments = studentdepartment13
             };
             context.Teaches.Add(teach77);
             var teach78 = new Teach()
             {
                 Teachers = teacher7,
-                SubjectGrades = subjectgrade9,
+                Subject = subject9,
                 StudentDepartments = studentdepartment14
             };
             context.Teaches.Add(teach78);
             var teach79 = new Teach()
             {
                 Teachers = teacher7,
-                SubjectGrades = subjectgrade9,
+                Subject = subject9,
                 StudentDepartments = studentdepartment15
             };
             context.Teaches.Add(teach79);
             var teach80 = new Teach()
             {
                 Teachers = teacher7,
-                SubjectGrades = subjectgrade9,
+                Subject = subject9,
                 StudentDepartments = studentdepartment16
             };
             context.Teaches.Add(teach80);
             var teach81 = new Teach()
             {
                 Teachers = teacher8,
-                SubjectGrades = subjectgrade8,
+                Subject = subject8,
                 StudentDepartments = studentdepartment13
             };
             context.Teaches.Add(teach81);
             var teach82 = new Teach()
             {
                 Teachers = teacher8,
-                SubjectGrades = subjectgrade8,
+                Subject = subject8,
                 StudentDepartments = studentdepartment14
             };
             context.Teaches.Add(teach82);
             var teach83 = new Teach()
             {
                 Teachers = teacher8,
-                SubjectGrades = subjectgrade8,
+                Subject = subject8,
                 StudentDepartments = studentdepartment15
             };
             context.Teaches.Add(teach83);
             var teach84 = new Teach()
             {
                 Teachers = teacher8,
-                SubjectGrades = subjectgrade8,
+                Subject = subject8,
                 StudentDepartments = studentdepartment16
             };
             context.Teaches.Add(teach84);
+
+            //var teach1 = new Teach()
+            //{
+            //    Teachers = teacher1,
+            //    Subjects = subjectgrade1,
+            //    StudentDepartments = studentdepartment1
+            //};
+            //context.Teaches.Add(teach1);
+
+            //var teach2 = new Teach()
+            //{
+            //    Teachers = teacher1,
+            //    SubjectGrades = subjectgrade1,
+            //    StudentDepartments = studentdepartment2
+            //};
+            //context.Teaches.Add(teach2);
+
+            //var teach3 = new Teach()
+            //{
+            //    Teachers = teacher2,
+            //    SubjectGrades = subjectgrade1,
+            //    StudentDepartments = studentdepartment3
+            //};
+            //context.Teaches.Add(teach3);
+            //var teach4 = new Teach()
+            //{
+            //    Teachers = teacher2,
+            //    SubjectGrades = subjectgrade1,
+            //    StudentDepartments = studentdepartment4
+            //};
+            //context.Teaches.Add(teach4);
+            //var teach5 = new Teach()
+            //{
+            //    Teachers = teacher3,
+            //    SubjectGrades = subjectgrade2,
+            //    StudentDepartments = studentdepartment1
+            //};
+            //context.Teaches.Add(teach5);
+            //var teach6 = new Teach()
+            //{
+            //    Teachers = teacher3,
+            //    SubjectGrades = subjectgrade2,
+            //    StudentDepartments = studentdepartment2
+            //};
+            //context.Teaches.Add(teach6);
+            //var teach7 = new Teach()
+            //{
+            //    Teachers = teacher4,
+            //    SubjectGrades = subjectgrade2,
+            //    StudentDepartments = studentdepartment3
+            //};
+            //context.Teaches.Add(teach7);
+            //var teach8 = new Teach()
+            //{
+            //    Teachers = teacher4,
+            //    SubjectGrades = subjectgrade2,
+            //    StudentDepartments = studentdepartment4
+            //};
+            //context.Teaches.Add(teach8);
+            //var teach9 = new Teach()
+            //{
+            //    Teachers = teacher5,
+            //    SubjectGrades = subjectgrade3,
+            //    StudentDepartments = studentdepartment1
+            //};
+            //context.Teaches.Add(teach9);
+            //var teach10 = new Teach()
+            //{
+            //    Teachers = teacher5,
+            //    SubjectGrades = subjectgrade3,
+            //    StudentDepartments = studentdepartment2
+            //};
+            //context.Teaches.Add(teach10);
+            //var teach11 = new Teach()
+            //{
+            //    Teachers = teacher5,
+            //    SubjectGrades = subjectgrade3,
+            //    StudentDepartments = studentdepartment3
+            //};
+            //context.Teaches.Add(teach11);
+            //var teach12 = new Teach()
+            //{
+            //    Teachers = teacher5,
+            //    SubjectGrades = subjectgrade3,
+            //    StudentDepartments = studentdepartment4
+            //};
+            //context.Teaches.Add(teach12);
+            //var teach13 = new Teach()
+            //{
+            //    Teachers = teacher6,
+            //    SubjectGrades = subjectgrade4,
+            //    StudentDepartments = studentdepartment1
+            //};
+            //context.Teaches.Add(teach13);
+            //var teach14 = new Teach()
+            //{
+            //    Teachers = teacher6,
+            //    SubjectGrades = subjectgrade4,
+            //    StudentDepartments = studentdepartment2
+            //};
+            //context.Teaches.Add(teach14);
+            //var teach15 = new Teach()
+            //{
+            //    Teachers = teacher6,
+            //    SubjectGrades = subjectgrade4,
+            //    StudentDepartments = studentdepartment3
+            //};
+            //context.Teaches.Add(teach15);
+            //var teach16 = new Teach()
+            //{
+            //    Teachers = teacher6,
+            //    SubjectGrades = subjectgrade4,
+            //    StudentDepartments = studentdepartment4
+            //};
+            //context.Teaches.Add(teach16);
+            //var teach17 = new Teach()
+            //{
+            //    Teachers = teacher1,
+            //    SubjectGrades = subjectgrade1,
+            //    StudentDepartments = studentdepartment5
+            //};
+            //context.Teaches.Add(teach17);
+            //var teach18 = new Teach()
+            //{
+            //    Teachers = teacher1,
+            //    SubjectGrades = subjectgrade1,
+            //    StudentDepartments = studentdepartment6
+            //};
+            //context.Teaches.Add(teach18);
+            //var teach19 = new Teach()
+            //{
+            //    Teachers = teacher2,
+            //    SubjectGrades = subjectgrade1,
+            //    StudentDepartments = studentdepartment7
+            //};
+            //context.Teaches.Add(teach19);
+            //var teach20 = new Teach()
+            //{
+            //    Teachers = teacher2,
+            //    SubjectGrades = subjectgrade1,
+            //    StudentDepartments = studentdepartment8
+            //};
+            //context.Teaches.Add(teach20);
+            //var teach21 = new Teach()
+            //{
+            //    Teachers = teacher3,
+            //    SubjectGrades = subjectgrade5,
+            //    StudentDepartments = studentdepartment5
+            //};
+            //context.Teaches.Add(teach21);
+            //var teach22 = new Teach()
+            //{
+            //    Teachers = teacher3,
+            //    SubjectGrades = subjectgrade5,
+            //    StudentDepartments = studentdepartment6
+            //};
+            //context.Teaches.Add(teach22);
+            //var teach23 = new Teach()
+            //{
+            //    Teachers = teacher4,
+            //    SubjectGrades = subjectgrade5,
+            //    StudentDepartments = studentdepartment7
+            //};
+            //context.Teaches.Add(teach23);
+            //var teach24 = new Teach()
+            //{
+            //    Teachers = teacher4,
+            //    SubjectGrades = subjectgrade5,
+            //    StudentDepartments = studentdepartment8
+            //};
+            //context.Teaches.Add(teach24);
+            //var teach25 = new Teach()
+            //{
+            //    Teachers = teacher5,
+            //    SubjectGrades = subjectgrade6,
+            //    StudentDepartments = studentdepartment5
+            //};
+            //context.Teaches.Add(teach25);
+            //var teach26 = new Teach()
+            //{
+            //    Teachers = teacher5,
+            //    SubjectGrades = subjectgrade6,
+            //    StudentDepartments = studentdepartment6
+            //};
+            //context.Teaches.Add(teach26);
+            //var teach27 = new Teach()
+            //{
+            //    Teachers = teacher5,
+            //    SubjectGrades = subjectgrade6,
+            //    StudentDepartments = studentdepartment7
+            //};
+            //context.Teaches.Add(teach27);
+            //var teach28 = new Teach()
+            //{
+            //    Teachers = teacher5,
+            //    SubjectGrades = subjectgrade6,
+            //    StudentDepartments = studentdepartment8
+            //};
+            //context.Teaches.Add(teach28);
+            //var teach29 = new Teach()
+            //{
+            //    Teachers = teacher6,
+            //    SubjectGrades = subjectgrade7,
+            //    StudentDepartments = studentdepartment5
+            //};
+            //context.Teaches.Add(teach29);
+            //var teach30 = new Teach()
+            //{
+            //    Teachers = teacher6,
+            //    SubjectGrades = subjectgrade7,
+            //    StudentDepartments = studentdepartment6
+            //};
+            //context.Teaches.Add(teach30);
+            //var teach31 = new Teach()
+            //{
+            //    Teachers = teacher6,
+            //    SubjectGrades = subjectgrade7,
+            //    StudentDepartments = studentdepartment7
+            //};
+            //context.Teaches.Add(teach31);
+            //var teach32 = new Teach()
+            //{
+            //    Teachers = teacher6,
+            //    SubjectGrades = subjectgrade7,
+            //    StudentDepartments = studentdepartment8
+            //};
+            //context.Teaches.Add(teach32);
+            //var teach33 = new Teach()
+            //{
+            //    Teachers = teacher7,
+            //    SubjectGrades = subjectgrade9,
+            //    StudentDepartments = studentdepartment5
+            //};
+            //context.Teaches.Add(teach33);
+            //var teach34 = new Teach()
+            //{
+            //    Teachers = teacher7,
+            //    SubjectGrades = subjectgrade9,
+            //    StudentDepartments = studentdepartment6
+            //};
+            //context.Teaches.Add(teach34);
+            //var teach35 = new Teach()
+            //{
+            //    Teachers = teacher7,
+            //    SubjectGrades = subjectgrade9,
+            //    StudentDepartments = studentdepartment7
+            //};
+            //context.Teaches.Add(teach35);
+            //var teach36 = new Teach()
+            //{
+            //    Teachers = teacher7,
+            //    SubjectGrades = subjectgrade9,
+            //    StudentDepartments = studentdepartment8
+            //};
+            //context.Teaches.Add(teach36);
+            //var teach37 = new Teach()
+            //{
+            //    Teachers = teacher1,
+            //    SubjectGrades = subjectgrade1,
+            //    StudentDepartments = studentdepartment9
+            //};
+            //context.Teaches.Add(teach37);
+            //var teach38 = new Teach()
+            //{
+            //    Teachers = teacher1,
+            //    SubjectGrades = subjectgrade1,
+            //    StudentDepartments = studentdepartment10
+            //};
+            //context.Teaches.Add(teach38);
+            //var teach39 = new Teach()
+            //{
+            //    Teachers = teacher2,
+            //    SubjectGrades = subjectgrade1,
+            //    StudentDepartments = studentdepartment11
+            //};
+            //context.Teaches.Add(teach39);
+            //var teach40 = new Teach()
+            //{
+            //    Teachers = teacher2,
+            //    SubjectGrades = subjectgrade1,
+            //    StudentDepartments = studentdepartment12
+            //};
+            //context.Teaches.Add(teach40);
+            //var teach41 = new Teach()
+            //{
+            //    Teachers = teacher3,
+            //    SubjectGrades = subjectgrade5,
+            //    StudentDepartments = studentdepartment9
+            //};
+            //context.Teaches.Add(teach41);
+            //var teach42 = new Teach()
+            //{
+            //    Teachers = teacher3,
+            //    SubjectGrades = subjectgrade5,
+            //    StudentDepartments = studentdepartment10
+            //};
+            //context.Teaches.Add(teach42);
+            //var teach43 = new Teach()
+            //{
+            //    Teachers = teacher4,
+            //    SubjectGrades = subjectgrade5,
+            //    StudentDepartments = studentdepartment11
+            //};
+            //context.Teaches.Add(teach43);
+            //var teach44 = new Teach()
+            //{
+            //    Teachers = teacher4,
+            //    SubjectGrades = subjectgrade5,
+            //    StudentDepartments = studentdepartment12
+            //};
+            //context.Teaches.Add(teach44);
+            //var teach45 = new Teach()
+            //{
+            //    Teachers = teacher5,
+            //    SubjectGrades = subjectgrade6,
+            //    StudentDepartments = studentdepartment9
+            //};
+            //context.Teaches.Add(teach45);
+            //var teach46 = new Teach()
+            //{
+            //    Teachers = teacher5,
+            //    SubjectGrades = subjectgrade6,
+            //    StudentDepartments = studentdepartment10
+            //};
+            //context.Teaches.Add(teach46);
+            //var teach47 = new Teach()
+            //{
+            //    Teachers = teacher5,
+            //    SubjectGrades = subjectgrade6,
+            //    StudentDepartments = studentdepartment11
+            //};
+            //context.Teaches.Add(teach47);
+            //var teach48 = new Teach()
+            //{
+            //    Teachers = teacher5,
+            //    SubjectGrades = subjectgrade6,
+            //    StudentDepartments = studentdepartment12
+            //};
+            //context.Teaches.Add(teach48);
+            //var teach49 = new Teach()
+            //{
+            //    Teachers = teacher6,
+            //    SubjectGrades = subjectgrade7,
+            //    StudentDepartments = studentdepartment9
+            //};
+            //context.Teaches.Add(teach49);
+            //var teach50 = new Teach()
+            //{
+            //    Teachers = teacher6,
+            //    SubjectGrades = subjectgrade7,
+            //    StudentDepartments = studentdepartment10
+            //};
+            //context.Teaches.Add(teach50);
+            //var teach51 = new Teach()
+            //{
+            //    Teachers = teacher6,
+            //    SubjectGrades = subjectgrade7,
+            //    StudentDepartments = studentdepartment11
+            //};
+            //context.Teaches.Add(teach51);
+            //var teach52 = new Teach()
+            //{
+            //    Teachers = teacher6,
+            //    SubjectGrades = subjectgrade7,
+            //    StudentDepartments = studentdepartment12
+            //};
+            //context.Teaches.Add(teach52);
+            //var teach53 = new Teach()
+            //{
+            //    Teachers = teacher7,
+            //    SubjectGrades = subjectgrade9,
+            //    StudentDepartments = studentdepartment9
+            //};
+            //context.Teaches.Add(teach53);
+            //var teach54 = new Teach()
+            //{
+            //    Teachers = teacher7,
+            //    SubjectGrades = subjectgrade9,
+            //    StudentDepartments = studentdepartment10
+            //};
+            //context.Teaches.Add(teach54);
+            //var teach55 = new Teach()
+            //{
+            //    Teachers = teacher7,
+            //    SubjectGrades = subjectgrade9,
+            //    StudentDepartments = studentdepartment11
+            //};
+            //context.Teaches.Add(teach55);
+            //var teach56 = new Teach()
+            //{
+            //    Teachers = teacher7,
+            //    SubjectGrades = subjectgrade9,
+            //    StudentDepartments = studentdepartment12
+            //};
+            //context.Teaches.Add(teach56);
+            //var teach57 = new Teach()
+            //{
+            //    Teachers = teacher8,
+            //    SubjectGrades = subjectgrade8,
+            //    StudentDepartments = studentdepartment9
+            //};
+            //context.Teaches.Add(teach57);
+            //var teach58 = new Teach()
+            //{
+            //    Teachers = teacher8,
+            //    SubjectGrades = subjectgrade8,
+            //    StudentDepartments = studentdepartment10
+            //};
+            //context.Teaches.Add(teach58);
+            //var teach59 = new Teach()
+            //{
+            //    Teachers = teacher8,
+            //    SubjectGrades = subjectgrade8,
+            //    StudentDepartments = studentdepartment11
+            //};
+            //context.Teaches.Add(teach59);
+            //var teach60 = new Teach()
+            //{
+            //    Teachers = teacher8,
+            //    SubjectGrades = subjectgrade8,
+            //    StudentDepartments = studentdepartment12
+            //};
+            //context.Teaches.Add(teach60);
+            //var teach61 = new Teach()
+            //{
+            //    Teachers = teacher1,
+            //    SubjectGrades = subjectgrade1,
+            //    StudentDepartments = studentdepartment13
+            //};
+            //context.Teaches.Add(teach61);
+            //var teach62 = new Teach()
+            //{
+            //    Teachers = teacher1,
+            //    SubjectGrades = subjectgrade1,
+            //    StudentDepartments = studentdepartment14
+            //};
+            //context.Teaches.Add(teach62);
+            //var teach63 = new Teach()
+            //{
+            //    Teachers = teacher2,
+            //    SubjectGrades = subjectgrade1,
+            //    StudentDepartments = studentdepartment15
+            //};
+            //context.Teaches.Add(teach63);
+            //var teach64 = new Teach()
+            //{
+            //    Teachers = teacher2,
+            //    SubjectGrades = subjectgrade1,
+            //    StudentDepartments = studentdepartment16
+            //};
+            //context.Teaches.Add(teach64);
+            //var teach65 = new Teach()
+            //{
+            //    Teachers = teacher3,
+            //    SubjectGrades = subjectgrade5,
+            //    StudentDepartments = studentdepartment13
+            //};
+            //context.Teaches.Add(teach65);
+            //var teach66 = new Teach()
+            //{
+            //    Teachers = teacher3,
+            //    SubjectGrades = subjectgrade5,
+            //    StudentDepartments = studentdepartment14
+            //};
+            //context.Teaches.Add(teach66);
+            //var teach67 = new Teach()
+            //{
+            //    Teachers = teacher4,
+            //    SubjectGrades = subjectgrade5,
+            //    StudentDepartments = studentdepartment15
+            //};
+            //context.Teaches.Add(teach67);
+            //var teach68 = new Teach()
+            //{
+            //    Teachers = teacher4,
+            //    SubjectGrades = subjectgrade5,
+            //    StudentDepartments = studentdepartment16
+            //};
+            //context.Teaches.Add(teach68);
+            //var teach69 = new Teach()
+            //{
+            //    Teachers = teacher5,
+            //    SubjectGrades = subjectgrade6,
+            //    StudentDepartments = studentdepartment13
+            //};
+            //context.Teaches.Add(teach69);
+            //var teach70 = new Teach()
+            //{
+            //    Teachers = teacher5,
+            //    SubjectGrades = subjectgrade6,
+            //    StudentDepartments = studentdepartment14
+            //};
+            //context.Teaches.Add(teach70);
+            //var teach71 = new Teach()
+            //{
+            //    Teachers = teacher5,
+            //    SubjectGrades = subjectgrade6,
+            //    StudentDepartments = studentdepartment15
+            //};
+            //context.Teaches.Add(teach71);
+            //var teach72 = new Teach()
+            //{
+            //    Teachers = teacher5,
+            //    SubjectGrades = subjectgrade6,
+            //    StudentDepartments = studentdepartment16
+            //};
+            //context.Teaches.Add(teach72);
+            //var teach73 = new Teach()
+            //{
+            //    Teachers = teacher6,
+            //    SubjectGrades = subjectgrade7,
+            //    StudentDepartments = studentdepartment13
+            //};
+            //context.Teaches.Add(teach73);
+            //var teach74 = new Teach()
+            //{
+            //    Teachers = teacher6,
+            //    SubjectGrades = subjectgrade7,
+            //    StudentDepartments = studentdepartment14
+            //};
+            //context.Teaches.Add(teach74);
+            //var teach75 = new Teach()
+            //{
+            //    Teachers = teacher6,
+            //    SubjectGrades = subjectgrade7,
+            //    StudentDepartments = studentdepartment15
+            //};
+            //context.Teaches.Add(teach75);
+            //var teach76 = new Teach()
+            //{
+            //    Teachers = teacher6,
+            //    SubjectGrades = subjectgrade7,
+            //    StudentDepartments = studentdepartment16
+            //};
+            //context.Teaches.Add(teach76);
+            //var teach77 = new Teach()
+            //{
+            //    Teachers = teacher7,
+            //    SubjectGrades = subjectgrade9,
+            //    StudentDepartments = studentdepartment13
+            //};
+            //context.Teaches.Add(teach77);
+            //var teach78 = new Teach()
+            //{
+            //    Teachers = teacher7,
+            //    SubjectGrades = subjectgrade9,
+            //    StudentDepartments = studentdepartment14
+            //};
+            //context.Teaches.Add(teach78);
+            //var teach79 = new Teach()
+            //{
+            //    Teachers = teacher7,
+            //    SubjectGrades = subjectgrade9,
+            //    StudentDepartments = studentdepartment15
+            //};
+            //context.Teaches.Add(teach79);
+            //var teach80 = new Teach()
+            //{
+            //    Teachers = teacher7,
+            //    SubjectGrades = subjectgrade9,
+            //    StudentDepartments = studentdepartment16
+            //};
+            //context.Teaches.Add(teach80);
+            //var teach81 = new Teach()
+            //{
+            //    Teachers = teacher8,
+            //    SubjectGrades = subjectgrade8,
+            //    StudentDepartments = studentdepartment13
+            //};
+            //context.Teaches.Add(teach81);
+            //var teach82 = new Teach()
+            //{
+            //    Teachers = teacher8,
+            //    SubjectGrades = subjectgrade8,
+            //    StudentDepartments = studentdepartment14
+            //};
+            //context.Teaches.Add(teach82);
+            //var teach83 = new Teach()
+            //{
+            //    Teachers = teacher8,
+            //    SubjectGrades = subjectgrade8,
+            //    StudentDepartments = studentdepartment15
+            //};
+            //context.Teaches.Add(teach83);
+            //var teach84 = new Teach()
+            //{
+            //    Teachers = teacher8,
+            //    SubjectGrades = subjectgrade8,
+            //    StudentDepartments = studentdepartment16
+            //};
+            //context.Teaches.Add(teach84);
 
             //make some marks
             var mark1 = new Mark()

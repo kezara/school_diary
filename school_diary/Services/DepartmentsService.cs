@@ -31,7 +31,7 @@ namespace school_diary.Services
             Department department = GetDepartmentByID(id);
             if (department == null)
             {
-                throw new UserNotFoundException();
+                throw new UserNotFoundException($"No department with ID {id}");
             }
             db.DepartmentsRepository.Delete(id);
             db.Save();

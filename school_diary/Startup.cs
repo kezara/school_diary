@@ -1,6 +1,7 @@
 ﻿using Microsoft.Owin;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
+using school_diary.Filters;
 using school_diary.Infrastructure;
 using school_diary.Models;
 using school_diary.Providers;
@@ -28,7 +29,10 @@ namespace school_diary
 
             HttpConfiguration config = new HttpConfiguration();
             config.DependencyResolver = new UnityDependencyResolver(container);
-            config.Formatters.JsonFormatter.SerializerSettings.DateFormatString = "dd-MM-yyyy";
+            config.Formatters.JsonFormatter.SerializerSettings.DateFormatString = "dd.MM.yyyy";
+            //config.Filters.Add(new UserNotFoundExceptionFilterAttribute());
+            //config.Filters.Add(new ValidateModelAttribute());
+            
 
             WebApiConfig.Register(config);
             app.UseWebApi(config);

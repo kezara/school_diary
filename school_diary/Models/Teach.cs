@@ -19,9 +19,9 @@ namespace school_diary.Models
         ////za unos i izmenu podataka
         //[NotMapped]
         //public int SubjectID { get; set; }
-        //[JsonIgnore]
-        //public virtual ICollection<Mark> Marks { get; set; }
-        public virtual SubjectGrade SubjectGrades { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<Mark> Marks { get; set; }
+        public virtual Subject Subject { get; set; }
         //public virtual ICollection<ClassRoom> Departments { get; set; }
         //public virtual ICollection<Student> Students { get; set; }
         //[ForeignKey("Students")]

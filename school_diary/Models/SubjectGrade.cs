@@ -10,6 +10,6 @@ namespace school_diary.Models
         public int Id { get; set; }
         public virtual Subject Subjects { get; set; }
         public virtual Grade Grades { get; set; }
-        public virtual ICollection<Teach> Teaches { get; set; }
+        //public virtual ICollection<Teach> Teaches { get; set; }
     }
 }

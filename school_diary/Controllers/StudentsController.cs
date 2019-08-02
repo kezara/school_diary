@@ -24,10 +24,17 @@ namespace school_diary.Controllers
         }
 
         [Route("")]
-        public IEnumerable<Student> GetAllStudents()
+        public IHttpActionResult GetAllStudents()
         {
-            logger.Info("Getting all students");
-            return studentsService.GetAllStudents();
+            logger.Info("Getting all students, Student controller");
+            return Ok(studentsService.GetAllStudents());
+        }
+
+        [Route("{id}")]
+        public IHttpActionResult GetStudentById(string id)
+        {
+            logger.Info("Get student by id, students controller");
+            return Ok(studentsService.GetStudentById(id));
         }
 
         //[Route("")]
@@ -47,44 +54,39 @@ namespace school_diary.Controllers
         //    }
         //}
 
-        [Route("{username}")]
-        [ResponseType(typeof(Student))]
-        public IHttpActionResult PutStudentInClass(string username, StudentDTOInClass updtStudent)
-        {
-            try
-            {
-                if (username != updtStudent.UserName)
-                {
-                    throw new BadRequestException();
-                }
-                StudentDTOOutClass studentUpdated = studentsService.AddStudentToClass(username, updtStudent);
-                return Ok(studentUpdated);
-            }
-            catch (BadRequestException)
-            {
+        //[Route("{username}")]
+        //[ResponseType(typeof(Student))]
+        //public IHttpActionResult PutStudentInClass(string username, StudentDTOIn updtStudent)
+        //{
+        //    try
+        //    {
+        //        if (username != updtStudent.UserName)
+        //        {
+        //            throw new BadRequestException();
+        //        }
+        //        StudentDTOOut studentUpdated = studentsService.AddStudentToClass(username, updtStudent);
+        //        return Ok(studentUpdated);
+        //    }
+        //    catch (BadRequestException)
+        //    {
 
-                return BadRequest();
-            }
-            catch (UserNotFoundException)
-            {
-                return NotFound();
-            }
+        //        return BadRequest();
+        //    }
+        //    catch (UserNotFoundException)
+        //    {
+        //        return NotFound();
+        //    }
 
-        }
+        //}
 
-        [Route("{username}")]
-        [ResponseType(typeof(Student))]
-        public IHttpActionResult DeleteStudent(string username)
-        {
-            try
-            {
-                Student studentDeleted = studentsService.DeleteStudent(username);
-                return Ok(studentDeleted);
-            }
-            catch (UserNotFoundException)
-            {
-                return NotFound();
-            }
-        }
+        //[Route("{id}")]
+        //[ResponseType(typeof(StudentDTOOut))]
+        //public IHttpActionResult DeleteStudent(string id)
+        //{
+
+        //        StudentDTOOut studentDeleted = studentsService.DeleteStudent(id);
+        //        return Ok(studentDeleted);
+
+        //}
     }
 }

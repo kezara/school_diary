@@ -1,4 +1,6 @@
-﻿using school_diary.Models;
+﻿using NLog;
+using school_diary.Models;
+using school_diary.Models.DTOs;
 using school_diary.Repositories;
 using school_diary.Utilities.Exceptions;
 using System;
@@ -11,82 +13,163 @@ namespace school_diary.Services
 {
     public class AppUsersService : IAppUsersService
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         IUnitOfWork db;
         public AppUsersService(IUnitOfWork db)
         {
             this.db = db;
         }
 
-        //public AppUser CreateUser(AppUser newUser)
+        public IEnumerable<AppUserDTOOut> GetAllUsers()
+        {
+            logger.Info("Accessing db over users repository, get all users");
+            IEnumerable<AppUser> appUsers = db.UsersRepository.Get();
+            if (appUsers.Count() < 1)
+            {
+                throw new UserNotFoundException("No users here!!!");
+            }
+            HashSet<AppUserDTOOut> appUsersDTOOut = new HashSet<AppUserDTOOut>(); 
+            foreach (var appUser in appUsers)
+            {
+                AppUserDTOOut appUserDTO = new AppUserDTOOut()
+                {
+                    Id = appUser.Id,
+                    FirstName = appUser.FirstName,
+                    LastName = appUser.LastName,
+                    UserName = appUser.UserName,
+                    RoleId = appUser.Roles.Select(x => x.RoleId).FirstOrDefault()
+                };
+                appUsersDTOOut.Add(appUserDTO);
+            };
+            return appUsersDTOOut;
+        }
+
+        public AppUserDTOOut GetUserByUsername(string username)
+        {
+            logger.Info("Accessing db over users repository, get user by username");
+            AppUser appUser = db.UsersRepository.Get(filter: x => x.UserName == username).FirstOrDefault();
+            if (appUser == null)
+            {
+                throw new UserNotFoundException($"No user with username {username} here!");
+            }
+
+            AppUserDTOOut appUserDTO = new AppUserDTOOut()
+            {
+                Id = appUser.Id,
+                FirstName = appUser.FirstName,
+                LastName = appUser.LastName,
+                UserName = appUser.UserName,
+                RoleId = appUser.Roles.Select(x => x.RoleId).FirstOrDefault()
+            };
+
+            return appUserDTO;
+        }
+
+        public IEnumerable<AppUserDTOOut> GetUserByName(string name)
+        {
+            logger.Info("Accessing db over users repository, get user by name");
+            IEnumerable<AppUser> appUsers = db.UsersRepository.Get(filter: x => x.FirstName == name);
+            if (appUsers.Count() < 1)
+            {
+                throw new UserNotFoundException($"No users with name {name} here!!!");
+            }
+            HashSet<AppUserDTOOut> appUsersDTOOut = new HashSet<AppUserDTOOut>();
+            foreach (var appUser in appUsers)
+            {
+                AppUserDTOOut appUserDTO = new AppUserDTOOut()
+                {
+                    Id = appUser.Id,
+                    FirstName = appUser.FirstName,
+                    LastName = appUser.LastName,
+                    UserName = appUser.UserName,
+                    RoleId = appUser.Roles.Select(x => x.RoleId).FirstOrDefault()
+                };
+                appUsersDTOOut.Add(appUserDTO);
+            };
+            return appUsersDTOOut;
+        }
+
+        public IEnumerable<AppUserDTOOut> GetUserBySurname(string lastName)
+        {
+            logger.Info("Accessing db over users repository, get user by lastname");
+            IEnumerable<AppUser> appUsers = db.UsersRepository.Get(filter: x => x.LastName == lastName);
+            if (appUsers.Count() < 1)
+            {
+                throw new UserNotFoundException($"No users with name {lastName} here!!!");
+            }
+            HashSet<AppUserDTOOut> appUsersDTOOut = new HashSet<AppUserDTOOut>();
+            foreach (var appUser in appUsers)
+            {
+                AppUserDTOOut appUserDTO = new AppUserDTOOut()
+                {
+                    Id = appUser.Id,
+                    FirstName = appUser.FirstName,
+                    LastName = appUser.LastName,
+                    UserName = appUser.UserName,
+                    RoleId = appUser.Roles.Select(x => x.RoleId).FirstOrDefault()
+                };
+                appUsersDTOOut.Add(appUserDTO);
+            };
+            return appUsersDTOOut;
+        }
+
+        public IEnumerable<AppUserDTOOut> GetUserByNameLastName(string name, string lastName)
+        {
+            logger.Info("Accessing db over users repository, get user by name and lastname");
+            IEnumerable<AppUser> appUsers = db.UsersRepository.Get(filter: x => x.LastName == lastName && x.FirstName == name);
+            if (appUsers.Count() < 1)
+            {
+                throw new UserNotFoundException($"No users with name {name} and surname {lastName} here!!!");
+            }
+            HashSet<AppUserDTOOut> appUsersDTOOut = new HashSet<AppUserDTOOut>();
+            foreach (var appUser in appUsers)
+            {
+                AppUserDTOOut appUserDTO = new AppUserDTOOut()
+                {
+                    Id = appUser.Id,
+                    FirstName = appUser.FirstName,
+                    LastName = appUser.LastName,
+                    UserName = appUser.UserName,
+                    RoleId = appUser.Roles.Select(x => x.RoleId).FirstOrDefault()
+                };
+                appUsersDTOOut.Add(appUserDTO);
+            };
+            return appUsersDTOOut;
+        }
+
+        public AppUserDTOOut GetUserById(string id)
+        {
+            logger.Info("Accessing db over users repository, get user by id");
+            AppUser appUser = db.UsersRepository.GetByID(id);
+            if (appUser == null)
+            {
+                throw new UserNotFoundException($"No user with id {id} here!");
+            }
+
+            AppUserDTOOut appUserDTO = new AppUserDTOOut()
+            {
+                Id = appUser.Id,
+                FirstName = appUser.FirstName,
+                LastName = appUser.LastName,
+                UserName = appUser.UserName,
+                RoleId = appUser.Roles.Select(x => x.RoleId).FirstOrDefault()
+            };
+
+            return appUserDTO;
+        }
+
+        //public AppUserDTOOut UpdateUser(string username, AppUser userToUpdt)
         //{
-        //    //ClassRoom newClass = ConverterDTO.SimpleDTOConverter<ClassRoom>(newClassDTO);
-        //    db.UsersRepository.Insert(newUser);
-        //    db.Save();
-        //    return newUser;
+        //    AppUserDTOOut user = GetUserByUsername(username);
+
+        //    //user.Id = userToUpdt.Id;
+        //    //user.FirstName = userToUpdt.FirstName;
+        //    //user.LastName = userToUpdt.LastName;
+        //    ////user.Username = user.Username;
+        //    ////user.Password = userToUpdt.Password;
+        //    //db.UsersRepository.Update(user);
+        //    //db.Save();
+        //    return user;
         //}
-
-        public AppUser DeleteUser(string username)
-        {
-            try
-            {
-                AppUser user = GetUserByUsername(username);
-                db.UsersRepository.Delete(username);
-                db.Save();
-                return user;
-            }
-            catch (UserNotFoundException)
-            {
-                throw new UserNotFoundException();
-            }
-        }
-
-        public IEnumerable<Student> GetAllStudents()
-        {
-            return db.UsersRepository.Get().OfType<Student>();
-        }
-
-        public IEnumerable<Parent> GetAllParents()
-        {
-            return db.UsersRepository.Get().OfType<Parent>();
-        }
-
-        public IEnumerable<Teacher> GetAllTeachers()
-        {
-            return db.UsersRepository.Get().OfType<Teacher>();
-        }
-
-        public IEnumerable<Admin> GetAllAdmins()
-        {
-            return db.UsersRepository.Get().OfType<Admin>();
-        }
-
-        public IEnumerable<AppUser> GetAllUsers()
-        {
-            return db.UsersRepository.Get();
-        }
-
-        public AppUser GetUserByUsername(string username)
-        {
-            AppUser user = db.UsersRepository.Get(filter: x => x.UserName == username).FirstOrDefault();
-            if (user == null)
-            {
-                throw new UserNotFoundException();
-            }
-            return user;
-        }
-
-        public AppUser UpdateUser(string username, AppUser userToUpdt)
-        {
-            AppUser user = GetUserByUsername(username);
-
-            user.Id = userToUpdt.Id;
-            user.FirstName = userToUpdt.FirstName;
-            user.LastName = userToUpdt.LastName;
-            //user.Username = user.Username;
-            //user.Password = userToUpdt.Password;
-            db.UsersRepository.Update(user);
-            db.Save();
-            return userToUpdt;
-        }
     }
 }

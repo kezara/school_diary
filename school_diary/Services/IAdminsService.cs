@@ -1,4 +1,5 @@
 ﻿using school_diary.Models;
+using school_diary.Models.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,12 @@ namespace school_diary.Services
 {
     public interface IAdminsService
     {
-        IEnumerable<Admin> GetAllAdmins();
-        Admin GetAdminByID(int id);
-        Admin CreateAdmin(Admin newAdmin);
-        Admin UpdateAdmin(int id, Admin adminToUpdt);
-        Admin DeleteAdmin(int id);
+        IEnumerable<AdminDTOOut> GetAllAdmins();
+        AdminDTOOut GetAdminById(string id);
+        AdminDTOOut GetAdminByUserName(string username);
+        IEnumerable<AdminDTOOut> GetAdminByName(string name);
+        IEnumerable<AdminDTOOut> GetAdminByLastName(string lastName);
+        IEnumerable<AdminDTOOut> GetAdminByNameLastName(string name, string lastName);
+        AdminDTOOut DeleteAdmin(string id);
     }
 }

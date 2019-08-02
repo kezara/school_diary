@@ -27,10 +27,7 @@ namespace school_diary.Services
         public Subject DeleteSubject(int id)
         {
             Subject subject = GetSubjectByID(id);
-            if (subject == null)
-            {
-                throw new UserNotFoundException();
-            }
+            
             db.SubjectsRepository.Delete(id);
             db.Save();
             return subject;

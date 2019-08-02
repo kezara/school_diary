@@ -6,7 +6,7 @@ using System.Web;
 
 namespace school_diary.Models.DTOs
 {
-    public class StudentDTOInClass
+    public class StudentDTOIn
     {
         public string UserName { get; set; }
         [Required]

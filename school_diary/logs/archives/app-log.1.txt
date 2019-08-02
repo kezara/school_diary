@@ -1,13 +1,376 @@
-2019-07-26 00:01:56.6984|INFO|school_diary.Controllers.GradesController|Getting all Grades
-2019-07-26 00:22:47.5267|INFO|school_diary.Controllers.GradesController|Getting all Grades
-2019-07-26 00:24:39.0833|INFO|school_diary.Controllers.GradesController|Getting all Grades
-2019-07-26 00:25:52.9345|INFO|school_diary.Controllers.TeachsController|Getting all teach
-2019-07-26 00:28:07.6151|INFO|school_diary.Controllers.TeachsController|Getting all teach
-2019-07-26 00:30:46.7128|INFO|school_diary.Controllers.TeachsController|Getting all teach
-2019-07-26 00:39:38.3314|INFO|school_diary.Controllers.TeachsController|Getting all teach
-2019-07-26 00:40:18.1316|INFO|school_diary.Controllers.TeachsController|Getting all teach
-2019-07-26 01:09:18.9297|INFO|school_diary.Controllers.TeachsController|Getting all teach
-2019-07-26 01:17:48.9506|INFO|school_diary.Controllers.GradesController|Getting all Grades
-2019-07-26 14:53:06.0032|INFO|school_diary.Controllers.StudentsController|Getting all students
-2019-07-26 14:55:05.6126|INFO|school_diary.Controllers.StudentsController|Getting all students
-2019-07-26 16:17:50.5269|INFO|school_diary.Controllers.StudentsController|Getting all students
+2019-07-31 09:54:11.8977|INFO|school_diary.Controllers.AdminsController|Getting all admins
+2019-07-31 09:54:11.9587|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get all admins
+2019-07-31 09:55:22.1262|INFO|school_diary.Controllers.AdminsController|Getting all admins
+2019-07-31 09:55:30.5607|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get all admins
+2019-07-31 09:56:34.8245|INFO|school_diary.Controllers.AdminsController|Getting all admins
+2019-07-31 09:56:38.7303|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get all admins
+2019-07-31 09:57:41.1014|INFO|school_diary.Controllers.AdminsController|Getting all admins
+2019-07-31 09:57:41.1504|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get all admins
+2019-07-31 09:57:51.7144|INFO|school_diary.Services.AdminsService|converting admin with SimpleDTOConverter, foreach, get all admins
+2019-07-31 09:57:51.7164|INFO|school_diary.Services.AdminsService|converting admin with SimpleDTOConverter, foreach, get all admins
+2019-07-31 09:58:14.6841|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID
+2019-07-31 09:58:14.6851|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 09:58:14.8550|INFO|school_diary.Services.AdminsService|converting admin with SimpleDTOConverter, get admin by id
+2019-07-31 09:58:57.9056|INFO|school_diary.Controllers.AdminsController|Getting admin by admin UserName
+2019-07-31 09:58:57.9056|INFO|school_diary.Services.AdminsService|Accessing db over admin repo, get admin by username
+2019-07-31 09:58:57.9715|INFO|school_diary.Services.AdminsService|converting with simpleDTOConverter, get admin by username
+2019-07-31 09:59:04.3579|INFO|school_diary.Controllers.AdminsController|Getting admin by admin UserName
+2019-07-31 09:59:04.3579|INFO|school_diary.Services.AdminsService|Accessing db over admin repo, get admin by username
+2019-07-31 09:59:04.3579|INFO|school_diary.Services.AdminsService|converting with simpleDTOConverter, get admin by username
+2019-07-31 09:59:12.9785|INFO|school_diary.Controllers.AdminsController|Getting admin by admin UserName
+2019-07-31 09:59:12.9785|INFO|school_diary.Services.AdminsService|Accessing db over admin repo, get admin by username
+2019-07-31 09:59:13.1134|INFO|school_diary.Controllers.AdminsController|Admin not found by username, UserNotFoundException thrown
+2019-07-31 09:59:49.6864|INFO|school_diary.Controllers.AdminsController|Getting admin by admin UserName
+2019-07-31 09:59:49.6864|INFO|school_diary.Services.AdminsService|Accessing db over admin repo, get admin by username
+2019-07-31 09:59:49.7344|INFO|school_diary.Controllers.AdminsController|Admin not found by username, UserNotFoundException thrown
+2019-07-31 10:00:25.2161|INFO|school_diary.Controllers.AdminsController|Getting admin by admin Name
+2019-07-31 10:00:25.2161|INFO|school_diary.Services.AdminsService|Accessing db over admin repo, get admin by name
+2019-07-31 10:00:25.2881|INFO|school_diary.Controllers.AdminsController|Admin not found by name, UserNotFoundException thrown
+2019-07-31 10:00:32.8622|INFO|school_diary.Controllers.AdminsController|Getting admin by admin Name
+2019-07-31 10:00:32.8622|INFO|school_diary.Services.AdminsService|Accessing db over admin repo, get admin by name
+2019-07-31 10:00:32.8622|INFO|school_diary.Services.AdminsService|converting with simpledtoconverter, foreach, get admin by name
+2019-07-31 10:00:48.6634|INFO|school_diary.Controllers.AdminsController|Getting admin by admin Name
+2019-07-31 10:00:48.6634|INFO|school_diary.Services.AdminsService|Accessing db over admin repo, get admin by name
+2019-07-31 10:00:48.6954|INFO|school_diary.Controllers.AdminsController|Admin not found by name, UserNotFoundException thrown
+2019-07-31 10:00:56.1280|INFO|school_diary.Controllers.AdminsController|Getting admin by admin Name
+2019-07-31 10:00:56.1280|INFO|school_diary.Services.AdminsService|Accessing db over admin repo, get admin by name
+2019-07-31 10:00:56.1280|INFO|school_diary.Services.AdminsService|converting with simpledtoconverter, foreach, get admin by name
+2019-07-31 10:01:30.7750|INFO|school_diary.Controllers.AdminsController|Getting admin by admin last name
+2019-07-31 10:01:30.7750|INFO|school_diary.Services.AdminsService|Accessing db over admin repo, get admin by lastname
+2019-07-31 10:01:30.9619|INFO|school_diary.Controllers.AdminsController|Admin not found by name, UserNotFoundException thrown
+2019-07-31 10:01:40.3640|INFO|school_diary.Controllers.AdminsController|Getting admin by admin last name
+2019-07-31 10:01:40.3640|INFO|school_diary.Services.AdminsService|Accessing db over admin repo, get admin by lastname
+2019-07-31 10:01:40.3640|INFO|school_diary.Services.AdminsService|converting with simpledtoconverter, foreach, get admin by lastname
+2019-07-31 10:01:52.8992|INFO|school_diary.Controllers.AdminsController|Getting admin by admin last name
+2019-07-31 10:01:52.8992|INFO|school_diary.Services.AdminsService|Accessing db over admin repo, get admin by lastname
+2019-07-31 10:01:52.9242|INFO|school_diary.Services.AdminsService|converting with simpledtoconverter, foreach, get admin by lastname
+2019-07-31 10:04:00.1644|INFO|school_diary.Controllers.AdminsController|Getting admin by admin name and last name
+2019-07-31 10:04:00.1644|INFO|school_diary.Services.AdminsService|Accessing db over admin repo, get admin by name and lastname
+2019-07-31 10:04:00.1804|INFO|school_diary.Services.AdminsService|converting with simpledtoconverter, foreach, get admin by lastname
+2019-07-31 10:04:09.7513|INFO|school_diary.Controllers.AdminsController|Getting admin by admin name and last name
+2019-07-31 10:04:09.7513|INFO|school_diary.Services.AdminsService|Accessing db over admin repo, get admin by name and lastname
+2019-07-31 10:04:09.8322|INFO|school_diary.Controllers.AdminsController|Admin not found by name and lasname, UserNotFoundException thrown
+2019-07-31 11:45:00.1383|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 11:45:10.1593|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 11:46:04.7689|INFO|school_diary.Controllers.AdminsController|Getting all admins, controller
+2019-07-31 11:46:04.7689|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get all admins
+2019-07-31 11:46:04.8218|INFO|school_diary.Services.AdminsService|converting admin with SimpleDTOConverter, foreach, get all admins
+2019-07-31 11:46:04.8218|INFO|school_diary.Services.AdminsService|converting admin with SimpleDTOConverter, foreach, get all admins
+2019-07-31 11:47:23.4842|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 11:47:23.4842|INFO|school_diary.Services.AdminsService|converting admin with SimpleDTOConverter, get admin by id
+2019-07-31 11:47:39.0786|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 11:47:39.1126|INFO|school_diary.Services.AdminsService|converting admin with SimpleDTOConverter, get admin by id
+2019-07-31 13:20:31.1616|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 13:20:31.1996|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 13:23:25.1430|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 13:23:25.1839|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 14:02:16.2827|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 14:02:16.3548|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 14:03:17.4791|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 14:03:17.5131|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 14:08:37.6210|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 14:08:37.6620|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 14:09:44.4561|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 14:09:44.5111|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 14:12:13.8657|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 14:12:13.8996|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 14:40:51.5419|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 14:40:51.5779|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 17:55:46.3226|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 17:55:46.3675|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 18:12:55.7675|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 18:12:55.8025|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 18:16:06.2022|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 18:16:06.2022|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 18:21:39.1966|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 18:21:39.2495|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 18:49:42.2559|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 18:49:42.2979|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 19:19:31.6020|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 19:19:31.6630|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 19:19:55.7736|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Utilities.Exceptions.UserNotFoundException
+   at school_diary.Services.AdminsService.GetAdminById(String id) in d:\Users\PC\source\repos\school_diary\school_diary\Services\AdminsService.cs:line 56
+   at school_diary.Controllers.AdminsController.GetAdminByID(String id) in d:\Users\PC\source\repos\school_diary\school_diary\Controllers\AdminsController.cs:line 56
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_2.<GetExecutor>b__2(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2019-07-31 19:28:44.8312|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 19:28:44.8722|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 19:29:07.4729|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 19:31:47.8032|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 19:31:47.8402|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 19:32:08.1618|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 19:32:55.8399|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 19:32:55.8399|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 19:33:10.8102|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 19:34:08.1955|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 19:34:08.2425|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 19:34:26.6004|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 19:34:27.3003|INFO|school_diary.Utilities.NLogExceptionLogger|
+2019-07-31 19:36:05.3333|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 19:36:05.3683|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 19:36:52.2701|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 19:36:52.7819|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Utilities.Exceptions.UserNotFoundException
+   at school_diary.Services.AdminsService.GetAdminById(String id) in d:\Users\PC\source\repos\school_diary\school_diary\Services\AdminsService.cs:line 56
+   at school_diary.Controllers.AdminsController.GetAdminByID(String id) in d:\Users\PC\source\repos\school_diary\school_diary\Controllers\AdminsController.cs:line 56
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_2.<GetExecutor>b__2(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2019-07-31 19:39:00.3006|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 19:39:00.3376|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 19:39:57.5230|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 19:39:57.9514|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary
+2019-07-31 19:42:41.7303|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 19:42:41.7853|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 19:43:00.9722|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 19:43:01.3682|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 19:56:25.5060|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 19:56:25.5400|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 19:56:44.9122|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 19:56:45.4819|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 19:57:51.8855|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 19:57:51.9244|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 19:58:13.9335|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 19:58:14.9579|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 20:16:06.1009|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 20:16:06.1588|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 20:16:28.0098|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 20:16:28.7733|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 20:17:41.3262|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 20:17:41.3651|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 20:17:55.4675|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 20:17:56.4662|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 20:25:48.6453|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 20:25:48.6822|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 20:28:36.7036|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 20:28:37.4252|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 20:30:28.8537|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 20:30:28.8537|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 20:49:44.8525|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 20:49:44.8525|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 20:50:28.7099|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 20:50:28.7099|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 20:50:33.5629|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 20:50:34.1824|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 21:13:31.6390|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 21:13:31.6750|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 21:13:40.2235|INFO|school_diary.Controllers.AdminsController|admin not found by id, usernotfoundexception thrown, controller
+2019-07-31 21:15:21.0961|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 21:15:24.2062|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 21:15:45.6252|INFO|school_diary.Controllers.AdminsController|admin not found by id, usernotfoundexception thrown, controller
+2019-07-31 21:21:31.9452|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 21:21:31.9842|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 21:21:38.9824|INFO|school_diary.Controllers.AdminsController|System exception thrown, Get admin by id, controller
+2019-07-31 21:23:00.8835|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 21:23:00.9185|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 21:23:21.4303|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 21:23:26.0767|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 21:30:42.6523|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 21:30:42.6863|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 21:30:48.1370|INFO|school_diary.Controllers.AdminsController|admin not found by id, usernotfoundexception thrown, controller
+2019-07-31 21:32:00.2908|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 21:32:09.9154|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 21:32:09.9154|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 21:35:12.7455|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 21:35:20.6182|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 21:35:20.6182|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 21:51:37.1533|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 21:51:42.8339|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 21:51:42.8339|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 21:55:22.3511|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 21:55:29.7242|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 21:55:29.7242|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 22:14:42.2115|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 22:14:47.8790|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 22:14:47.8790|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 22:16:38.9803|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 22:16:53.9099|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 22:16:53.9099|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 22:34:33.1908|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 22:34:40.1344|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 22:34:40.1344|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 22:34:40.1484|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 22:34:40.1484|INFO|school_diary.Utilities.NLogExceptionLogger|Void OnException(System.Web.Http.Filters.HttpActionExecutedContext)
+2019-07-31 22:41:38.7039|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 22:41:44.2136|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 22:41:44.2156|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 22:42:31.2585|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 22:42:38.5219|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 22:42:38.5219|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 22:45:25.0901|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 22:45:25.1221|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 22:45:32.6852|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 22:45:32.6852|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 22:50:55.2831|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 22:50:55.3221|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 22:51:00.5656|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 22:51:00.5656|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 22:51:00.5656|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 22:52:52.9064|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 22:52:52.9444|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 22:53:00.6831|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 22:53:00.6831|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 22:53:00.6861|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 22:54:39.9507|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 22:54:40.0236|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 22:54:45.2323|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 22:54:45.2323|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 22:54:45.2323|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 22:56:16.3287|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 22:56:16.3607|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 22:56:24.4659|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 22:56:24.4659|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 22:56:24.4659|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 22:57:47.7999|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 22:57:47.8329|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 22:57:56.2572|INFO|school_diary.Utilities.NLogExceptionLogger|System.Web.Http.ExceptionHandling.ExceptionContext
+2019-07-31 22:57:56.2632|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 22:57:56.2632|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 22:59:15.1529|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 22:59:15.1979|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 22:59:20.6749|INFO|school_diary.Utilities.NLogExceptionLogger|
+2019-07-31 22:59:20.6749|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 22:59:20.6749|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 23:00:07.4204|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 23:00:07.4593|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 23:01:53.5634|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 23:01:53.6144|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 23:03:20.4674|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 23:03:20.5004|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 23:05:03.8957|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 23:05:03.9317|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 23:05:09.3636|INFO|school_diary.Utilities.NLogExceptionLogger|Requested admin doesn't exists
+2019-07-31 23:05:09.3636|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 23:05:09.3636|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 23:06:00.5500|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 23:06:00.5900|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 23:06:09.1063|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Utilities.Exceptions.AdminNotFoundException: Requested admin doesn't exists
+   at school_diary.Services.AdminsService.GetAdminById(String id) in d:\Users\PC\source\repos\school_diary\school_diary\Services\AdminsService.cs:line 55
+   at school_diary.Controllers.AdminsController.GetAdminByID(String id) in d:\Users\PC\source\repos\school_diary\school_diary\Controllers\AdminsController.cs:line 55
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_2.<GetExecutor>b__2(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2019-07-31 23:06:09.1283|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 23:06:09.1283|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 23:07:24.2350|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 23:07:24.2740|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 23:07:31.6886|INFO|school_diary.Utilities.NLogExceptionLogger|
+2019-07-31 23:07:31.6886|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 23:07:31.6886|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 23:08:55.0471|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 23:08:55.0951|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 23:09:06.3759|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.ListDictionaryInternal
+2019-07-31 23:09:06.3759|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 23:09:06.3759|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 23:09:52.7666|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 23:09:52.8006|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 23:09:58.7307|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.ListDictionaryInternal+NodeKeyValueCollection
+2019-07-31 23:09:58.7357|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 23:09:58.7357|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 23:11:00.9863|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 23:11:01.0213|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 23:11:09.2089|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.ListDictionaryInternal+NodeKeyValueCollection
+2019-07-31 23:11:09.2089|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 23:11:09.2089|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
+2019-07-31 23:12:11.2197|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
+2019-07-31 23:12:11.2537|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
+2019-07-31 23:12:16.3520|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Utilities.Exceptions.AdminNotFoundException: Requested admin doesn't exists
+   at school_diary.Services.AdminsService.GetAdminById(String id) in d:\Users\PC\source\repos\school_diary\school_diary\Services\AdminsService.cs:line 55
+   at school_diary.Controllers.AdminsController.GetAdminByID(String id) in d:\Users\PC\source\repos\school_diary\school_diary\Controllers\AdminsController.cs:line 55
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_2.<GetExecutor>b__2(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2019-07-31 23:12:16.3640|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/2a332618-defa-44c5-aefe-677f12312370
+2019-07-31 23:12:16.3640|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)

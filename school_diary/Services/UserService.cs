@@ -13,11 +13,22 @@ namespace school_diary.Services
     public class UserService : IUserService
     {
         private IUnitOfWork db;
+        private IAdminsService adminsService;
 
-        public UserService(IUnitOfWork unitOfWork)
+        public UserService(IUnitOfWork unitOfWork, IAdminsService adminsService)
         {
             db = unitOfWork;
+            this.adminsService = adminsService;
         }
+
+        //public AdminDTOOut UpdateAdmin(string id, AdminDTOIn studentUpd)
+        //{
+        //    AdminDTOOut admin = adminsService.GetAdminById(id);
+            
+        //    {
+
+        //    }
+        //}
 
         public async Task<IdentityResult> RegisterAdminUser(UserDTO userModel)
         {
@@ -25,8 +36,7 @@ namespace school_diary.Services
             {
                 UserName = userModel.UserName,
                 FirstName = userModel.FirstName,
-                LastName = userModel.LastName,
-                Email = "tx"
+                LastName = userModel.LastName
             };
 
             return await db.AuthRepository.RegisterAdminUser(user, userModel.Password);

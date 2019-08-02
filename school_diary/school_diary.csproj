@@ -171,17 +171,28 @@
     <Compile Include="Controllers\TeachersController.cs" />
     <Compile Include="Controllers\TeachsController.cs" />
     <Compile Include="Controllers\AppUsersController.cs" />
+    <Compile Include="Filters\ExceptionHandlerFilter.cs" />
     <Compile Include="Filters\ValidatemodelAttribute.cs" />
     <Compile Include="Infrastructure\AuthContext.cs" />
+    <Compile Include="Models\DTOs\AdminDTOIn.cs" />
+    <Compile Include="Models\DTOs\AdminDTOInUp.cs" />
+    <Compile Include="Models\DTOs\AdminDTOOut.cs" />
+    <Compile Include="Models\DTOs\AppUserDTOOut.cs" />
+    <Compile Include="Models\DTOs\GradeDTOOut.cs" />
+    <Compile Include="Models\DTOs\ParentDTOOut.cs" />
+    <Compile Include="Models\DTOs\StudentDTOOut.cs" />
+    <Compile Include="Models\DTOs\StudentDTOOutSingle.cs" />
+    <Compile Include="Models\DTOs\SubjectDTOOut.cs" />
+    <Compile Include="Models\DTOs\SubjectGradeDTOOut.cs" />
+    <Compile Include="Models\DTOs\TeacherDTOOut.cs" />
     <Compile Include="Models\StudentDepartment.cs" />
     <Compile Include="Services\ISubjectGradesService.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\DataAccessContextInitializer.cs" />
-    <Compile Include="Models\DTOs\GradeDTO.cs" />
-    <Compile Include="Models\DTOs\StudentDTOInClass.cs" />
-    <Compile Include="Models\DTOs\StudentDTOOutClass.cs" />
-    <Compile Include="Models\DTOs\TeachsDTOOut.cs" />
+    <Compile Include="Models\DTOs\MarkDTO.cs" />
+    <Compile Include="Models\DTOs\StudentDTOIn.cs" />
+    <Compile Include="Models\DTOs\TeachesDTOOut.cs" />
     <Compile Include="Models\DTOs\UserDTO.cs" />
     <Compile Include="Models\DTOs\UserDTOOut.cs" />
     <Compile Include="Models\Mark.cs" />
@@ -228,9 +239,12 @@
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Utilities\ConverterDTO.cs" />
+    <Compile Include="Utilities\Exceptions\AdminNotFoundException.cs" />
     <Compile Include="Utilities\Exceptions\BadRequestException.cs" />
+    <Compile Include="Utilities\Exceptions\StudentNotFoundException.cs" />
     <Compile Include="Utilities\Exceptions\UnauthorizedException.cs" />
     <Compile Include="Utilities\Exceptions\UserNotFoundException.cs" />
+    <Compile Include="Utilities\NLogExceptionLogger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

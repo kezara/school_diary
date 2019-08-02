@@ -1,12 +1,29 @@
-2019-07-25 11:39:38.9780|INFO|school_diary.Controllers.GradesController|Getting all Grades
-2019-07-25 11:42:19.7812|INFO|school_diary.Controllers.GradesController|Getting all Grades
-2019-07-25 11:45:13.8797|INFO|school_diary.Controllers.GradesController|Getting all Grades
-2019-07-25 12:38:05.2137|INFO|school_diary.Controllers.GradesController|Getting all Grades
-2019-07-25 12:40:45.1660|INFO|school_diary.Controllers.GradesController|Getting all Grades
-2019-07-25 12:44:33.7149|INFO|school_diary.Controllers.GradesController|Getting all Grades
-2019-07-25 13:28:27.9268|INFO|school_diary.Controllers.GradesController|Getting all Grades
-2019-07-25 14:47:28.8096|INFO|school_diary.Controllers.GradesController|Getting all Grades
-2019-07-25 14:48:20.0917|INFO|school_diary.Controllers.GradesController|Getting all Grades
-2019-07-25 15:09:13.8026|INFO|school_diary.Controllers.GradesController|Getting all Grades
-2019-07-25 15:12:26.6083|INFO|school_diary.Controllers.GradesController|Getting all Grades
-2019-07-25 15:38:42.1434|INFO|school_diary.Controllers.GradesController|Getting all Grades
+2019-07-30 10:42:32.5214|INFO|school_diary.Controllers.AdminsController|Getting all admins
+2019-07-30 11:14:38.8927|INFO|school_diary.Controllers.AdminsController|Getting all admins
+2019-07-30 11:15:32.9537|INFO|school_diary.Controllers.AdminsController|Getting all admins
+2019-07-30 11:18:27.2648|INFO|school_diary.Controllers.AdminsController|Getting all admins
+2019-07-30 11:33:16.4855|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID
+2019-07-30 11:34:00.9173|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID
+2019-07-30 11:34:51.8493|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID
+2019-07-30 11:35:00.5962|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID
+2019-07-30 11:40:30.2854|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID
+2019-07-30 11:41:13.8534|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID
+2019-07-30 11:41:43.2092|INFO|school_diary.Controllers.AdminsController|Getting all admins
+2019-07-30 11:42:24.1725|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID
+2019-07-30 13:58:53.0976|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID
+2019-07-30 13:59:03.6276|INFO|school_diary.Controllers.AdminsController|System exception thrown, Get admin by id
+2019-07-30 13:59:34.4516|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID
+2019-07-30 13:59:34.4876|INFO|school_diary.Controllers.AdminsController|System exception thrown, Get admin by id
+2019-07-30 14:05:20.3218|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID
+2019-07-30 14:09:43.1584|INFO|school_diary.Controllers.AdminsController|System exception thrown, Get admin by id
+2019-07-30 14:09:43.1864|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID
+2019-07-30 14:09:45.9331|INFO|school_diary.Controllers.AdminsController|System exception thrown, Get admin by id
+2019-07-30 14:11:50.0398|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID
+2019-07-30 14:16:05.3968|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID
+2019-07-30 14:31:54.6574|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID
+2019-07-30 14:32:02.3596|INFO|school_diary.Controllers.AdminsController|Admin not found by ID, UserNotFoundException thrown
+2019-07-30 14:42:43.0886|INFO|school_diary.Controllers.AdminsController|Getting admin by admin UserName
+2019-07-30 14:42:50.5358|INFO|school_diary.Controllers.AdminsController|Admin not found by username, UserNotFoundException thrown
+2019-07-30 14:44:47.3982|INFO|school_diary.Controllers.AdminsController|Getting admin by admin UserName
+2019-07-30 14:45:21.2082|INFO|school_diary.Controllers.AdminsController|Admin not found by username, UserNotFoundException thrown
+2019-07-30 14:54:51.9800|INFO|school_diary.Controllers.AdminsController|Getting admin by admin UserName

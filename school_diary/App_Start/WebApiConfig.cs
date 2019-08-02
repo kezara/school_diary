@@ -1,8 +1,10 @@
 ﻿using school_diary.Filters;
+using school_diary.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.ExceptionHandling;
 
 namespace school_diary
 {
@@ -20,7 +22,10 @@ namespace school_diary
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
             config.Filters.Add(new ValidateModelAttribute());
+            config.Filters.Add(new ExceptionHandlerFilter());
+            config.Services.Add(typeof(IExceptionLogger), new NLogExceptionLogger());
         }
     }
 }
