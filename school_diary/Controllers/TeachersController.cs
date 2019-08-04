@@ -1,5 +1,6 @@
 ﻿using NLog;
 using school_diary.Models;
+using school_diary.Models.DTOs;
 using school_diary.Services;
 using school_diary.Utilities.Exceptions;
 using System;
@@ -23,63 +24,57 @@ namespace school_diary.Controllers
         }
 
         [Route("")]
-        public IEnumerable<Teacher> GetAllTeachers()
+        [ResponseType(typeof(IEnumerable<TeacherDTOOut>))]
+        public IHttpActionResult GetAllTeachers()
         {
-            logger.Info("Getting all teachers");
-            return teachersService.GetAllTeachers();
-        }
-
-        [Route("")]
-        [ResponseType(typeof(Teacher))]
-        public IHttpActionResult PostTeacher(Teacher teacher)
-        {
-            try
-            {
-                Teacher teacherCreated = teachersService.CreateTeacher(teacher);
-                return Created("", teacherCreated);
-            }
-            catch (UserNotFoundException)
-            {
-                return NotFound();
-            }
+            logger.Info("Getting all teachers, controller");
+            IEnumerable<TeacherDTOOut> teacher = teachersService.GetAllTeachers();
+            return Ok(teacher);
         }
 
         [Route("{id}")]
-        [ResponseType(typeof(Teacher))]
-        public IHttpActionResult PutTeacher(int id, Teacher updtTeacher)
+        [ResponseType(typeof(TeacherDTOOut))]
+        public IHttpActionResult GetTeacherById(string id)
         {
-            try
-            {
-                Teacher teacherUpdated = teachersService.UpdateTeacher(id, updtTeacher);
-                if (teacherUpdated == null)
-                {
-                    return NotFound();
-                }
-
-                return Ok(teacherUpdated);
-            }
-            catch (Exception)
-            {
-
-                return BadRequest();
-            }
-
+            logger.Info("Getting teacher by id, controller");
+            TeacherDTOOut teacher = teachersService.GetTeacherById(id);
+            return Ok(teacher);
         }
 
-        [Route("{id}")]
-        [ResponseType(typeof(Teacher))]
-        public IHttpActionResult DeleteTeacher(int id)
+        [Route("by-username/{username}")]
+        [ResponseType(typeof(TeacherDTOOut))]
+        public IHttpActionResult GetTeacherByUsername(string username)
         {
-            try
-            {
-                Teacher teacherDeleted = teachersService.DeleteTeacher(id);
-                return Ok(teacherDeleted);
-            }
-            catch (UserNotFoundException)
-            {
-                return NotFound();
-            }
+            logger.Info("Getting teacher by username, controller");
+            TeacherDTOOut teacher = teachersService.GetTeacherByUsername(username);
+            return Ok(teacher);
         }
 
+        [Route("by-name/{name}")]
+        [ResponseType(typeof(IEnumerable<TeacherDTOOut>))]
+        public IHttpActionResult GetTeachersByName(string name)
+        {
+            logger.Info("Getting teachers by name, controller");
+            IEnumerable<TeacherDTOOut> teacher = teachersService.GetTeachersByName(name);
+            return Ok(teacher);
+        }
+
+        [Route("by-lastname/{lastname}")]
+        [ResponseType(typeof(IEnumerable<TeacherDTOOut>))]
+        public IHttpActionResult GetTeachersByLastName(string lastName)
+        {
+            logger.Info("Getting teachers by last name, controller");
+            IEnumerable<TeacherDTOOut> teacher = teachersService.GetTeachersByLastName(lastName);
+            return Ok(teacher);
+        }
+
+        [Route("by-name-lastname")]
+        [ResponseType(typeof(IEnumerable<TeacherDTOOut>))]
+        public IHttpActionResult GetTeachersByNameLastName([FromUri]string name, [FromUri] string lastName)
+        {
+            logger.Info("Getting teachers by name, controller");
+            IEnumerable<TeacherDTOOut> teacher = teachersService.GetTeachersByNameLastName(name, lastName);
+            return Ok(teacher);
+        }
     }
 }

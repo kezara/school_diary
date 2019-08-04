@@ -47,14 +47,22 @@ namespace school_diary.Utilities
                 EnrolmentTime = x.StudentDepartments.EnrolmentTime,
                 Grade = x.StudentDepartments.Departments.Grades.GradeYear,
                 Parents = x.Parents.Select(z => SimpleDTOConverter<ParentDTOOut>(z))
-                //new ParentDTOOut()
-                //{
-                //    FirstName = z.FirstName,
-                //    LastName = z.LastName,
-                //    UserName = z.UserName,
-                //    Id = z.Id
-                //})
             };
+            return studentDTO;
+        }
+
+        public static StudentDTOOutParent StudentsDTOParentConverter(Student x)
+        {
+            StudentDTOOutParent studentDTO = new StudentDTOOutParent()
+            {
+                Id = x.Id,
+                FirstName = x.FirstName,
+                LastName = x.LastName,
+                UserName = x.UserName,
+                ClassName = x.StudentDepartments.Departments.DepartmentName,
+                EnrolmentTime = x.StudentDepartments.EnrolmentTime,
+                Grade = x.StudentDepartments.Departments.Grades.GradeYear,
+               };
             return studentDTO;
         }
 
@@ -81,12 +89,39 @@ namespace school_diary.Utilities
                     SubjectFond = y.Subject.SubjectFond,
                     SubjectName = y.Subject.SubjectName,
                     TeacherName = y.Teachers.FirstName,
-                    TeacherLastName = y.Teachers.FirstName,
-
+                    TeacherLastName = y.Teachers.LastName,
+                    TeacherID = y.Teachers.Id,
+                    Marks = y.Marks.Select(m => SimpleDTOConverter<MarkDTO>(m))
                 }),
                 Parents = x.Parents.Select(z => SimpleDTOConverter<ParentDTOOut>(z))
             };
             return studentDTO;
+        }
+
+        public static TeacherDTOOut TeacherDTOOutConverter (Teacher x)
+        {
+            TeacherDTOOut teacherDTO = new TeacherDTOOut()
+            {
+                Id = x.Id,
+                UserName = x.UserName,
+                FirstName = x.FirstName,
+                LastName = x.LastName,
+                Subjects = x.Teaches.GroupBy(z => new { z.Subject })
+                .Select(z => new SubjectDTO()
+                {
+                    Id = z.Key.Subject.Id,
+                    SubjectFond = z.Key.Subject.SubjectFond,
+                    SubjectName = z.Key.Subject.SubjectName
+                }),
+                Departments = x.Teaches.GroupBy(k => new { k.StudentDepartments.Departments })
+                .Select(k => new DepartmentDTO()
+                {
+                    Id = k.Key.Departments.Id,
+                    DepartmentName = k.Key.Departments.DepartmentName,
+                    GradeYear = k.Key.Departments.Grades.GradeYear
+                })
+            };
+            return teacherDTO;
         }
     }
 }

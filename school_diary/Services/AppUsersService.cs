@@ -28,19 +28,15 @@ namespace school_diary.Services
             {
                 throw new UserNotFoundException("No users here!!!");
             }
-            HashSet<AppUserDTOOut> appUsersDTOOut = new HashSet<AppUserDTOOut>(); 
-            foreach (var appUser in appUsers)
+            IEnumerable<AppUserDTOOut> appUsersDTOOut = appUsers.Select(x => new AppUserDTOOut()
             {
-                AppUserDTOOut appUserDTO = new AppUserDTOOut()
-                {
-                    Id = appUser.Id,
-                    FirstName = appUser.FirstName,
-                    LastName = appUser.LastName,
-                    UserName = appUser.UserName,
-                    RoleId = appUser.Roles.Select(x => x.RoleId).FirstOrDefault()
-                };
-                appUsersDTOOut.Add(appUserDTO);
-            };
+                Id = x.Id,
+                FirstName = x.FirstName,
+                LastName = x.LastName,
+                UserName = x.UserName,
+                RoleId = x.Roles.Select(y => y.RoleId).FirstOrDefault()
+            });
+
             return appUsersDTOOut;
         }
 
@@ -73,19 +69,14 @@ namespace school_diary.Services
             {
                 throw new UserNotFoundException($"No users with name {name} here!!!");
             }
-            HashSet<AppUserDTOOut> appUsersDTOOut = new HashSet<AppUserDTOOut>();
-            foreach (var appUser in appUsers)
+            IEnumerable<AppUserDTOOut> appUsersDTOOut = appUsers.Select(x => new AppUserDTOOut()
             {
-                AppUserDTOOut appUserDTO = new AppUserDTOOut()
-                {
-                    Id = appUser.Id,
-                    FirstName = appUser.FirstName,
-                    LastName = appUser.LastName,
-                    UserName = appUser.UserName,
-                    RoleId = appUser.Roles.Select(x => x.RoleId).FirstOrDefault()
-                };
-                appUsersDTOOut.Add(appUserDTO);
-            };
+                Id = x.Id,
+                FirstName = x.FirstName,
+                LastName = x.LastName,
+                UserName = x.UserName,
+                RoleId = x.Roles.Select(y => y.RoleId).FirstOrDefault()
+            });
             return appUsersDTOOut;
         }
 
@@ -97,19 +88,14 @@ namespace school_diary.Services
             {
                 throw new UserNotFoundException($"No users with name {lastName} here!!!");
             }
-            HashSet<AppUserDTOOut> appUsersDTOOut = new HashSet<AppUserDTOOut>();
-            foreach (var appUser in appUsers)
+            IEnumerable<AppUserDTOOut> appUsersDTOOut = appUsers.Select(x => new AppUserDTOOut()
             {
-                AppUserDTOOut appUserDTO = new AppUserDTOOut()
-                {
-                    Id = appUser.Id,
-                    FirstName = appUser.FirstName,
-                    LastName = appUser.LastName,
-                    UserName = appUser.UserName,
-                    RoleId = appUser.Roles.Select(x => x.RoleId).FirstOrDefault()
-                };
-                appUsersDTOOut.Add(appUserDTO);
-            };
+                Id = x.Id,
+                FirstName = x.FirstName,
+                LastName = x.LastName,
+                UserName = x.UserName,
+                RoleId = x.Roles.Select(y => y.RoleId).FirstOrDefault()
+            });
             return appUsersDTOOut;
         }
 
@@ -121,19 +107,14 @@ namespace school_diary.Services
             {
                 throw new UserNotFoundException($"No users with name {name} and surname {lastName} here!!!");
             }
-            HashSet<AppUserDTOOut> appUsersDTOOut = new HashSet<AppUserDTOOut>();
-            foreach (var appUser in appUsers)
+            IEnumerable<AppUserDTOOut> appUsersDTOOut = appUsers.Select(x => new AppUserDTOOut()
             {
-                AppUserDTOOut appUserDTO = new AppUserDTOOut()
-                {
-                    Id = appUser.Id,
-                    FirstName = appUser.FirstName,
-                    LastName = appUser.LastName,
-                    UserName = appUser.UserName,
-                    RoleId = appUser.Roles.Select(x => x.RoleId).FirstOrDefault()
-                };
-                appUsersDTOOut.Add(appUserDTO);
-            };
+                Id = x.Id,
+                FirstName = x.FirstName,
+                LastName = x.LastName,
+                UserName = x.UserName,
+                RoleId = x.Roles.Select(y => y.RoleId).FirstOrDefault()
+            });
             return appUsersDTOOut;
         }
 

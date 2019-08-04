@@ -22,7 +22,7 @@ namespace school_diary.Models
         //public virtual ICollection<Student> Students { get; set; }
         //[JsonIgnore]
         //public ICollection<Semestar> Marks { get; set; }
-        //[JsonIgnore]
-        //public ICollection<Grade> Marks { get; set; }
+        [JsonIgnore]
+        public ICollection<SubjectGrade> SubjectGrades { get; set; }
     }
 }

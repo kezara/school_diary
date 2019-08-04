@@ -8,7 +8,8 @@ namespace school_diary.Models.DTOs
 {
     public class MarkDTO
     {
-        public TeachesDTOOut Teaches { get; set; }
+        public int Id { get; set; }
         public int MarkValue { get; set; }
+
     }
 }

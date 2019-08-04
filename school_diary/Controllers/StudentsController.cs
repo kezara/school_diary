@@ -24,17 +24,51 @@ namespace school_diary.Controllers
         }
 
         [Route("")]
+        [ResponseType(typeof(IEnumerable<StudentDTOOut>))]
         public IHttpActionResult GetAllStudents()
         {
             logger.Info("Getting all students, Student controller");
             return Ok(studentsService.GetAllStudents());
         }
 
+        [Route("by-name/{name}")]
+        [ResponseType(typeof(IEnumerable<StudentDTOOut>))]
+        public IHttpActionResult GetStudentsByName(string name)
+        {
+            logger.Info("Getting students by name, Student controller");
+            return Ok(studentsService.GetStudentsByName(name));
+        }
+
+        [Route("by-lastname/{lastName}")]
+        [ResponseType(typeof(IEnumerable<StudentDTOOut>))]
+        public IHttpActionResult GetStudentsByLastName(string lastName)
+        {
+            logger.Info("Getting students by last name, Student controller");
+            return Ok(studentsService.GetStudentsByLastName(lastName));
+        }
+
+        [Route("by-name-lastname")]
+        [ResponseType(typeof(IEnumerable<StudentDTOOut>))]
+        public IHttpActionResult GetStudentsByNameLastName([FromUri]string name, [FromUri]string lastName)
+        {
+            logger.Info("Getting students by name and last name, Student controller");
+            return Ok(studentsService.GetStudentsByNameLastName(name, lastName));
+        }
+
         [Route("{id}")]
+        [ResponseType(typeof(StudentDTOOutSingle))]
         public IHttpActionResult GetStudentById(string id)
         {
             logger.Info("Get student by id, students controller");
             return Ok(studentsService.GetStudentById(id));
+        }
+
+        [Route("by-username/{username}")]
+        [ResponseType(typeof(StudentDTOOutSingle))]
+        public IHttpActionResult GetStudentByUserName(string username)
+        {
+            logger.Info("Get student by username, students controller");
+            return Ok(studentsService.GetStudentByUserName(username));
         }
 
         //[Route("")]

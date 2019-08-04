@@ -49,22 +49,80 @@ namespace school_diary.Services
             {
                 throw new StudentNotFoundException("No students here!");
             }
+            logger.Info("converting student with AllStudentsDTOConverter, get all students");
             var studentsDTO = students.Select(x => Utilities.ConverterDTO.AllStudentsDTOConverter(x));
             
             return studentsDTO;
         }
 
+        public IEnumerable<StudentDTOOut> GetStudentsByName(string name)
+        {
+            logger.Info("Accssesing db over Students rep, get students by name");
+            IEnumerable<Student> students = db.StudentsRepository.Get(filter: x => x.FirstName == name);
 
+            if (students.Count() < 1)
+            {
+                throw new StudentNotFoundException($"Student with name {name} does not exist!");
+            }
+            logger.Info("converting student with AllStudentsDTOConverter, get students by name");
+            var studentsDTO = students.Select(x => Utilities.ConverterDTO.AllStudentsDTOConverter(x));
+
+            return studentsDTO;
+        }
+
+        public IEnumerable<StudentDTOOut> GetStudentsByLastName(string lastName)
+        {
+            logger.Info("Accssesing db over Students rep, get students by lastname");
+            IEnumerable<Student> students = db.StudentsRepository.Get(filter: x => x.LastName == lastName);
+
+            if (students.Count() < 1)
+            {
+                throw new StudentNotFoundException($"Student with last name {lastName} does not exist!");
+            }
+            logger.Info("converting student with AllStudentsDTOConverter, get students by last name");
+            var studentsDTO = students.Select(x => Utilities.ConverterDTO.AllStudentsDTOConverter(x));
+
+            return studentsDTO;
+        }
+
+        public IEnumerable<StudentDTOOut> GetStudentsByNameLastName(string name, string lastName)
+        {
+            logger.Info("Accssesing db over Students rep, get students by name and lastname");
+            IEnumerable<Student> students = db.StudentsRepository.Get(filter: x => x.FirstName == name && x.LastName == lastName);
+
+            if (students.Count() < 1)
+            {
+                throw new StudentNotFoundException($"Student with name {name} and last name {lastName} does not exist!");
+            }
+            logger.Info("converting student with AllStudentsDTOConverter, get students by name and last name");
+            var studentsDTO = students.Select(x => Utilities.ConverterDTO.AllStudentsDTOConverter(x));
+
+            return studentsDTO;
+        }
 
         public StudentDTOOutSingle GetStudentById(string id)
         {
             logger.Info("Accssesing db over Student rep, get student by id");
-            Student student = db.StudentsRepository.GetByID(id);
+            Student student = db.StudentsRepository.Get(filter: x => x.Id == id).FirstOrDefault();
             if (student == null)
             {
                 throw new StudentNotFoundException($"Student with ID {id} doesn't exists");
             }
-            logger.Info("converting admin with SimpleDTOConverter, get admin by id");
+            logger.Info("converting student with StudentDTOConverter, get student by id");
+            StudentDTOOutSingle studentDTO = Utilities.ConverterDTO.StudentDTOConverter(student);
+
+            return studentDTO;
+        }
+
+        public StudentDTOOutSingle GetStudentByUserName(string username)
+        {
+            logger.Info("Accssesing db over Student rep, get student by username");
+            Student student = db.StudentsRepository.Get(filter: x => x.UserName == username).FirstOrDefault();
+            if (student == null)
+            {
+                throw new StudentNotFoundException($"Student with username {username} doesn't exists");
+            }
+            logger.Info("converting student with StudentDTOConverter, get student by username");
             StudentDTOOutSingle studentDTO = Utilities.ConverterDTO.StudentDTOConverter(student);
 
             return studentDTO;

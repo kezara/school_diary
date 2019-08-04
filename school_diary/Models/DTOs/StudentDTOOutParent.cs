@@ -5,14 +5,14 @@ using System.Web;
 
 namespace school_diary.Models.DTOs
 {
-    public class TeacherDTOOut
+    public class StudentDTOOutParent
     {
         public string Id { get; set; }
         public string UserName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public IEnumerable<SubjectDTO> Subjects { get; set; }
-        public IEnumerable<DepartmentDTO> Departments { get; set; }
-        //public IEnumerable<GradeDTOOut> Grades { get; set; }
+        public string ClassName { get; set; }
+        public int Grade { get; set; }
+        public DateTime? EnrolmentTime { get; set; }
     }
 }

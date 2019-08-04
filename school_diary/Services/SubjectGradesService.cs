@@ -17,7 +17,7 @@ namespace school_diary.Services
 
         IEnumerable<SubjectGrade> GetSubjectGrades(int gradeId)
         {
-            return db.SubjectGradesRepository.Get(filter: x => x.Grades.Id == gradeId);
+            return db.SubjectGradesRepository.Get(filter: x => x.Grade.Id == gradeId);
         }
     }
 }

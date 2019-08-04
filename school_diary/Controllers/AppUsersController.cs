@@ -32,6 +32,7 @@ namespace school_diary.Controllers
         [ResponseType(typeof(IEnumerable<AppUserDTOOut>))]
         public IHttpActionResult GetAllUsers()
         {
+
             logger.Info("Admin gets all users, appuserscontroller");
             IEnumerable<AppUserDTOOut> appUsersDTOOut = appUsersService.GetAllUsers();
             return Ok(appUsersDTOOut);

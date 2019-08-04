@@ -179,7 +179,7 @@ namespace school_diary.Models
             };
             manager.Create(teacher10);
             manager.AddToRole(teacher10.Id, "teachers");
-            
+
             //make some grades
             var grade1 = new Grade()
             {
@@ -322,128 +322,128 @@ namespace school_diary.Models
             //make some subjectgrade
             var subjectgrade1 = new SubjectGrade()
             {
-                Subjects = subject1,
-                Grades = grade1
+                Subject = subject1,
+                Grade = grade1
             };
             context.SubjectGrades.Add(subjectgrade1);
             var subjectgrade2 = new SubjectGrade()
             {
-                Subjects = subject2,
-                Grades = grade1
+                Subject = subject2,
+                Grade = grade1
             };
             context.SubjectGrades.Add(subjectgrade2);
             var subjectgrade3 = new SubjectGrade()
             {
-                Subjects = subject3,
-                Grades = grade1
+                Subject = subject3,
+                Grade = grade1
             };
             context.SubjectGrades.Add(subjectgrade3);
             var subjectgrade4 = new SubjectGrade()
             {
-                Subjects = subject4,
-                Grades = grade1
+                Subject = subject4,
+                Grade = grade1
             };
             context.SubjectGrades.Add(subjectgrade4);
             var subjectgrade5 = new SubjectGrade()
             {
-                Subjects = subject1,
-                Grades = grade2
+                Subject = subject1,
+                Grade = grade2
             };
             context.SubjectGrades.Add(subjectgrade5);
             var subjectgrade6 = new SubjectGrade()
             {
-                Subjects = subject5,
-                Grades = grade2
+                Subject = subject5,
+                Grade = grade2
             };
             context.SubjectGrades.Add(subjectgrade6);
             var subjectgrade7 = new SubjectGrade()
             {
-                Subjects = subject6,
-                Grades = grade2
+                Subject = subject6,
+                Grade = grade2
             };
             context.SubjectGrades.Add(subjectgrade7);
             var subjectgrade8 = new SubjectGrade()
             {
-                Subjects = subject7,
-                Grades = grade2
+                Subject = subject7,
+                Grade = grade2
             };
             context.SubjectGrades.Add(subjectgrade8);
             var subjectgrade9 = new SubjectGrade()
             {
-                Subjects = subject9,
-                Grades = grade2
+                Subject = subject9,
+                Grade = grade2
             };
             context.SubjectGrades.Add(subjectgrade9);
             var subjectgrade10 = new SubjectGrade()
             {
-                Subjects = subject1,
-                Grades = grade3
+                Subject = subject1,
+                Grade = grade3
             };
             context.SubjectGrades.Add(subjectgrade10);
             var subjectgrade11 = new SubjectGrade()
             {
-                Subjects = subject5,
-                Grades = grade3
+                Subject = subject5,
+                Grade = grade3
             };
             context.SubjectGrades.Add(subjectgrade11);
             var subjectgrade12 = new SubjectGrade()
             {
-                Subjects = subject6,
-                Grades = grade3
+                Subject = subject6,
+                Grade = grade3
             };
             context.SubjectGrades.Add(subjectgrade12);
             var subjectgrade13 = new SubjectGrade()
             {
-                Subjects = subject7,
-                Grades = grade3
+                Subject = subject7,
+                Grade = grade3
             };
             context.SubjectGrades.Add(subjectgrade13);
             var subjectgrade14 = new SubjectGrade()
             {
-                Subjects = subject8,
-                Grades = grade3
+                Subject = subject8,
+                Grade = grade3
             };
             context.SubjectGrades.Add(subjectgrade14);
             var subjectgrade15 = new SubjectGrade()
             {
-                Subjects = subject9,
-                Grades = grade3
+                Subject= subject9,
+                Grade = grade3
             };
             context.SubjectGrades.Add(subjectgrade15);
             var subjectgrade16 = new SubjectGrade()
             {
-                Subjects = subject1,
-                Grades = grade4
+                Subject = subject1,
+                Grade = grade4
             };
             context.SubjectGrades.Add(subjectgrade16);
             var subjectgrade17 = new SubjectGrade()
             {
-                Subjects = subject5,
-                Grades = grade4
+                Subject = subject5,
+                Grade = grade4
             };
             context.SubjectGrades.Add(subjectgrade17);
             var subjectgrade18 = new SubjectGrade()
             {
-                Subjects = subject6,
-                Grades = grade4
+                Subject = subject6,
+                Grade = grade4
             };
             context.SubjectGrades.Add(subjectgrade18);
             var subjectgrade19 = new SubjectGrade()
             {
-                Subjects = subject7,
-                Grades = grade4
+                Subject = subject7,
+                Grade = grade4
             };
             context.SubjectGrades.Add(subjectgrade19);
             var subjectgrade20 = new SubjectGrade()
             {
-                Subjects = subject8,
-                Grades = grade4
+                Subject = subject8,
+                Grade = grade4
             };
             context.SubjectGrades.Add(subjectgrade20);
             var subjectgrade21 = new SubjectGrade()
             {
-                Subjects = subject9,
-                Grades = grade4
+                Subject = subject9,
+                Grade = grade4
             };
             context.SubjectGrades.Add(subjectgrade21);
 
@@ -2084,6 +2084,13 @@ namespace school_diary.Models
                 Teaches = teach65
             };
             context.Marks.Add(mark15);
+
+            var mark16 = new Mark()
+            {
+                MarkValue = 3,
+                Teaches = teach40
+            };
+            context.Marks.Add(mark16);
 
             base.Seed(context);
         }

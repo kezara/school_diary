@@ -32,6 +32,34 @@ namespace school_diary.Filters
                 };
                 throw new HttpResponseException(resp);
             }
+            else if (context.Exception is ParentNotFoundException)
+            {
+                var resp = new HttpResponseMessage(HttpStatusCode.NotFound)
+                {
+                    Content = new StringContent(context.Exception.Message),
+                    ReasonPhrase = "Parent Not Found"
+                };
+                throw new HttpResponseException(resp);
+            }
+            else if (context.Exception is StudentNotFoundException)
+            {
+                var resp = new HttpResponseMessage(HttpStatusCode.NotFound)
+                {
+                    Content = new StringContent(context.Exception.Message),
+                    ReasonPhrase = "Student Not Found"
+                };
+                throw new HttpResponseException(resp);
+            }
+            else if (context.Exception is TeacherNotFoundException)
+            {
+                var resp = new HttpResponseMessage(HttpStatusCode.NotFound)
+                {
+                    Content = new StringContent(context.Exception.Message),
+                    ReasonPhrase = "Teacher Not Found"
+                };
+                throw new HttpResponseException(resp);
+            }
+
             else if (context.Exception is Exception)
             {
                 var resp = new HttpResponseMessage(HttpStatusCode.InternalServerError)
