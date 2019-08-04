@@ -106,19 +106,15 @@ namespace school_diary.Utilities
                 UserName = x.UserName,
                 FirstName = x.FirstName,
                 LastName = x.LastName,
-                Subjects = x.Teaches.GroupBy(z => new { z.Subject })
-                .Select(z => new SubjectDTO()
-                {
-                    Id = z.Key.Subject.Id,
-                    SubjectFond = z.Key.Subject.SubjectFond,
-                    SubjectName = z.Key.Subject.SubjectName
-                }),
-                Departments = x.Teaches.GroupBy(k => new { k.StudentDepartments.Departments })
+                Departments = x.Teaches.GroupBy(k => new { k.StudentDepartments.Departments, k.Subject })
                 .Select(k => new DepartmentDTO()
                 {
                     Id = k.Key.Departments.Id,
                     DepartmentName = k.Key.Departments.DepartmentName,
-                    GradeYear = k.Key.Departments.Grades.GradeYear
+                    GradeYear = k.Key.Departments.Grades.GradeYear,
+                    SubjectId = k.Key.Subject.Id,
+                    SubjectFond = k.Key.Subject.SubjectFond,
+                    SubjectName = k.Key.Subject.SubjectName
                 })
             };
             return teacherDTO;

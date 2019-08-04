@@ -108,3 +108,15 @@ Parameter name: source
 2019-08-04 18:30:21.5031|INFO|school_diary.Controllers.StudentsController|Getting students by name and last name, Student controller
 2019-08-04 18:30:21.5031|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get students by name and lastname
 2019-08-04 18:30:21.6150|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get students by name and last name
+2019-08-04 19:21:39.9773|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 19:21:40.0318|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 19:23:14.4591|INFO|school_diary.Controllers.TeachersController|Getting teacher by id, controller
+2019-08-04 19:23:14.4591|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teacher by id
+2019-08-04 19:27:19.5713|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 19:27:19.6062|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 19:32:01.2835|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 19:32:01.3185|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 19:40:28.2749|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 19:40:28.3098|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 19:41:44.3781|INFO|school_diary.Controllers.TeachersController|Getting teacher by id, controller
+2019-08-04 19:41:44.3781|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teacher by id

@@ -10,5 +10,8 @@ namespace school_diary.Models.DTOs
         public int Id { get; set; }
         public string DepartmentName { get; set; }
         public int GradeYear { get; set; }
+        public int SubjectId { get; set; }
+        public string SubjectName { get; set; }
+        public int SubjectFond { get; set; }
     }
 }
