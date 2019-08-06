@@ -37,65 +37,113 @@ namespace school_diary.Utilities
 
         public static StudentDTOOut AllStudentsDTOConverter(Student x)
         {
-            StudentDTOOut studentDTO = new StudentDTOOut()
+            if(x.StudentDepartments == null)
             {
-                Id = x.Id,
-                FirstName = x.FirstName,
-                LastName = x.LastName,
-                UserName = x.UserName,
-                ClassName = x.StudentDepartments.Departments.DepartmentName,
-                EnrolmentTime = x.StudentDepartments.EnrolmentTime,
-                Grade = x.StudentDepartments.Departments.Grades.GradeYear,
-                Parents = x.Parents.Select(z => SimpleDTOConverter<ParentDTOOut>(z))
-            };
-            return studentDTO;
+                StudentDTOOut studentDTO = new StudentDTOOut()
+                {
+                    Id = x.Id,
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    UserName = x.UserName,
+                    ClassName = $"Student with username {x.UserName} is registered, but not enrolled!",
+                    EnrolmentTime = null,
+                    Grade = 0,
+                    Parents = x.Parents.Select(z => SimpleDTOConverter<ParentDTOOut>(z))
+                };
+                return studentDTO;
+            }
+            else
+            {
+                StudentDTOOut studentDTO = new StudentDTOOut()
+                {
+                    Id = x.Id,
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    UserName = x.UserName,
+                    ClassName = x.StudentDepartments.Departments.DepartmentName,
+                    EnrolmentTime = x.StudentDepartments.EnrolmentTime,
+                    Grade = x.StudentDepartments.Departments.Grades.GradeYear,
+                    Parents = x.Parents.Select(z => SimpleDTOConverter<ParentDTOOut>(z))
+                };
+                return studentDTO;
+            }
         }
 
         public static StudentDTOOutParent StudentsDTOParentConverter(Student x)
         {
-            StudentDTOOutParent studentDTO = new StudentDTOOutParent()
+            if (x.StudentDepartments == null)
             {
-                Id = x.Id,
-                FirstName = x.FirstName,
-                LastName = x.LastName,
-                UserName = x.UserName,
-                ClassName = x.StudentDepartments.Departments.DepartmentName,
-                EnrolmentTime = x.StudentDepartments.EnrolmentTime,
-                Grade = x.StudentDepartments.Departments.Grades.GradeYear,
-               };
-            return studentDTO;
+                StudentDTOOutParent studentDTO = new StudentDTOOutParent()
+                {
+                    Id = x.Id,
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    UserName = x.UserName,
+                    ClassName = $"Student with username {x.UserName} is registered, nut not enrolled",
+                    EnrolmentTime = null,
+                    Grade = 0
+                };
+                return studentDTO;
+            }
+            else
+            {
+                StudentDTOOutParent studentDTO = new StudentDTOOutParent()
+                {
+                    Id = x.Id,
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    UserName = x.UserName,
+                    ClassName = x.StudentDepartments.Departments.DepartmentName,
+                    EnrolmentTime = x.StudentDepartments.EnrolmentTime,
+                    Grade = x.StudentDepartments.Departments.Grades.GradeYear
+                };
+                return studentDTO;
+            }
         }
 
         public static StudentDTOOutSingle StudentDTOConverter(Student x)
         {
-            StudentDTOOutSingle studentDTO = new StudentDTOOutSingle()
+            if (x.StudentDepartments == null)
             {
-                Id = x.Id,
-                FirstName = x.FirstName,
-                LastName = x.LastName,
-                UserName = x.UserName,
-                ClassName = x.StudentDepartments.Departments.DepartmentName,
-                EnrolmentTime = x.StudentDepartments.EnrolmentTime,
-                Grade = x.StudentDepartments.Departments.Grades.GradeYear,
-                //Teaches = x.StudentDepartments.Departments.Grades.SubjectGrades.Select(y => new TeacherDTOOut()
-                //{
-                //    FirstName = y.Teaches.sele
-                //    SubjectName = y.SubjectGrades.Subjects.SubjectName
-                //}),
-
-                Subjects = x.StudentDepartments.Teaches.Select(y => new SubjectDTOOut()//Departments.Grades.SubjectGrades.Select(y => new SubjectDTOOut()
+                StudentDTOOutSingle studentDTO = new StudentDTOOutSingle()
                 {
-                    Id = y.Subject.Id,
-                    SubjectFond = y.Subject.SubjectFond,
-                    SubjectName = y.Subject.SubjectName,
-                    TeacherName = y.Teachers.FirstName,
-                    TeacherLastName = y.Teachers.LastName,
-                    TeacherID = y.Teachers.Id,
-                    Marks = y.Marks.Select(m => SimpleDTOConverter<MarkDTO>(m))
-                }),
-                Parents = x.Parents.Select(z => SimpleDTOConverter<ParentDTOOut>(z))
-            };
-            return studentDTO;
+                    Id = x.Id,
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    UserName = x.UserName,
+                    ClassName = $"Student with username {x.UserName} is registered, but not enrolled",
+                    EnrolmentTime = null,
+                    Grade = 0,
+                    Subjects = null,
+                    Parents = x.Parents.Select(z => SimpleDTOConverter<ParentDTOOut>(z))
+                };
+                return studentDTO;
+            }
+            else
+            {
+                StudentDTOOutSingle studentDTO = new StudentDTOOutSingle()
+                {
+                    Id = x.Id,
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    UserName = x.UserName,
+                    ClassName = x.StudentDepartments.Departments.DepartmentName,
+                    EnrolmentTime = x.StudentDepartments.EnrolmentTime,
+                    Grade = x.StudentDepartments.Departments.Grades.GradeYear,
+                    Subjects = x.StudentDepartments.Teaches.Select(y => new SubjectDTOOut()
+                    {
+                        Id = y.Subject.Id,
+                        SubjectFond = y.Subject.SubjectFond,
+                        SubjectName = y.Subject.SubjectName,
+                        TeacherName = y.Teachers.FirstName,
+                        TeacherLastName = y.Teachers.LastName,
+                        TeacherID = y.Teachers.Id,
+                        Marks = y.Marks.Select(m => SimpleDTOConverter<MarkDTO>(m))
+                    }),
+                    Parents = x.Parents.Select(z => SimpleDTOConverter<ParentDTOOut>(z))
+                };
+                return studentDTO;
+            }
         }
 
         public static TeacherDTOOut TeacherDTOOutConverter (Teacher x)

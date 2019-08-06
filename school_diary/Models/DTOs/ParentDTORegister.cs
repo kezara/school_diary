@@ -6,7 +6,7 @@ using System.Web;
 
 namespace school_diary.Models.DTOs
 {
-    public class AdminDTOIn
+    public class ParentDTORegister
     {
         [Required]
         [Display(Name = "Username")]
@@ -17,8 +17,11 @@ namespace school_diary.Models.DTOs
         public string FirstName { get; set; }
 
         [Required]
-        [Display(Name = "Surname")]
+        [Display(Name = "Last name")]
         public string LastName { get; set; }
+        [Required]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]

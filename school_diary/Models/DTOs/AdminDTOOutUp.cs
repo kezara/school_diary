@@ -6,7 +6,7 @@ using System.Web;
 
 namespace school_diary.Models.DTOs
 {
-    public class AdminDTOOut
+    public class AdminDTOOutUp
     {
         [Display(Name = "AdminId")]
         public string Id { get; set; }
@@ -16,5 +16,7 @@ namespace school_diary.Models.DTOs
         public string LastName { get; set; }
         [Display(Name = "UserName")]
         public string UserName { get; set; }
+        [Display(Name = "Email")]
+        public string Email { get; set; }
     }
 }

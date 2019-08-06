@@ -6,7 +6,7 @@ using System.Web;
 
 namespace school_diary.Models.DTOs
 {
-    public class AdminDTOInUp
+    public class ParentDTOInUp
     {
         [Required]
         public string Id { get; set; }

@@ -174,24 +174,36 @@
     <Compile Include="Filters\ExceptionHandlerFilter.cs" />
     <Compile Include="Filters\ValidatemodelAttribute.cs" />
     <Compile Include="Infrastructure\AuthContext.cs" />
-    <Compile Include="Models\DTOs\AdminDTOIn.cs" />
+    <Compile Include="Models\DTOs\AdminDTOInRegister.cs" />
     <Compile Include="Models\DTOs\AdminDTOInUp.cs" />
-    <Compile Include="Models\DTOs\AdminDTOOut.cs" />
+    <Compile Include="Models\DTOs\AdminDTOOutUp.cs" />
+    <Compile Include="Models\DTOs\AppUserDTOIn.cs" />
     <Compile Include="Models\DTOs\AppUserDTOOut.cs" />
+    <Compile Include="Models\DTOs\AppUserDTOOutPass.cs" />
+    <Compile Include="Models\DTOs\AppUserDTOPassword.cs" />
     <Compile Include="Models\DTOs\DepartmentDTO.cs" />
     <Compile Include="Models\DTOs\GradeDTOOut.cs" />
     <Compile Include="Models\DTOs\ParentDTOHelper.cs" />
     <Compile Include="Models\DTOs\ParentDTOOut.cs" />
     <Compile Include="Models\DTOs\ParentDTOOutAll.cs" />
+    <Compile Include="Models\DTOs\ParentDTORegister.cs" />
+    <Compile Include="Models\DTOs\ParentDTOInUp.cs" />
     <Compile Include="Models\DTOs\StudentDepartmentDTO.cs" />
-    <Compile Include="Models\DTOs\StudentDTO.cs" />
+    <Compile Include="Models\DTOs\StudentDTOInUp.cs" />
+    <Compile Include="Models\DTOs\StudentDTOOutUp.cs" />
+    <Compile Include="Models\DTOs\StudentDTOInRegister.cs" />
     <Compile Include="Models\DTOs\StudentDTOOut.cs" />
     <Compile Include="Models\DTOs\StudentDTOOutParent.cs" />
+    <Compile Include="Models\DTOs\StudentDTOOutReg.cs" />
     <Compile Include="Models\DTOs\StudentDTOOutSingle.cs" />
     <Compile Include="Models\DTOs\SubjectDTO.cs" />
     <Compile Include="Models\DTOs\SubjectDTOOut.cs" />
     <Compile Include="Models\DTOs\SubjectGradeDTOOut.cs" />
+    <Compile Include="Models\DTOs\TeacherDTOInUp.cs" />
     <Compile Include="Models\DTOs\TeacherDTOOut.cs" />
+    <Compile Include="Models\DTOs\TeacherDTOOutReg.cs" />
+    <Compile Include="Models\DTOs\TeacherDTOOutUp.cs" />
+    <Compile Include="Models\DTOs\TeacherDTORegister.cs" />
     <Compile Include="Models\StudentDepartment.cs" />
     <Compile Include="Models\SubjectGrade.cs" />
     <Compile Include="Services\ISubjectGradesService.cs" />
@@ -202,7 +214,6 @@
     <Compile Include="Models\DTOs\StudentDTOIn.cs" />
     <Compile Include="Models\DTOs\TeachesDTOOut.cs" />
     <Compile Include="Models\DTOs\UserDTO.cs" />
-    <Compile Include="Models\DTOs\UserDTOOut.cs" />
     <Compile Include="Models\Mark.cs" />
     <Compile Include="Models\Parent.cs" />
     <Compile Include="Models\Grade.cs" />
@@ -254,6 +265,7 @@
     <Compile Include="Utilities\Exceptions\UnauthorizedException.cs" />
     <Compile Include="Utilities\Exceptions\UserNotFoundException.cs" />
     <Compile Include="Utilities\NLogExceptionLogger.cs" />
+    <Compile Include="Utilities\HashPass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

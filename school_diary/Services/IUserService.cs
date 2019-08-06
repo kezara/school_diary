@@ -6,11 +6,16 @@ namespace school_diary.Services
 {
     public interface IUserService
     {
-        Task<IdentityResult> RegisterAdminUser(UserDTO userModel);
+        Task<AdminDTOOutUp> RegisterAdminUser(AdminDTOInRegister userModel);
 
-        //sAdminDTOOut UpdateAdmin(string id, AdminDTOIn adminUpd);
-        Task<IdentityResult> RegisterParent(UserDTO userModel);
-        Task<IdentityResult> RegisterStudent(UserDTO userModel);
-        Task<IdentityResult> RegisterTeacher(UserDTO userModel);
+        Task<AdminDTOOutUp> UpdateAdmin(string id, AdminDTOInUp adminUpd);
+        Task<TeacherDTOOutUp> UpdateTeacher(string id, TeacherDTOInUp adminUpd);
+        Task<StudentDTOOutUp> UpdateStudent(string id, StudentDTOInUp adminUpd);
+        Task<ParentDTOOut> UpdateParent(string id, ParentDTOInUp parentUpd);
+        Task<ParentDTOOut> RegisterParent(ParentDTORegister userModel);
+        Task<StudentDTOOutReg> RegisterStudent(StudentDTOInRegister userModel);
+        Task<TeacherDTOOutReg> RegisterTeacher(TeacherDTORegister userModel);
+        Task<AppUserDTOOutPass> UpdatePassword(string id, AppUserDTOPassword user);
+        Task<AppUserDTOOut> UpdateRole(string id, AppUserDTOIn user);
     }
 }

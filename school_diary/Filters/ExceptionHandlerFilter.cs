@@ -59,7 +59,15 @@ namespace school_diary.Filters
                 };
                 throw new HttpResponseException(resp);
             }
-
+            else if (context.Exception is BadRequestException)
+            {
+                var resp = new HttpResponseMessage(HttpStatusCode.NotFound)
+                {
+                    Content = new StringContent(context.Exception.Message),
+                    ReasonPhrase = "Bad Request"
+                };
+                throw new HttpResponseException(resp);
+            }
             else if (context.Exception is Exception)
             {
                 var resp = new HttpResponseMessage(HttpStatusCode.InternalServerError)

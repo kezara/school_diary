@@ -6,17 +6,15 @@ using System.Web;
 
 namespace school_diary.Models.DTOs
 {
-    public class ParentDTOOut
+    public class AppUserDTOOutPass
     {
-        [Display(Name = "ParentId")]
+        [Display(Name = "User Id")]
         public string Id { get; set; }
-        [Display(Name = "Name")]
+        [Display(Name = "User Name")]
         public string FirstName { get; set; }
-        [Display(Name = "Surname")]
+        [Display(Name = "User Surname")]
         public string LastName { get; set; }
-        [Display(Name = "UserName")]
+        [Display(Name = "Username")]
         public string UserName { get; set; }
-        [Display(Name = "Email")]
-        public string Email { get; set; }
     }
 }

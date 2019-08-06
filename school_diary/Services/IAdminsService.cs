@@ -10,12 +10,12 @@ namespace school_diary.Services
 {
     public interface IAdminsService
     {
-        IEnumerable<AdminDTOOut> GetAllAdmins();
-        AdminDTOOut GetAdminById(string id);
-        AdminDTOOut GetAdminByUserName(string username);
-        IEnumerable<AdminDTOOut> GetAdminByName(string name);
-        IEnumerable<AdminDTOOut> GetAdminByLastName(string lastName);
-        IEnumerable<AdminDTOOut> GetAdminByNameLastName(string name, string lastName);
-        AdminDTOOut DeleteAdmin(string id);
+        IEnumerable<AdminDTOOutUp> GetAllAdmins();
+        AdminDTOOutUp GetAdminById(string id);
+        AdminDTOOutUp GetAdminByUserName(string username);
+        IEnumerable<AdminDTOOutUp> GetAdminByName(string name);
+        IEnumerable<AdminDTOOutUp> GetAdminByLastName(string lastName);
+        IEnumerable<AdminDTOOutUp> GetAdminByNameLastName(string name, string lastName);
+        AdminDTOOutUp DeleteAdmin(string id);
     }
 }

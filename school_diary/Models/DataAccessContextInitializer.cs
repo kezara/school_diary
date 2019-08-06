@@ -52,8 +52,8 @@ namespace school_diary.Models
             //make some admins
             var admins = new List<AppUser>
             {
-                new Admin { UserName = "borisavadmin", PasswordHash = HashedPassword("test123"), FirstName = "Borisav", LastName = "Ignjatov" },
-                new Admin { UserName = "ivanadmin", PasswordHash = HashedPassword("test123"), FirstName = "Ivan", LastName = "Miljkovic" }
+                new Admin { UserName = "borisavadmin", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Borisav", LastName = "Ignjatov" },
+                new Admin { UserName = "ivanadmin", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Ivan", LastName = "Miljkovic" }
             };
             admins.ForEach(a => manager.Create(a));
             admins.ForEach(a => manager.AddToRole(a.Id, ReturnUserRole(a)));
@@ -61,21 +61,21 @@ namespace school_diary.Models
             //make some parents
             var parents = new List<Parent>
             {
-                new Parent { UserName = "baneparent", PasswordHash = HashedPassword("test123"), FirstName = "Branislav", LastName = "Djordjevic", Email = "bane@example.com" },
-                new Parent { UserName = "ivanaparent", PasswordHash = HashedPassword("test123"), FirstName = "Ivana", LastName = "Djordjevic", Email = "ivana@gmail.com" },
-                new Parent { UserName = "goranparent", PasswordHash = HashedPassword("test123"), FirstName = "Goran", LastName = "Antanasijevic", Email = "goran@example.com" },
-                new Parent { UserName = "jelenaparent", PasswordHash = HashedPassword("test123"), FirstName = "Jelena", LastName = "Antanasijevic", Email = "jelena@yahoo.com" },
-                new Parent { UserName = "djordjeparent", PasswordHash = HashedPassword("test123"), FirstName = "Djordje", LastName = "Nikolic", Email = "djordje@icloud.com" },
-                new Parent { UserName = "gabrijelaparent", PasswordHash = HashedPassword("test123"), FirstName = "Gabrijela", LastName = "Nikolic", Email = "gabrijela@example.com" },
-                new Parent { UserName = "brankicaparent", PasswordHash = HashedPassword("test123"), FirstName = "Brankica", LastName = "Ignjatov", Email = "brankica@yahoo.com" },
-                new Parent { UserName = "zeljkoparent", PasswordHash = HashedPassword("test123"), FirstName = "Zeljko", LastName = "Backulic", Email = "zeljko@gmail.com" },
-                new Parent { UserName = "marijaparent", PasswordHash = HashedPassword("test123"), FirstName = "Marija", LastName = "Backulic", Email = "marija@example.com" },
-                new Parent { UserName = "jelenapparent", PasswordHash = HashedPassword("test123"), FirstName = "Jelena", LastName = "Pavlica", Email = "jelenap@example.com" },
-                new Parent { UserName = "milanparent", PasswordHash = HashedPassword("test123"), FirstName = "Milan", LastName = "Miskovic", Email = "milan@yahoo.com" },
-                new Parent { UserName = "milenaparent", PasswordHash = HashedPassword("test123"), FirstName = "Milena", LastName = "Miskovic", Email = "milena@gmail.com" },
-                new Parent { UserName = "stanislavparent", PasswordHash = HashedPassword("test123"), FirstName = "Stanislav", LastName = "Zirovic", Email = "stanislav@email.com" },
-                new Parent { UserName = "sandraparent", PasswordHash = HashedPassword("test123"), FirstName = "Sandra", LastName = "Zirovic", Email = "sandra@email.com" },
-                new Parent { UserName = "cicaparent", PasswordHash = HashedPassword("test123"), FirstName = "Cica", LastName = "Zirovic", Email = "cica@example.com" }
+                new Parent { UserName = "baneparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Branislav", LastName = "Djordjevic", Email = "bane@example.com" },
+                new Parent { UserName = "ivanaparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Ivana", LastName = "Djordjevic", Email = "ivana@gmail.com" },
+                new Parent { UserName = "goranparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Goran", LastName = "Antanasijevic", Email = "goran@example.com" },
+                new Parent { UserName = "jelenaparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Jelena", LastName = "Antanasijevic", Email = "jelena@yahoo.com" },
+                new Parent { UserName = "djordjeparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Djordje", LastName = "Nikolic", Email = "djordje@icloud.com" },
+                new Parent { UserName = "gabrijelaparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Gabrijela", LastName = "Nikolic", Email = "gabrijela@example.com" },
+                new Parent { UserName = "brankicaparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Brankica", LastName = "Ignjatov", Email = "brankica@yahoo.com" },
+                new Parent { UserName = "zeljkoparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Zeljko", LastName = "Backulic", Email = "zeljko@gmail.com" },
+                new Parent { UserName = "marijaparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Marija", LastName = "Backulic", Email = "marija@example.com" },
+                new Parent { UserName = "jelenapparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Jelena", LastName = "Pavlica", Email = "jelenap@example.com" },
+                new Parent { UserName = "milanparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Milan", LastName = "Miskovic", Email = "milan@yahoo.com" },
+                new Parent { UserName = "milenaparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Milena", LastName = "Miskovic", Email = "milena@gmail.com" },
+                new Parent { UserName = "stanislavparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Stanislav", LastName = "Zirovic", Email = "stanislav@email.com" },
+                new Parent { UserName = "sandraparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Sandra", LastName = "Zirovic", Email = "sandra@email.com" },
+                new Parent { UserName = "cicaparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Cica", LastName = "Zirovic", Email = "cica@example.com" }
             };
 
             parents.ForEach(a => manager.Create(a));
@@ -85,7 +85,7 @@ namespace school_diary.Models
             var teacher1 = new Teacher()
             {
                 UserName = "nikolateacher",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Nikola",
                 LastName = "Vajdic"
             };
@@ -94,7 +94,7 @@ namespace school_diary.Models
             var teacher2 = new Teacher()
             {
                 UserName = "cabateacher",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Caba",
                 LastName = "Varga"
             };
@@ -103,7 +103,7 @@ namespace school_diary.Models
             var teacher3 = new Teacher()
             {
                 UserName = "brankicateacher",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Brankica",
                 LastName = "Kuzmanovic"
             };
@@ -113,7 +113,7 @@ namespace school_diary.Models
             var teacher4 = new Teacher()
             {
                 UserName = "branislavteacher",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Branislav",
                 LastName = "Kukic"
             };
@@ -123,7 +123,7 @@ namespace school_diary.Models
             var teacher5 = new Teacher()
             {
                 UserName = "radmilateacher",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Radmila",
                 LastName = "Dajic"
             };
@@ -133,7 +133,7 @@ namespace school_diary.Models
             var teacher6 = new Teacher()
             {
                 UserName = "milicateacher",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Milica",
                 LastName = "Barbaric"
             };
@@ -143,7 +143,7 @@ namespace school_diary.Models
             var teacher7 = new Teacher()
             {
                 UserName = "marinateacher",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Marina",
                 LastName = "Petrovic"
             };
@@ -153,7 +153,7 @@ namespace school_diary.Models
             var teacher8 = new Teacher()
             {
                 UserName = "radoteacher",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Rado",
                 LastName = "Maksimovic"
             };
@@ -163,7 +163,7 @@ namespace school_diary.Models
             var teacher9 = new Teacher()
             {
                 UserName = "ikonovteacher",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Radmila",
                 LastName = "Ikonov"
             };
@@ -173,7 +173,7 @@ namespace school_diary.Models
             var teacher10 = new Teacher()
             {
                 UserName = "ivicateacher",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Ivica",
                 LastName = "Tuskan"
             };
@@ -451,7 +451,7 @@ namespace school_diary.Models
             var student1 = new Student()
             {
                 UserName = "aleksastudent",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Aleksa",
                 LastName = "Ignjatov",
                 Parents = new List<Parent>()
@@ -465,7 +465,7 @@ namespace school_diary.Models
             var student2 = new Student()
             {
                 UserName = "petarstudent",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Petar",
                 LastName = "Ignjatov",
                 Parents = new List<Parent>()
@@ -479,7 +479,7 @@ namespace school_diary.Models
             var student3 = new Student()
             {
                 UserName = "strahinjastudent",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Strahinja",
                 LastName = "Nikolic",
                 Parents = new List<Parent>()
@@ -494,7 +494,7 @@ namespace school_diary.Models
             var student4 = new Student()
             {
                 UserName = "filipstudent",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Filip",
                 LastName = "Antanasijevic",
                 Parents = new List<Parent>()
@@ -509,7 +509,7 @@ namespace school_diary.Models
             var student5 = new Student()
             {
                 UserName = "ivastudent",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Iva",
                 LastName = "Antanasijevic",
                 Parents = new List<Parent>()
@@ -524,7 +524,7 @@ namespace school_diary.Models
             var student6 = new Student()
             {
                 UserName = "miastudent",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Mia",
                 LastName = "Zirovic",
                 Parents = new List<Parent>()
@@ -538,7 +538,7 @@ namespace school_diary.Models
             var student7 = new Student()
             {
                 UserName = "dariostudent",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Dario",
                 LastName = "Zirovic",
                 Parents = new List<Parent>()
@@ -552,7 +552,7 @@ namespace school_diary.Models
             var student8 = new Student()
             {
                 UserName = "teastudent",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Tea",
                 LastName = "Zirovic",
                 Parents = new List<Parent>()
@@ -567,7 +567,7 @@ namespace school_diary.Models
             var student9 = new Student()
             {
                 UserName = "vukasinzstudent",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Vukasin",
                 LastName = "Zirovic",
                 Parents = new List<Parent>()
@@ -582,7 +582,7 @@ namespace school_diary.Models
             var student10 = new Student()
             {
                 UserName = "dunjastudent",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Dunja",
                 LastName = "Miskovic",
                 Parents = new List<Parent>()
@@ -597,7 +597,7 @@ namespace school_diary.Models
             var student11 = new Student()
             {
                 UserName = "milosstudent",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Milos",
                 LastName = "Miskovic",
                 Parents = new List<Parent>()
@@ -612,7 +612,7 @@ namespace school_diary.Models
             var student12 = new Student()
             {
                 UserName = "vukasinpstudent",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Vukasin",
                 LastName = "Pavlica",
                 Parents = new List<Parent>()
@@ -626,7 +626,7 @@ namespace school_diary.Models
             var student13 = new Student()
             {
                 UserName = "urosstudent",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Uros",
                 LastName = "Backulic",
                 Parents = new List<Parent>()
@@ -641,7 +641,7 @@ namespace school_diary.Models
             var student14 = new Student()
             {
                 UserName = "vukasinstudent",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Vukasin",
                 LastName = "Djordjevic",
                 Parents = new List<Parent>()
@@ -656,7 +656,7 @@ namespace school_diary.Models
             var student15 = new Student()
             {
                 UserName = "aleksandarstudent",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Aleksandar",
                 LastName = "Djordjevic",
                 Parents = new List<Parent>()
@@ -671,7 +671,7 @@ namespace school_diary.Models
             var student16 = new Student()
             {
                 UserName = "veljkostudent",
-                PasswordHash = HashedPassword("test123"),
+                PasswordHash = Utilities.HashPass.HashedPassword("test123"),
                 FirstName = "Veljko",
                 LastName = "Zirovic",
                 Parents = new List<Parent>()
@@ -2095,12 +2095,12 @@ namespace school_diary.Models
             base.Seed(context);
         }
     
-        private static string HashedPassword(string password)
-        {
-            var pass = new PasswordHasher();
-            var hashed = pass.HashPassword(password);
-            return hashed;
-        }
+        //private static string HashedPassword(string password)
+        //{
+        //    var pass = new PasswordHasher();
+        //    var hashed = pass.HashPassword(password);
+        //    return hashed;
+        //}
 
         private string ReturnUserRole(AppUser user)
         {

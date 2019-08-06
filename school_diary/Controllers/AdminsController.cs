@@ -26,18 +26,18 @@ namespace school_diary.Controllers
         }
 
         [Route("")]
-        [ResponseType(typeof(IEnumerable<AdminDTOOut>))]
+        [ResponseType(typeof(IEnumerable<AdminDTOOutUp>))]
         public IHttpActionResult GetAllAdmins()
         {
 
             logger.Info("Getting all admins, controller");
-            IEnumerable<AdminDTOOut> adminsDTOOut = adminsService.GetAllAdmins();
+            IEnumerable<AdminDTOOutUp> adminsDTOOut = adminsService.GetAllAdmins();
             return Ok(adminsDTOOut);
 
         }
 
         [Route("{id}")]
-        [ResponseType(typeof(AdminDTOOut))]
+        [ResponseType(typeof(AdminDTOOutUp))]
         public IHttpActionResult GetAdminByID(string id)
         {
 
@@ -47,7 +47,7 @@ namespace school_diary.Controllers
         }
 
         [Route("admin-by-username/{username}")]
-        [ResponseType(typeof(AdminDTOOut))]
+        [ResponseType(typeof(AdminDTOOutUp))]
         public IHttpActionResult GetAdminByUsername(string username)
         {
 
@@ -57,7 +57,7 @@ namespace school_diary.Controllers
         }
 
         [Route("admin-name/{name}")]
-        [ResponseType(typeof(IEnumerable<AdminDTOOut>))]
+        [ResponseType(typeof(IEnumerable<AdminDTOOutUp>))]
         public IHttpActionResult GetAdminByName(string name)
         {
 
@@ -67,7 +67,7 @@ namespace school_diary.Controllers
         }
 
         [Route("admin-lastname/{lastname}")]
-        [ResponseType(typeof(IEnumerable<AdminDTOOut>))]
+        [ResponseType(typeof(IEnumerable<AdminDTOOutUp>))]
         public IHttpActionResult GetAdminByLastName(string lastName)
         {
 
@@ -77,7 +77,7 @@ namespace school_diary.Controllers
         }
 
         [Route("admin-name-lastname")]
-        [ResponseType(typeof(IEnumerable<AdminDTOOut>))]
+        [ResponseType(typeof(IEnumerable<AdminDTOOutUp>))]
         public IHttpActionResult GetAdminByNameLastName(string name, string lastName)
         {
 
@@ -87,10 +87,10 @@ namespace school_diary.Controllers
         }
 
         [Route("{id}")]
-        [ResponseType(typeof(AdminDTOOut))]
+        [ResponseType(typeof(AdminDTOOutUp))]
         public IHttpActionResult DeleteAdmin(string id)
         {
-            AdminDTOOut adminDeleted = adminsService.DeleteAdmin(id);
+            AdminDTOOutUp adminDeleted = adminsService.DeleteAdmin(id);
             return Ok(adminDeleted);
         }
     }

@@ -1,122 +1,120 @@
-2019-08-04 01:12:12.9243|INFO|school_diary.Controllers.ParentsController|Getting parent by parent ID, controller
-2019-08-04 01:12:13.0303|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
-2019-08-04 01:12:30.7190|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\ParentsService.cs, line which throw an exception 48
-2019-08-04 01:12:30.7190|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/parents/341ba300-e469-414f-8397-91ec17d3f8f0
-2019-08-04 01:12:30.7190|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.ParentDTOHelper GetParentById(System.String)
-2019-08-04 01:12:30.7440|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Requested parent doesn't exists
-2019-08-04 01:13:10.7987|INFO|school_diary.Controllers.ParentsController|Getting parent by parent ID, controller
-2019-08-04 01:13:10.7987|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
-2019-08-04 01:13:10.8237|INFO|school_diary.Services.ParentsService|converting parent with SimpleDTOConverter, get admin by id
-2019-08-04 11:37:34.9590|INFO|school_diary.Controllers.ParentsController|Getting parent by parent ID, controller
-2019-08-04 11:37:35.0000|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
-2019-08-04 12:39:29.4443|INFO|school_diary.Controllers.ParentsController|Getting all parents, controller
-2019-08-04 12:39:29.4793|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get all parents
-2019-08-04 12:41:35.1284|INFO|school_diary.Controllers.ParentsController|Getting parent by parent ID, controller
-2019-08-04 12:41:35.1284|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
-2019-08-04 12:41:35.5034|INFO|school_diary.Services.ParentsService|converting parent with SimpleDTOConverter, get admin by id
-2019-08-04 12:42:17.3980|INFO|school_diary.Controllers.ParentsController|Getting parent by parent ID, controller
-2019-08-04 12:42:17.3980|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
-2019-08-04 12:42:20.2014|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\ParentsService.cs, line which throw an exception 78
-2019-08-04 12:42:20.2014|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/parents/8084f302-3587-40e7-acfb-d03123ba8ab0
-2019-08-04 12:42:20.2014|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.ParentDTOHelper GetParentById(System.String)
-2019-08-04 12:42:20.2164|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Requested parent doesn't exists
-2019-08-04 13:07:28.6007|INFO|school_diary.Controllers.ParentsController|Getting all parents, controller
-2019-08-04 13:07:28.6457|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get all parents
-2019-08-04 13:07:57.3314|INFO|school_diary.Controllers.ParentsController|Getting parent by parent ID, controller
-2019-08-04 13:07:57.3314|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
-2019-08-04 13:07:57.3464|INFO|school_diary.Services.ParentsService|converting parent with SimpleDTOConverter, get parent by id
-2019-08-04 13:10:45.2336|INFO|school_diary.Controllers.ParentsController|Getting all parents, controller
-2019-08-04 13:10:45.2686|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get all parents
-2019-08-04 13:11:17.4748|INFO|school_diary.Controllers.ParentsController|Getting parent by parent ID, controller
-2019-08-04 13:11:17.4748|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
-2019-08-04 13:11:17.5058|INFO|school_diary.Services.ParentsService|converting parent with SimpleDTOConverter, get parent by id
-2019-08-04 13:11:35.7899|INFO|school_diary.Controllers.ParentsController|Getting parent by parent username, controller
-2019-08-04 13:11:35.7899|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by udername
-2019-08-04 13:11:35.9978|INFO|school_diary.Services.ParentsService|converting parent with SimpleDTOConverter, get parent by username
-2019-08-04 13:11:46.6620|INFO|school_diary.Controllers.ParentsController|Getting parent by parent username, controller
-2019-08-04 13:11:46.6620|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by udername
-2019-08-04 13:11:46.6999|INFO|school_diary.Services.ParentsService|converting parent with SimpleDTOConverter, get parent by username
-2019-08-04 13:12:49.8002|INFO|school_diary.Controllers.ParentsController|Getting parents by last name, controller
-2019-08-04 13:12:49.8002|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parents by last name
-2019-08-04 13:13:49.1242|INFO|school_diary.Controllers.ParentsController|Getting parents by last name, controller
-2019-08-04 13:13:49.1671|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parents by last name
-2019-08-04 13:14:00.8292|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\ParentsService.cs, line which throw an exception 88
-2019-08-04 13:14:00.8292|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/parents/by-lastname/gabrijela
-2019-08-04 13:14:00.8292|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[school_diary.Models.DTOs.ParentDTOOutAll] GetParentsByLastName(System.String)
-2019-08-04 13:14:00.8461|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: No parents with last name gabrijela here!
-2019-08-04 13:14:12.3155|INFO|school_diary.Controllers.ParentsController|Getting parents by last name, controller
-2019-08-04 13:14:12.3155|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parents by last name
-2019-08-04 13:15:15.3622|INFO|school_diary.Controllers.ParentsController|Getting parents by name and last name, controller
-2019-08-04 13:15:15.3622|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parents by name and last name
-2019-08-04 13:15:41.2457|INFO|school_diary.Controllers.ParentsController|Getting parents by last name, controller
-2019-08-04 13:15:41.2467|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parents by last name
-2019-08-04 13:15:45.8476|INFO|school_diary.Controllers.ParentsController|Getting parents by name and last name, controller
-2019-08-04 13:15:45.8476|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parents by name and last name
-2019-08-04 14:02:57.0699|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-04 14:02:57.1049|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-04 14:24:52.6450|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-04 14:24:52.6869|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-04 14:42:39.4116|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-04 14:42:39.4465|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-04 14:46:21.8339|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
-2019-08-04 14:46:22.0678|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/teachers
-2019-08-04 14:46:22.2057|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[TResult] Select[TSource,TResult](System.Collections.Generic.IEnumerable`1[TSource], System.Func`2[TSource,TResult])
-2019-08-04 14:46:22.3486|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Value cannot be null.
-Parameter name: source
-2019-08-04 15:18:42.3713|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-04 15:18:42.4132|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-04 15:28:17.5247|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-04 15:28:17.5626|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-04 15:42:13.0811|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-04 15:42:13.1201|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-04 15:49:55.5017|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-04 15:49:55.5437|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-04 16:00:35.0276|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-04 16:00:35.0645|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-04 16:03:11.2012|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-04 16:03:11.2452|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-04 16:06:45.8662|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-04 16:06:45.9032|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-04 16:46:51.6349|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-04 16:46:51.6838|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-04 16:49:58.3641|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-04 16:49:58.4075|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-04 17:53:25.1346|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-04 17:53:25.1706|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-04 18:23:41.5534|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-04 18:23:41.6104|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-04 18:26:10.9362|INFO|school_diary.Controllers.TeachersController|Getting teacher by id, controller
-2019-08-04 18:26:10.9362|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teacher by id
-2019-08-04 18:26:52.9154|INFO|school_diary.Controllers.TeachersController|Getting teachers by name, controller
-2019-08-04 18:26:52.9154|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teachers by name
-2019-08-04 18:27:17.0766|INFO|school_diary.Controllers.TeachersController|Getting teachers by name, controller
-2019-08-04 18:27:17.0766|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teachers by name
-2019-08-04 18:27:25.4092|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\TeachersService.cs, line which throw an exception 43
-2019-08-04 18:27:25.4092|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/teachers/by-name/petrovic
-2019-08-04 18:27:25.4092|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[school_diary.Models.DTOs.TeacherDTOOut] GetTeachersByName(System.String)
-2019-08-04 18:27:25.4232|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: No teachers with name petrovic here!
-2019-08-04 18:27:36.2798|INFO|school_diary.Controllers.TeachersController|Getting teachers by last name, controller
-2019-08-04 18:27:36.2798|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teachers by last name
-2019-08-04 18:27:42.8968|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\TeachersService.cs, line which throw an exception 57
-2019-08-04 18:27:42.8968|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/teachers/by-lastname/petrovic
-2019-08-04 18:27:42.8968|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[school_diary.Models.DTOs.TeacherDTOOut] GetTeachersByLastName(System.String)
-2019-08-04 18:27:42.8968|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: No teachers with last name petrovic here!
-2019-08-04 18:28:32.1521|INFO|school_diary.Controllers.TeachersController|Getting teachers by last name, controller
-2019-08-04 18:28:32.1890|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teachers by last name
-2019-08-04 18:29:41.5539|INFO|school_diary.Controllers.TeachersController|Getting teachers by name, controller
-2019-08-04 18:29:41.5539|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teachers by name and last name
-2019-08-04 18:30:21.5031|INFO|school_diary.Controllers.StudentsController|Getting students by name and last name, Student controller
-2019-08-04 18:30:21.5031|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get students by name and lastname
-2019-08-04 18:30:21.6150|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get students by name and last name
-2019-08-04 19:21:39.9773|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-04 19:21:40.0318|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-04 19:23:14.4591|INFO|school_diary.Controllers.TeachersController|Getting teacher by id, controller
-2019-08-04 19:23:14.4591|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teacher by id
-2019-08-04 19:27:19.5713|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-04 19:27:19.6062|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-04 19:32:01.2835|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-04 19:32:01.3185|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-04 19:40:28.2749|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-04 19:40:28.3098|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-04 19:41:44.3781|INFO|school_diary.Controllers.TeachersController|Getting teacher by id, controller
-2019-08-04 19:41:44.3781|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teacher by id
+2019-08-06 00:42:59.9094|INFO|school_diary.Controllers.AppUsersController|Admin gets all users, appuserscontroller
+2019-08-06 00:43:00.0027|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get all users
+2019-08-06 00:48:55.3234|INFO|school_diary.Controllers.AppUsersController|Admin gets all users, appuserscontroller
+2019-08-06 00:48:55.3663|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get all users
+2019-08-06 00:51:10.8892|INFO|school_diary.Controllers.AccountController|Id does not match, put Password, account controller
+2019-08-06 00:51:10.9102|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-06 00:51:26.5269|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id 3bfc3461-1328-4b73-8f68-8d463a75f84f, user service, update password
+2019-08-06 00:51:26.5299|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 3bfc3461-1328-4b73-8f68-8d463a75f84f find user by id async, auth repository
+2019-08-06 00:51:26.9966|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of old password
+2019-08-06 00:51:27.0256|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of new password
+2019-08-06 00:51:27.1805|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\UserService.cs, line which throw an exception 46
+2019-08-06 00:51:27.1805|INFO|school_diary.Utilities.NLogExceptionLogger|PUT http://localhost:51055/api/account/password-update/3bfc3461-1328-4b73-8f68-8d463a75f84f
+2019-08-06 00:51:27.1805|INFO|school_diary.Utilities.NLogExceptionLogger|Void MoveNext()
+2019-08-06 00:51:27.1895|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Wrong password
+2019-08-06 00:51:39.4174|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-06 00:54:56.7721|INFO|school_diary.Controllers.AppUsersController|Admin gets all users, appuserscontroller
+2019-08-06 00:54:56.8060|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get all users
+2019-08-06 00:56:15.2208|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id 04db0869-4720-4e1a-bd77-7e07fb7a6149, user service, update password
+2019-08-06 00:56:15.2208|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 04db0869-4720-4e1a-bd77-7e07fb7a6149 find user by id async, auth repository
+2019-08-06 00:56:15.3018|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of old password
+2019-08-06 00:56:15.3248|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of new password
+2019-08-06 00:56:15.4647|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\UserService.cs, line which throw an exception 46
+2019-08-06 00:56:15.4657|INFO|school_diary.Utilities.NLogExceptionLogger|PUT http://localhost:51055/api/account/password-update/04db0869-4720-4e1a-bd77-7e07fb7a6149
+2019-08-06 00:56:15.4657|INFO|school_diary.Utilities.NLogExceptionLogger|Void MoveNext()
+2019-08-06 00:56:15.4657|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Wrong password
+2019-08-06 00:56:28.4965|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-06 00:57:15.3169|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id 04db0869-4720-4e1a-bd77-7e07fb7a6149, user service, update password
+2019-08-06 00:57:17.8999|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 04db0869-4720-4e1a-bd77-7e07fb7a6149 find user by id async, auth repository
+2019-08-06 00:57:20.8206|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of old password
+2019-08-06 00:57:42.6085|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of new password
+2019-08-06 00:59:15.8021|INFO|school_diary.Controllers.AppUsersController|Admin gets all users, appuserscontroller
+2019-08-06 00:59:15.8450|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get all users
+2019-08-06 01:00:51.0162|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id e5455d83-4e94-44b0-ae09-e93182af6e1d, user service, update password
+2019-08-06 01:00:52.9964|INFO|school_diary.Repositories.AuthRepository|Searching for user with id e5455d83-4e94-44b0-ae09-e93182af6e1d find user by id async, auth repository
+2019-08-06 01:10:46.3877|INFO|school_diary.Controllers.AppUsersController|Admin gets all users, appuserscontroller
+2019-08-06 01:10:46.4396|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get all users
+2019-08-06 01:11:59.6343|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id 598d4887-e640-4460-8855-86295ff9dc0d, user service, update password
+2019-08-06 01:12:03.5431|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 598d4887-e640-4460-8855-86295ff9dc0d find user by id async, auth repository
+2019-08-06 01:12:38.8776|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of old password
+2019-08-06 01:13:05.9600|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of new password
+2019-08-06 01:13:17.2415|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\UserService.cs, line which throw an exception 46
+2019-08-06 01:13:17.2415|INFO|school_diary.Utilities.NLogExceptionLogger|PUT http://localhost:51055/api/account/password-update/598d4887-e640-4460-8855-86295ff9dc0d
+2019-08-06 01:13:17.2415|INFO|school_diary.Utilities.NLogExceptionLogger|Void MoveNext()
+2019-08-06 01:13:17.2565|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Wrong password
+2019-08-06 01:13:20.2758|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-06 01:25:22.4064|INFO|school_diary.Controllers.AppUsersController|Admin gets all users, appuserscontroller
+2019-08-06 01:25:22.4484|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get all users
+2019-08-06 01:34:33.6996|INFO|school_diary.Controllers.AppUsersController|Admin gets all users, appuserscontroller
+2019-08-06 01:34:33.7425|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get all users
+2019-08-06 01:35:23.3283|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id ae30b54e-000b-45e9-b855-fffa3133d9cf, user service, update password
+2019-08-06 01:35:23.8622|INFO|school_diary.Repositories.AuthRepository|Searching for user with id ae30b54e-000b-45e9-b855-fffa3133d9cf find user by id async, auth repository
+2019-08-06 01:35:28.2227|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of new password
+2019-08-06 01:37:59.2504|INFO|school_diary.Services.UserService|Updating user borisavadmin with new password, update password, user service
+2019-08-06 01:38:00.2797|INFO|school_diary.Repositories.AuthRepository|sending user borisavadmin to user manager, update user auth repository
+2019-08-06 01:38:02.8379|INFO|school_diary.Services.UserService|Getting updated user with auth repository
+2019-08-06 01:38:03.3835|INFO|school_diary.Repositories.AuthRepository|Searching for user with id ae30b54e-000b-45e9-b855-fffa3133d9cf find user by id async, auth repository
+2019-08-06 01:38:03.8164|INFO|school_diary.Services.UserService|Converting user to AppUser dto
+2019-08-06 01:38:13.4652|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-06 01:44:51.9316|INFO|school_diary.Repositories.AuthRepository|searching for user borisavadmin find user, auth repository
+2019-08-06 01:44:52.0925|INFO|school_diary.Repositories.AuthRepository|searching for roles ae30b54e-000b-45e9-b855-fffa3133d9cf find roles, auth repository
+2019-08-06 01:44:52.1325|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-06 01:46:09.0815|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id ae30b54e-000b-45e9-b855-fffa3133d9cf, user service, update password
+2019-08-06 01:46:09.0815|INFO|school_diary.Repositories.AuthRepository|Searching for user with id ae30b54e-000b-45e9-b855-fffa3133d9cf find user by id async, auth repository
+2019-08-06 01:46:09.3763|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of new password
+2019-08-06 01:46:09.4653|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\UserService.cs, line which throw an exception 46
+2019-08-06 01:46:09.4653|INFO|school_diary.Utilities.NLogExceptionLogger|PUT http://localhost:51055/api/account/password-update/ae30b54e-000b-45e9-b855-fffa3133d9cf
+2019-08-06 01:46:09.4673|INFO|school_diary.Utilities.NLogExceptionLogger|Void MoveNext()
+2019-08-06 01:46:09.4673|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Wrong password
+2019-08-06 01:46:12.5052|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-06 01:46:51.6294|INFO|school_diary.Controllers.AccountController|Accessing user service, register parent sanelaparent, controller
+2019-08-06 01:46:51.6294|INFO|school_diary.Services.UserService|Converting Parent sanelaparent to model, user service, register parent
+2019-08-06 01:46:51.6294|INFO|school_diary.Services.UserService|sending model to auth repository, register parent sanelaparent
+2019-08-06 01:46:51.6294|INFO|school_diary.Repositories.AuthRepository|sending parent sanelaparent to user manager, create async, auth repository
+2019-08-06 01:46:51.7733|INFO|school_diary.Repositories.AuthRepository|sending parent sanelaparent id 40b0d545-dcb3-4995-9db2-4f427b95c8f3 to user manager, add role, auth repository
+2019-08-06 01:46:51.8454|INFO|school_diary.Services.UserService|Searching for registered parent sanelaparent
+2019-08-06 01:46:51.8454|INFO|school_diary.Repositories.AuthRepository|searching for user sanelaparent find user, auth repository
+2019-08-06 01:46:51.8803|INFO|school_diary.Services.UserService|Converting parent sanelaparent to DTO with simple dto converter
+2019-08-06 01:46:51.8873|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-06 01:48:34.8392|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id 40b0d545-dcb3-4995-9db2-4f427b95c8f3, user service, update password
+2019-08-06 01:48:34.8412|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 40b0d545-dcb3-4995-9db2-4f427b95c8f3 find user by id async, auth repository
+2019-08-06 01:48:35.0141|INFO|school_diary.Services.UserService|User with username sanelaparent trying to change password, hashing of new password
+2019-08-06 01:48:35.0561|INFO|school_diary.Services.UserService|Updating user sanelaparent with new password, update password, user service
+2019-08-06 01:48:35.0561|INFO|school_diary.Repositories.AuthRepository|sending user sanelaparent to user manager, update user auth repository
+2019-08-06 01:48:35.1021|INFO|school_diary.Services.UserService|Getting updated user with auth repository
+2019-08-06 01:48:35.1021|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 40b0d545-dcb3-4995-9db2-4f427b95c8f3 find user by id async, auth repository
+2019-08-06 01:48:35.1091|INFO|school_diary.Services.UserService|Converting user to AppUser dto
+2019-08-06 01:48:35.1091|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-06 11:59:40.8658|INFO|school_diary.Controllers.ParentsController|Getting parent by parent username, controller
+2019-08-06 11:59:40.9018|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by udername
+2019-08-06 11:59:52.1930|INFO|school_diary.Services.ParentsService|converting parent with SimpleDTOConverter, get parent by username
+2019-08-06 12:04:10.1590|INFO|school_diary.Controllers.AccountController|Id does not match, put parent, account controller
+2019-08-06 12:04:10.1900|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-06 12:04:22.6166|INFO|school_diary.Controllers.AccountController|User brankicaparent sent to user service, put role
+2019-08-06 12:04:22.6166|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id 43e8d133-59a8-413a-9fa8-7725fcc95fa8, user service, update role
+2019-08-06 12:04:22.6166|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 43e8d133-59a8-413a-9fa8-7725fcc95fa8 find user by id async, auth repository
+2019-08-06 12:04:22.7945|INFO|school_diary.Services.UserService|Sending user to find new role name by ID, user service, update role
+2019-08-06 12:04:22.9355|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-06 12:04:50.6997|INFO|school_diary.Controllers.AdminsController|Getting all admins, controller
+2019-08-06 12:04:50.6997|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get all admins
+2019-08-06 12:05:33.0430|INFO|school_diary.Controllers.AccountController|User brankicaparent sent to user service, put role
+2019-08-06 12:05:43.1520|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id 43e8d133-59a8-413a-9fa8-7725fcc95fa8, user service, update role
+2019-08-06 12:05:54.7453|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 43e8d133-59a8-413a-9fa8-7725fcc95fa8 find user by id async, auth repository
+2019-08-06 12:07:04.4843|INFO|school_diary.Services.UserService|Sending user to find new role name by ID, user service, update role
+2019-08-06 12:07:04.5392|INFO|school_diary.Services.UserService|Role update failed, result not succeeded, user service
+2019-08-06 12:07:04.5392|INFO|school_diary.Controllers.AccountController|User role brankicaparent has not been updated. Update failed, put role.
+2019-08-06 12:07:04.5392|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-06 12:07:27.3977|INFO|school_diary.Controllers.AccountController|User brankicaparent sent to user service, put role
+2019-08-06 12:07:27.3977|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id 43e8d133-59a8-413a-9fa8-7725fcc95fa8, user service, update role
+2019-08-06 12:07:27.3977|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 43e8d133-59a8-413a-9fa8-7725fcc95fa8 find user by id async, auth repository
+2019-08-06 12:07:27.4527|INFO|school_diary.Services.UserService|Sending user to find new role name by ID, user service, update role
+2019-08-06 12:07:27.5137|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-06 12:14:07.9118|INFO|school_diary.Controllers.AppUsersController|Admin gets all users, appuserscontroller
+2019-08-06 12:14:07.9588|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get all users
+2019-08-06 12:15:38.2433|INFO|school_diary.Controllers.AccountController|User brankicaparent sent to user service, put role
+2019-08-06 12:15:38.2473|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id 8319f4db-1b4d-41b0-8a51-55000f024b61, user service, update role
+2019-08-06 12:15:38.2473|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 8319f4db-1b4d-41b0-8a51-55000f024b61 find user by id async, auth repository
+2019-08-06 12:15:38.3292|INFO|school_diary.Services.UserService|Sending user to find new role name by ID, user service, update role
+2019-08-06 12:15:38.4342|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-06 12:15:54.8829|INFO|school_diary.Controllers.AppUsersController|Admin gets user by id, appuserscontroller
+2019-08-06 12:15:54.8829|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get user by id

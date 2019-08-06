@@ -7,7 +7,7 @@ namespace school_diary.Utilities.Exceptions
 {
     public class BadRequestException : Exception
     {
-        public BadRequestException()
+        public BadRequestException(string message) : base (message)
         {
 
         }
