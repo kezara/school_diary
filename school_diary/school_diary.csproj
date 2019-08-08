@@ -165,6 +165,7 @@
     <Compile Include="Controllers\ClassRoomsController.cs" />
     <Compile Include="Controllers\ExampleController.cs" />
     <Compile Include="Controllers\GradesController.cs" />
+    <Compile Include="Controllers\MarksController.cs" />
     <Compile Include="Controllers\ParentsController.cs" />
     <Compile Include="Controllers\StudentDepartmentsController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
@@ -186,6 +187,9 @@
     <Compile Include="Models\DTOs\DepartmentDTOStudent.cs" />
     <Compile Include="Models\DTOs\GradeDTO.cs" />
     <Compile Include="Models\DTOs\GradeDTOOut.cs" />
+    <Compile Include="Models\DTOs\MarkDTODate.cs" />
+    <Compile Include="Models\DTOs\MarkDTOIn.cs" />
+    <Compile Include="Models\DTOs\MarkDTOOut.cs" />
     <Compile Include="Models\DTOs\ParentDTO.cs" />
     <Compile Include="Models\DTOs\ParentDTOHelper.cs" />
     <Compile Include="Models\DTOs\ParentDTOOut.cs" />

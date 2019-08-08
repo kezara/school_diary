@@ -1,248 +1,203 @@
-2019-08-06 00:42:59.9094|INFO|school_diary.Controllers.AppUsersController|Admin gets all users, appuserscontroller
-2019-08-06 00:43:00.0027|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get all users
-2019-08-06 00:48:55.3234|INFO|school_diary.Controllers.AppUsersController|Admin gets all users, appuserscontroller
-2019-08-06 00:48:55.3663|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get all users
-2019-08-06 00:51:10.8892|INFO|school_diary.Controllers.AccountController|Id does not match, put Password, account controller
-2019-08-06 00:51:10.9102|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 00:51:26.5269|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id 3bfc3461-1328-4b73-8f68-8d463a75f84f, user service, update password
-2019-08-06 00:51:26.5299|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 3bfc3461-1328-4b73-8f68-8d463a75f84f find user by id async, auth repository
-2019-08-06 00:51:26.9966|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of old password
-2019-08-06 00:51:27.0256|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of new password
-2019-08-06 00:51:27.1805|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\UserService.cs, line which throw an exception 46
-2019-08-06 00:51:27.1805|INFO|school_diary.Utilities.NLogExceptionLogger|PUT http://localhost:51055/api/account/password-update/3bfc3461-1328-4b73-8f68-8d463a75f84f
-2019-08-06 00:51:27.1805|INFO|school_diary.Utilities.NLogExceptionLogger|Void MoveNext()
-2019-08-06 00:51:27.1895|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Wrong password
-2019-08-06 00:51:39.4174|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 00:54:56.7721|INFO|school_diary.Controllers.AppUsersController|Admin gets all users, appuserscontroller
-2019-08-06 00:54:56.8060|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get all users
-2019-08-06 00:56:15.2208|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id 04db0869-4720-4e1a-bd77-7e07fb7a6149, user service, update password
-2019-08-06 00:56:15.2208|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 04db0869-4720-4e1a-bd77-7e07fb7a6149 find user by id async, auth repository
-2019-08-06 00:56:15.3018|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of old password
-2019-08-06 00:56:15.3248|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of new password
-2019-08-06 00:56:15.4647|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\UserService.cs, line which throw an exception 46
-2019-08-06 00:56:15.4657|INFO|school_diary.Utilities.NLogExceptionLogger|PUT http://localhost:51055/api/account/password-update/04db0869-4720-4e1a-bd77-7e07fb7a6149
-2019-08-06 00:56:15.4657|INFO|school_diary.Utilities.NLogExceptionLogger|Void MoveNext()
-2019-08-06 00:56:15.4657|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Wrong password
-2019-08-06 00:56:28.4965|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 00:57:15.3169|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id 04db0869-4720-4e1a-bd77-7e07fb7a6149, user service, update password
-2019-08-06 00:57:17.8999|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 04db0869-4720-4e1a-bd77-7e07fb7a6149 find user by id async, auth repository
-2019-08-06 00:57:20.8206|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of old password
-2019-08-06 00:57:42.6085|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of new password
-2019-08-06 00:59:15.8021|INFO|school_diary.Controllers.AppUsersController|Admin gets all users, appuserscontroller
-2019-08-06 00:59:15.8450|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get all users
-2019-08-06 01:00:51.0162|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id e5455d83-4e94-44b0-ae09-e93182af6e1d, user service, update password
-2019-08-06 01:00:52.9964|INFO|school_diary.Repositories.AuthRepository|Searching for user with id e5455d83-4e94-44b0-ae09-e93182af6e1d find user by id async, auth repository
-2019-08-06 01:10:46.3877|INFO|school_diary.Controllers.AppUsersController|Admin gets all users, appuserscontroller
-2019-08-06 01:10:46.4396|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get all users
-2019-08-06 01:11:59.6343|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id 598d4887-e640-4460-8855-86295ff9dc0d, user service, update password
-2019-08-06 01:12:03.5431|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 598d4887-e640-4460-8855-86295ff9dc0d find user by id async, auth repository
-2019-08-06 01:12:38.8776|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of old password
-2019-08-06 01:13:05.9600|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of new password
-2019-08-06 01:13:17.2415|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\UserService.cs, line which throw an exception 46
-2019-08-06 01:13:17.2415|INFO|school_diary.Utilities.NLogExceptionLogger|PUT http://localhost:51055/api/account/password-update/598d4887-e640-4460-8855-86295ff9dc0d
-2019-08-06 01:13:17.2415|INFO|school_diary.Utilities.NLogExceptionLogger|Void MoveNext()
-2019-08-06 01:13:17.2565|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Wrong password
-2019-08-06 01:13:20.2758|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 01:25:22.4064|INFO|school_diary.Controllers.AppUsersController|Admin gets all users, appuserscontroller
-2019-08-06 01:25:22.4484|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get all users
-2019-08-06 01:34:33.6996|INFO|school_diary.Controllers.AppUsersController|Admin gets all users, appuserscontroller
-2019-08-06 01:34:33.7425|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get all users
-2019-08-06 01:35:23.3283|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id ae30b54e-000b-45e9-b855-fffa3133d9cf, user service, update password
-2019-08-06 01:35:23.8622|INFO|school_diary.Repositories.AuthRepository|Searching for user with id ae30b54e-000b-45e9-b855-fffa3133d9cf find user by id async, auth repository
-2019-08-06 01:35:28.2227|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of new password
-2019-08-06 01:37:59.2504|INFO|school_diary.Services.UserService|Updating user borisavadmin with new password, update password, user service
-2019-08-06 01:38:00.2797|INFO|school_diary.Repositories.AuthRepository|sending user borisavadmin to user manager, update user auth repository
-2019-08-06 01:38:02.8379|INFO|school_diary.Services.UserService|Getting updated user with auth repository
-2019-08-06 01:38:03.3835|INFO|school_diary.Repositories.AuthRepository|Searching for user with id ae30b54e-000b-45e9-b855-fffa3133d9cf find user by id async, auth repository
-2019-08-06 01:38:03.8164|INFO|school_diary.Services.UserService|Converting user to AppUser dto
-2019-08-06 01:38:13.4652|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 01:44:51.9316|INFO|school_diary.Repositories.AuthRepository|searching for user borisavadmin find user, auth repository
-2019-08-06 01:44:52.0925|INFO|school_diary.Repositories.AuthRepository|searching for roles ae30b54e-000b-45e9-b855-fffa3133d9cf find roles, auth repository
-2019-08-06 01:44:52.1325|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
-2019-08-06 01:46:09.0815|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id ae30b54e-000b-45e9-b855-fffa3133d9cf, user service, update password
-2019-08-06 01:46:09.0815|INFO|school_diary.Repositories.AuthRepository|Searching for user with id ae30b54e-000b-45e9-b855-fffa3133d9cf find user by id async, auth repository
-2019-08-06 01:46:09.3763|INFO|school_diary.Services.UserService|User with username borisavadmin trying to change password, hashing of new password
-2019-08-06 01:46:09.4653|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\UserService.cs, line which throw an exception 46
-2019-08-06 01:46:09.4653|INFO|school_diary.Utilities.NLogExceptionLogger|PUT http://localhost:51055/api/account/password-update/ae30b54e-000b-45e9-b855-fffa3133d9cf
-2019-08-06 01:46:09.4673|INFO|school_diary.Utilities.NLogExceptionLogger|Void MoveNext()
-2019-08-06 01:46:09.4673|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Wrong password
-2019-08-06 01:46:12.5052|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 01:46:51.6294|INFO|school_diary.Controllers.AccountController|Accessing user service, register parent sanelaparent, controller
-2019-08-06 01:46:51.6294|INFO|school_diary.Services.UserService|Converting Parent sanelaparent to model, user service, register parent
-2019-08-06 01:46:51.6294|INFO|school_diary.Services.UserService|sending model to auth repository, register parent sanelaparent
-2019-08-06 01:46:51.6294|INFO|school_diary.Repositories.AuthRepository|sending parent sanelaparent to user manager, create async, auth repository
-2019-08-06 01:46:51.7733|INFO|school_diary.Repositories.AuthRepository|sending parent sanelaparent id 40b0d545-dcb3-4995-9db2-4f427b95c8f3 to user manager, add role, auth repository
-2019-08-06 01:46:51.8454|INFO|school_diary.Services.UserService|Searching for registered parent sanelaparent
-2019-08-06 01:46:51.8454|INFO|school_diary.Repositories.AuthRepository|searching for user sanelaparent find user, auth repository
-2019-08-06 01:46:51.8803|INFO|school_diary.Services.UserService|Converting parent sanelaparent to DTO with simple dto converter
-2019-08-06 01:46:51.8873|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 01:48:34.8392|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id 40b0d545-dcb3-4995-9db2-4f427b95c8f3, user service, update password
-2019-08-06 01:48:34.8412|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 40b0d545-dcb3-4995-9db2-4f427b95c8f3 find user by id async, auth repository
-2019-08-06 01:48:35.0141|INFO|school_diary.Services.UserService|User with username sanelaparent trying to change password, hashing of new password
-2019-08-06 01:48:35.0561|INFO|school_diary.Services.UserService|Updating user sanelaparent with new password, update password, user service
-2019-08-06 01:48:35.0561|INFO|school_diary.Repositories.AuthRepository|sending user sanelaparent to user manager, update user auth repository
-2019-08-06 01:48:35.1021|INFO|school_diary.Services.UserService|Getting updated user with auth repository
-2019-08-06 01:48:35.1021|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 40b0d545-dcb3-4995-9db2-4f427b95c8f3 find user by id async, auth repository
-2019-08-06 01:48:35.1091|INFO|school_diary.Services.UserService|Converting user to AppUser dto
-2019-08-06 01:48:35.1091|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 11:59:40.8658|INFO|school_diary.Controllers.ParentsController|Getting parent by parent username, controller
-2019-08-06 11:59:40.9018|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by udername
-2019-08-06 11:59:52.1930|INFO|school_diary.Services.ParentsService|converting parent with SimpleDTOConverter, get parent by username
-2019-08-06 12:04:10.1590|INFO|school_diary.Controllers.AccountController|Id does not match, put parent, account controller
-2019-08-06 12:04:10.1900|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 12:04:22.6166|INFO|school_diary.Controllers.AccountController|User brankicaparent sent to user service, put role
-2019-08-06 12:04:22.6166|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id 43e8d133-59a8-413a-9fa8-7725fcc95fa8, user service, update role
-2019-08-06 12:04:22.6166|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 43e8d133-59a8-413a-9fa8-7725fcc95fa8 find user by id async, auth repository
-2019-08-06 12:04:22.7945|INFO|school_diary.Services.UserService|Sending user to find new role name by ID, user service, update role
-2019-08-06 12:04:22.9355|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 12:04:50.6997|INFO|school_diary.Controllers.AdminsController|Getting all admins, controller
-2019-08-06 12:04:50.6997|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get all admins
-2019-08-06 12:05:33.0430|INFO|school_diary.Controllers.AccountController|User brankicaparent sent to user service, put role
-2019-08-06 12:05:43.1520|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id 43e8d133-59a8-413a-9fa8-7725fcc95fa8, user service, update role
-2019-08-06 12:05:54.7453|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 43e8d133-59a8-413a-9fa8-7725fcc95fa8 find user by id async, auth repository
-2019-08-06 12:07:04.4843|INFO|school_diary.Services.UserService|Sending user to find new role name by ID, user service, update role
-2019-08-06 12:07:04.5392|INFO|school_diary.Services.UserService|Role update failed, result not succeeded, user service
-2019-08-06 12:07:04.5392|INFO|school_diary.Controllers.AccountController|User role brankicaparent has not been updated. Update failed, put role.
-2019-08-06 12:07:04.5392|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 12:07:27.3977|INFO|school_diary.Controllers.AccountController|User brankicaparent sent to user service, put role
-2019-08-06 12:07:27.3977|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id 43e8d133-59a8-413a-9fa8-7725fcc95fa8, user service, update role
-2019-08-06 12:07:27.3977|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 43e8d133-59a8-413a-9fa8-7725fcc95fa8 find user by id async, auth repository
-2019-08-06 12:07:27.4527|INFO|school_diary.Services.UserService|Sending user to find new role name by ID, user service, update role
-2019-08-06 12:07:27.5137|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 12:14:07.9118|INFO|school_diary.Controllers.AppUsersController|Admin gets all users, appuserscontroller
-2019-08-06 12:14:07.9588|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get all users
-2019-08-06 12:15:38.2433|INFO|school_diary.Controllers.AccountController|User brankicaparent sent to user service, put role
-2019-08-06 12:15:38.2473|INFO|school_diary.Services.UserService|Accessing db over auth repo, find user by id 8319f4db-1b4d-41b0-8a51-55000f024b61, user service, update role
-2019-08-06 12:15:38.2473|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 8319f4db-1b4d-41b0-8a51-55000f024b61 find user by id async, auth repository
-2019-08-06 12:15:38.3292|INFO|school_diary.Services.UserService|Sending user to find new role name by ID, user service, update role
-2019-08-06 12:15:38.4342|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 12:15:54.8829|INFO|school_diary.Controllers.AppUsersController|Admin gets user by id, appuserscontroller
-2019-08-06 12:15:54.8829|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get user by id
-2019-08-06 12:55:25.7317|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-06 12:55:25.7667|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-06 12:56:49.4646|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-06 12:56:49.4666|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-06 12:56:49.5675|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get all students
-2019-08-06 12:57:28.4612|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-06 12:57:28.4612|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-06 12:57:28.4772|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by id
-2019-08-06 13:22:47.8340|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
-2019-08-06 13:22:47.8720|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
-2019-08-06 13:23:33.0278|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-06 13:23:33.0278|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-06 13:23:33.1008|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get all students
-2019-08-06 13:24:25.2228|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-06 13:24:25.2228|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-06 13:24:25.2638|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by id
-2019-08-06 15:16:02.9170|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
-2019-08-06 15:16:02.9550|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
-2019-08-06 15:16:02.9550|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
-2019-08-06 15:16:02.9670|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
-2019-08-06 15:20:51.9939|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
-2019-08-06 15:20:52.0339|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
-2019-08-06 15:20:52.0339|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
-2019-08-06 15:20:52.0459|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
-2019-08-06 15:20:59.8694|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id 6687e99f-8d75-4ffd-a072-9d28a5586dca to user manager, add role, auth repository
-2019-08-06 15:20:59.9654|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
-2019-08-06 15:20:59.9654|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
-2019-08-06 15:21:00.0203|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
-2019-08-06 15:21:00.0993|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 15:48:45.5303|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
-2019-08-06 15:48:45.5763|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
-2019-08-06 15:48:45.5763|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
-2019-08-06 15:48:45.5913|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
-2019-08-06 15:48:59.3891|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id 3740d055-545d-48a3-9b9f-d5a639856b30 to user manager, add role, auth repository
-2019-08-06 15:48:59.5210|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
-2019-08-06 15:48:59.5210|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
-2019-08-06 15:48:59.5869|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
-2019-08-06 15:48:59.6759|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 15:56:51.9318|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
-2019-08-06 17:58:05.5397|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
-2019-08-06 17:58:05.5807|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
-2019-08-06 17:58:05.5807|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
-2019-08-06 17:58:05.5807|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
-2019-08-06 17:58:16.4229|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id 2aa84417-d70f-48b8-9ffa-529195ec3f0a to user manager, add role, auth repository
-2019-08-06 17:58:16.4799|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
-2019-08-06 17:58:16.4819|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
-2019-08-06 17:58:16.5319|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
-2019-08-06 17:58:16.5988|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 18:03:33.9190|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
-2019-08-06 18:04:27.6645|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
-2019-08-06 18:04:27.6645|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/studentdepartments
-2019-08-06 18:04:27.6645|INFO|school_diary.Utilities.NLogExceptionLogger|Int32 SaveChanges()
-2019-08-06 18:04:27.6894|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
-2019-08-06 18:05:14.9404|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
-2019-08-06 18:05:21.3683|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
-2019-08-06 18:05:21.3723|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/studentdepartments
-2019-08-06 18:05:21.3723|INFO|school_diary.Utilities.NLogExceptionLogger|Int32 SaveChanges()
-2019-08-06 18:05:21.3723|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
-2019-08-06 18:06:07.5124|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
-2019-08-06 18:30:48.4228|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
-2019-08-06 18:30:48.4228|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/studentdepartments
-2019-08-06 18:30:48.4228|INFO|school_diary.Utilities.NLogExceptionLogger|Int32 SaveChanges()
-2019-08-06 18:30:48.4228|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
-2019-08-06 18:34:06.9347|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
-2019-08-06 18:34:21.9056|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
-2019-08-06 18:34:21.9056|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/studentdepartments
-2019-08-06 18:34:21.9056|INFO|school_diary.Utilities.NLogExceptionLogger|Int32 SaveChanges()
-2019-08-06 18:34:21.9056|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
-2019-08-06 18:41:10.4979|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
-2019-08-06 18:41:10.5469|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
-2019-08-06 18:41:10.5469|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
-2019-08-06 18:41:10.5469|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
-2019-08-06 18:41:19.1133|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id 12550908-aa97-45a7-a9c6-225d33fbca41 to user manager, add role, auth repository
-2019-08-06 18:41:19.2193|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
-2019-08-06 18:41:19.2193|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
-2019-08-06 18:41:19.3002|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
-2019-08-06 18:41:19.3662|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 18:44:11.9984|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
-2019-08-06 18:45:54.6260|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
-2019-08-06 18:45:54.6260|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/studentdepartments
-2019-08-06 18:45:54.6260|INFO|school_diary.Utilities.NLogExceptionLogger|Int32 SaveChanges()
-2019-08-06 18:45:54.6260|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
-2019-08-06 19:31:59.9431|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
-2019-08-06 19:31:59.9891|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
-2019-08-06 19:31:59.9891|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
-2019-08-06 19:31:59.9981|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
-2019-08-06 19:32:10.4824|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id 75ae50d6-a10a-4b37-95e5-2fbdd380068c to user manager, add role, auth repository
-2019-08-06 19:32:10.5314|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
-2019-08-06 19:32:10.5314|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
-2019-08-06 19:32:10.5813|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
-2019-08-06 19:32:10.6743|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 19:33:10.6328|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
-2019-08-06 19:34:14.7938|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
-2019-08-06 19:34:14.7938|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/studentdepartments
-2019-08-06 19:34:14.7938|INFO|school_diary.Utilities.NLogExceptionLogger|Int32 SaveChanges()
-2019-08-06 19:34:14.8108|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Entities in 'AuthContext.StudentDepartments' participate in the 'StudentDepartment_Students' relationship. 0 related 'StudentDepartment_Students_Target' were found. 1 'StudentDepartment_Students_Target' is expected.
-2019-08-06 19:39:06.0151|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
-2019-08-06 19:39:06.0520|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
-2019-08-06 19:39:06.0620|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
-2019-08-06 19:39:06.0620|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
-2019-08-06 19:39:14.0149|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id 5957ff85-2af5-4c22-bdc7-3749ae15a21f to user manager, add role, auth repository
-2019-08-06 19:39:14.1029|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
-2019-08-06 19:39:14.1029|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
-2019-08-06 19:39:14.1518|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
-2019-08-06 19:39:14.2118|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 19:40:01.0150|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
-2019-08-06 19:45:49.2359|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
-2019-08-06 19:45:49.2359|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/studentdepartments
-2019-08-06 19:45:49.2359|INFO|school_diary.Utilities.NLogExceptionLogger|Int32 SaveChanges()
-2019-08-06 19:45:49.2509|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
-2019-08-06 20:01:25.3537|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
-2019-08-06 20:01:25.3887|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
-2019-08-06 20:01:25.3887|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
-2019-08-06 20:01:25.3887|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
-2019-08-06 20:01:32.8907|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id 19690680-a42e-4d84-b390-264e86ce6aef to user manager, add role, auth repository
-2019-08-06 20:01:32.9716|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
-2019-08-06 20:01:32.9716|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
-2019-08-06 20:01:33.0246|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
-2019-08-06 20:01:33.1055|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
-2019-08-06 20:02:12.6857|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
-2019-08-06 20:03:27.9120|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\StudentDepartmentsService.cs, line which throw an exception 30
-2019-08-06 20:03:27.9120|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/studentdepartments
-2019-08-06 20:03:27.9120|INFO|school_diary.Utilities.NLogExceptionLogger|Void CreateStudentDepartment(school_diary.Models.DTOs.StudentDepartmentDTO)
-2019-08-06 20:03:27.9240|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Object reference not set to an instance of an object.
-2019-08-06 20:03:44.8021|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
-2019-08-06 20:04:08.9865|INFO|school_diary.Controllers.StudentsController|Get student by username, students controller
-2019-08-06 20:04:08.9865|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by username
-2019-08-06 20:04:09.0384|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by username
+2019-08-07 03:49:52.2106|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-07 03:49:52.2766|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-07 03:50:22.7798|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get all students
+2019-08-07 03:50:52.4487|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
+2019-08-07 03:50:52.4507|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
+2019-08-07 03:50:52.4507|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by id
+2019-08-07 10:55:37.7114|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-07 10:55:37.8283|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-07 10:55:52.1686|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get all students
+2019-08-07 10:58:17.6080|INFO|school_diary.Controllers.StudentsController|Get student by username, students controller
+2019-08-07 10:58:17.6080|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by username
+2019-08-07 10:58:17.6703|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by username
+2019-08-07 11:06:38.0898|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-07 11:06:38.0898|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-07 11:08:07.7190|INFO|school_diary.Controllers.TeachersController|Getting teacher by id, controller
+2019-08-07 11:08:07.7190|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teacher by id
+2019-08-07 11:31:20.1437|INFO|school_diary.Controllers.SubjectsController|Getting all subjects
+2019-08-07 11:31:20.1766|INFO|school_diary.Services.SubjectsService|Accssesing db over subjects rep, get all subjects
+2019-08-07 12:40:52.3919|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
+2019-08-07 12:40:52.4269|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
+2019-08-07 12:40:52.4339|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
+2019-08-07 12:40:52.4339|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
+2019-08-07 12:41:02.6614|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id 463adc9c-c206-4013-8f83-9928f98a71ab to user manager, add role, auth repository
+2019-08-07 12:41:02.7524|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
+2019-08-07 12:41:02.7524|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
+2019-08-07 12:41:02.8143|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
+2019-08-07 12:41:02.8993|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-07 12:41:56.1391|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-07 12:42:36.5772|INFO|school_diary.Controllers.StudentsController|Get student by username, students controller
+2019-08-07 12:42:36.5772|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by username
+2019-08-07 12:42:36.5942|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by username
+2019-08-07 13:05:42.1945|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
+2019-08-07 13:05:42.2424|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
+2019-08-07 13:05:42.2514|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
+2019-08-07 13:05:42.2514|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
+2019-08-07 13:05:49.6604|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id a09a1554-ca7a-4f6d-8cef-616bbd2c226e to user manager, add role, auth repository
+2019-08-07 13:05:49.7103|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
+2019-08-07 13:05:49.7123|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
+2019-08-07 13:05:49.7453|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
+2019-08-07 13:05:49.8233|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-07 13:06:23.3990|INFO|school_diary.Controllers.StudentDepartmentsController|Enrolling student to department, studentdepartment service, Post enroll Student, studentdepartment controller
+2019-08-07 13:06:23.4000|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-07 13:10:08.9271|INFO|school_diary.Controllers.StudentDepartmentsController|Enrolling student to department, studentdepartment service, Post enroll Student, studentdepartment controller
+2019-08-07 13:10:08.9640|INFO|school_diary.Services.StudentDepartmentsService|Searching for student with ID a09a1554-ca7a-4f6d-8cef-616bbd2c226e over student service, create student department, student department service
+2019-08-07 13:10:08.9640|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-07 13:10:15.9223|INFO|school_diary.Services.StudentsService|User with id {id} is not found
+2019-08-07 13:10:24.1162|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 138
+2019-08-07 13:10:24.1162|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/studentdepartments
+2019-08-07 13:10:24.1162|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.Student GetStudent(System.String)
+2019-08-07 13:10:24.1302|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Student with id a09a1554-ca7a-4f6d-8cef-616bbd2c226e is not here
+2019-08-07 14:41:22.8687|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
+2019-08-07 14:41:22.9077|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
+2019-08-07 14:41:22.9237|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
+2019-08-07 14:41:22.9317|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
+2019-08-07 14:41:30.4140|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id 390cc628-b9f6-4755-8000-1d61c973f349 to user manager, add role, auth repository
+2019-08-07 14:41:30.4540|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
+2019-08-07 14:41:30.4540|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
+2019-08-07 14:41:30.4880|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
+2019-08-07 14:41:30.5650|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-07 14:42:06.2157|INFO|school_diary.Controllers.StudentDepartmentsController|Enrolling student to department, studentdepartment service, Post enroll Student, studentdepartment controller
+2019-08-07 14:42:06.2157|INFO|school_diary.Services.StudentDepartmentsService|Searching for student with ID 390cc628-b9f6-4755-8000-1d61c973f349 over student service, create student department, student department service
+2019-08-07 14:42:06.2157|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-07 14:42:06.2967|INFO|school_diary.Services.StudentDepartmentsService|searching for department with id 1 over student service, create student department, student department service
+2019-08-07 14:42:06.3226|INFO|school_diary.Services.StudentDepartmentsService|Converting from DTO, createStudent department, student department service
+2019-08-07 14:42:06.3226|INFO|school_diary.Services.StudentDepartmentsService|Sending student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-07 14:42:06.3226|INFO|school_diary.Services.StudentDepartmentsService|Saving student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-07 14:42:06.3226|INFO|school_diary.Services.StudentDepartmentsService|Converting student department to DTO, create student department, student department service
+2019-08-07 14:50:24.7328|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-07 14:50:24.7707|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-07 14:50:55.6137|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-07 14:50:55.6237|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-07 14:52:11.2591|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-07 14:52:13.4626|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-07 15:17:08.1857|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
+2019-08-07 15:17:08.2217|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
+2019-08-07 15:17:08.2317|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
+2019-08-07 15:17:08.2317|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
+2019-08-07 15:17:17.6470|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id c807ccb3-f532-4d24-a604-3b15f0f56304 to user manager, add role, auth repository
+2019-08-07 15:17:17.7050|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
+2019-08-07 15:17:17.7050|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
+2019-08-07 15:17:17.7450|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
+2019-08-07 15:17:17.8049|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-07 15:17:41.8141|INFO|school_diary.Controllers.StudentDepartmentsController|Enrolling student to department, studentdepartment service, Post enroll Student, studentdepartment controller
+2019-08-07 15:17:41.8141|INFO|school_diary.Services.StudentDepartmentsService|Searching for student with ID c807ccb3-f532-4d24-a604-3b15f0f56304 over student service, create student department, student department service
+2019-08-07 15:17:41.8141|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-07 15:17:41.8741|INFO|school_diary.Services.StudentDepartmentsService|searching for department with id 1 over student service, create student department, student department service
+2019-08-07 15:17:41.9100|INFO|school_diary.Services.StudentDepartmentsService|Converting from DTO, createStudent department, student department service
+2019-08-07 15:17:41.9100|INFO|school_diary.Services.StudentDepartmentsService|Sending student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-07 15:17:41.9100|INFO|school_diary.Services.StudentDepartmentsService|Saving student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-07 15:17:41.9170|INFO|school_diary.Services.StudentDepartmentsService|Converting student department to DTO, create student department, student department service
+2019-08-07 15:20:08.7984|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-07 15:20:08.8444|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-07 15:20:12.2609|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\TeachersService.cs, line which throw an exception 29
+2019-08-07 15:20:12.2609|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/teachs
+2019-08-07 15:20:12.2609|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.Teacher GetById(System.String)
+2019-08-07 15:20:12.2609|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: No teacher with id 48f28898-16a8-4950-af6a-979ef4977039 here!
+2019-08-07 15:20:31.7077|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-07 15:20:31.7077|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-07 15:21:44.3913|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-07 15:21:44.4003|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-07 15:21:47.9539|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\TeachesService.cs, line which throw an exception 37
+2019-08-07 15:21:47.9539|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/teachs
+2019-08-07 15:21:47.9539|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.TeachDTOOut CreateTeach(school_diary.Models.DTOs.TeachDTOIn)
+2019-08-07 15:21:47.9719|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Teacher - subject pair does not match
+2019-08-07 15:22:07.3341|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-07 15:22:07.3501|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-07 21:33:20.3889|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
+2019-08-07 21:33:20.4239|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
+2019-08-07 21:33:20.4349|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
+2019-08-07 21:33:20.4349|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
+2019-08-07 21:33:26.9475|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id c869cb45-d124-4261-ba91-438f03395f5a to user manager, add role, auth repository
+2019-08-07 21:33:27.0055|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
+2019-08-07 21:33:27.0055|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
+2019-08-07 21:33:27.0514|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
+2019-08-07 21:33:27.1134|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-07 21:33:47.4760|INFO|school_diary.Controllers.StudentDepartmentsController|Enrolling student to department, studentdepartment service, Post enroll Student, studentdepartment controller
+2019-08-07 21:33:47.4780|INFO|school_diary.Services.StudentDepartmentsService|Searching for student with ID c869cb45-d124-4261-ba91-438f03395f5a over student service, create student department, student department service
+2019-08-07 21:33:47.4780|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-07 21:33:47.5660|INFO|school_diary.Services.StudentDepartmentsService|searching for department with id 1 over student service, create student department, student department service
+2019-08-07 21:33:47.6029|INFO|school_diary.Services.StudentDepartmentsService|Converting from DTO, createStudent department, student department service
+2019-08-07 21:33:47.6029|INFO|school_diary.Services.StudentDepartmentsService|Sending student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-07 21:33:47.6029|INFO|school_diary.Services.StudentDepartmentsService|Saving student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-07 21:33:47.6209|INFO|school_diary.Services.StudentDepartmentsService|Converting student department to DTO, create student department, student department service
+2019-08-07 22:03:35.3554|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
+2019-08-07 22:03:35.3904|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
+2019-08-07 22:03:35.3904|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
+2019-08-07 22:03:35.3904|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
+2019-08-07 22:03:41.6487|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id 9ff400db-4cfe-4c60-93b4-8f2474e0a280 to user manager, add role, auth repository
+2019-08-07 22:03:41.6957|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
+2019-08-07 22:03:41.6977|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
+2019-08-07 22:03:41.7427|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
+2019-08-07 22:03:41.8156|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-07 22:04:00.1879|INFO|school_diary.Controllers.StudentDepartmentsController|Enrolling student to department, studentdepartment service, Post enroll Student, studentdepartment controller
+2019-08-07 22:04:00.1879|INFO|school_diary.Services.StudentDepartmentsService|Searching for student with ID 9ff400db-4cfe-4c60-93b4-8f2474e0a280 over student service, create student department, student department service
+2019-08-07 22:04:00.1879|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-07 22:04:00.2378|INFO|school_diary.Services.StudentDepartmentsService|searching for department with id 1 over student service, create student department, student department service
+2019-08-07 22:04:00.2768|INFO|school_diary.Services.StudentDepartmentsService|Converting from DTO, createStudent department, student department service
+2019-08-07 22:04:00.2768|INFO|school_diary.Services.StudentDepartmentsService|Sending student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-07 22:04:00.2768|INFO|school_diary.Services.StudentDepartmentsService|Saving student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-07 22:04:00.2768|INFO|school_diary.Services.StudentDepartmentsService|Converting student department to DTO, create student department, student department service
+2019-08-07 22:04:20.6486|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-07 22:04:20.6486|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-07 22:06:10.2864|INFO|school_diary.Controllers.SubjectsController|Getting all subjects
+2019-08-07 22:06:10.2864|INFO|school_diary.Services.SubjectsService|Accssesing db over subjects rep, get all subjects
+2019-08-07 22:06:45.8555|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-07 22:06:45.8705|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-07 22:07:25.7830|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
+2019-08-07 22:07:25.8210|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
+2019-08-07 22:07:25.8290|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
+2019-08-07 22:07:25.8290|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
+2019-08-07 22:07:31.8975|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id ee788c1a-fc5e-441c-93ec-ef2392d92d00 to user manager, add role, auth repository
+2019-08-07 22:07:31.9475|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
+2019-08-07 22:07:31.9475|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
+2019-08-07 22:07:31.9974|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
+2019-08-07 22:07:32.0704|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-07 22:07:49.1326|INFO|school_diary.Controllers.StudentDepartmentsController|Enrolling student to department, studentdepartment service, Post enroll Student, studentdepartment controller
+2019-08-07 22:07:49.1346|INFO|school_diary.Services.StudentDepartmentsService|Searching for student with ID 9ff400db-4cfe-4c60-93b4-8f2474e0a280 over student service, create student department, student department service
+2019-08-07 22:07:49.1346|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-07 22:07:49.1906|INFO|school_diary.Services.StudentsService|User with id {id} is not found
+2019-08-07 22:07:56.6843|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 138
+2019-08-07 22:07:56.6843|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/studentdepartments
+2019-08-07 22:07:56.6843|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.Student GetStudent(System.String)
+2019-08-07 22:07:56.6973|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Student with id 9ff400db-4cfe-4c60-93b4-8f2474e0a280 is not here
+2019-08-07 22:08:24.8874|INFO|school_diary.Controllers.StudentDepartmentsController|Enrolling student to department, studentdepartment service, Post enroll Student, studentdepartment controller
+2019-08-07 22:08:24.8874|INFO|school_diary.Services.StudentDepartmentsService|Searching for student with ID ee788c1a-fc5e-441c-93ec-ef2392d92d00 over student service, create student department, student department service
+2019-08-07 22:08:24.8874|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-07 22:08:24.8874|INFO|school_diary.Services.StudentDepartmentsService|searching for department with id 1 over student service, create student department, student department service
+2019-08-07 22:08:24.9394|INFO|school_diary.Services.StudentDepartmentsService|Converting from DTO, createStudent department, student department service
+2019-08-07 22:08:24.9394|INFO|school_diary.Services.StudentDepartmentsService|Sending student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-07 22:08:24.9394|INFO|school_diary.Services.StudentDepartmentsService|Saving student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-07 22:08:24.9634|INFO|school_diary.Services.StudentDepartmentsService|Converting student department to DTO, create student department, student department service
+2019-08-07 22:08:45.2609|INFO|school_diary.Controllers.StudentsController|Get student by username, students controller
+2019-08-07 22:08:45.2609|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by username
+2019-08-07 22:08:45.2789|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by username
+2019-08-07 22:09:15.5364|INFO|school_diary.Controllers.SubjectsController|Getting all subjects
+2019-08-07 22:09:15.5364|INFO|school_diary.Services.SubjectsService|Accssesing db over subjects rep, get all subjects
+2019-08-07 22:09:35.6603|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-07 22:09:35.6682|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-07 22:09:53.1107|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\TeachesService.cs, line which throw an exception 43
+2019-08-07 22:09:53.1107|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/teachs
+2019-08-07 22:09:53.1107|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.TeachDTOOut CreateTeach(school_diary.Models.DTOs.TeachDTOIn)
+2019-08-07 22:09:53.1107|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Subject Matematika already added to student mitarstudent
+2019-08-07 23:40:18.0270|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
+2019-08-07 23:40:18.0620|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
+2019-08-07 23:40:18.0720|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
+2019-08-07 23:40:18.0720|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
+2019-08-07 23:40:24.7294|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id 2e02e2c7-a7bc-4648-a0ef-990b6e6e659b to user manager, add role, auth repository
+2019-08-07 23:40:24.8433|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
+2019-08-07 23:40:24.8433|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
+2019-08-07 23:40:24.8873|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
+2019-08-07 23:40:24.9453|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-07 23:40:44.2160|INFO|school_diary.Controllers.StudentDepartmentsController|Enrolling student to department, studentdepartment service, Post enroll Student, studentdepartment controller
+2019-08-07 23:40:44.2160|INFO|school_diary.Services.StudentDepartmentsService|Searching for student with ID 2e02e2c7-a7bc-4648-a0ef-990b6e6e659b over student service, create student department, student department service
+2019-08-07 23:40:44.2160|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-07 23:40:44.2769|INFO|school_diary.Services.StudentDepartmentsService|searching for department with id 1 over student service, create student department, student department service
+2019-08-07 23:40:44.3189|INFO|school_diary.Services.StudentDepartmentsService|Converting from DTO, createStudent department, student department service
+2019-08-07 23:40:44.3189|INFO|school_diary.Services.StudentDepartmentsService|Sending student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-07 23:40:44.3219|INFO|school_diary.Services.StudentDepartmentsService|Saving student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-07 23:40:44.3219|INFO|school_diary.Services.StudentDepartmentsService|Converting student department to DTO, create student department, student department service
+2019-08-07 23:41:09.2226|INFO|school_diary.Controllers.SubjectsController|Getting all subjects
+2019-08-07 23:41:09.2226|INFO|school_diary.Services.SubjectsService|Accssesing db over subjects rep, get all subjects
+2019-08-07 23:41:29.7222|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-07 23:41:29.7542|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id

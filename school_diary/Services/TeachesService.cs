@@ -18,16 +18,14 @@ namespace school_diary.Services
         ITeachersService teachersService;
         IStudentsService studentsService;
         ISubjectsService subjectsService;
-        IGradeService gradesService;
         public TeachesService(IUnitOfWork db, IStudentDepartmentsService studentDepartmentsService, ITeachersService teachersService,
-            IGradeService gradesService, ISubjectsService subjectsService,IStudentsService studentsService)
+            ISubjectsService subjectsService,IStudentsService studentsService)
         {
             this.db = db;
             this.studentDepartmentsService = studentDepartmentsService;
             this.subjectsService = subjectsService;
             this.teachersService = teachersService;
-            this.studentsService = studentsService;
-            this.gradesService = gradesService;
+            this.studentsService = studentsService;            
         }
 
         public TeachDTOOut CreateTeach(TeachDTOIn newTeach)
@@ -41,22 +39,11 @@ namespace school_diary.Services
             logger.Info("Get subject over subject service, create teach teaches service");
             Subject subject = subjectsService.GetSubjectByID(newTeach.SubjectID);
 
-            logger.Info("Get gradesDTOOut over grade service, create teach teaches service");
-            IEnumerable<GradeDTOOut> gradesDTO = gradesService.GetGrades();
-
-            logger.Info("Converting from DTO to Grades");
-            IEnumerable<Grade> grades = gradesDTO.Select(x => new Grade()
-            {
-                Id = x.Id,
-                GradeYear = x.GradeYear,
-                Subjects = x.Subjects.Select(y => Utilities.ConverterDTO.SimpleDTOConverter<Subject>(y)).ToList()
-            });
-
             logger.Info("Get teaches over teach service, create teach teaches service");
             IEnumerable<Teach> teach = GetAllTeach();
             //Check if subject is for students grade
             logger.Info("Checking if subject is for the selected grade, create teaches, teaches service");
-            var isGradeOk = grades.Where(x => x.Id == studentDepartment.Departments.Grades.Id).Any(x => x.Subjects.Any(y => y.Id == subject.Id));
+            var isGradeOk = subject.Grades.Contains(studentDepartment.Departments.Grades);
             if (!isGradeOk)
             {
                 throw new SubjectIsNotForThisGrade("Wrong subject");
@@ -84,10 +71,8 @@ namespace school_diary.Services
             logger.Info("Checking if theacher is teach in department");
             var isDepartmentOK = teach.Any(x => x.Subject.Equals(subject) && x.Teachers.Equals(teacher) &&
             x.StudentDepartments.Departments.Id.Equals(studentDepartment.Departments.Id));
-
             var isSubjectInDepartment = teach.Any(x => x.Subject.Equals(subject) && x.StudentDepartments.Departments.Id.Equals(studentDepartment.Departments.Id));
             var whoTeach = teach.Where(x => x.Subject.Equals(subject) && x.StudentDepartments.Equals(studentDepartment)).Select(x => x.Teachers.UserName);
-
             if (!isDepartmentOK)
             {
                 if (isSubjectInDepartment)

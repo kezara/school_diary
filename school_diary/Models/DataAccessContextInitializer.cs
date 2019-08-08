@@ -61,8 +61,8 @@ namespace school_diary.Models
             //make some parents
             var parents = new List<Parent>
             {
-                new Parent { UserName = "baneparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Branislav", LastName = "Djordjevic", Email = "bane@example.com" },
-                new Parent { UserName = "ivanaparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Ivana", LastName = "Djordjevic", Email = "ivana@gmail.com" },
+                new Parent { UserName = "baneparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Branislav", LastName = "Djordjevic", Email = "borisav.ignjatov@gmail.com" },
+                new Parent { UserName = "ivanaparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Ivana", LastName = "Djordjevic", Email = "borisav.ignjatov@icloud.com" },
                 new Parent { UserName = "goranparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Goran", LastName = "Antanasijevic", Email = "goran@example.com" },
                 new Parent { UserName = "jelenaparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Jelena", LastName = "Antanasijevic", Email = "jelena@yahoo.com" },
                 new Parent { UserName = "djordjeparent", PasswordHash = Utilities.HashPass.HashedPassword("test123"), FirstName = "Djordje", LastName = "Nikolic", Email = "djordje@icloud.com" },

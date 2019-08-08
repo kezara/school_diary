@@ -12,6 +12,7 @@ using System.Web.Http.Description;
 
 namespace school_diary.Controllers
 {
+    [Authorize(Roles = "admins")]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
     {
@@ -149,7 +150,7 @@ namespace school_diary.Controllers
             return Ok(appUserPassChanged);
         }
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [Route("register-parent")]
         [ResponseType(typeof(ParentDTOOut))]
         public async Task<IHttpActionResult> RegisterParent(ParentDTORegister userModel)
@@ -172,7 +173,7 @@ namespace school_diary.Controllers
             return Created("Parent created", result);
         }
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [Route("register-student")]
         [ResponseType(typeof(StudentDTOOutReg))]
         public async Task<IHttpActionResult> RegisterStudent(StudentDTOInRegister userModel)
@@ -195,7 +196,7 @@ namespace school_diary.Controllers
             return Created("Student created",result);
         }
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [Route("register-admin")]
         [ResponseType(typeof(AdminDTOOutUp))]
         public async Task<IHttpActionResult> RegisterAdminUser(AdminDTOInRegister userModel)
@@ -219,7 +220,7 @@ namespace school_diary.Controllers
             return Created("Admin created", result);
         }
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [Route("register-teacher")]
         [ResponseType(typeof(TeacherDTOOutReg))]
         public async Task<IHttpActionResult> RegisterTeacher(TeacherDTORegister userModel)

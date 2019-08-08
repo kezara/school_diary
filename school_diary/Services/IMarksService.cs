@@ -16,7 +16,8 @@ namespace school_diary.Services
         //IEnumerable<Grade> GetGradeByStudentLastName(string lastName);
         //IEnumerable<Grade> GetGradeByStudentNameSurname(string name, string surname);
         //IEnumerable<Grade> GetGradeByStudentNameSurnameParentName(string name, string surname, string parentName);
-        Mark CreateMark(Mark newMark);
+        MarkDTOOut CreateMarkTeacher(string uerId, MarkDTOIn newMark);
+        MarkDTOOut CreateMarkAdmin(string uerId, MarkDTOIn newMark);
         //Grade UpdateGrade(string username, Grade gradeToUpdt);
         //Grade DeleteGrade(string username);
     }

@@ -87,6 +87,7 @@ namespace school_diary
             container.RegisterType<ITeachersService, TeachersService>();
             container.RegisterType<IStudentDepartmentsService, StudentDepartmentsService>();
             container.RegisterType<IAppUsersService, AppUsersService>();
+            container.RegisterType<IEmailService, EmailService>();
             container.RegisterType<IGradeService, GradeService>();
 
             return container;

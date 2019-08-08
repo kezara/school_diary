@@ -13,19 +13,109 @@ namespace school_diary.Services
     {
         IUnitOfWork db;
         ITeachesService teachsService;
-        public MarksService(IUnitOfWork db, ITeachesService teachsService)
+        IStudentsService studentsService;
+        ISubjectsService subjectsService;
+        IEmailService emailService;
+        public MarksService(IUnitOfWork db, ITeachesService teachsService, IStudentsService studentsService, ISubjectsService subjectsService, IEmailService emailService)
         {
             this.db = db;
             this.teachsService = teachsService;
+            this.studentsService = studentsService;
+            this.subjectsService = subjectsService;
+            this.emailService = emailService;
         }
 
-        public Mark CreateMark(Mark newMark)
+        public MarkDTOOut CreateMarkTeacher(string userId, MarkDTOIn newMark)
         {
-            //ClassRoom newClass = ConverterDTO.SimpleDTOConverter<ClassRoom>(newClassDTO);
-            db.MarksRepository.Insert(newMark);
+            Student student = studentsService.GetStudent(newMark.StudentID);
+            Subject subject = subjectsService.GetSubjectByID(newMark.SubjectID);
+            Teach teach = subject.Teaches.Where(x => x.StudentDepartments.Id == student.StudentDepartments.Id && x.Teachers.Id == userId && x.Subject.Id == subject.Id).FirstOrDefault();
+            if (teach == null)
+            {
+                throw new TeacherDontTeachThisSubjectException("Wrong student or subject");
+            }
+            if (newMark.MarkValue < 1 || newMark.MarkValue > 5 )
+            {
+                throw new BadRequestException("Mark van be only 1,2,3,4,5");
+            }
+            Mark mark = new Mark()
+            {
+                MarkValue = newMark.MarkValue,
+                Teaches = teach
+            };
+            db.MarksRepository.Insert(mark);
             db.Save();
-            return newMark;
+            IEnumerable<ParentDTOOut> parents = mark.Teaches.StudentDepartments.Students.Parents.Select(x => new ParentDTOOut()
+            {
+                Id = x.Id,
+                FirstName = x.FirstName,
+                LastName = x.LastName,
+                Email = x.Email,
+                UserName = x.UserName
+            });
+            MarkDTOOut markDTO = new MarkDTOOut()
+            {
+                Mark = new MarkDTODate()
+                {
+                    Id = mark.Id,
+                    MarkValue = mark.MarkValue,
+                    InsertDate = mark.InsertDate
+                },
+                Student = Utilities.ConverterDTO.SimpleDTOConverter<StudentDTO>(mark.Teaches.StudentDepartments.Students),
+                Subject = Utilities.ConverterDTO.SimpleDTOConverter<SubjectDTO>(mark.Teaches.Subject),
+                Teacher = Utilities.ConverterDTO.SimpleDTOConverter<TeacherDTO>(mark.Teaches.Teachers)
+            };
+            foreach (var parent in parents)
+            {
+                emailService.SendEmail(parent, markDTO);
+            }
+
+            return markDTO;
         }
+
+        public MarkDTOOut CreateMarkAdmin(string userId, MarkDTOIn newMark)
+        {
+            Student student = studentsService.GetStudent(newMark.StudentID);
+            Subject subject = subjectsService.GetSubjectByID(newMark.SubjectID);
+            Teach teach = subject.Teaches.Where(x => x.StudentDepartments.Id == student.StudentDepartments.Id && x.Teachers.Id == newMark.TeacherID && x.Subject.Id == subject.Id).FirstOrDefault();
+            //var isTeacherOK = student.StudentDepartments.Teaches.Any(x => x.Teachers.Id == newMark.TeacherID && x.Subject.Id == newMark.SubjectID && x.StudentDepartments.Id == student.StudentDepartments.Id);
+            if (teach == null)
+            {
+                throw new TeacherDontTeachThisSubjectException("Wrong teacher or subject");
+            }
+            if (newMark.MarkValue < 1 || newMark.MarkValue > 5)
+            {
+                throw new BadRequestException("Mark van be only 1,2,3,4,5");
+            }
+            Mark mark = new Mark()
+            {
+                MarkValue = newMark.MarkValue,
+                Teaches = teach
+            };
+            db.MarksRepository.Insert(mark);
+            db.Save();
+            MarkDTOOut markDTO = new MarkDTOOut()
+            {
+                Mark = new MarkDTODate()
+                {
+                    Id = mark.Id,
+                    MarkValue = mark.MarkValue,
+                    InsertDate = mark.InsertDate
+                },
+                Student = Utilities.ConverterDTO.SimpleDTOConverter<StudentDTO>(mark.Teaches.StudentDepartments.Students),
+                Subject = Utilities.ConverterDTO.SimpleDTOConverter<SubjectDTO>(mark.Teaches.Subject),
+                Teacher = Utilities.ConverterDTO.SimpleDTOConverter<TeacherDTO>(mark.Teaches.Teachers)
+            };
+            return markDTO;
+        }
+
+        //public Mark CreateMarkTeacher(Mark newMark)
+        //{
+
+        //    db.MarksRepository.Insert(newMark);
+        //    db.Save();
+        //    return newMark;
+        //}
 
         //public Grade DeleteGrade(string username)
         //{

@@ -14,6 +14,8 @@ namespace school_diary.Models
         //public DateTime GradeDate { get; set; }
         [Range(1,5, ErrorMessage ="Ocena ne moze biti manja od 1, ni veca od 5!!!")]
         public int MarkValue { get; set; }
+        public DateTime InsertDate { get; set; } = DateTime.Now;
+        public DateTime? ChangeDate { get; set; }
         //[JsonIgnore]
         public virtual Teach Teaches { get; set; }
         //public virtual Student Students { get; set; }

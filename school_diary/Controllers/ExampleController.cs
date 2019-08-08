@@ -18,7 +18,7 @@ namespace school_diary.Controllers
         //{
         //    this.exampleService = exampleService;
         //}
-
+        [Authorize(Roles = "admins")]
         public void PostSendMail()
         {
             string subject = "Testing testing";

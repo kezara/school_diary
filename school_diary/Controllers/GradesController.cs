@@ -13,6 +13,7 @@ using System.Web.Http.Description;
 
 namespace school_diary.Controllers
 {
+    [Authorize(Roles = "admins")]
     [RoutePrefix("api/grades")]
     public class GradesController : ApiController
     {
@@ -23,11 +24,10 @@ namespace school_diary.Controllers
             this.gradesService = gradesService;
         }
 
-        //Authorize(Roles = "admins")]
         [Route("")]
         public IHttpActionResult GetAllGrades()
         {
-            logger.Info("Getting all Marks");
+            logger.Info("Getting all grades");
             IEnumerable<GradeDTOOut> grades = gradesService.GetGrades();
             return Ok(grades);
         }

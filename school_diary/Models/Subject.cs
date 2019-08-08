@@ -24,6 +24,6 @@ namespace school_diary.Models
         //[JsonIgnore]
         //public ICollection<Semestar> Marks { get; set; }
         
-        public ICollection<Grade> Grades { get; set; }
+        public virtual ICollection<Grade> Grades { get; set; }
     }
 }

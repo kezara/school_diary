@@ -15,7 +15,7 @@ using System.Web.Http.Description;
 
 namespace school_diary.Controllers
 {
-    //[Authorize(Roles = "admins")]
+    [Authorize(Roles = "admins")]
     [RoutePrefix("api/users")]
     public class AppUsersController : ApiController
     {
