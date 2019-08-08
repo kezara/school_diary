@@ -16,8 +16,6 @@ namespace school_diary.Models
         //public Teach Teaches { get; set; }
         //[JsonIgnore]
         public virtual Grade Grades { get; set; }
-        //[JsonIgnore]
-        //public virtual ICollection<Teach> Teaches { get; set; }
         [JsonIgnore]
         public virtual ICollection<StudentDepartment> StudentDepartments { get; set; }
         //public virtual ICollection<Student> Students { get; set; }

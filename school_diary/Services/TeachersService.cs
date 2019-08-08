@@ -19,6 +19,17 @@ namespace school_diary.Services
             this.db = db;
         }
 
+        //GET teacher by ID return teacher
+        public Teacher GetById(string id)
+        {
+            logger.Info("Accssesing db over TEacher rep, get by id");
+            Teacher teacher = db.TeachersRepository.Get(filter: x => x.Id.Contains(id)).FirstOrDefault();
+            if (teacher == null)
+            {
+                throw new TeacherNotFoundException($"No teacher with id {id} here!");
+            }
+            return teacher;
+        }
         //GET all teachers
         public IEnumerable<TeacherDTOOut> GetAllTeachers()
         {

@@ -180,27 +180,112 @@ namespace school_diary.Models
             manager.Create(teacher10);
             manager.AddToRole(teacher10.Id, "teachers");
 
+            //make some subjects
+            var subject1 = new Subject()
+            {
+                Id = 1,
+                SubjectName = "Matematika",
+                SubjectFond = 4,
+                Teachers = new HashSet<Teacher>() { teacher1, teacher2}
+            };
+            context.Subjects.Add(subject1);
+            var subject2 = new Subject()
+            {
+                Id = 2,
+                SubjectName = "Srpski jezik i knjizevnost",
+                SubjectFond = 5,
+                Teachers = new HashSet<Teacher>() { teacher3, teacher4, teacher9 }
+            };
+            context.Subjects.Add(subject2);
+            var subject3 = new Subject()
+            {
+                Id = 3,
+                SubjectName = "Likovno",
+                SubjectFond = 2,
+                Teachers = new HashSet<Teacher>() { teacher5 }
+            };
+            context.Subjects.Add(subject3);
+            var subject4 = new Subject()
+            {
+                Id = 4,
+                SubjectName = "Muzicko",
+                SubjectFond = 2,
+                Teachers = new HashSet<Teacher>() { teacher6 }
+            };
+            context.Subjects.Add(subject4);
+            var subject5 = new Subject()
+            {
+                Id = 5,
+                SubjectName = "Srpski jezik i knjizevnost",
+                SubjectFond = 4,
+                Teachers = new HashSet<Teacher>() { teacher3, teacher4, teacher9 }
+            };
+            context.Subjects.Add(subject5);
+            var subject6 = new Subject()
+            {
+                Id = 6,
+                SubjectName = "Likovno",
+                SubjectFond = 1,
+                Teachers = new HashSet<Teacher>() { teacher5 }
+            };
+            context.Subjects.Add(subject6);
+            var subject7 = new Subject()
+            {
+                Id = 7,
+                SubjectName = "Muzicko",
+                SubjectFond = 1,
+                Teachers = new HashSet<Teacher>() { teacher6 }
+            };
+            context.Subjects.Add(subject7);
+            var subject8 = new Subject()
+            {
+                Id = 8,
+                SubjectName = "Hemija",
+                SubjectFond = 2,
+                Teachers = new HashSet<Teacher>() { teacher7, teacher10 }
+            };
+            context.Subjects.Add(subject8);
+            var subject9 = new Subject()
+            {
+                Id = 9,
+                SubjectName = "Biologija",
+                SubjectFond = 2,
+                Teachers = new HashSet<Teacher>() { teacher8 }
+            };
+            context.Subjects.Add(subject9);
+            var subject10 = new Subject()
+            {
+                Id = 10,
+                SubjectName = "Fizika",
+                SubjectFond = 2,
+                Teachers = new HashSet<Teacher>() { teacher1 }
+            };
+            context.Subjects.Add(subject10);
+
             //make some grades
             var grade1 = new Grade()
             {
                 GradeYear = 5,
-                //GradeEnrolment = new DateTime(2018, 9, 1)
+                Subjects = new HashSet<Subject>() { subject1, subject2, subject3, subject4 }
 
             };
             context.Grades.Add(grade1);
             var grade2 = new Grade()
             {
                 GradeYear = 6,
+                Subjects = new HashSet<Subject>() { subject1, subject5, subject6, subject7, subject9 }
             };
             context.Grades.Add(grade2);
             var grade3 = new Grade()
             {
                 GradeYear = 7,
+                Subjects = new HashSet<Subject>() { subject1, subject5, subject6, subject7, subject8, subject9,subject10 }
             };
             context.Grades.Add(grade3);
             var grade4 = new Grade()
             {
                 GradeYear = 8,
+                Subjects = new HashSet<Subject>() { subject1, subject5, subject6, subject7, subject8, subject9, subject10 }
             };
             context.Grades.Add(grade4);
 
@@ -253,199 +338,133 @@ namespace school_diary.Models
                 Grades = grade4
             };
             context.Departments.Add(classRoom8);
-
-            //make some subjects
-            var subject1 = new Subject()
-            {
-                Id = 1,
-                SubjectName = "Matematika",
-                SubjectFond = 4
-            };
-            context.Subjects.Add(subject1);
-            var subject2 = new Subject()
-            {
-                Id = 2,
-                SubjectName = "Srpski jezik i knjizevnost",
-                SubjectFond = 5
-            };
-            context.Subjects.Add(subject2);
-            var subject3 = new Subject()
-            {
-                Id = 3,
-                SubjectName = "Likovno",
-                SubjectFond = 2
-            };
-            context.Subjects.Add(subject3);
-            var subject4 = new Subject()
-            {
-                Id = 4,
-                SubjectName = "Muzicko",
-                SubjectFond = 2
-            };
-            context.Subjects.Add(subject4);
-            var subject5 = new Subject()
-            {
-                Id = 5,
-                SubjectName = "Srpski jezik i knjizevnost",
-                SubjectFond = 4
-            };
-            context.Subjects.Add(subject5);
-            var subject6 = new Subject()
-            {
-                Id = 6,
-                SubjectName = "Likovno",
-                SubjectFond = 1
-            };
-            context.Subjects.Add(subject6);
-            var subject7 = new Subject()
-            {
-                Id = 7,
-                SubjectName = "Muzicko",
-                SubjectFond = 1
-            };
-            context.Subjects.Add(subject7);
-            var subject8 = new Subject()
-            {
-                Id = 8,
-                SubjectName = "Hemija",
-                SubjectFond = 2
-            };
-            context.Subjects.Add(subject8);
-            var subject9 = new Subject()
-            {
-                Id = 9,
-                SubjectName = "Biologija",
-                SubjectFond = 2
-            };
-            context.Subjects.Add(subject9);
-
             //make some subjectgrade
-            var subjectgrade1 = new SubjectGrade()
-            {
-                Subject = subject1,
-                Grade = grade1
-            };
-            context.SubjectGrades.Add(subjectgrade1);
-            var subjectgrade2 = new SubjectGrade()
-            {
-                Subject = subject2,
-                Grade = grade1
-            };
-            context.SubjectGrades.Add(subjectgrade2);
-            var subjectgrade3 = new SubjectGrade()
-            {
-                Subject = subject3,
-                Grade = grade1
-            };
-            context.SubjectGrades.Add(subjectgrade3);
-            var subjectgrade4 = new SubjectGrade()
-            {
-                Subject = subject4,
-                Grade = grade1
-            };
-            context.SubjectGrades.Add(subjectgrade4);
-            var subjectgrade5 = new SubjectGrade()
-            {
-                Subject = subject1,
-                Grade = grade2
-            };
-            context.SubjectGrades.Add(subjectgrade5);
-            var subjectgrade6 = new SubjectGrade()
-            {
-                Subject = subject5,
-                Grade = grade2
-            };
-            context.SubjectGrades.Add(subjectgrade6);
-            var subjectgrade7 = new SubjectGrade()
-            {
-                Subject = subject6,
-                Grade = grade2
-            };
-            context.SubjectGrades.Add(subjectgrade7);
-            var subjectgrade8 = new SubjectGrade()
-            {
-                Subject = subject7,
-                Grade = grade2
-            };
-            context.SubjectGrades.Add(subjectgrade8);
-            var subjectgrade9 = new SubjectGrade()
-            {
-                Subject = subject9,
-                Grade = grade2
-            };
-            context.SubjectGrades.Add(subjectgrade9);
-            var subjectgrade10 = new SubjectGrade()
-            {
-                Subject = subject1,
-                Grade = grade3
-            };
-            context.SubjectGrades.Add(subjectgrade10);
-            var subjectgrade11 = new SubjectGrade()
-            {
-                Subject = subject5,
-                Grade = grade3
-            };
-            context.SubjectGrades.Add(subjectgrade11);
-            var subjectgrade12 = new SubjectGrade()
-            {
-                Subject = subject6,
-                Grade = grade3
-            };
-            context.SubjectGrades.Add(subjectgrade12);
-            var subjectgrade13 = new SubjectGrade()
-            {
-                Subject = subject7,
-                Grade = grade3
-            };
-            context.SubjectGrades.Add(subjectgrade13);
-            var subjectgrade14 = new SubjectGrade()
-            {
-                Subject = subject8,
-                Grade = grade3
-            };
-            context.SubjectGrades.Add(subjectgrade14);
-            var subjectgrade15 = new SubjectGrade()
-            {
-                Subject= subject9,
-                Grade = grade3
-            };
-            context.SubjectGrades.Add(subjectgrade15);
-            var subjectgrade16 = new SubjectGrade()
-            {
-                Subject = subject1,
-                Grade = grade4
-            };
-            context.SubjectGrades.Add(subjectgrade16);
-            var subjectgrade17 = new SubjectGrade()
-            {
-                Subject = subject5,
-                Grade = grade4
-            };
-            context.SubjectGrades.Add(subjectgrade17);
-            var subjectgrade18 = new SubjectGrade()
-            {
-                Subject = subject6,
-                Grade = grade4
-            };
-            context.SubjectGrades.Add(subjectgrade18);
-            var subjectgrade19 = new SubjectGrade()
-            {
-                Subject = subject7,
-                Grade = grade4
-            };
-            context.SubjectGrades.Add(subjectgrade19);
-            var subjectgrade20 = new SubjectGrade()
-            {
-                Subject = subject8,
-                Grade = grade4
-            };
-            context.SubjectGrades.Add(subjectgrade20);
-            var subjectgrade21 = new SubjectGrade()
-            {
-                Subject = subject9,
-                Grade = grade4
-            };
-            context.SubjectGrades.Add(subjectgrade21);
+            //var subjectgrade1 = new SubjectGrade()
+            //{
+            //    Subject = subject1,
+            //    Grade = grade1
+            //};
+            //context.SubjectGrades.Add(subjectgrade1);
+            //var subjectgrade2 = new SubjectGrade()
+            //{
+            //    Subject = subject2,
+            //    Grade = grade1
+            //};
+            //context.SubjectGrades.Add(subjectgrade2);
+            //var subjectgrade3 = new SubjectGrade()
+            //{
+            //    Subject = subject3,
+            //    Grade = grade1
+            //};
+            //context.SubjectGrades.Add(subjectgrade3);
+            //var subjectgrade4 = new SubjectGrade()
+            //{
+            //    Subject = subject4,
+            //    Grade = grade1
+            //};
+            //context.SubjectGrades.Add(subjectgrade4);
+            //var subjectgrade5 = new SubjectGrade()
+            //{
+            //    Subject = subject1,
+            //    Grade = grade2
+            //};
+            //context.SubjectGrades.Add(subjectgrade5);
+            //var subjectgrade6 = new SubjectGrade()
+            //{
+            //    Subject = subject5,
+            //    Grade = grade2
+            //};
+            //context.SubjectGrades.Add(subjectgrade6);
+            //var subjectgrade7 = new SubjectGrade()
+            //{
+            //    Subject = subject6,
+            //    Grade = grade2
+            //};
+            //context.SubjectGrades.Add(subjectgrade7);
+            //var subjectgrade8 = new SubjectGrade()
+            //{
+            //    Subject = subject7,
+            //    Grade = grade2
+            //};
+            //context.SubjectGrades.Add(subjectgrade8);
+            //var subjectgrade9 = new SubjectGrade()
+            //{
+            //    Subject = subject9,
+            //    Grade = grade2
+            //};
+            //context.SubjectGrades.Add(subjectgrade9);
+            //var subjectgrade10 = new SubjectGrade()
+            //{
+            //    Subject = subject1,
+            //    Grade = grade3
+            //};
+            //context.SubjectGrades.Add(subjectgrade10);
+            //var subjectgrade11 = new SubjectGrade()
+            //{
+            //    Subject = subject5,
+            //    Grade = grade3
+            //};
+            //context.SubjectGrades.Add(subjectgrade11);
+            //var subjectgrade12 = new SubjectGrade()
+            //{
+            //    Subject = subject6,
+            //    Grade = grade3
+            //};
+            //context.SubjectGrades.Add(subjectgrade12);
+            //var subjectgrade13 = new SubjectGrade()
+            //{
+            //    Subject = subject7,
+            //    Grade = grade3
+            //};
+            //context.SubjectGrades.Add(subjectgrade13);
+            //var subjectgrade14 = new SubjectGrade()
+            //{
+            //    Subject = subject8,
+            //    Grade = grade3
+            //};
+            //context.SubjectGrades.Add(subjectgrade14);
+            //var subjectgrade15 = new SubjectGrade()
+            //{
+            //    Subject= subject9,
+            //    Grade = grade3
+            //};
+            //context.SubjectGrades.Add(subjectgrade15);
+            //var subjectgrade16 = new SubjectGrade()
+            //{
+            //    Subject = subject1,
+            //    Grade = grade4
+            //};
+            //context.SubjectGrades.Add(subjectgrade16);
+            //var subjectgrade17 = new SubjectGrade()
+            //{
+            //    Subject = subject5,
+            //    Grade = grade4
+            //};
+            //context.SubjectGrades.Add(subjectgrade17);
+            //var subjectgrade18 = new SubjectGrade()
+            //{
+            //    Subject = subject6,
+            //    Grade = grade4
+            //};
+            //context.SubjectGrades.Add(subjectgrade18);
+            //var subjectgrade19 = new SubjectGrade()
+            //{
+            //    Subject = subject7,
+            //    Grade = grade4
+            //};
+            //context.SubjectGrades.Add(subjectgrade19);
+            //var subjectgrade20 = new SubjectGrade()
+            //{
+            //    Subject = subject8,
+            //    Grade = grade4
+            //};
+            //context.SubjectGrades.Add(subjectgrade20);
+            //var subjectgrade21 = new SubjectGrade()
+            //{
+            //    Subject = subject9,
+            //    Grade = grade4
+            //};
+            //context.SubjectGrades.Add(subjectgrade21);
 
             //make some students with parents and 
             var student1 = new Student()
@@ -687,112 +706,176 @@ namespace school_diary.Models
             {
                 Departments = classRoom1,
                 Students = student1,
-                EnrolmentTime = new DateTime(2018,9,1)
+                EnrolmentTime = new DateTime(2018,9,1),
+                //Teaches = new List<Teach>()
+                //{
+                //    teach1, teach3, teach7, teach9
+                //}
             };
             context.StudentDepartments.Add(studentdepartment1);
             var studentdepartment2 = new StudentDepartment()
             {
                 Departments = classRoom1,
                 Students = student2,
-                EnrolmentTime = new DateTime(2018, 9, 1)
+                EnrolmentTime = new DateTime(2018, 9, 1),
+                //Teaches = new List<Teach>()
+                //{
+                //    teach1, teach3, teach7, teach9
+                //}
             };
             context.StudentDepartments.Add(studentdepartment2);
             var studentdepartment3 = new StudentDepartment()
             {
                 Departments = classRoom2,
                 Students = student3,
-                EnrolmentTime = new DateTime(2018, 9, 1)
+                EnrolmentTime = new DateTime(2018, 9, 1),
+                //Teaches = new List<Teach>()
+                //{
+                //    teach2, teach4, teach7, teach9
+                //}
             };
             context.StudentDepartments.Add(studentdepartment3);
             var studentdepartment4 = new StudentDepartment()
             {
                 Departments = classRoom2,
                 Students = student4,
-                EnrolmentTime = new DateTime(2018, 9, 1)
+                EnrolmentTime = new DateTime(2018, 9, 1),
+                //Teaches = new List<Teach>()
+                //{
+                //    teach2, teach4, teach7, teach9
+                //}
             };
             context.StudentDepartments.Add(studentdepartment4);
             var studentdepartment5 = new StudentDepartment()
             {
                 Departments = classRoom3,
                 Students = student5,
-                EnrolmentTime = new DateTime(2018, 9, 1)
+                EnrolmentTime = new DateTime(2018, 9, 1),
+                //Teaches = new List<Teach>()
+                //{
+                //    teach1, teach5,teach8,teach12,teach10
+                //}
             };
             context.StudentDepartments.Add(studentdepartment5);
             var studentdepartment6 = new StudentDepartment()
             {
                 Departments = classRoom3,
                 Students = student6,
-                EnrolmentTime = new DateTime(2018, 9, 1)
+                EnrolmentTime = new DateTime(2018, 9, 1),
+                //Teaches = new List<Teach>()
+                //{
+                //    teach1, teach5,teach8,teach12,teach10
+                //}
             };
             context.StudentDepartments.Add(studentdepartment6);
             var studentdepartment7 = new StudentDepartment()
             {
                 Departments = classRoom4,
                 Students = student7,
-                EnrolmentTime = new DateTime(2018, 9, 1)
+                EnrolmentTime = new DateTime(2018, 9, 1),
+                //Teaches = new List<Teach>()
+                //{
+                //    teach2, teach6,teach8,teach12,teach10
+                //}
             };
             context.StudentDepartments.Add(studentdepartment7);
             var studentdepartment8 = new StudentDepartment()
             {
                 Departments = classRoom4,
                 Students = student8,
-                EnrolmentTime = new DateTime(2018, 9, 1)
+                EnrolmentTime = new DateTime(2018, 9, 1),
+                //Teaches = new List<Teach>()
+                //{
+                //    teach2, teach6,teach8,teach12,teach10
+                //}
             };
             context.StudentDepartments.Add(studentdepartment8);
             var studentdepartment9 = new StudentDepartment()
             {
                 Departments = classRoom5,
                 Students = student9,
-                EnrolmentTime = new DateTime(2018, 9, 1)
+                EnrolmentTime = new DateTime(2018, 9, 1),
+                //Teaches = new List<Teach>()
+                //{
+                //    teach1, teach5,teach8,teach12,teach10,teach11,teach13
+                //}
             };
             context.StudentDepartments.Add(studentdepartment9);
             var studentdepartment10 = new StudentDepartment()
             {
                 Departments = classRoom5,
                 Students = student10,
-                EnrolmentTime = new DateTime(2018, 9, 1)
+                EnrolmentTime = new DateTime(2018, 9, 1),
+                //Teaches = new List<Teach>()
+                //{
+                //    teach1, teach5,teach8,teach12,teach10,teach11,teach13
+                //}
             };
             context.StudentDepartments.Add(studentdepartment10);
             var studentdepartment11 = new StudentDepartment()
             {
                 Departments = classRoom6,
                 Students = student11,
-                EnrolmentTime = new DateTime(2018, 9, 1)
+                EnrolmentTime = new DateTime(2018, 9, 1),
+                //Teaches = new List<Teach>()
+                //{
+                //    teach2, teach6,teach8,teach12,teach10,teach11,teach13
+                //}
             };
             context.StudentDepartments.Add(studentdepartment11);
             var studentdepartment12 = new StudentDepartment()
             {
                 Departments = classRoom6,
                 Students = student12,
-                EnrolmentTime = new DateTime(2018, 9, 1)
+                EnrolmentTime = new DateTime(2018, 9, 1),
+                //Teaches = new List<Teach>()
+                //{
+                //    teach2, teach6,teach8,teach12,teach10,teach11,teach13
+                //}
             };
             context.StudentDepartments.Add(studentdepartment12);
             var studentdepartment13 = new StudentDepartment()
             {
                 Departments = classRoom7,
                 Students = student13,
-                EnrolmentTime = new DateTime(2018, 9, 1)
+                EnrolmentTime = new DateTime(2018, 9, 1),
+                //Teaches = new List<Teach>()
+                //{
+                //    teach1, teach5,teach8,teach12,teach10,teach11,teach13
+                //}
             };
             context.StudentDepartments.Add(studentdepartment13);
             var studentdepartment14 = new StudentDepartment()
             {
                 Departments = classRoom7,
                 Students = student14,
-                EnrolmentTime = new DateTime(2018, 9, 1)
+                EnrolmentTime = new DateTime(2018, 9, 1),
+                //Teaches = new List<Teach>()
+                //{
+                //    teach1, teach5,teach8,teach12,teach10,teach11,teach13
+                //}
             };
             context.StudentDepartments.Add(studentdepartment14);
             var studentdepartment15 = new StudentDepartment()
             {
                 Departments = classRoom8,
                 Students = student15,
-                EnrolmentTime = new DateTime(2018, 9, 1)
+                EnrolmentTime = new DateTime(2018, 9, 1),
+                //Teaches = new List<Teach>()
+                //{
+                //    teach2, teach6,teach8,teach12,teach10,teach11,teach13
+                //}
             };
             context.StudentDepartments.Add(studentdepartment15);
             var studentdepartment16 = new StudentDepartment()
             {
                 Departments = classRoom8,
                 Students = student16,
-                EnrolmentTime = new DateTime(2018, 9, 1)
+                EnrolmentTime = new DateTime(2018, 9, 1),
+                //Teaches = new List<Teach>()
+                //{
+                //    teach2, teach6,teach8,teach12,teach10,teach11,teach13
+                //}
             };
             context.StudentDepartments.Add(studentdepartment16);
 
@@ -2095,13 +2178,6 @@ namespace school_diary.Models
             base.Seed(context);
         }
     
-        //private static string HashedPassword(string password)
-        //{
-        //    var pass = new PasswordHasher();
-        //    var hashed = pass.HashPassword(password);
-        //    return hashed;
-        //}
-
         private string ReturnUserRole(AppUser user)
         {
             string role = null;

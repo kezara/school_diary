@@ -64,7 +64,7 @@ namespace school_diary.Services
                 });
             if (mark.Count() < 1)
             {
-                throw new UserNotFoundException($"This student with username {username} does not have any mark!!!");
+                throw new UserNotFoundException($"Student with username {username} does not have any mark!!!");
             }
 
             return mark;

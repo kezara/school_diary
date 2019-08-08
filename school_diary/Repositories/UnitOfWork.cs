@@ -38,7 +38,7 @@ namespace school_diary.Repositories
         [Dependency]
         public IGenericRepository<Grade> GradesRepository { get; set; }
         [Dependency]
-        public IGenericRepository<SubjectGrade> SubjectGradesRepository { get; set; }
+        public IGenericRepository<StudentDepartment> StudentDepartmentsRepository { get; set; }
         [Dependency]
         public IAuthRepository AuthRepository { get; set; }
 

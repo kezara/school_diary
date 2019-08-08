@@ -169,7 +169,7 @@ namespace school_diary.Controllers
                 return BadRequest(ModelState);
             }
 
-            return Ok(result);
+            return Created("Parent created", result);
         }
 
         [AllowAnonymous]
@@ -192,7 +192,7 @@ namespace school_diary.Controllers
                 return BadRequest(ModelState);
             }
 
-            return Ok(result);
+            return Created("Student created",result);
         }
 
         [AllowAnonymous]
@@ -216,7 +216,7 @@ namespace school_diary.Controllers
                 return BadRequest(ModelState);
             }
 
-            return Ok(result);
+            return Created("Admin created", result);
         }
 
         [AllowAnonymous]
@@ -239,7 +239,7 @@ namespace school_diary.Controllers
                 return BadRequest(ModelState);
             }
 
-            return Ok(result);
+            return Created("Teacher created", result);
         }
 
         protected override void Dispose(bool disposing)

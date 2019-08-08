@@ -7,7 +7,8 @@ namespace school_diary.Models.DTOs
 {
     public class StudentDepartmentDTO
     {
-        public int Id { get; set; }
         public DateTime? EnrolmentTime { get; set; }
+        public string StudentID { get; set; }
+        public int DepartmentID { get; set; }
     }
 }

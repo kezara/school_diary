@@ -10,6 +10,5 @@ namespace school_diary.Models.DTOs
         public int Id { get; set; }
         public string SubjectName { get; set; }
         public int SubjectFond { get; set; }
-        //public IEnumerable<SubjectGradeDTOOut> Grades { get; set; }
     }
 }

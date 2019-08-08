@@ -36,7 +36,7 @@ namespace school_diary.Infrastructure
         //public DbSet<Parent> Parents { get; set; }
         public DbSet<Subject> Subjects { get; set; }
         public DbSet<Teach> Teaches { get; set; }
-        public DbSet<SubjectGrade> SubjectGrades { get; set; }
+       // public DbSet<SubjectGrade> SubjectGrades { get; set; }
         public DbSet<StudentDepartment> StudentDepartments { get; set; }
 
     }

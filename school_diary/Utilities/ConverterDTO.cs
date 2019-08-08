@@ -167,5 +167,16 @@ namespace school_diary.Utilities
             };
             return teacherDTO;
         }
+
+        public static GradeDTOOut GradeDTOConverter(Grade x)
+        {
+            GradeDTOOut gradeDTO = new GradeDTOOut()
+            {
+                Id = x.Id,
+                GradeYear = x.GradeYear,
+                Subjects = x.Subjects.Select(k => SimpleDTOConverter<SubjectDTO>(k))
+            };
+            return gradeDTO;
+        }
     }
 }

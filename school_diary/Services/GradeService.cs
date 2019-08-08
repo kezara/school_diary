@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using school_diary.Models;
+using school_diary.Models.DTOs;
 using school_diary.Repositories;
+using school_diary.Utilities.Exceptions;
 
 namespace school_diary.Services
 {
@@ -15,10 +17,16 @@ namespace school_diary.Services
             this.db = db;
         }
 
-        public IEnumerable<Grade> GetGradeSubjects(int gradeId)
+        public IEnumerable<GradeDTOOut> GetGrades()
         {
-            IEnumerable<Grade> subjects = db.GradesRepository.Get(x => x.Id == gradeId);
-            return subjects;
+            IEnumerable<Grade> grades = db.GradesRepository.Get();
+            if (grades == null)
+            {
+                throw new GradesNotFoundException("No grades here");
+            }
+            var gradesDTO = grades.Select(x => Utilities.ConverterDTO.GradeDTOConverter(x));
+
+            return gradesDTO;
         }
     }
 }

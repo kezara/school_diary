@@ -1,0 +1,52 @@
+{
+	"EnrolmentTime" : "01.09.2018.",
+	"Student" :
+	{
+		"Id" : "3740d055-545d-48a3-9b9f-d5a639856b30",
+		"FirstName" : "Mitar",
+		"LastName" : "Mitrovic",
+		"UserName" : "mitarstudent",
+		"Parents" :
+		[
+			{
+				"Id" : "869a563c-27c9-4065-9672-4e4b2b8a589e",
+				"FirstName" : "Marija",
+				"LastName" : "Backulic"
+			},
+			{
+				"Id" : "acc9f3b4-9588-4a43-b589-772d87eff7b7",
+				"FirstName" : "Zeljko",
+				"LastName" : "Backulic"
+			}
+		]
+	},
+	"Department" : {
+		"Id" : 1,
+		"DepartmentName" : "V-1"
+	},
+	"Teaches" : [
+		{
+			"Subject" : {
+				"Id" : "1",
+				"SubjectName" : "SrpskiJezik i knjizevnost",
+				"SubjectFond" : 5
+			},
+			"Teacher" : {
+				"Id" : "061fcd13-5c7c-4757-92ec-c7c470508c58",
+				"FirstName" : "Brankica",
+				"LastName" : "Kuzmanovic"
+			}
+		},
+		{
+			"Subject" : {
+				"Id" : "1",
+				"SubjectName" : "Matematika",
+				"SubjectFond" : 4
+			},
+			"Teacher" : {
+				"Id" : "6e7edf8c-75cd-411a-98f2-311b71d9fbd5",
+				"FirstName" : "Nikola",
+				"LastName" : "Vajdic"
+			}
+		}]
+}

@@ -32,6 +32,51 @@ namespace school_diary.Filters
                 };
                 throw new HttpResponseException(resp);
             }
+            else if (context.Exception is TeacherDontTeachThisDepartment)
+            {
+                var resp = new HttpResponseMessage(HttpStatusCode.BadRequest)
+                {
+                    Content = new StringContent(context.Exception.Message),
+                    ReasonPhrase = "Admin Not Found"
+                };
+                throw new HttpResponseException(resp);
+            }
+            else if (context.Exception is StudentDepartmentNotFoundException)
+            {
+                var resp = new HttpResponseMessage(HttpStatusCode.BadRequest)
+                {
+                    Content = new StringContent(context.Exception.Message),
+                    ReasonPhrase = "Student's not enrolled in this department"
+                };
+                throw new HttpResponseException(resp);
+            }
+            else if (context.Exception is SubjectIsNotForThisGrade)
+            {
+                var resp = new HttpResponseMessage(HttpStatusCode.BadRequest)
+                {
+                    Content = new StringContent(context.Exception.Message),
+                    ReasonPhrase = "Subject is not for the selected grade"
+                };
+                throw new HttpResponseException(resp);
+            }
+            else if (context.Exception is TeacherDontTeachThisSubjectException)
+            {
+                var resp = new HttpResponseMessage(HttpStatusCode.BadRequest)
+                {
+                    Content = new StringContent(context.Exception.Message),
+                    ReasonPhrase = "Teacher does not teach this subject"
+                };
+                throw new HttpResponseException(resp);
+            }
+            else if (context.Exception is SubjectNotFoundException)
+            {
+                var resp = new HttpResponseMessage(HttpStatusCode.NotFound)
+                {
+                    Content = new StringContent(context.Exception.Message),
+                    ReasonPhrase = "Subject Not Found"
+                };
+                throw new HttpResponseException(resp);
+            }
             else if (context.Exception is ParentNotFoundException)
             {
                 var resp = new HttpResponseMessage(HttpStatusCode.NotFound)
@@ -61,10 +106,19 @@ namespace school_diary.Filters
             }
             else if (context.Exception is BadRequestException)
             {
-                var resp = new HttpResponseMessage(HttpStatusCode.NotFound)
+                var resp = new HttpResponseMessage(HttpStatusCode.BadRequest)
                 {
                     Content = new StringContent(context.Exception.Message),
                     ReasonPhrase = "Bad Request"
+                };
+                throw new HttpResponseException(resp);
+            }
+            else if (context.Exception is SubjectExistsException)
+            {
+                var resp = new HttpResponseMessage(HttpStatusCode.BadRequest)
+                {
+                    Content = new StringContent(context.Exception.Message),
+                    ReasonPhrase = "Student already learns this subject"
                 };
                 throw new HttpResponseException(resp);
             }

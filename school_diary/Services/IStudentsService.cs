@@ -13,6 +13,9 @@ namespace school_diary.Services
         IEnumerable<StudentDTOOut> GetStudentsByLastName(string lastName);
         IEnumerable<StudentDTOOut> GetStudentsByNameLastName(string name, string lastName);
         StudentDTOOutSingle GetStudentById(string id);
+
+        //Student AddStudentToClass(string id, StudentDTOIn studentToUpdt);
+        Student GetStudent(string id);
         StudentDTOOutSingle GetStudentByUserName(string username);
         //Student GetStudentByUserName(string username);
         //StudentDTOOut AddStudentToClass(string username, StudentDTOIn studentToUpdt);

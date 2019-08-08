@@ -67,7 +67,7 @@ namespace school_diary
             container.RegisterType<IGenericRepository<Student>, GenericRepository<Student>>();
             container.RegisterType<IGenericRepository<Teacher>, GenericRepository<Teacher>>();
             container.RegisterType<IGenericRepository<Grade>, GenericRepository<Grade>>();
-            container.RegisterType<IGenericRepository<SubjectGrade>, GenericRepository<SubjectGrade>>();
+            container.RegisterType<IGenericRepository<StudentDepartment>, GenericRepository<StudentDepartment>>();
             container.RegisterType<IAuthRepository, AuthRepository>();
 
             container.RegisterType<IUserService, UserService>();
@@ -85,7 +85,7 @@ namespace school_diary
             container.RegisterType<ISubjectsService, SubjectsService>();
             container.RegisterType<ITeachesService, TeachesService>();
             container.RegisterType<ITeachersService, TeachersService>();
-            container.RegisterType<ISubjectGradesService, SubjectGradesService>();
+            container.RegisterType<IStudentDepartmentsService, StudentDepartmentsService>();
             container.RegisterType<IAppUsersService, AppUsersService>();
             container.RegisterType<IGradeService, GradeService>();
 

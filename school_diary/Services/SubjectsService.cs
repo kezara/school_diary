@@ -1,4 +1,6 @@
-﻿using school_diary.Models;
+﻿using NLog;
+using school_diary.Models;
+using school_diary.Models.DTOs;
 using school_diary.Repositories;
 using school_diary.Utilities.Exceptions;
 using System;
@@ -10,6 +12,7 @@ namespace school_diary.Services
 {
     public class SubjectsService : ISubjectsService
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         IUnitOfWork db;
         public SubjectsService(IUnitOfWork db)
         {
@@ -33,14 +36,25 @@ namespace school_diary.Services
             return subject;
         }
 
-        public IEnumerable<Subject> GetAllSubjects()
+        public IEnumerable<SubjectTeacherDTOOut> GetAllSubjects()
         {
-            return db.SubjectsRepository.Get();
+            logger.Info("Accssesing db over subjects rep, get all subjects");
+            IEnumerable<Subject> subjects = db.SubjectsRepository.Get();
+            if (subjects.Count() < 1)
+            {
+                throw new SubjectNotFoundException("No subjects here!");
+            }
+            IEnumerable<SubjectTeacherDTOOut> subjectTeacherDTOOuts = subjects.Select(x => new SubjectTeacherDTOOut()
+            {
+                Subject = Utilities.ConverterDTO.SimpleDTOConverter<SubjectDTO>(x),
+                Teachers = x.Teachers.Select(y => Utilities.ConverterDTO.SimpleDTOConverter<TeacherDTOOutReg>(y))
+            });
+            return subjectTeacherDTOOuts;
         }
 
-        //public IEnumerable<Subject> GetGradesOfSubject(fillter: x => x.Subject.Name)
+            //public IEnumerable<Subject> GetGradesOfSubject(fillter: x => x.Subject.Name)
 
-        public Subject GetSubjectByID(int id)
+            public Subject GetSubjectByID(int id)
         {
             return db.SubjectsRepository.GetByID(id);
         }

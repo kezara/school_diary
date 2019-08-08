@@ -1,4 +1,5 @@
 ﻿using school_diary.Models;
+using school_diary.Models.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace school_diary.Services
 {
-    interface IGradeService
+    public interface IGradeService
     {
-        IEnumerable<Grade> GetGradeSubjects(int gradeId);
+        IEnumerable<GradeDTOOut> GetGrades();
     }
 }

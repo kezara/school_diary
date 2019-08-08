@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using school_diary.Models;
+using school_diary.Models.DTOs;
 
 namespace school_diary.Services
 {
     public interface ITeachesService
     {
-        Teach CreateTeach(Teach newTeach);
+        TeachDTOOut CreateTeach(TeachDTOIn newTeach);
         Teach DeleteTeach(int id);
         IEnumerable<Teach> GetAllTeach();
         Teach GetTeachByID(int id);

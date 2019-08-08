@@ -12,7 +12,7 @@ namespace school_diary.Services
 {
     public class StudentsService : IStudentsService
     {
-        public static Logger logger = LogManager.GetCurrentClassLogger(); 
+        public static Logger logger = LogManager.GetCurrentClassLogger();
         IUnitOfWork db;
         IDepartmentsService departmentsService;
         IParentsService parentsService;
@@ -51,7 +51,7 @@ namespace school_diary.Services
             }
             logger.Info("converting student with AllStudentsDTOConverter, get all students");
             var studentsDTO = students.Select(x => Utilities.ConverterDTO.AllStudentsDTOConverter(x));
-            
+
             return studentsDTO;
         }
 
@@ -128,145 +128,72 @@ namespace school_diary.Services
             return studentDTO;
         }
 
-        //public AdminDTOOut GetAdminByUserName(string username)
-        //{
-        //    logger.Info("Accessing db over admin repo, get admin by username");
-        //    Admin admin = db.AdminsRepository.Get(filter: x => x.UserName == username).FirstOrDefault();
-        //    if (admin == null)
+        public Student GetStudent(string id)
+        {
+            logger.Info("Accsessing db over student repo, get student");
+            Student student = db.StudentsRepository.Get(filter: x => x.Id == id).FirstOrDefault();
+            if (student == null)
+            {
+                logger.Info("User with id {id} is not found");
+                throw new StudentNotFoundException($"Student with id {id} is not here");
+            }
+            return student;
+        }
+
+
+        public Student AddStudentToClass(string id, StudentDepartmentDTO studentToUpdt)
+        {
+            Student student = GetStudent(id);
+        //    student.FirstName = studentToUpdt.Student.FirstName;
+        //    student.LastName = studentToUpdt.Student.LastName;
+        //    //student.Parents = studentToUpdt.Student.Parents.Select(x => Utilities.ConverterDTO.SimpleDTOConverter<Parent>(x)).ToList();
+        //    ////student.StudentDepartments.Departments = Utilities.ConverterDTO.SimpleDTOConverter<Department>(studentToUpdt.Department);
+        //    ////student.StudentDepartments.Teaches = 
+            
+        //    StudentDepartment studentDepartment = new StudentDepartment()
         //    {
-        //        throw new AdminNotFoundException($"Requested admin with username {username} does not exists");
-        //    }
-        //    logger.Info("converting with simpleDTOConverter, get admin by username");
-        //    AdminDTOOut adminDTOOut = Utilities.ConverterDTO.SimpleDTOConverter<AdminDTOOut>(admin);
+        //        EnrolmentTime = studentToUpdt.EnrolmentTime,
+        //        Students = student,
+        //        Departments = Utilities.ConverterDTO.SimpleDTOConverter<Department>(studentToUpdt.Department),
+        //        //Teaches = studentToUpdt.Teaches.Select(x => new Teach()
+        //        //{
+        //        //    Subject = Utilities.ConverterDTO.SimpleDTOConverter<Subject>(x.Subject),
+        //        //    Teachers = Utilities.ConverterDTO.SimpleDTOConverter<Teacher>(x.Teacher)
+        //        //}).ToList()
+        //};
+            
+            //Student studentTest = new Student();
+            //Teacher teachertest = new Teacher();
+            //studentTest.StudentDepartments.Teaches.Where(x => x.Teachers.Id == studentToUpdt.Id && x.Subject.Id == studentToUpdt.SubjectID);
+            //StudentDTOOutSingle student = GetStudentByUserName(username);
+            ////Department department = departmentsService.GetDepartmentByID(studentToUpdt.DepartmentID);
+            //ParentDTOHelper mother = parentsService.GetParentByUserName(studentToUpdt.MotherUserName);
+            //mother.Parent.
+            //ParentDTOHelper father = parentsService.GetParentByUserName(studentToUpdt.FatherUserName);
+            //ICollection<ParentDTOHelper> parents = new HashSet<ParentDTOHelper>();
+            //parents.Add(mother);
+            //parents.Add(father);
+            ////student.StudentDepartments = department;
+            //student.Parents = parents;
+            //student.
+            db.StudentsRepository.Update(student);
+            db.Save();
+            //StudentDTOOut studentDTOOutClass = new StudentDTOOut()
+            //{
+            //    ClassName = student.StudentDepartments.Departments.DepartmentName,
+            //    FirstName = student.FirstName,
+            //    LastName = student.LastName,
+            //    UserName = student.UserName,
+            //    MotherName = mother.FirstName,
+            //    MotherSurname = mother.LastName,
+            //    MotherUserName = mother.UserName,
+            //    FatherName = father.FirstName,
+            //    FatherSurname = father.LastName,
+            //    FatherUserName = father.UserName
+            //};
+            return student;
 
-        //    return adminDTOOut;
-        //}
-
-        //public IEnumerable<AdminDTOOut> GetAdminByName(string name)
-        //{
-        //    logger.Info("Accessing db over admin repo, get admin by name");
-        //    IEnumerable<Admin> admins = db.AdminsRepository.Get(filter: x => x.FirstName == name);
-        //    if (admins.Count() < 1)
-        //    {
-        //        throw new AdminNotFoundException($"No admins with requested name {name} inhere");
-        //    }
-        //    HashSet<AdminDTOOut> adminsDTOOut = new HashSet<AdminDTOOut>();
-        //    foreach (var admin in admins)
-        //    {
-        //        logger.Info("converting with simpledtoconverter, foreach, get admin by name");
-        //        var adminDTOOut = Utilities.ConverterDTO.SimpleDTOConverter<AdminDTOOut>(admin);
-        //        adminsDTOOut.Add(adminDTOOut);
-        //    }
-
-        //    IEnumerable<AdminDTOOut> iadminsDTOOut = adminsDTOOut;
-
-        //    return iadminsDTOOut;
-        //}
-
-        //public IEnumerable<AdminDTOOut> GetAdminByLastName(string lastName)
-        //{
-        //    logger.Info("Accessing db over admin repo, get admin by lastname");
-        //    IEnumerable<Admin> admins = db.AdminsRepository.Get(filter: x => x.LastName == lastName);
-        //    if (admins.Count() < 1)
-        //    {
-        //        throw new AdminNotFoundException($"No admins with requested surname {lastName} inhere!");
-        //    }
-        //    HashSet<AdminDTOOut> adminsDTOOut = new HashSet<AdminDTOOut>();
-        //    foreach (var admin in admins)
-        //    {
-        //        logger.Info("converting with simpledtoconverter, foreach, get admin by lastname");
-        //        var adminDTOOut = Utilities.ConverterDTO.SimpleDTOConverter<AdminDTOOut>(admin);
-        //        adminsDTOOut.Add(adminDTOOut);
-        //    }
-
-        //    IEnumerable<AdminDTOOut> iadminsDTOOut = adminsDTOOut;
-
-        //    return iadminsDTOOut;
-        //}
-
-        //public IEnumerable<AdminDTOOut> GetAdminByNameLastName(string name, string lastName)
-        //{
-        //    logger.Info("Accessing db over admin repo, get admin by name and lastname");
-        //    IEnumerable<Admin> admins = db.AdminsRepository.Get(filter: x => x.FirstName == name && x.LastName == lastName);
-        //    if (admins.Count() < 1)
-        //    {
-        //        throw new AdminNotFoundException($"No admins with that name {name} and surname {lastName}");
-        //    }
-        //    HashSet<AdminDTOOut> adminsDTOOut = new HashSet<AdminDTOOut>();
-        //    foreach (var admin in admins)
-        //    {
-        //        logger.Info("converting with simpledtoconverter, foreach, get admin by lastname");
-        //        var adminDTOOut = Utilities.ConverterDTO.SimpleDTOConverter<AdminDTOOut>(admin);
-        //        adminsDTOOut.Add(adminDTOOut);
-        //    }
-
-        //    IEnumerable<AdminDTOOut> iadminsDTOOut = adminsDTOOut;
-
-        //    return iadminsDTOOut;
-        //}
-
-        //public AdminDTOOut DeleteAdmin(string id)
-        //{
-        //    AdminDTOOut admin = GetAdminById(id);
-        //    db.AdminsRepository.Delete(id);
-        //    db.Save();
-        //    return admin;
-        //}
-
-        ////IEnumerable<Parent> parents = parentsService.GetParentByUserName(student.Parents);
-        ////Parent father = parentsService.GetParentByUserName(student.FatherUserName);
-        ////ICollection<Parent> parents = new HashSet<Parent>();
-        ////parents.Add(mother);
-        ////parents.Add(father);
-        ////student.StudentDepartments = department;
-        ////student.Parents = parents;
-
-        //StudentDTOOut studentDTOOut = new StudentDTOOut()
-        //    {
-        //        ClassName = student.StudentDepartments.Departments.DepartmentName,
-        //        FirstName = student.FirstName,
-        //        LastName = student.LastName,
-        //        UserName = student.UserName,
-        //        //MotherName = mother.FirstName,
-        //        //MotherSurname = mother.LastName,
-        //        //MotherUserName = mother.UserName,
-        //        //FatherName = father.FirstName,
-        //        //FatherSurname = father.LastName,
-        //        //FatherUserName = father.UserName
-        //    };
-
-        //    return studentDTOOut;
-        //}
-
-        //public StudentDTOOut AddStudentToClass(string username, StudentDTOIn studentToUpdt)
-        //{
-
-        //        Student student = GetStudentByUserName(username);
-        //        //Department department = departmentsService.GetDepartmentByID(studentToUpdt.DepartmentID);
-        //        Parent mother = parentsService.GetParentByUserName(studentToUpdt.MotherUserName);
-        //        Parent father = parentsService.GetParentByUserName(studentToUpdt.FatherUserName);
-        //        ICollection<Parent> parents = new HashSet<Parent>();
-        //        parents.Add(mother);
-        //        parents.Add(father);
-        //        //student.StudentDepartments = department;
-        //        student.Parents = parents;
-        //        db.StudentsRepository.Update(student);
-        //        db.Save();
-        //        StudentDTOOut studentDTOOutClass = new StudentDTOOut()
-        //        {
-        //            ClassName = student.StudentDepartments.Departments.DepartmentName,
-        //            FirstName = student.FirstName,
-        //            LastName = student.LastName,
-        //            UserName = student.UserName,
-        //            MotherName = mother.FirstName,
-        //            MotherSurname = mother.LastName,
-        //            MotherUserName = mother.UserName,
-        //            FatherName = father.FirstName,
-        //            FatherSurname = father.LastName,
-        //            FatherUserName = father.UserName
-        //        };
-        //        return studentDTOOutClass;
-
-        //}
+            //    //}
+        }
     }
 }

@@ -5,10 +5,9 @@ using System.Web;
 
 namespace school_diary.Models.DTOs
 {
-    public class SubjectGradeDTOOut
+    public class GradeDTO
     {
         public int Id { get; set; }
-        public SubjectDTO Subject { get; set; }
-        public GradeDTOOut Grade { get; set; }
+        public int GradeYear { get; set; }
     }
 }

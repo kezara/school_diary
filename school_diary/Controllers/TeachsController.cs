@@ -1,5 +1,6 @@
 ﻿using NLog;
 using school_diary.Models;
+using school_diary.Models.DTOs;
 using school_diary.Services;
 using school_diary.Utilities.Exceptions;
 using System;
@@ -30,20 +31,11 @@ namespace school_diary.Controllers
         }
 
         [Route("")]
-        [ResponseType(typeof(Teach))]
-        public IHttpActionResult PostTeach(Teach teach)
-        {
-            try
-            {
-                Teach teachCreated = teachsService.CreateTeach(teach);
+        [ResponseType(typeof(TeachDTOOut))]
+        public IHttpActionResult PostTeach(TeachDTOIn teach)
+        {        
+                TeachDTOOut teachCreated = teachsService.CreateTeach(teach);
                 return Created("", teachCreated);
-            }
-            catch (UserNotFoundException)
-            {
-
-                return NotFound();
-
-            }
         }
 
         [Route("{id}")]

@@ -23,10 +23,10 @@ namespace school_diary.Controllers
         }
 
         [Route("")]
-        public IEnumerable<Subject> GetAllSubjects()
+        public IHttpActionResult GetAllSubjects()
         {
             logger.Info("Getting all subjects");
-            return subjectsService.GetAllSubjects();
+            return Ok(subjectsService.GetAllSubjects());
         }
 
         [Route("")]

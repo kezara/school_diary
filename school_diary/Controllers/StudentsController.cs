@@ -88,28 +88,18 @@ namespace school_diary.Controllers
         //    }
         //}
 
-        //[Route("{username}")]
+        //[Route("{id}")]
         //[ResponseType(typeof(Student))]
-        //public IHttpActionResult PutStudentInClass(string username, StudentDTOIn updtStudent)
+        //public IHttpActionResult PutStudentInClass(string id, StudentDTOIn updtStudent)
         //{
-        //    try
-        //    {
-        //        if (username != updtStudent.UserName)
+            
+        //        if (id != updtStudent.Id)
         //        {
-        //            throw new BadRequestException();
+        //           return BadRequest(ModelState);
         //        }
-        //        StudentDTOOut studentUpdated = studentsService.AddStudentToClass(username, updtStudent);
+        //        Student studentUpdated = studentsService.AddStudentToClass(id, updtStudent);
         //        return Ok(studentUpdated);
-        //    }
-        //    catch (BadRequestException)
-        //    {
-
-        //        return BadRequest();
-        //    }
-        //    catch (UserNotFoundException)
-        //    {
-        //        return NotFound();
-        //    }
+            
 
         //}
 

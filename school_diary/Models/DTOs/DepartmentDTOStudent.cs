@@ -5,11 +5,9 @@ using System.Web;
 
 namespace school_diary.Models.DTOs
 {
-    public class TeachesDTOOut
+    public class DepartmentDTOStudent
     {
         public int Id { get; set; }
-        public TeacherDTOOut Teacher { get; set; }
-        //public SubjectGradeDTOOut SubjectGrade { get; set; }
-
+        public string DepartmentName { get; set; }
     }
 }

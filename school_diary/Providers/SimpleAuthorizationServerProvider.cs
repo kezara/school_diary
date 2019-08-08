@@ -45,7 +45,7 @@ namespace school_diary.Providers
             roles = await _repo.FindRoles(user.Id);
 
             var identity = new ClaimsIdentity(context.Options.AuthenticationType);
-            identity.AddClaim(new Claim(ClaimTypes.Email, context.UserName));
+            //identity.AddClaim(new Claim(ClaimTypes.Email, context.UserName));
             identity.AddClaim(new Claim(ClaimTypes.Name, ((AppUser)user)?.FirstName));
             identity.AddClaim(new Claim(ClaimTypes.Surname, ((AppUser)user)?.LastName));
             identity.AddClaim(new Claim(ClaimTypes.Role, string.Join(",", roles)));

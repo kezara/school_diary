@@ -12,6 +12,7 @@ namespace school_diary.Services
         IEnumerable<TeacherDTOOut> GetTeachersByName(string name);
         IEnumerable<TeacherDTOOut> GetTeachersByLastName(string lastName);
         IEnumerable<TeacherDTOOut> GetTeachersByNameLastName(string name, string lastName);
+        Teacher GetById(string id);
         TeacherDTOOut GetTeacherById(string Id);
         TeacherDTOOut GetTeacherByUsername(string username);
         //Teacher GetTeacherByID(int id);

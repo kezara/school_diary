@@ -9,5 +9,6 @@ namespace school_diary.Models.DTOs
     {
         public int Id { get; set; }
         public int GradeYear { get; set; }
+        public IEnumerable<SubjectDTO> Subjects { get; set; }
     }
 }

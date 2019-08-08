@@ -1,312 +1,122 @@
-2019-08-02 00:00:07.1662|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception d:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 61
-2019-08-02 00:00:07.2512|INFO|school_diary.Utilities.NLogExceptionLogger|DELETE http://localhost:51055/api/students/82eae9b8-acf1-432e-ab6b-ff13c3401fe9
-2019-08-02 00:00:07.2512|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.StudentDTOOut GetStudentById(System.String)
-2019-08-02 00:00:07.2672|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Student with ID 82eae9b8-acf1-432e-ab6b-ff13c3401fe9 does not exists here
-2019-08-02 00:01:10.0008|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
-2019-08-02 00:01:10.0008|INFO|school_diary.Utilities.NLogExceptionLogger|DELETE http://localhost:51055/api/students/c10d0606-25da-48ea-b7de-46210930feea
-2019-08-02 00:01:10.0008|INFO|school_diary.Utilities.NLogExceptionLogger|Int32 SaveChanges()
-2019-08-02 00:01:10.0008|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: An error occurred while saving entities that do not expose foreign key properties for their relationships. The EntityEntries property will return null because a single entity cannot be identified as the source of the exception. Handling of exceptions while saving can be made easier by exposing foreign key properties in your entity types. See the InnerException for details.
-2019-08-02 00:10:13.0922|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
-2019-08-02 00:10:13.1322|INFO|school_diary.Utilities.NLogExceptionLogger|DELETE http://localhost:51055/api/students/c10d0606-25da-48ea-b7de-46210930feea
-2019-08-02 00:10:13.1322|INFO|school_diary.Utilities.NLogExceptionLogger|Boolean MoveNext()
-2019-08-02 00:10:13.1482|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: The ForeignKeyAttribute on property 'Departments' on type 'school_diary.Models.StudentDepartment' is not valid. The foreign key name 'Departmets_Id' was not found on the dependent type 'school_diary.Models.StudentDepartment'. The Name value should be a comma separated list of foreign key property names.
-2019-08-02 00:13:08.4401|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
-2019-08-02 00:13:08.4769|INFO|school_diary.Utilities.NLogExceptionLogger|DELETE http://localhost:51055/api/students/c10d0606-25da-48ea-b7de-46210930feea
-2019-08-02 00:13:08.4769|INFO|school_diary.Utilities.NLogExceptionLogger|Boolean MoveNext()
-2019-08-02 00:13:08.4968|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: The ForeignKeyAttribute on property 'Departments' on type 'school_diary.Models.StudentDepartment' is not valid. The foreign key name 'Departments_Id' was not found on the dependent type 'school_diary.Models.StudentDepartment'. The Name value should be a comma separated list of foreign key property names.
-2019-08-02 00:16:01.9320|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
-2019-08-02 00:16:01.9747|INFO|school_diary.Utilities.NLogExceptionLogger|DELETE http://localhost:51055/api/students/c10d0606-25da-48ea-b7de-46210930feea
-2019-08-02 00:16:01.9747|INFO|school_diary.Utilities.NLogExceptionLogger|Void Apply(System.Reflection.PropertyInfo, System.Data.Entity.ModelConfiguration.Configuration.ConventionTypeConfiguration, System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute)
-2019-08-02 00:16:01.9867|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: The ForeignKeyAttribute on property 'Department_Id' on type 'school_diary.Models.StudentDepartment' is not valid. The navigation property 'Departments_Id' was not found on the dependent type 'school_diary.Models.StudentDepartment'. The Name value should be a valid navigation property name.
-2019-08-02 00:27:20.8198|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
-2019-08-02 00:27:20.8638|INFO|school_diary.Utilities.NLogExceptionLogger|DELETE http://localhost:51055/api/students/c10d0606-25da-48ea-b7de-46210930feea
-2019-08-02 00:27:20.8638|INFO|school_diary.Utilities.NLogExceptionLogger|Boolean MoveNext()
-2019-08-02 00:27:20.8718|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: The ForeignKeyAttribute on property 'Students' on type 'school_diary.Models.StudentDepartment' is not valid. The foreign key name 'Students_Id' was not found on the dependent type 'school_diary.Models.StudentDepartment'. The Name value should be a comma separated list of foreign key property names.
-2019-08-02 00:28:38.8857|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
-2019-08-02 00:28:38.9426|INFO|school_diary.Utilities.NLogExceptionLogger|DELETE http://localhost:51055/api/students/c10d0606-25da-48ea-b7de-46210930feea
-2019-08-02 00:28:38.9426|INFO|school_diary.Utilities.NLogExceptionLogger|Boolean MoveNext()
-2019-08-02 00:28:38.9616|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: The ForeignKeyAttribute on property 'Departments' on type 'school_diary.Models.StudentDepartment' is not valid. The foreign key name 'Departments_Id' was not found on the dependent type 'school_diary.Models.StudentDepartment'. The Name value should be a comma separated list of foreign key property names.
-2019-08-02 00:30:04.6164|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
-2019-08-02 00:30:04.6164|INFO|school_diary.Utilities.NLogExceptionLogger|DELETE http://localhost:51055/api/students/c10d0606-25da-48ea-b7de-46210930feea
-2019-08-02 00:30:04.6164|INFO|school_diary.Utilities.NLogExceptionLogger|Boolean MoveNext()
-2019-08-02 00:30:04.6164|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: The ForeignKeyAttribute on property 'Departments' on type 'school_diary.Models.StudentDepartment' is not valid. The foreign key name 'Departments_Id' was not found on the dependent type 'school_diary.Models.StudentDepartment'. The Name value should be a comma separated list of foreign key property names.
-2019-08-02 00:31:17.6368|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception d:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 61
-2019-08-02 00:31:17.6791|INFO|school_diary.Utilities.NLogExceptionLogger|DELETE http://localhost:51055/api/students/c10d0606-25da-48ea-b7de-46210930feea
-2019-08-02 00:31:17.6791|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.StudentDTOOut GetStudentById(System.String)
-2019-08-02 00:31:17.6991|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Student with ID c10d0606-25da-48ea-b7de-46210930feea does not exists here
-2019-08-02 01:01:57.3046|INFO|school_diary.Controllers.AppUsersController|Admin gets all users, appuserscontroller
-2019-08-02 01:01:57.3395|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get all users
-2019-08-02 01:05:09.3317|INFO|school_diary.Controllers.AdminsController|Getting all admins, controller
-2019-08-02 01:05:09.3716|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get all admins
-2019-08-02 01:05:20.3484|INFO|school_diary.Services.AdminsService|converting admin with SimpleDTOConverter, foreach, get all admins
-2019-08-02 01:05:20.3484|INFO|school_diary.Services.AdminsService|converting admin with SimpleDTOConverter, foreach, get all admins
-2019-08-02 01:05:53.8944|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
-2019-08-02 01:05:54.1163|INFO|school_diary.Services.AdminsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 01:06:28.0192|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
-2019-08-02 01:06:28.0192|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
-2019-08-02 01:06:35.1063|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception d:\Users\PC\source\repos\school_diary\school_diary\Services\AdminsService.cs, line which throw an exception 48
-2019-08-02 01:06:35.1063|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/69e77654-f625-4944-94d6-cee3de6c6637
-2019-08-02 01:06:35.1063|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
-2019-08-02 01:06:35.1253|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Requested admin doesn't exists
-2019-08-02 01:07:16.1415|INFO|school_diary.Controllers.AdminsController|Getting all admins, controller
-2019-08-02 01:07:16.1415|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get all admins
-2019-08-02 01:07:16.1595|INFO|school_diary.Services.AdminsService|converting admin with SimpleDTOConverter, foreach, get all admins
-2019-08-02 01:07:51.6120|INFO|school_diary.Controllers.AdminsController|Getting all admins, controller
-2019-08-02 01:07:51.6120|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get all admins
-2019-08-02 01:07:51.6799|INFO|school_diary.Services.AdminsService|converting admin with SimpleDTOConverter, foreach, get all admins
-2019-08-02 01:24:04.7804|INFO|school_diary.Controllers.AdminsController|Getting all admins, controller
-2019-08-02 01:24:04.8263|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get all admins
-2019-08-02 01:24:11.9919|INFO|school_diary.Services.AdminsService|converting admin with SimpleDTOConverter, foreach, get all admins
-2019-08-02 01:24:11.9919|INFO|school_diary.Services.AdminsService|converting admin with SimpleDTOConverter, foreach, get all admins
-2019-08-02 01:28:03.6121|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
-2019-08-02 01:28:03.8010|INFO|school_diary.Services.AdminsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 01:29:17.6980|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
-2019-08-02 01:29:17.6980|INFO|school_diary.Utilities.NLogExceptionLogger|PUT http://localhost:51055/api/admin/1724f8c2-ba8d-4dda-a406-b5ff36c2ac04
-2019-08-02 01:29:17.7000|INFO|school_diary.Utilities.NLogExceptionLogger|Void VerifyRootForAdd(Boolean, System.String, System.Data.Entity.Core.Objects.Internal.IEntityWrapper, System.Data.Entity.Core.Objects.EntityEntry, System.Data.Entity.Core.Metadata.Edm.EntitySet ByRef, Boolean ByRef)
-2019-08-02 01:29:17.7000|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Attaching an entity of type 'school_diary.Models.Admin' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
-2019-08-02 02:40:05.7135|INFO|school_diary.Controllers.StudentsController|Getting all students
-2019-08-02 02:40:05.7535|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 02:40:13.4914|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 02:40:13.6213|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 02:40:13.6223|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 02:40:13.6223|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 02:40:13.6223|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 02:40:13.6433|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 02:40:13.6433|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 02:40:13.6433|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 02:40:13.6433|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 02:40:13.6433|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 02:40:13.6433|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 02:40:13.6433|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 02:40:13.6433|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 02:40:13.6433|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 02:40:13.6533|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 02:40:13.6533|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 02:49:13.7492|INFO|school_diary.Controllers.StudentsController|Getting all students
-2019-08-02 02:49:13.7861|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 02:49:21.8069|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 02:49:49.1676|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception d:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 56
-2019-08-02 02:49:49.1676|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/students
-2019-08-02 02:49:49.1686|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[school_diary.Models.DTOs.StudentDTOOutTest] GetAllStudents()
-2019-08-02 02:49:49.1686|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Unable to cast object of type 'System.Collections.Generic.HashSet`1[school_diary.Models.Parent]' to type 'System.Collections.Generic.IEnumerable`1[school_diary.Models.DTOs.ParentDTOOutTest]'.
-2019-08-02 10:18:21.8276|INFO|school_diary.Controllers.StudentsController|Getting all students
-2019-08-02 10:18:21.9155|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 10:18:34.9353|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:18:35.2396|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:18:35.2396|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:18:35.2396|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:18:35.2716|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:18:35.2716|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:18:35.2716|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:18:35.2796|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:18:35.2796|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:18:35.2796|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:18:35.2796|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:18:35.2796|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:18:35.2796|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:18:35.2796|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:18:35.2956|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:18:35.2956|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:20:49.2756|INFO|school_diary.Controllers.StudentsController|Getting all students
-2019-08-02 10:20:49.3276|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 10:20:59.1025|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:20:59.2984|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:20:59.2984|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:20:59.2984|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:20:59.2984|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:20:59.2984|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:20:59.3104|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:20:59.3104|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:20:59.3104|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:20:59.3104|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:20:59.3104|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:20:59.3104|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:20:59.3104|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:20:59.3104|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:20:59.3264|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:20:59.3264|INFO|school_diary.Services.StudentsService|converting student, foreach, get all stuents
-2019-08-02 10:58:38.8066|INFO|school_diary.Controllers.AdminsController|Getting admin by admin UserName, controller
-2019-08-02 10:58:38.8425|INFO|school_diary.Services.AdminsService|Accessing db over admin repo, get admin by username
-2019-08-02 10:58:47.5104|INFO|school_diary.Services.AdminsService|converting with simpleDTOConverter, get admin by username
-2019-08-02 10:59:02.4811|INFO|school_diary.Controllers.AdminsController|Getting admin by admin Name, controller
-2019-08-02 10:59:02.4811|INFO|school_diary.Services.AdminsService|Accessing db over admin repo, get admin by name
-2019-08-02 11:08:13.6143|INFO|school_diary.Controllers.AdminsController|Getting admin by admin last name, controller
-2019-08-02 11:08:13.6543|INFO|school_diary.Services.AdminsService|Accessing db over admin repo, get admin by lastname
-2019-08-02 11:08:39.4234|INFO|school_diary.Controllers.AdminsController|Getting admin by admin name and last name, controller
-2019-08-02 11:08:39.4234|INFO|school_diary.Services.AdminsService|Accessing db over admin repo, get admin by name and lastname
-2019-08-02 11:08:51.4818|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception d:\Users\PC\source\repos\school_diary\school_diary\Services\AdminsService.cs, line which throw an exception 112
-2019-08-02 11:08:51.4818|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/admin-name-lastname?name=petar&lastname=ignjatov
-2019-08-02 11:08:51.4818|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[school_diary.Models.DTOs.AdminDTOOut] GetAdminByNameLastName(System.String, System.String)
-2019-08-02 11:08:51.5058|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: No admins with that name petar and surname ignjatov
-2019-08-02 11:09:03.4517|INFO|school_diary.Controllers.AdminsController|Getting admin by admin name and last name, controller
-2019-08-02 11:09:03.4517|INFO|school_diary.Services.AdminsService|Accessing db over admin repo, get admin by name and lastname
-2019-08-02 11:17:03.0254|INFO|school_diary.Controllers.StudentsController|Getting all students
-2019-08-02 11:17:03.0574|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 11:19:05.8760|INFO|school_diary.Controllers.StudentsController|Getting all students
-2019-08-02 11:19:05.9120|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 12:34:12.5519|INFO|school_diary.Controllers.StudentsController|Getting all students
-2019-08-02 12:34:12.5849|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 12:44:58.8856|INFO|school_diary.Controllers.StudentsController|Getting all students
-2019-08-02 12:44:58.9216|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 13:00:21.0414|INFO|school_diary.Controllers.StudentsController|Getting all students
-2019-08-02 13:00:21.0784|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 13:02:06.1645|INFO|school_diary.Controllers.StudentsController|Getting all students
-2019-08-02 13:02:06.2444|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 13:15:49.9268|INFO|school_diary.Controllers.StudentsController|Getting all students
-2019-08-02 13:15:49.9608|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 13:18:54.5924|INFO|school_diary.Controllers.StudentsController|Getting all students
-2019-08-02 13:18:54.6324|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 13:29:25.2954|INFO|school_diary.Controllers.StudentsController|Getting all students
-2019-08-02 13:29:25.3513|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 13:30:43.3714|INFO|school_diary.Controllers.StudentsController|Getting all students
-2019-08-02 13:30:43.4164|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 14:06:16.6982|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-02 14:06:16.7332|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 14:07:14.2158|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 14:07:14.2158|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 14:07:14.4078|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 14:09:24.9419|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 14:09:24.9419|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 14:09:24.9809|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 14:09:54.3618|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 14:09:54.3618|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 14:09:54.4107|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 14:50:01.7356|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-02 14:50:01.7816|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 14:50:51.8961|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 14:50:51.8961|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 14:50:52.0210|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 14:52:37.3958|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-02 14:52:37.4317|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 14:53:01.3534|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 14:53:01.3534|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 14:53:01.7262|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 14:54:04.7680|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 14:54:04.7680|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 14:54:04.7930|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 14:54:52.1318|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 14:54:52.1318|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 14:54:52.1578|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 14:55:31.8354|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 14:55:31.8354|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 14:55:31.8514|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 14:56:11.9187|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 14:56:11.9187|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 14:56:11.9187|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 15:25:33.5936|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-02 15:25:33.6375|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 15:25:55.9822|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 15:25:55.9822|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 15:25:56.1331|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 15:27:16.3549|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 15:27:16.3549|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 15:27:16.3929|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 15:29:10.2433|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 15:29:10.2433|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 15:29:10.2613|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 15:30:54.4694|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 15:30:54.4694|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 15:30:54.4994|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 15:57:33.9170|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-02 15:57:33.9510|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 15:58:08.3032|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 15:58:08.3032|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 15:58:08.4331|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 16:06:02.5769|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-02 16:06:02.6138|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 16:06:32.6750|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 16:06:32.6750|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 16:06:32.7979|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 16:26:05.9667|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-02 16:26:06.0307|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 16:26:40.2379|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 16:26:40.2379|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 16:26:40.3847|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 16:34:47.8495|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-02 16:34:47.8895|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 16:35:14.7584|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 16:35:14.7584|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 16:35:14.9003|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 17:24:30.1593|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-02 17:24:30.1952|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 17:25:02.6976|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 17:25:02.6976|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 17:25:02.8695|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 18:08:53.7464|INFO|school_diary.Controllers.AdminsController|Getting all admins, controller
-2019-08-02 18:08:53.7789|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get all admins
-2019-08-02 18:09:38.9410|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
-2019-08-02 18:09:38.9410|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
-2019-08-02 18:09:50.3765|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
-2019-08-02 18:09:50.3765|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/01da72a9-904f-45db-8305-4d8c1f894ace
-2019-08-02 18:09:50.3765|INFO|school_diary.Utilities.NLogExceptionLogger|TTarget CheckedConvert[TSource,TTarget](TSource)
-2019-08-02 18:09:50.4005|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: The specified cast from a materialized 'System.Data.Entity.DynamicProxies.Student_B0C1132D31068A85376DC61F27B7F374E50F6308BC8277545F5AF102FA553757' type to the 'school_diary.Models.Admin' type is not valid.
-2019-08-02 18:10:27.3919|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
-2019-08-02 18:10:27.3919|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
-2019-08-02 18:10:38.5916|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
-2019-08-02 18:10:38.5916|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/0e064e5f-936c-4f70-88a0-490eea1f470a
-2019-08-02 18:10:38.5916|INFO|school_diary.Utilities.NLogExceptionLogger|TTarget CheckedConvert[TSource,TTarget](TSource)
-2019-08-02 18:10:38.5916|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: The specified cast from a materialized 'System.Data.Entity.DynamicProxies.Parent_14F086DAE16466B8BDA4B3B9B9EF402A4FEF9D991188B10B7F65A4DF8B44655F' type to the 'school_diary.Models.Admin' type is not valid.
-2019-08-02 18:13:52.8037|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
-2019-08-02 18:13:52.8437|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
-2019-08-02 18:14:09.2965|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception d:\Users\PC\source\repos\school_diary\school_diary\Services\AdminsService.cs, line which throw an exception 49
-2019-08-02 18:14:09.2965|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/0e064e5f-936c-4f70-88a0-490eea1f470a
-2019-08-02 18:14:09.2965|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
-2019-08-02 18:14:09.3125|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Requested admin doesn't exists
-2019-08-02 18:15:18.2978|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
-2019-08-02 18:15:18.2978|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
-2019-08-02 18:15:23.0143|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception d:\Users\PC\source\repos\school_diary\school_diary\Services\AdminsService.cs, line which throw an exception 49
-2019-08-02 18:15:23.0143|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/1124fa83-8c85-447e-ad3c-789c0424cd3f
-2019-08-02 18:15:23.0143|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
-2019-08-02 18:15:23.0283|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Requested admin doesn't exists
-2019-08-02 18:15:53.9815|INFO|school_diary.Controllers.AdminsController|Getting admin by admin ID, controller
-2019-08-02 18:15:53.9815|INFO|school_diary.Services.AdminsService|Accssesing db over Admin rep, get admin by id
-2019-08-02 18:15:59.1048|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception d:\Users\PC\source\repos\school_diary\school_diary\Services\AdminsService.cs, line which throw an exception 49
-2019-08-02 18:15:59.1048|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/admin/03bc80b2-5930-4543-9455-b4f91a80077a
-2019-08-02 18:15:59.1048|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.AdminDTOOut GetAdminById(System.String)
-2019-08-02 18:15:59.1048|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Requested admin doesn't exists
-2019-08-02 18:38:45.5357|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-02 18:38:45.6037|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 18:39:41.4242|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 18:39:41.4242|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 18:39:53.8942|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception d:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 65
-2019-08-02 18:39:53.8942|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/students/03bc80b2-5930-4543-9455-b4f91a80077a
-2019-08-02 18:39:53.8942|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.StudentDTOOutSingle GetStudentById(System.String)
-2019-08-02 18:39:53.9101|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Student with ID 03bc80b2-5930-4543-9455-b4f91a80077a doesn't exists
-2019-08-02 18:40:06.7402|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-02 18:40:06.7402|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 18:40:29.4656|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 18:40:29.4656|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 18:40:34.9381|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception d:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 65
-2019-08-02 18:40:34.9381|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/students/03bc80b2-5930-4543-9455-b4f91a80077a
-2019-08-02 18:40:34.9381|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.StudentDTOOutSingle GetStudentById(System.String)
-2019-08-02 18:40:34.9381|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Student with ID 03bc80b2-5930-4543-9455-b4f91a80077a doesn't exists
-2019-08-02 18:40:45.6042|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-02 18:40:45.6042|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 18:40:47.9338|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-02 18:40:47.9338|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 18:41:10.7813|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 18:41:10.7813|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 18:41:15.6241|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception d:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 65
-2019-08-02 18:41:15.6241|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/students/03bc80b2-5930-4543-9455-b4f91a80077a
-2019-08-02 18:41:15.6241|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.StudentDTOOutSingle GetStudentById(System.String)
-2019-08-02 18:41:15.6241|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Student with ID 03bc80b2-5930-4543-9455-b4f91a80077a doesn't exists
-2019-08-02 18:41:33.1427|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-02 18:41:33.1427|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 18:42:28.8244|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-02 18:42:28.8724|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 18:42:54.5121|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 18:42:54.5121|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 18:43:06.1880|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception d:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 65
-2019-08-02 18:43:06.1880|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/students/03bc80b2-5930-4543-9455-b4f91a80077a
-2019-08-02 18:43:06.1880|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.StudentDTOOutSingle GetStudentById(System.String)
-2019-08-02 18:43:06.2080|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Student with ID 03bc80b2-5930-4543-9455-b4f91a80077a doesn't exists
-2019-08-02 18:44:06.4335|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-02 18:44:06.4695|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 18:45:02.5237|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 18:45:02.5237|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 18:45:02.6597|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
-2019-08-02 18:49:21.0876|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-02 18:49:21.1316|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-02 18:49:47.8037|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-02 18:49:47.8037|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-02 18:49:47.9603|INFO|school_diary.Services.StudentsService|converting admin with SimpleDTOConverter, get admin by id
+2019-08-04 01:12:12.9243|INFO|school_diary.Controllers.ParentsController|Getting parent by parent ID, controller
+2019-08-04 01:12:13.0303|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
+2019-08-04 01:12:30.7190|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\ParentsService.cs, line which throw an exception 48
+2019-08-04 01:12:30.7190|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/parents/341ba300-e469-414f-8397-91ec17d3f8f0
+2019-08-04 01:12:30.7190|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.ParentDTOHelper GetParentById(System.String)
+2019-08-04 01:12:30.7440|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Requested parent doesn't exists
+2019-08-04 01:13:10.7987|INFO|school_diary.Controllers.ParentsController|Getting parent by parent ID, controller
+2019-08-04 01:13:10.7987|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
+2019-08-04 01:13:10.8237|INFO|school_diary.Services.ParentsService|converting parent with SimpleDTOConverter, get admin by id
+2019-08-04 11:37:34.9590|INFO|school_diary.Controllers.ParentsController|Getting parent by parent ID, controller
+2019-08-04 11:37:35.0000|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
+2019-08-04 12:39:29.4443|INFO|school_diary.Controllers.ParentsController|Getting all parents, controller
+2019-08-04 12:39:29.4793|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get all parents
+2019-08-04 12:41:35.1284|INFO|school_diary.Controllers.ParentsController|Getting parent by parent ID, controller
+2019-08-04 12:41:35.1284|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
+2019-08-04 12:41:35.5034|INFO|school_diary.Services.ParentsService|converting parent with SimpleDTOConverter, get admin by id
+2019-08-04 12:42:17.3980|INFO|school_diary.Controllers.ParentsController|Getting parent by parent ID, controller
+2019-08-04 12:42:17.3980|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
+2019-08-04 12:42:20.2014|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\ParentsService.cs, line which throw an exception 78
+2019-08-04 12:42:20.2014|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/parents/8084f302-3587-40e7-acfb-d03123ba8ab0
+2019-08-04 12:42:20.2014|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.ParentDTOHelper GetParentById(System.String)
+2019-08-04 12:42:20.2164|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Requested parent doesn't exists
+2019-08-04 13:07:28.6007|INFO|school_diary.Controllers.ParentsController|Getting all parents, controller
+2019-08-04 13:07:28.6457|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get all parents
+2019-08-04 13:07:57.3314|INFO|school_diary.Controllers.ParentsController|Getting parent by parent ID, controller
+2019-08-04 13:07:57.3314|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
+2019-08-04 13:07:57.3464|INFO|school_diary.Services.ParentsService|converting parent with SimpleDTOConverter, get parent by id
+2019-08-04 13:10:45.2336|INFO|school_diary.Controllers.ParentsController|Getting all parents, controller
+2019-08-04 13:10:45.2686|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get all parents
+2019-08-04 13:11:17.4748|INFO|school_diary.Controllers.ParentsController|Getting parent by parent ID, controller
+2019-08-04 13:11:17.4748|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
+2019-08-04 13:11:17.5058|INFO|school_diary.Services.ParentsService|converting parent with SimpleDTOConverter, get parent by id
+2019-08-04 13:11:35.7899|INFO|school_diary.Controllers.ParentsController|Getting parent by parent username, controller
+2019-08-04 13:11:35.7899|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by udername
+2019-08-04 13:11:35.9978|INFO|school_diary.Services.ParentsService|converting parent with SimpleDTOConverter, get parent by username
+2019-08-04 13:11:46.6620|INFO|school_diary.Controllers.ParentsController|Getting parent by parent username, controller
+2019-08-04 13:11:46.6620|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by udername
+2019-08-04 13:11:46.6999|INFO|school_diary.Services.ParentsService|converting parent with SimpleDTOConverter, get parent by username
+2019-08-04 13:12:49.8002|INFO|school_diary.Controllers.ParentsController|Getting parents by last name, controller
+2019-08-04 13:12:49.8002|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parents by last name
+2019-08-04 13:13:49.1242|INFO|school_diary.Controllers.ParentsController|Getting parents by last name, controller
+2019-08-04 13:13:49.1671|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parents by last name
+2019-08-04 13:14:00.8292|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\ParentsService.cs, line which throw an exception 88
+2019-08-04 13:14:00.8292|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/parents/by-lastname/gabrijela
+2019-08-04 13:14:00.8292|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[school_diary.Models.DTOs.ParentDTOOutAll] GetParentsByLastName(System.String)
+2019-08-04 13:14:00.8461|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: No parents with last name gabrijela here!
+2019-08-04 13:14:12.3155|INFO|school_diary.Controllers.ParentsController|Getting parents by last name, controller
+2019-08-04 13:14:12.3155|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parents by last name
+2019-08-04 13:15:15.3622|INFO|school_diary.Controllers.ParentsController|Getting parents by name and last name, controller
+2019-08-04 13:15:15.3622|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parents by name and last name
+2019-08-04 13:15:41.2457|INFO|school_diary.Controllers.ParentsController|Getting parents by last name, controller
+2019-08-04 13:15:41.2467|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parents by last name
+2019-08-04 13:15:45.8476|INFO|school_diary.Controllers.ParentsController|Getting parents by name and last name, controller
+2019-08-04 13:15:45.8476|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parents by name and last name
+2019-08-04 14:02:57.0699|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 14:02:57.1049|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 14:24:52.6450|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 14:24:52.6869|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 14:42:39.4116|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 14:42:39.4465|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 14:46:21.8339|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
+2019-08-04 14:46:22.0678|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/teachers
+2019-08-04 14:46:22.2057|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[TResult] Select[TSource,TResult](System.Collections.Generic.IEnumerable`1[TSource], System.Func`2[TSource,TResult])
+2019-08-04 14:46:22.3486|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Value cannot be null.
+Parameter name: source
+2019-08-04 15:18:42.3713|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 15:18:42.4132|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 15:28:17.5247|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 15:28:17.5626|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 15:42:13.0811|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 15:42:13.1201|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 15:49:55.5017|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 15:49:55.5437|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 16:00:35.0276|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 16:00:35.0645|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 16:03:11.2012|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 16:03:11.2452|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 16:06:45.8662|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 16:06:45.9032|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 16:46:51.6349|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 16:46:51.6838|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 16:49:58.3641|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 16:49:58.4075|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 17:53:25.1346|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 17:53:25.1706|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 18:23:41.5534|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 18:23:41.6104|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 18:26:10.9362|INFO|school_diary.Controllers.TeachersController|Getting teacher by id, controller
+2019-08-04 18:26:10.9362|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teacher by id
+2019-08-04 18:26:52.9154|INFO|school_diary.Controllers.TeachersController|Getting teachers by name, controller
+2019-08-04 18:26:52.9154|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teachers by name
+2019-08-04 18:27:17.0766|INFO|school_diary.Controllers.TeachersController|Getting teachers by name, controller
+2019-08-04 18:27:17.0766|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teachers by name
+2019-08-04 18:27:25.4092|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\TeachersService.cs, line which throw an exception 43
+2019-08-04 18:27:25.4092|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/teachers/by-name/petrovic
+2019-08-04 18:27:25.4092|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[school_diary.Models.DTOs.TeacherDTOOut] GetTeachersByName(System.String)
+2019-08-04 18:27:25.4232|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: No teachers with name petrovic here!
+2019-08-04 18:27:36.2798|INFO|school_diary.Controllers.TeachersController|Getting teachers by last name, controller
+2019-08-04 18:27:36.2798|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teachers by last name
+2019-08-04 18:27:42.8968|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\TeachersService.cs, line which throw an exception 57
+2019-08-04 18:27:42.8968|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/teachers/by-lastname/petrovic
+2019-08-04 18:27:42.8968|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[school_diary.Models.DTOs.TeacherDTOOut] GetTeachersByLastName(System.String)
+2019-08-04 18:27:42.8968|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: No teachers with last name petrovic here!
+2019-08-04 18:28:32.1521|INFO|school_diary.Controllers.TeachersController|Getting teachers by last name, controller
+2019-08-04 18:28:32.1890|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teachers by last name
+2019-08-04 18:29:41.5539|INFO|school_diary.Controllers.TeachersController|Getting teachers by name, controller
+2019-08-04 18:29:41.5539|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teachers by name and last name
+2019-08-04 18:30:21.5031|INFO|school_diary.Controllers.StudentsController|Getting students by name and last name, Student controller
+2019-08-04 18:30:21.5031|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get students by name and lastname
+2019-08-04 18:30:21.6150|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get students by name and last name
+2019-08-04 19:21:39.9773|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 19:21:40.0318|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 19:23:14.4591|INFO|school_diary.Controllers.TeachersController|Getting teacher by id, controller
+2019-08-04 19:23:14.4591|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teacher by id
+2019-08-04 19:27:19.5713|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 19:27:19.6062|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 19:32:01.2835|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 19:32:01.3185|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 19:40:28.2749|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-04 19:40:28.3098|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-04 19:41:44.3781|INFO|school_diary.Controllers.TeachersController|Getting teacher by id, controller
+2019-08-04 19:41:44.3781|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teacher by id

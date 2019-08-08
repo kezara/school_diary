@@ -14,6 +14,7 @@ namespace school_diary.Models
         public int SubjectFond { get; set; }
         [JsonIgnore]
         public virtual ICollection<Teach> Teaches { get; set; }
+        public virtual ICollection<Teacher> Teachers { get; set; }
         // public int WeeklyFond { get; set; }
         //public virtual Teach Fond { get; set; }
         //[NotMapped]
@@ -22,7 +23,7 @@ namespace school_diary.Models
         //public virtual ICollection<Student> Students { get; set; }
         //[JsonIgnore]
         //public ICollection<Semestar> Marks { get; set; }
-        [JsonIgnore]
-        public ICollection<SubjectGrade> SubjectGrades { get; set; }
+        
+        public ICollection<Grade> Grades { get; set; }
     }
 }
