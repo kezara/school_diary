@@ -17,7 +17,7 @@ namespace school_diary.Services
             this.db = db;
         }
 
-        public IEnumerable<GradeDTOOut> GetGrades()
+        public IEnumerable<GradeDTOOutGet> GetGrades()
         {
             IEnumerable<Grade> grades = db.GradesRepository.Get();
             if (grades == null)
@@ -27,6 +27,37 @@ namespace school_diary.Services
             var gradesDTO = grades.Select(x => Utilities.ConverterDTO.GradeDTOConverter(x));
 
             return gradesDTO;
+        }
+
+        public GradeDTO CreateGrade(GradeDTO newGrade)
+        {
+            Grade grade = Utilities.ConverterDTO.SimpleDTOConverter<Grade>(newGrade);
+            db.GradesRepository.Insert(grade);
+            db.Save();
+            return newGrade;
+        }
+
+        public GradeDTOOutGet GetGradesById(int id)
+        {
+            Grade grade = db.GradesRepository.Get(filter: x => x.Id == id).FirstOrDefault();
+            if (grade == null)
+            {
+                throw new GradesNotFoundException($"No grade with id {id} here");
+            }
+            var gradesDTO = Utilities.ConverterDTO.GradeDTOConverter(grade);
+
+            return gradesDTO;
+        }
+
+        public Grade GetGradeId(int id)
+        {
+            Grade grade = db.GradesRepository.Get(filter: x => x.Id == id).FirstOrDefault();
+            if (grade == null)
+            {
+                throw new GradesNotFoundException($"No grade with id {id} here");
+            }
+
+            return grade;
         }
     }
 }

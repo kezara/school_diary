@@ -25,123 +25,30 @@ namespace school_diary.Controllers
         }
 
         [Route("")]
+        [ResponseType(typeof(IEnumerable<GradeDTOOutGet>))]
         public IHttpActionResult GetAllGrades()
         {
             logger.Info("Getting all grades");
-            IEnumerable<GradeDTOOut> grades = gradesService.GetGrades();
+            IEnumerable<GradeDTOOutGet> grades = gradesService.GetGrades();
             return Ok(grades);
         }
 
-        //[Authorize(Roles = "admins")]
-        //[Authorize(Roles = "teachers")]
-        //[Authorize(Roles = "students")]
-        //[Authorize(Roles = "parents")]
-        //[Route("by-username/{username}")]
-        //public IHttpActionResult GetGradesByUserName(string username)
-        //{
-        //    try
-        //    {
-        //        IEnumerable<MarkDTO> grade = gradesService.GetMarkByStudentUserName(username);
-        //        return Ok(grade);
-        //    }
-        //    catch (UserNotFoundException)
-        //    {
-        //        return NotFound();
-        //    }
-        //    catch
-        //    {
-        //        return BadRequest();
-        //    }
-        //}
+        [Route("{id}")]
+        [ResponseType(typeof(GradeDTOOutGet))]
+        public IHttpActionResult GetGradesById(int id)
+        {
+            logger.Info("Getting grade byId");
+            GradeDTOOutGet grades = gradesService.GetGradesById(id);
+            return Ok(grades);
+        }
 
-        //[Route("by-name/{name}")]
-        //public IHttpActionResult GetGradesByName(string name)
-        //{
-        //    try
-        //    {
-        //        IEnumerable<Grade> grade = gradesService.GetGradeByStudentName(name);
-        //        return Ok(grade);
-        //    }
-        //    catch (UserNotFoundException)
-        //    {
-        //        return NotFound();
-        //    }
-        //    catch
-        //    {
-        //        return BadRequest();
-        //    }
-        //}
-
-        //[Route("by-lastname/{lastName}")]
-        //public IHttpActionResult GetGradesByLastName(string lastName)
-        //{
-        //    try
-        //    {
-        //        IEnumerable<Grade> grade = gradesService.GetGradeByStudentLastName(lastName);
-        //        return Ok(grade);
-        //    }
-        //    catch (UserNotFoundException)
-        //    {
-        //        return NotFound();
-        //    }
-        //    catch
-        //    {
-        //        return BadRequest();
-        //    }
-        //}
-
-        //[Route("")]
-        //[ResponseType(typeof(Mark))]
-        //public IHttpActionResult PostGrade(Mark grade)
-        //{
-        //    try
-        //    {
-        //        Mark gradeCreated = gradesService.CreateMark(grade);
-        //        return Created("", gradeCreated);
-        //    }
-        //    catch (UserNotFoundException)
-        //    {
-
-        //        return NotFound();
-
-        //    }
-        //}
-
-        //[Route("{id}")]
-        //[ResponseType(typeof(Grade))]
-        //public IHttpActionResult PutGrade(string username, Grade updtGrade)
-        //{
-        //    try
-        //    {
-        //        Grade gradeUpdated = gradesService.UpdateGrade(username, updtGrade);
-        //        if (gradeUpdated == null)
-        //        {
-        //            return NotFound();
-        //        }
-
-        //        return Ok(gradeUpdated);
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        return BadRequest();
-        //    }
-
-        //}
-
-        //[Route("{id}")]
-        //[ResponseType(typeof(Grade))]
-        //public IHttpActionResult DeleteGrade(string username)
-        //{
-        //    try
-        //    {
-        //        Grade gradeDeleted = gradesService.DeleteGrade(username);
-        //        return Ok(gradeDeleted);
-        //    }
-        //    catch (UserNotFoundException)
-        //    {
-        //        return NotFound();
-        //    }
-        //}
+        [Route("")]
+        [ResponseType(typeof(GradeDTO))]
+        public IHttpActionResult PostGrade(GradeDTO newGrade)
+        {
+            GradeDTO createdGrade = gradesService.CreateGrade(newGrade);
+            return Created("", createdGrade);
+        }
+       
     }
 }

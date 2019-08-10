@@ -1,4 +1,5 @@
-﻿using school_diary.Models.DTOs;
+﻿using NLog;
+using school_diary.Models.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -11,6 +12,7 @@ namespace school_diary.Services
 {
     public class EmailService : IEmailService
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         public void SendEmail(ParentDTOOut parent, MarkDTOOut mark)
         {
             string subject = $"{mark.Student.FirstName} je dobio ocenu iz predmeta {mark.Subject.SubjectName}";
@@ -32,6 +34,7 @@ namespace school_diary.Services
             SmtpServer.Port = int.Parse(ConfigurationManager.AppSettings["smtpPort"]);
             SmtpServer.Credentials = new System.Net.NetworkCredential(ConfigurationManager.AppSettings["username"], ConfigurationManager.AppSettings["password"]);
             SmtpServer.EnableSsl = bool.Parse(ConfigurationManager.AppSettings["smtpSsl"]);
+            logger.Info($"Sending email to {parent.Email}");
             SmtpServer.Send(mail);
         }
     }

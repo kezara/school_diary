@@ -19,6 +19,7 @@ namespace school_diary.Repositories
 
         [Dependency]
         public IGenericRepository<Admin> AdminsRepository { get; set; }
+        
         [Dependency]
         public IGenericRepository<Department> DepartmentsRepository { get; set; }
         [Dependency]

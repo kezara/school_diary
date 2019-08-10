@@ -1,40 +1,211 @@
-2019-08-09 00:05:23.7864|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-09 00:05:23.8664|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-09 00:05:52.9333|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 109
-2019-08-09 00:05:52.9333|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/students/aleksandarstudent
-2019-08-09 00:05:52.9333|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.StudentDTOOutSingle GetStudentById(System.String)
-2019-08-09 00:05:52.9333|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Student with ID aleksandarstudent doesn't exists
-2019-08-09 00:06:05.2518|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
-2019-08-09 00:06:05.2518|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
-2019-08-09 00:06:23.6960|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 109
-2019-08-09 00:06:23.6960|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/students/vukasinstudent
-2019-08-09 00:06:23.6960|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.StudentDTOOutSingle GetStudentById(System.String)
-2019-08-09 00:06:23.6960|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Student with ID vukasinstudent doesn't exists
-2019-08-09 00:06:44.8173|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
-2019-08-09 00:06:44.8173|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
-2019-08-09 00:06:44.8572|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get all students
-2019-08-09 00:07:09.2815|INFO|school_diary.Controllers.StudentsController|Get student by username, students controller
-2019-08-09 00:07:09.2815|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by username
-2019-08-09 00:07:09.3055|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by username
-2019-08-09 00:08:20.5561|INFO|school_diary.Repositories.AuthRepository|searching for user nikolateacher find user, auth repository
-2019-08-09 00:08:20.6481|INFO|school_diary.Repositories.AuthRepository|searching for roles 8db4d3af-ffff-4dfd-8d38-db336137f063 find roles, auth repository
-2019-08-09 00:08:20.6681|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
-2019-08-09 00:09:16.9707|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
-2019-08-09 00:09:16.9707|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/marks
-2019-08-09 00:09:16.9707|INFO|school_diary.Utilities.NLogExceptionLogger|System.Web.Http.Controllers.IHttpController Create(System.Net.Http.HttpRequestMessage, System.Web.Http.Controllers.HttpControllerDescriptor, System.Type)
-2019-08-09 00:09:16.9707|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: An error occurred when trying to create a controller of type 'MarksController'. Make sure that the controller has a parameterless public constructor.
-2019-08-09 00:17:23.6909|INFO|school_diary.Controllers.StudentsController|Get student by username, students controller
-2019-08-09 00:17:23.7349|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by username
-2019-08-09 00:17:34.8305|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by username
-2019-08-09 00:18:04.0691|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
-2019-08-09 00:18:24.8486|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\MarksService.cs, line which throw an exception 35
-2019-08-09 00:18:24.8486|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/marks
-2019-08-09 00:18:24.8486|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.MarkDTOOut CreateMarkTeacher(System.String, school_diary.Models.DTOs.MarkDTOIn)
-2019-08-09 00:18:24.8646|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Wrong student or subject
-2019-08-09 00:19:10.8944|INFO|school_diary.Repositories.AuthRepository|searching for user chabateacher find user, auth repository
-2019-08-09 00:19:16.2089|INFO|school_diary.Repositories.AuthRepository|searching for user chabateacher find user, auth repository
-2019-08-09 00:19:42.4799|INFO|school_diary.Repositories.AuthRepository|searching for user cabateacher find user, auth repository
-2019-08-09 00:19:42.5439|INFO|school_diary.Repositories.AuthRepository|searching for roles b5fd03a9-6a85-4929-801b-e02e819771d6 find roles, auth repository
-2019-08-09 00:19:42.5599|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
-2019-08-09 00:19:59.7706|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
-2019-08-09 00:20:46.9301|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-10 06:52:16.4615|INFO|school_diary.Controllers.DepartmentsController|Getting all departments
+2019-08-10 06:52:16.5215|INFO|school_diary.Services.DepartmentsService|Accessing departments repo, getalldepartments, departments service
+2019-08-10 06:53:48.7126|INFO|school_diary.Controllers.DepartmentsController|accessing department service for deleting of department id 1
+2019-08-10 06:53:48.7126|INFO|school_diary.Services.DepartmentsService|Getting department by id, preparing for delete, deletedepartment, department service
+2019-08-10 06:53:48.7126|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 06:53:48.7566|INFO|school_diary.Services.DepartmentsService|Accessing department repo for delete of department id 1
+2019-08-10 06:53:48.7606|INFO|school_diary.Services.DepartmentsService|Saving to db, department with ID 1 delete
+2019-08-10 06:58:36.7731|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 06:58:36.8131|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 06:58:36.8131|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 06:58:47.8353|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 06:59:21.7749|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\DepartmentsService.cs, line which throw an exception 95
+2019-08-10 06:59:21.7749|INFO|school_diary.Utilities.NLogExceptionLogger|PUT http://localhost:51055/api/departments/1
+2019-08-10 06:59:21.7749|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.DepartmentDTOOutSingle UpdateDepartment(Int32, school_diary.Models.DTOs.DepartmentDTOOut)
+2019-08-10 06:59:21.7749|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Object reference not set to an instance of an object.
+2019-08-10 06:59:42.5723|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 06:59:42.5723|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 06:59:42.5723|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 06:59:42.6763|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 06:59:42.6763|INFO|school_diary.Services.DepartmentsService|Converting to department and prepare for storing updates, updatedepartment, department service
+2019-08-10 06:59:42.6763|INFO|school_diary.Services.DepartmentsService|Accessing department repository, for update department, department service
+2019-08-10 07:02:00.6110|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 07:02:00.6550|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 07:02:00.6550|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 07:02:11.9058|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 07:02:11.9058|INFO|school_diary.Services.DepartmentsService|Converting to department and prepare for storing updates, updatedepartment, department service
+2019-08-10 07:02:11.9058|INFO|school_diary.Services.DepartmentsService|Accessing department repository, for update department, department service
+2019-08-10 07:02:20.8501|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
+2019-08-10 07:02:20.8501|INFO|school_diary.Utilities.NLogExceptionLogger|PUT http://localhost:51055/api/departments/1
+2019-08-10 07:02:20.8542|INFO|school_diary.Utilities.NLogExceptionLogger|Void AttachSingleObject(System.Data.Entity.Core.Objects.Internal.IEntityWrapper, System.Data.Entity.Core.Metadata.Edm.EntitySet)
+2019-08-10 07:02:20.8542|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Attaching an entity of type 'school_diary.Models.Grade' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+2019-08-10 07:10:49.8587|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 07:10:54.0966|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 07:10:55.0766|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 07:11:24.5517|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 07:12:04.9528|INFO|school_diary.Services.DepartmentsService|Converting to department and prepare for storing updates, updatedepartment, department service
+2019-08-10 07:15:16.1405|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 07:15:16.1725|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 07:15:16.1725|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 07:15:26.8298|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 07:15:26.8298|INFO|school_diary.Services.DepartmentsService|Converting to department and prepare for storing updates, updatedepartment, department service
+2019-08-10 07:15:26.8298|INFO|school_diary.Services.DepartmentsService|Accessing department repository, for update department, department service
+2019-08-10 07:15:26.8298|INFO|school_diary.Services.DepartmentsService|Saving changes to db id 1
+2019-08-10 07:15:52.2789|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
+2019-08-10 07:15:52.2789|INFO|school_diary.Utilities.NLogExceptionLogger|PUT http://localhost:51055/api/departments/1
+2019-08-10 07:15:52.2789|INFO|school_diary.Utilities.NLogExceptionLogger|Int32 SaveChanges()
+2019-08-10 07:15:52.2789|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
+2019-08-10 07:16:41.5541|INFO|school_diary.Controllers.DepartmentsController|Getting all departments
+2019-08-10 07:16:41.5581|INFO|school_diary.Services.DepartmentsService|Accessing departments repo, getalldepartments, departments service
+2019-08-10 07:17:07.5516|INFO|school_diary.Controllers.DepartmentsController|Getting all departments
+2019-08-10 07:17:07.5516|INFO|school_diary.Services.DepartmentsService|Accessing departments repo, getalldepartments, departments service
+2019-08-10 07:41:24.1271|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 07:41:24.1591|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 07:41:24.1591|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 07:41:34.2215|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 07:41:34.2215|INFO|school_diary.Services.DepartmentsService|Converting to department and prepare for storing updates, updatedepartment, department service
+2019-08-10 07:41:34.2215|INFO|school_diary.Services.DepartmentsService|Accessing department repository, for update department, department service
+2019-08-10 07:48:35.3839|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 07:48:35.4279|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 07:48:35.4279|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 07:48:45.6771|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 07:51:33.0661|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 07:51:33.1221|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 07:51:33.1221|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 07:51:40.6289|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 07:51:46.1414|INFO|school_diary.Services.DepartmentsService|Converting to department and prepare for storing updates, updatedepartment, department service
+2019-08-10 07:51:46.8079|INFO|school_diary.Services.DepartmentsService|Accessing department repository, for update department, department service
+2019-08-10 07:53:25.0880|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 07:53:25.1240|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 07:53:25.1240|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 07:53:35.9078|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 07:53:39.2835|INFO|school_diary.Services.DepartmentsService|Converting to department and prepare for storing updates, updatedepartment, department service
+2019-08-10 07:53:40.2833|INFO|school_diary.Services.DepartmentsService|Accessing department repository, for update department, department service
+2019-08-10 07:54:05.2951|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
+2019-08-10 07:54:05.2951|INFO|school_diary.Utilities.NLogExceptionLogger|PUT http://localhost:51055/api/departments/1
+2019-08-10 07:54:05.2951|INFO|school_diary.Utilities.NLogExceptionLogger|Void VerifyRootForAdd(Boolean, System.String, System.Data.Entity.Core.Objects.Internal.IEntityWrapper, System.Data.Entity.Core.Objects.EntityEntry, System.Data.Entity.Core.Metadata.Edm.EntitySet ByRef, Boolean ByRef)
+2019-08-10 07:54:05.3071|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Attaching an entity of type 'school_diary.Models.Department' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+2019-08-10 07:54:57.4409|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 07:54:57.4769|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 07:54:57.4769|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 07:55:04.9953|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 07:55:09.0926|INFO|school_diary.Services.DepartmentsService|Converting to department and prepare for storing updates, updatedepartment, department service
+2019-08-10 07:55:09.8124|INFO|school_diary.Services.DepartmentsService|Accessing department repository, for update department, department service
+2019-08-10 07:55:20.6476|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
+2019-08-10 07:55:20.8716|INFO|school_diary.Utilities.NLogExceptionLogger|PUT http://localhost:51055/api/departments/1
+2019-08-10 07:55:21.0399|INFO|school_diary.Utilities.NLogExceptionLogger|Void AttachSingleObject(System.Data.Entity.Core.Objects.Internal.IEntityWrapper, System.Data.Entity.Core.Metadata.Edm.EntitySet)
+2019-08-10 07:55:21.2638|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Attaching an entity of type 'school_diary.Models.Grade' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+2019-08-10 07:55:57.9996|INFO|school_diary.Controllers.DepartmentsController|Getting all departments
+2019-08-10 07:55:57.9996|INFO|school_diary.Services.DepartmentsService|Accessing departments repo, getalldepartments, departments service
+2019-08-10 08:03:23.4162|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 08:03:23.4482|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 08:03:23.4482|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 08:03:33.5332|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 08:03:42.0860|INFO|school_diary.Services.DepartmentsService|Converting to department and prepare for storing updates, updatedepartment, department service
+2019-08-10 08:03:42.0900|INFO|school_diary.Services.DepartmentsService|Accessing department repository, for update department, department service
+2019-08-10 08:03:54.1378|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
+2019-08-10 08:03:54.1378|INFO|school_diary.Utilities.NLogExceptionLogger|PUT http://localhost:51055/api/departments/1
+2019-08-10 08:03:54.1378|INFO|school_diary.Utilities.NLogExceptionLogger|Void VerifyRootForAdd(Boolean, System.String, System.Data.Entity.Core.Objects.Internal.IEntityWrapper, System.Data.Entity.Core.Objects.EntityEntry, System.Data.Entity.Core.Metadata.Edm.EntitySet ByRef, Boolean ByRef)
+2019-08-10 08:03:54.1538|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Attaching an entity of type 'school_diary.Models.Department' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+2019-08-10 08:39:01.1134|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 08:39:01.1534|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 08:39:01.1534|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 08:39:12.2700|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 08:39:12.2700|INFO|school_diary.Services.DepartmentsService|Converting to department and prepare for storing updates, updatedepartment, department service
+2019-08-10 08:39:12.2700|INFO|school_diary.Services.DepartmentsService|Accessing department repository, for update department, department service
+2019-08-10 08:39:12.2700|INFO|school_diary.Services.DepartmentsService|Saving changes to db id 1
+2019-08-10 08:39:12.2820|INFO|school_diary.Services.DepartmentsService|returning department to controller, department service, updatedepartment
+2019-08-10 08:39:34.2607|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 08:39:34.2607|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 08:39:34.2607|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 08:39:34.2607|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 08:39:34.2607|INFO|school_diary.Services.DepartmentsService|Converting to department and prepare for storing updates, updatedepartment, department service
+2019-08-10 08:39:34.2607|INFO|school_diary.Services.DepartmentsService|Accessing department repository, for update department, department service
+2019-08-10 08:39:34.2607|INFO|school_diary.Services.DepartmentsService|Saving changes to db id 1
+2019-08-10 08:39:34.2847|INFO|school_diary.Services.DepartmentsService|returning department to controller, department service, updatedepartment
+2019-08-10 08:40:21.0592|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 08:40:21.0592|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 08:40:21.0592|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 08:40:21.0751|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 08:41:50.3972|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 08:41:50.4332|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 08:41:50.4332|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 08:41:57.8240|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 08:42:00.8684|INFO|school_diary.Services.DepartmentsService|Converting to department and prepare for storing updates, updatedepartment, department service
+2019-08-10 08:42:00.8684|INFO|school_diary.Services.DepartmentsService|Accessing department repository, for update department, department service
+2019-08-10 08:42:00.8844|INFO|school_diary.Services.DepartmentsService|Saving changes to db id 1
+2019-08-10 08:42:00.9088|INFO|school_diary.Services.DepartmentsService|returning department to controller, department service, updatedepartment
+2019-08-10 08:42:19.5814|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 08:42:19.5814|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 08:42:19.5814|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 08:42:19.5894|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 08:42:21.6979|INFO|school_diary.Services.DepartmentsService|Converting to department and prepare for storing updates, updatedepartment, department service
+2019-08-10 08:42:21.6979|INFO|school_diary.Services.DepartmentsService|Accessing department repository, for update department, department service
+2019-08-10 08:42:21.7139|INFO|school_diary.Services.DepartmentsService|Saving changes to db id 1
+2019-08-10 08:42:22.0658|INFO|school_diary.Services.DepartmentsService|returning department to controller, department service, updatedepartment
+2019-08-10 08:44:50.2836|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 08:44:50.3276|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 08:44:50.3276|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 08:45:01.9120|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 08:45:04.1641|INFO|school_diary.Services.DepartmentsService|Converting to department and prepare for storing updates, updatedepartment, department service
+2019-08-10 08:45:04.1641|INFO|school_diary.Services.DepartmentsService|Accessing department repository, for update department, department service
+2019-08-10 08:45:04.1681|INFO|school_diary.Services.DepartmentsService|Saving changes to db id 1
+2019-08-10 08:45:04.2641|INFO|school_diary.Services.DepartmentsService|returning department to controller, department service, updatedepartment
+2019-08-10 08:52:56.1829|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 08:52:56.2349|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 08:52:56.2349|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 08:53:06.2967|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 08:53:09.5194|INFO|school_diary.Services.DepartmentsService|Converting to department and prepare for storing updates, updatedepartment, department service
+2019-08-10 08:53:09.5274|INFO|school_diary.Services.DepartmentsService|Accessing department repository, for update department, department service
+2019-08-10 08:53:09.5554|INFO|school_diary.Services.DepartmentsService|Saving changes to db id 1
+2019-08-10 08:53:09.6114|INFO|school_diary.Services.DepartmentsService|returning department to controller, department service, updatedepartment
+2019-08-10 08:53:35.2746|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 08:53:35.2746|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 08:53:35.2746|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 08:53:35.2786|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 08:53:38.2756|INFO|school_diary.Services.DepartmentsService|Converting to department and prepare for storing updates, updatedepartment, department service
+2019-08-10 08:53:38.2756|INFO|school_diary.Services.DepartmentsService|Accessing department repository, for update department, department service
+2019-08-10 08:53:38.2756|INFO|school_diary.Services.DepartmentsService|Saving changes to db id 1
+2019-08-10 08:53:38.2995|INFO|school_diary.Services.DepartmentsService|returning department to controller, department service, updatedepartment
+2019-08-10 08:55:24.0522|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 08:55:24.1081|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 08:55:24.1081|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 08:55:43.3194|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
+2019-08-10 08:55:43.3194|INFO|school_diary.Utilities.NLogExceptionLogger|PUT http://localhost:51055/api/departments/1
+2019-08-10 08:55:43.3234|INFO|school_diary.Utilities.NLogExceptionLogger|Void PerformInitializationAction(System.Action)
+2019-08-10 08:55:43.3234|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: An exception occurred while initializing the database. See the InnerException for details.
+2019-08-10 08:55:57.8517|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 08:55:57.8517|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 08:55:57.8517|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 08:57:17.8210|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
+2019-08-10 08:57:17.8230|INFO|school_diary.Utilities.NLogExceptionLogger|PUT http://localhost:51055/api/departments/1
+2019-08-10 08:57:17.8230|INFO|school_diary.Utilities.NLogExceptionLogger|Void PerformInitializationAction(System.Action)
+2019-08-10 08:57:17.8230|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: An exception occurred while initializing the database. See the InnerException for details.
+2019-08-10 08:57:35.6489|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 08:57:35.6489|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 08:57:35.6489|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 08:59:18.2489|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
+2019-08-10 08:59:18.2489|INFO|school_diary.Utilities.NLogExceptionLogger|PUT http://localhost:51055/api/departments/1
+2019-08-10 08:59:18.2489|INFO|school_diary.Utilities.NLogExceptionLogger|Void PerformInitializationAction(System.Action)
+2019-08-10 08:59:18.2489|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: An exception occurred while initializing the database. See the InnerException for details.
+2019-08-10 09:00:01.6341|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 09:00:01.6741|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 09:00:01.6741|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 09:02:55.4016|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 09:02:55.4376|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 09:02:55.4376|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 09:04:14.0612|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 09:04:14.1092|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 09:04:14.1092|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 09:05:29.7665|INFO|school_diary.Controllers.DepartmentsController|accessing department service for updating of department id 1
+2019-08-10 09:05:29.8064|INFO|school_diary.Services.DepartmentsService|Getting department 1, updatedepartment, department service
+2019-08-10 09:05:29.8064|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 09:05:38.0791|INFO|school_diary.Services.DepartmentsService|Making updates
+2019-08-10 09:05:41.3722|INFO|school_diary.Services.DepartmentsService|Converting to department and prepare for storing updates, updatedepartment, department service
+2019-08-10 09:05:41.3722|INFO|school_diary.Services.DepartmentsService|Accessing department repository, for update department, department service
+2019-08-10 09:05:41.3722|INFO|school_diary.Services.DepartmentsService|Saving changes to db id 1
+2019-08-10 09:05:41.4282|INFO|school_diary.Services.DepartmentsService|returning department to controller, department service, updatedepartment
+2019-08-10 09:43:17.9884|INFO|school_diary.Controllers.DepartmentsController|Getting all departments
+2019-08-10 09:43:18.0464|INFO|school_diary.Services.DepartmentsService|Accessing departments repo, getalldepartments, departments service
+2019-08-10 09:47:46.3546|INFO|school_diary.Controllers.DepartmentsController|Getting all departments
+2019-08-10 09:47:46.3906|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 09:56:57.5650|INFO|school_diary.Controllers.GradesController|Getting all grades
+2019-08-10 09:57:28.0324|INFO|school_diary.Controllers.GradesController|Getting grade byId
+2019-08-10 10:01:58.1197|INFO|school_diary.Controllers.GradesController|Getting all grades
+2019-08-10 10:08:53.5665|INFO|school_diary.Controllers.GradesController|Getting all grades
+2019-08-10 10:09:26.5159|INFO|school_diary.Controllers.GradesController|Getting grade byId
+2019-08-10 10:11:03.4486|INFO|school_diary.Repositories.AuthRepository|searching for user borisavadmin find user, auth repository
+2019-08-10 10:11:03.5195|INFO|school_diary.Repositories.AuthRepository|searching for roles fe9351da-4e0b-4eff-8b45-c51190ea092a find roles, auth repository
+2019-08-10 10:11:03.5325|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 10:11:08.1365|INFO|school_diary.Controllers.GradesController|Getting all grades
+2019-08-10 10:11:47.8842|INFO|school_diary.Controllers.GradesController|Getting grade byId

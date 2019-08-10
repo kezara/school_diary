@@ -139,18 +139,16 @@ namespace school_diary.Services
             return appUserDTO;
         }
 
-        //public AppUserDTOOut UpdateUser(string username, AppUser userToUpdt)
-        //{
-        //    AppUserDTOOut user = GetUserByUsername(username);
-
-        //    //user.Id = userToUpdt.Id;
-        //    //user.FirstName = userToUpdt.FirstName;
-        //    //user.LastName = userToUpdt.LastName;
-        //    ////user.Username = user.Username;
-        //    ////user.Password = userToUpdt.Password;
-        //    //db.UsersRepository.Update(user);
-        //    //db.Save();
-        //    return user;
-        //}
+        public AppUserDTOOut DeleteUser(string id)
+        {
+            logger.Info("Getting user by ID, appusersservice, delete user");
+            AppUserDTOOut user = GetUserById(id);
+            logger.Info("Sending admin to user repo for delete");
+            db.UsersRepository.Delete(id);
+            logger.Info("saving delete to db");
+            db.Save();
+            logger.Info("returning deleted user. delete user");
+            return user;
+        }
     }
 }

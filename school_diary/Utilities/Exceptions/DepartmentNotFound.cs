@@ -5,9 +5,9 @@ using System.Web;
 
 namespace school_diary.Utilities.Exceptions
 {
-    public class DepartmentNotFoundException : Exception
+    public class DepartmentNotFound : Exception
     {
-        public DepartmentNotFoundException(string message) : base(message)
+        public DepartmentNotFound(string message) : base(message)
         {
 
         }

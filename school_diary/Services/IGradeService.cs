@@ -10,6 +10,9 @@ namespace school_diary.Services
 {
     public interface IGradeService
     {
-        IEnumerable<GradeDTOOut> GetGrades();
+        IEnumerable<GradeDTOOutGet> GetGrades();
+        GradeDTOOutGet GetGradesById(int id);
+        Grade GetGradeId(int id);
+        GradeDTO CreateGrade(GradeDTO newGrade);
     }
 }

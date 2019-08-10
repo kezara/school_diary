@@ -43,7 +43,13 @@ namespace school_diary.Services
             logger.Info($"Searching for student with ID {studentDepartmentDTO.StudentID} over student service, create student department, student department service");
             Student student = studentsService.GetStudent(studentDepartmentDTO.StudentID);
             logger.Info($"searching for department with id {studentDepartmentDTO.DepartmentID} over student service, create student department, student department service");
-            Department department = departmentsService.GetDepartmentByID(studentDepartmentDTO.DepartmentID);
+            DepartmentDTOOutSingle departmentDTO = departmentsService.GetDepartmentByID(studentDepartmentDTO.DepartmentID);
+            Department department = new Department()
+            {
+                Id = departmentDTO.Department.Id,
+                DepartmentName = departmentDTO.Department.DepartmentName,
+                Grades = Utilities.ConverterDTO.SimpleDTOConverter<Grade>(departmentDTO.Grade)
+            };
             logger.Info($"Converting from DTO, createStudent department, student department service");
             StudentDepartment studentDepartment = new StudentDepartment()
             {

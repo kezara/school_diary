@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Security.Claims;
 using System.Web.Http;
 using System.Web.Http.Description;
 
@@ -29,8 +30,8 @@ namespace school_diary.Controllers
         [ResponseType(typeof(IEnumerable<AdminDTOOutUp>))]
         public IHttpActionResult GetAllAdmins()
         {
-
-            logger.Info("Getting all admins, controller");
+            string userId = ((ClaimsPrincipal)RequestContext.Principal).FindFirst(x => x.Type == "UserId").Value;
+            logger.Info($"Admin {userId} Getting all admins, controller");
             IEnumerable<AdminDTOOutUp> adminsDTOOut = adminsService.GetAllAdmins();
             return Ok(adminsDTOOut);
 
@@ -40,8 +41,9 @@ namespace school_diary.Controllers
         [ResponseType(typeof(AdminDTOOutUp))]
         public IHttpActionResult GetAdminByID(string id)
         {
+            string userId = ((ClaimsPrincipal)RequestContext.Principal).FindFirst(x => x.Type == "UserId").Value;
 
-            logger.Info("Getting admin by admin ID, controller");
+            logger.Info($"Admin {userId} Getting admin by admin ID, controller");
             return Ok(adminsService.GetAdminById(id));
 
         }
@@ -50,8 +52,9 @@ namespace school_diary.Controllers
         [ResponseType(typeof(AdminDTOOutUp))]
         public IHttpActionResult GetAdminByUsername(string username)
         {
+            string userId = ((ClaimsPrincipal)RequestContext.Principal).FindFirst(x => x.Type == "UserId").Value;
 
-            logger.Info("Getting admin by admin UserName, controller");
+            logger.Info($"Admin {userId} Getting admin by admin UserName, controller");
             return Ok(adminsService.GetAdminByUserName(username));
 
         }
@@ -60,8 +63,9 @@ namespace school_diary.Controllers
         [ResponseType(typeof(IEnumerable<AdminDTOOutUp>))]
         public IHttpActionResult GetAdminByName(string name)
         {
+            string userId = ((ClaimsPrincipal)RequestContext.Principal).FindFirst(x => x.Type == "UserId").Value;
 
-            logger.Info("Getting admin by admin Name, controller");
+            logger.Info($"Admin {userId} Getting admin by admin Name, controller");
             return Ok(adminsService.GetAdminByName(name));
 
         }
@@ -70,8 +74,9 @@ namespace school_diary.Controllers
         [ResponseType(typeof(IEnumerable<AdminDTOOutUp>))]
         public IHttpActionResult GetAdminByLastName(string lastName)
         {
+            string userId = ((ClaimsPrincipal)RequestContext.Principal).FindFirst(x => x.Type == "UserId").Value;
 
-            logger.Info("Getting admin by admin last name, controller");
+            logger.Info($"Admin {userId} Getting admin by admin last name, controller");
             return Ok(adminsService.GetAdminByLastName(lastName));
 
         }
@@ -80,8 +85,9 @@ namespace school_diary.Controllers
         [ResponseType(typeof(IEnumerable<AdminDTOOutUp>))]
         public IHttpActionResult GetAdminByNameLastName(string name, string lastName)
         {
+            string userId = ((ClaimsPrincipal)RequestContext.Principal).FindFirst(x => x.Type == "UserId").Value;
 
-            logger.Info("Getting admin by admin name and last name, controller");
+            logger.Info($"Admin {userId} Getting admin by admin name and last name, controller");
             return Ok(adminsService.GetAdminByNameLastName(name, lastName));
 
         }
@@ -90,6 +96,9 @@ namespace school_diary.Controllers
         [ResponseType(typeof(AdminDTOOutUp))]
         public IHttpActionResult DeleteAdmin(string id)
         {
+            string userId = ((ClaimsPrincipal)RequestContext.Principal).FindFirst(x => x.Type == "UserId").Value;
+
+            logger.Info($"Admin {userId} deletes admin");
             AdminDTOOutUp adminDeleted = adminsService.DeleteAdmin(id);
             return Ok(adminDeleted);
         }

@@ -13,6 +13,7 @@ namespace school_diary.Repositories
         IGenericRepository<Teach> TeachesRepository { get; }
         IGenericRepository<Teacher> TeachersRepository { get; }
         IGenericRepository<AppUser> UsersRepository { get; }
+
         IGenericRepository<Grade> GradesRepository { get; }
         IGenericRepository<StudentDepartment> StudentDepartmentsRepository { get; }
         IAuthRepository AuthRepository { get; }

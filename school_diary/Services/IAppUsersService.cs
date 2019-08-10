@@ -7,14 +7,12 @@ namespace school_diary.Services
 {
     public interface IAppUsersService
     {
-        //AppUser CreateUser(AppUser newUser);
-        //AppUserDTOOut DeleteUser(string username);
         IEnumerable<AppUserDTOOut> GetAllUsers();
         IEnumerable<AppUserDTOOut> GetUserByName(string name);
         IEnumerable<AppUserDTOOut> GetUserBySurname(string lastName);
         IEnumerable<AppUserDTOOut> GetUserByNameLastName(string name, string lastName);
         AppUserDTOOut GetUserByUsername(string username);
         AppUserDTOOut GetUserById(string id);
-        //AppUserDTOOut UpdateUser(string username, AppUser userToUpdt);
+        AppUserDTOOut DeleteUser(string id);
     }
 }

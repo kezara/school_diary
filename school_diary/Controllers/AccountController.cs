@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
@@ -28,13 +29,14 @@ namespace school_diary.Controllers
         [ResponseType(typeof(AppUserDTOOut))]
         public async Task<IHttpActionResult> PutRole(string id, AppUserDTOIn userModel)
         {
+            string userId = ((ClaimsPrincipal)RequestContext.Principal).FindFirst(x => x.Type == "UserId").Value;
             if (!id.Equals(userModel.Id))
             {
-                logger.Info("Id does not match, put parent, account controller");
+                logger.Info("Id does not match, put role, account controller");
                 return BadRequest("Id not match");
             }
 
-            logger.Info($"User {userModel.UserName} sent to user service, put role");
+            logger.Info($"Aadmin {userId} sent {userModel.UserName} to user service, put role");
             var updatedRole = await service.UpdateRole(id, userModel);
 
             if (updatedRole == null)
@@ -51,13 +53,14 @@ namespace school_diary.Controllers
         [ResponseType(typeof(ParentDTOOut))]
         public async Task<IHttpActionResult> PutParent(string id, ParentDTOInUp userModel)
         {
+            string userId = ((ClaimsPrincipal)RequestContext.Principal).FindFirst(x => x.Type == "UserId").Value;
             if (!id.Equals(userModel.Id))
             {
                 logger.Info("Id does not match, put parent, account controller");
                 return BadRequest("Id not match");
             }
 
-            logger.Info($"User {userModel.UserName} sent to user service, put parent");
+            logger.Info($"Admin {userId} {userModel.UserName} sent to user service, put parent");
             var updatedParent = await service.UpdateParent(id, userModel);
 
             if (updatedParent == null)
@@ -73,18 +76,19 @@ namespace school_diary.Controllers
         [ResponseType(typeof(TeacherDTOOutUp))]
         public async Task<IHttpActionResult> PutTeacher(string id, TeacherDTOInUp userModel)
         {
+            string userId = ((ClaimsPrincipal)RequestContext.Principal).FindFirst(x => x.Type == "UserId").Value;
             if (!id.Equals(userModel.Id))
             {
                 logger.Info("Id does not match, put teacher, account controller");
                 return BadRequest("Id not match");
             }
 
-            logger.Info($"User {userModel.UserName} sent to user service, put teacher");
+            logger.Info($"Admin {userId} sent {userModel.UserName} to user service, put teacher");
             var updatedTeacher = await service.UpdateTeacher(id, userModel);
 
             if (updatedTeacher == null)
             {
-                logger.Info($"User {userModel.UserName} has not been updated. Update failed, put teacher.");
+                logger.Info($"User {userModel.UserName} has not been updated. Update failed, put teacher. Admin {userId}");
                 return NotFound();
             }
 
@@ -95,13 +99,14 @@ namespace school_diary.Controllers
         [ResponseType(typeof(StudentDTOOutUp))]
         public async Task<IHttpActionResult> PutStudent(string id, StudentDTOInUp userModel)
         {
+            string userId = ((ClaimsPrincipal)RequestContext.Principal).FindFirst(x => x.Type == "UserId").Value;
             if (!id.Equals(userModel.Id))
             {
                 logger.Info("Id does not match, put student, account controller");
                 return BadRequest("Id not match");
             }
 
-            logger.Info($"User {userModel.UserName} sent to user service, put student");
+            logger.Info($"Admin {userId} sent {userModel.UserName}  to user service, put student");
             var updatedStudent = await service.UpdateStudent(id, userModel);
 
             if (updatedStudent == null)
@@ -117,13 +122,14 @@ namespace school_diary.Controllers
         [ResponseType(typeof(StudentDTOOutUp))]
         public async Task<IHttpActionResult> PutAdmin(string id, AdminDTOInUp userModel)
         {
+            string userId = ((ClaimsPrincipal)RequestContext.Principal).FindFirst(x => x.Type == "UserId").Value;
             if (!id.Equals(userModel.Id))
             {
                 logger.Info("Id does not match, put admin, account controller");
                 return BadRequest("Id not match");
             }
 
-            logger.Info($"User {userModel.UserName} sent to user service, put admin");
+            logger.Info($"Admin {userId} sent {userModel.UserName} to user service, put admin");
             var updatedAdmin = await service.UpdateAdmin(id, userModel);
 
             if (updatedAdmin == null)
@@ -150,7 +156,7 @@ namespace school_diary.Controllers
             return Ok(appUserPassChanged);
         }
 
-        //[AllowAnonymous]
+        
         [Route("register-parent")]
         [ResponseType(typeof(ParentDTOOut))]
         public async Task<IHttpActionResult> RegisterParent(ParentDTORegister userModel)
@@ -173,7 +179,7 @@ namespace school_diary.Controllers
             return Created("Parent created", result);
         }
 
-        //[AllowAnonymous]
+        
         [Route("register-student")]
         [ResponseType(typeof(StudentDTOOutReg))]
         public async Task<IHttpActionResult> RegisterStudent(StudentDTOInRegister userModel)
@@ -196,7 +202,7 @@ namespace school_diary.Controllers
             return Created("Student created",result);
         }
 
-        //[AllowAnonymous]
+        
         [Route("register-admin")]
         [ResponseType(typeof(AdminDTOOutUp))]
         public async Task<IHttpActionResult> RegisterAdminUser(AdminDTOInRegister userModel)
@@ -220,7 +226,7 @@ namespace school_diary.Controllers
             return Created("Admin created", result);
         }
 
-        //[AllowAnonymous]
+        
         [Route("register-teacher")]
         [ResponseType(typeof(TeacherDTOOutReg))]
         public async Task<IHttpActionResult> RegisterTeacher(TeacherDTORegister userModel)

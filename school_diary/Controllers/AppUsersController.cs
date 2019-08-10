@@ -88,32 +88,15 @@ namespace school_diary.Controllers
             return Ok(user);
         }
 
-        //[Authorize(Roles = "admins")]
-        //[Route("{username}")]
-        //[ResponseType(typeof(AppUserDTOOut))]
-        //public IHttpActionResult PutUser(string username, AppUser updtUser)
-        //{
-        //    if (!username.Equals(updtUser.UserName))
-        //    {
-        //        throw new BadRequestException();
-        //    }
+        [Route("{id}")]
+        [ResponseType(typeof(AppUserDTOOut))]
+        public IHttpActionResult DeleteUser(string id)
+        {
+            string userId = ((ClaimsPrincipal)RequestContext.Principal).FindFirst(x => x.Type == "UserId").Value;
 
-        //    try
-        //    {
-        //        AppUserDTOOut userUpdated = appUsersService.UpdateUser(username, updtUser);
-        //        if (userUpdated == null)
-        //        {
-        //            return NotFound();
-        //        }
-
-        //        return Ok(userUpdated);
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        return BadRequest();
-        //    }
-
-        //}
+            logger.Info($"Admin {userId} deletes user");
+            AppUserDTOOut userDeleted = appUsersService.DeleteUser(id);
+            return Ok(userDeleted);
+        }
     }
 }

@@ -6,6 +6,9 @@ using school_diary.Repositories;
 using school_diary.Utilities.Exceptions;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
+using System.ServiceModel.Channels;
+using System.Web.Http;
 
 namespace school_diary.Services
 {
@@ -24,20 +27,10 @@ namespace school_diary.Services
             IEnumerable<Admin> admins = db.AdminsRepository.Get();
             if (admins.Count() < 1)
             {
-                throw new AdminNotFoundException("No admins here!");
+                throw new DepartmentNotFoundException("No admins here!");
             }
             IEnumerable<AdminDTOOutUp> adminsDTOOut = admins.Select(x => Utilities.ConverterDTO.SimpleDTOConverter<AdminDTOOutUp>(x));
-            return adminsDTOOut;
-            //HashSet<AdminDTOOut> adminsDTOOut = new HashSet<AdminDTOOut>();
-            //foreach (var admin in admins)
-            //{
-            //    logger.Info("converting admin with SimpleDTOConverter, foreach, get all admins");
-            //    var adminDTOOut = Utilities.ConverterDTO.SimpleDTOConverter<AdminDTOOut>(admin);
-            //    adminsDTOOut.Add(adminDTOOut);
-            //}
-
-            //IEnumerable<AdminDTOOut> iadminsDTOOut = adminsDTOOut; 
-            //return iadminsDTOOut;
+            return adminsDTOOut;           
         }
 
         public AdminDTOOutUp GetAdminById(string id)
@@ -46,7 +39,7 @@ namespace school_diary.Services
             Admin admin = db.AdminsRepository.Get(filter: x => x.Id == id).FirstOrDefault();
             if (admin == null)
             {
-                throw new AdminNotFoundException("Requested admin doesn't exists");
+                throw new DepartmentNotFoundException("Requested admin doesn't exists");
             }
             logger.Info("converting admin with SimpleDTOConverter, get admin by id");
             AdminDTOOutUp adminDTOOut = Utilities.ConverterDTO.SimpleDTOConverter<AdminDTOOutUp>(admin);
@@ -60,7 +53,7 @@ namespace school_diary.Services
             Admin admin = db.AdminsRepository.Get(filter: x => x.UserName == username).FirstOrDefault();
             if (admin == null)
             {
-                throw new AdminNotFoundException($"Requested admin with username {username} does not exists");
+                throw new DepartmentNotFoundException($"Requested admin with username {username} does not exists");
             }
             logger.Info("converting with simpleDTOConverter, get admin by username");
             AdminDTOOutUp adminDTOOut = Utilities.ConverterDTO.SimpleDTOConverter<AdminDTOOutUp>(admin);
@@ -74,7 +67,7 @@ namespace school_diary.Services
             IEnumerable<Admin> admins = db.AdminsRepository.Get(filter: x => x.FirstName == name);
             if (admins.Count() < 1)
             {
-                throw new AdminNotFoundException($"No admins with requested name {name} inhere");
+                throw new DepartmentNotFoundException($"No admins with requested name {name} inhere");
             }
 
             IEnumerable<AdminDTOOutUp> adminsDTOOut = admins.Select(x => Utilities.ConverterDTO.SimpleDTOConverter<AdminDTOOutUp>(x));
@@ -87,7 +80,7 @@ namespace school_diary.Services
             IEnumerable<Admin> admins = db.AdminsRepository.Get(filter: x => x.LastName == lastName);
             if (admins.Count() < 1)
             {
-                throw new AdminNotFoundException($"No admins with requested surname {lastName} inhere!");
+                throw new DepartmentNotFoundException($"No admins with requested surname {lastName} inhere!");
             }
             IEnumerable<AdminDTOOutUp> adminsDTOOut = admins.Select(x => Utilities.ConverterDTO.SimpleDTOConverter<AdminDTOOutUp>(x));
             return adminsDTOOut;
@@ -99,7 +92,7 @@ namespace school_diary.Services
             IEnumerable<Admin> admins = db.AdminsRepository.Get(filter: x => x.FirstName == name && x.LastName == lastName);
             if (admins.Count() < 1)
             {
-                throw new AdminNotFoundException($"No admins with that name {name} and surname {lastName}");
+                throw new DepartmentNotFoundException($"No admins with that name {name} and surname {lastName}");
             }
             IEnumerable<AdminDTOOutUp> adminsDTOOut = admins.Select(x => Utilities.ConverterDTO.SimpleDTOConverter<AdminDTOOutUp>(x));
             return adminsDTOOut;
@@ -107,9 +100,13 @@ namespace school_diary.Services
 
         public AdminDTOOutUp DeleteAdmin(string id)
         {
+            logger.Info("Getting admin by ID, admin service, delete admin");
             AdminDTOOutUp admin = GetAdminById(id);
+            logger.Info("Sending admin to admin repo for delete");
             db.AdminsRepository.Delete(id);
+            logger.Info("saving delete to db");
             db.Save();
+            logger.Info("returning deleted admin. delete admin");
             return admin;
         }
     }

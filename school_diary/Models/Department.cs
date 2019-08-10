@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -9,15 +11,13 @@ namespace school_diary.Models
     public class Department
     {
         public int Id { get; set; }
-        //public int Year { get; set; }
+        [Required]
         public string DepartmentName { get; set; }
-        //[JsonIgnore]
-        //public Teacher Teachers { get; set; }
-        //public Teach Teaches { get; set; }
-        //[JsonIgnore]
+        [NotMapped]
+        public int GradeID { get; set; }
+        [Required]
         public virtual Grade Grades { get; set; }
         [JsonIgnore]
         public virtual ICollection<StudentDepartment> StudentDepartments { get; set; }
-        //public virtual ICollection<Student> Students { get; set; }
     }
 }

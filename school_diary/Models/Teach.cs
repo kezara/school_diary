@@ -11,25 +11,17 @@ namespace school_diary.Models
     public class Teach
     {
         public int Id { get; set; }
-        //public int WeeklyFond { get; set; }
+       
         [NotMapped]
         public string TeacherID { get; set; }
         public virtual Teacher Teachers { get; set; }
-        //za unos i izmenu podataka
-        //[NotMapped]
-        //public string TeacherUserName { get; set; }
-        ////za unos i izmenu podataka
-        //[NotMapped]
-        //public int SubjectID { get; set; }
+        
         [JsonIgnore]
         public virtual ICollection<Mark> Marks { get; set; }
         [NotMapped]
         public int SubjectID { get; set; }
         public virtual Subject Subject { get; set; }
-        //public virtual ICollection<ClassRoom> Departments { get; set; }
-        //public virtual ICollection<Student> Students { get; set; }
-        //[ForeignKey("Students")]
-        //public Student Students { get; set; }
+        [NotMapped]
         public int StudentDepartmentID { get; set; }
         public virtual StudentDepartment StudentDepartments { get; set; }
     }

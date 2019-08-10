@@ -168,13 +168,14 @@ namespace school_diary.Utilities
             return teacherDTO;
         }
 
-        public static GradeDTOOut GradeDTOConverter(Grade x)
+        public static GradeDTOOutGet GradeDTOConverter(Grade x)
         {
-            GradeDTOOut gradeDTO = new GradeDTOOut()
+            GradeDTOOutGet gradeDTO = new GradeDTOOutGet()
             {
                 Id = x.Id,
                 GradeYear = x.GradeYear,
-                Subjects = x.Subjects.Select(k => SimpleDTOConverter<SubjectDTO>(k))
+                Subjects = x.Subjects.Select(k => SimpleDTOConverter<SubjectDTO>(k)),
+                Departments = x.Departments.Select(p => SimpleDTOConverter<DepartmentDTOStudent>(p))
             };
             return gradeDTO;
         }

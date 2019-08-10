@@ -1,14 +1,17 @@
 ﻿using school_diary.Models;
+using school_diary.Models.DTOs;
 using System.Collections.Generic;
 
 namespace school_diary.Services
 {
     public interface IDepartmentsService
     {
-        IEnumerable<Department> GetAllDepartments();
-        Department GetDepartmentByID(int id);
-        Department CreateDepartment(Department newClass);
-        Department UpdateDepartment(int id, Department classToUpdt);
-        Department DeleteDepartment(int id);
+        IEnumerable<DepartmentDTOOut> GetAllDepartments();
+        DepartmentDTOOutSingle GetDepartmentByID(int id);
+        DepartmentDTOCreated CreateDepartment(DepartmentDTOIn newClass);
+        DepartmentDTOUpdateOut UpdateDepartment(int id, DepartmentDTOStudent classToUpdt);
+        DepartmentDTOOutSingle DeleteDepartment(int id);
+
+        Department GetDepartmentId(int id);
     }
 }

@@ -23,7 +23,16 @@ namespace school_diary.Filters
                 };
                 throw new HttpResponseException(resp);
             }
-            else if (context.Exception is AdminNotFoundException)
+            else if (context.Exception is DepartmentNotFoundException)
+            {
+                var resp = new HttpResponseMessage(HttpStatusCode.NotFound)
+                {
+                    Content = new StringContent(context.Exception.Message),
+                    ReasonPhrase = "Departmrents Not Found"
+                };
+                throw new HttpResponseException(resp);
+            }
+            else if (context.Exception is DepartmentNotFoundException)
             {
                 var resp = new HttpResponseMessage(HttpStatusCode.NotFound)
                 {
