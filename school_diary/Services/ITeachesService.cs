@@ -7,9 +7,9 @@ namespace school_diary.Services
     public interface ITeachesService
     {
         TeachDTOOut CreateTeach(TeachDTOIn newTeach);
-        Teach DeleteTeach(int id);
+        //Teach DeleteTeach(int id);
         IEnumerable<Teach> GetAllTeach();
-        Teach GetTeachByID(int id);
-        Teach UpdateTeach(int id, Teach teachToUpdt);
+        //Teach GetTeachByID(int id);
+        //Teach UpdateTeach(int id, Teach teachToUpdt);
     }
 }

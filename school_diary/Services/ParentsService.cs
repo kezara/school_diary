@@ -133,5 +133,17 @@ namespace school_diary.Services
             parentDTOOutHelper.Student = studentDTOOutParent;
             return parentDTOOutHelper;
         }
+
+        public Parent GetParentID(string id)
+        {
+            logger.Info("Accssesing db over Parent rep, get parent by id");
+            Parent parent = db.ParentsRepository.Get(filter: x => x.Id == id).FirstOrDefault();
+            if (parent == null)
+            {
+                throw new ParentNotFoundException($"Parent with ID {id} doesn't exists");
+            }
+
+            return parent;
+        }
     }
 }

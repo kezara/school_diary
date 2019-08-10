@@ -24,12 +24,12 @@ namespace school_diary.Controllers
             this.teachsService = teachsService;
         }
 
-        [Route("")]
-        public IEnumerable<Teach> GetAllTeachs()
-        {
-            logger.Info("Getting all teach");
-            return teachsService.GetAllTeach();
-        }
+        //[Route("")]
+        //public IEnumerable<Teach> GetAllTeachs()
+        //{
+        //    logger.Info("Getting all teach");
+        //    return teachsService.GetAllTeach();
+        //}
 
         [Route("")]
         [ResponseType(typeof(TeachDTOOut))]
@@ -39,42 +39,42 @@ namespace school_diary.Controllers
                 return Created("", teachCreated);
         }
 
-        [Route("{id}")]
-        [ResponseType(typeof(Teach))]
-        public IHttpActionResult PutTeach(int id, Teach updtTech)
-        {
-            try
-            {
-                Teach teachUpdated = teachsService.UpdateTeach(id, updtTech);
-                if (teachUpdated == null)
-                {
-                    return NotFound();
-                }
+        //[Route("{id}")]
+        //[ResponseType(typeof(Teach))]
+        //public IHttpActionResult PutTeach(int id, Teach updtTech)
+        //{
+        //    try
+        //    {
+        //        Teach teachUpdated = teachsService.UpdateTeach(id, updtTech);
+        //        if (teachUpdated == null)
+        //        {
+        //            return NotFound();
+        //        }
 
-                return Ok(teachUpdated);
-            }
-            catch (Exception)
-            {
+        //        return Ok(teachUpdated);
+        //    }
+        //    catch (Exception)
+        //    {
 
-                return BadRequest();
-            }
+        //        return BadRequest();
+        //    }
 
-        }
+        //}
 
-        [Route("{id}")]
-        [ResponseType(typeof(Teach))]
-        public IHttpActionResult DeleteTeach(int id)
-        {
-            try
-            {
-                Teach teachDeleted = teachsService.DeleteTeach(id);
-                return Ok(teachDeleted);
-            }
-            catch (UserNotFoundException)
-            {
-                return NotFound();
-            }
-        }
+        //[Route("{id}")]
+        //[ResponseType(typeof(Teach))]
+        //public IHttpActionResult DeleteTeach(int id)
+        //{
+        //    try
+        //    {
+        //        Teach teachDeleted = teachsService.DeleteTeach(id);
+        //        return Ok(teachDeleted);
+        //    }
+        //    catch (UserNotFoundException)
+        //    {
+        //        return NotFound();
+        //    }
+        //}
 
     }
 }

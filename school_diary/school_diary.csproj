@@ -191,9 +191,12 @@
     <Compile Include="Models\DTOs\DepartmentDTOStudent.cs" />
     <Compile Include="Models\DTOs\DepartmentDTOCreated.cs" />
     <Compile Include="Models\DTOs\DepartmentDTOUpdateOut.cs" />
+    <Compile Include="Models\DTOs\GradeDepartmentDTOIn.cs" />
+    <Compile Include="Models\DTOs\GradeDepartmentDTOOut.cs" />
     <Compile Include="Models\DTOs\GradeDTO.cs" />
     <Compile Include="Models\DTOs\GradeDTOOut.cs" />
     <Compile Include="Models\DTOs\GradeDTOOutGet.cs" />
+    <Compile Include="Models\DTOs\GradeSubjectDTOIn.cs" />
     <Compile Include="Models\DTOs\MarkDTODate.cs" />
     <Compile Include="Models\DTOs\MarkDTOIn.cs" />
     <Compile Include="Models\DTOs\MarkDTOOut.cs" />
@@ -206,6 +209,7 @@
     <Compile Include="Models\DTOs\StudentDepartmentDTO.cs" />
     <Compile Include="Models\DTOs\StudentDepartmentDTOenrolled.cs" />
     <Compile Include="Models\DTOs\StudentDTO.cs" />
+    <Compile Include="Models\DTOs\StudentDTOInAddParent.cs" />
     <Compile Include="Models\DTOs\StudentDTOInUp.cs" />
     <Compile Include="Models\DTOs\StudentDTOOutUp.cs" />
     <Compile Include="Models\DTOs\StudentDTOInRegister.cs" />
@@ -272,6 +276,7 @@
     <Compile Include="Services\StudentsService.cs" />
     <Compile Include="Services\SubjectGradesService.cs" />
     <Compile Include="Services\SubjectsService.cs" />
+    <Compile Include="Services\SubjectTEacherDTOIn.cs" />
     <Compile Include="Services\TeachersService.cs" />
     <Compile Include="Services\TeachesService.cs" />
     <Compile Include="Services\AppUsersService.cs" />
@@ -283,6 +288,7 @@
     <Compile Include="Utilities\Exceptions\BadRequestException.cs" />
     <Compile Include="Utilities\Exceptions\DepartmentNotFound.cs" />
     <Compile Include="Utilities\Exceptions\GradesNotFoundException.cs" />
+    <Compile Include="Utilities\Exceptions\MarksNotFoundException.cs" />
     <Compile Include="Utilities\Exceptions\ParentNotFoundException.cs" />
     <Compile Include="Utilities\Exceptions\StudentDepartmentNotFoundException.cs" />
     <Compile Include="Utilities\Exceptions\StudentNotFoundException.cs" />

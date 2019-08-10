@@ -32,6 +32,15 @@ namespace school_diary.Filters
                 };
                 throw new HttpResponseException(resp);
             }
+            else if (context.Exception is MarksNotFoundException)
+            {
+                var resp = new HttpResponseMessage(HttpStatusCode.NotFound)
+                {
+                    Content = new StringContent(context.Exception.Message),
+                    ReasonPhrase = "No marks here"
+                };
+                throw new HttpResponseException(resp);
+            }
             else if (context.Exception is DepartmentNotFoundException)
             {
                 var resp = new HttpResponseMessage(HttpStatusCode.NotFound)

@@ -152,9 +152,45 @@ namespace school_diary.Services
             return markDTO;
         }
 
-        public IEnumerable<Mark> GetAllMarks()
+        public IEnumerable<MarkDTOOut> GetAllMarks(string role, string userId)
         {
-            return db.MarksRepository.Get();
+            IEnumerable<Mark> marks = new HashSet<Mark>();
+            logger.Info($"User {userId} in role {role} accessing db to get all marks");
+            if (role.Equals("students"))
+            {
+                marks = db.MarksRepository.Get().Where(x => x.Teaches.StudentDepartments.Students.Id == userId);
+            }
+            else if (role.Equals("parents"))
+            {
+                marks = db.MarksRepository.Get().Where(x => x.Teaches.StudentDepartments.Students.Parents.Any(y => y.Id == userId));
+            }
+            else if (role.Equals("teachers"))
+            {
+                marks = db.MarksRepository.Get().Where(x => x.Teaches.Teachers.Id == userId);
+            }
+            else
+            {
+                marks = db.MarksRepository.Get();
+            }
+
+            if (marks.Count() < 1)
+            {
+                throw new MarksNotFoundException("No marks here");
+            }
+
+            IEnumerable<MarkDTOOut> marksDTO = marks.Select(x => new MarkDTOOut()
+            {
+                Mark = new MarkDTODate()
+                {
+                    Id = x.Id,
+                    InsertDate = x.InsertDate,
+                    MarkValue = x.MarkValue
+                },
+                Student = Utilities.ConverterDTO.SimpleDTOConverter<StudentDTO>(x.Teaches.StudentDepartments.Students),
+                Subject = Utilities.ConverterDTO.SimpleDTOConverter<SubjectDTO>(x.Teaches.Subject),
+                Teacher = Utilities.ConverterDTO.SimpleDTOConverter<TeacherDTO>(x.Teaches.Teachers)
+            });
+            return marksDTO;
         }
 
         public IEnumerable<MarkDTO> GetMarkByStudentUserName(string username)

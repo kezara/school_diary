@@ -1,5 +1,6 @@
 ﻿using NLog;
 using school_diary.Models;
+using school_diary.Models.DTOs;
 using school_diary.Services;
 using school_diary.Utilities.Exceptions;
 using System;
@@ -30,58 +31,60 @@ namespace school_diary.Controllers
             return Ok(subjectsService.GetAllSubjects());
         }
 
-        [Route("")]
-        [ResponseType(typeof(Subject))]
-        public IHttpActionResult PostSubject(Subject subject)
-        {
-            try
-            {
-                Subject subjectCreated = subjectsService.CreateSubject(subject);
-                return Created("", subjectCreated);
-            }
-            catch (UserNotFoundException)
-            {
-
-                return NotFound();
-
-            }
-        }
-
         [Route("{id}")]
-        [ResponseType(typeof(Subject))]
-        public IHttpActionResult Subject(int id, Subject updtSubject)
+        [ResponseType(typeof(SubjectTeacherDTOOut))]
+        public IHttpActionResult PutTeacherInSubject(int id, SubjectTEacherDTOIn subject)
         {
-            try
+            if (id != subject.SubjectID)
             {
-                Subject subjectUpdated = subjectsService.UpdateSubject(id, updtSubject);
-                if (subjectUpdated == null)
-                {
-                    return NotFound();
-                }
-
-                return Ok(subjectUpdated);
-            }
-            catch (Exception)
-            {
-
                 return BadRequest();
             }
 
+            SubjectTeacherDTOOut subjectDTO = subjectsService.AddTeacherToSubject(id, subject);
+
+            return Ok(subjectDTO);
         }
 
+        [Route("")]
+        [ResponseType(typeof(SubjectDTO))]
+        public IHttpActionResult PostSubject(SubjectDTO subject)
+        {
+
+            SubjectDTO subjectCreated = subjectsService.CreateSubject(subject);
+            return Created("", subjectCreated);
+
+        }
+
+        //[Route("{id}")]
+        //[ResponseType(typeof(Subject))]
+        //public IHttpActionResult Subject(int id, Subject updtSubject)
+        //{
+        //    try
+        //    {
+        //        Subject subjectUpdated = subjectsService.UpdateSubject(id, updtSubject);
+        //        if (subjectUpdated == null)
+        //        {
+        //            return NotFound();
+        //        }
+
+        //        return Ok(subjectUpdated);
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        return BadRequest();
+        //    }
+
+        //}
+
         [Route("{id}")]
-        [ResponseType(typeof(Subject))]
+        [ResponseType(typeof(SubjectDTO))]
         public IHttpActionResult DeleteSubject(int id)
         {
-            try
-            {
-                Subject subjectDeleted = subjectsService.DeleteSubject(id);
-                return Ok(subjectDeleted);
-            }
-            catch (UserNotFoundException)
-            {
-                return NotFound();
-            }
+           
+            SubjectDTO subjectDeleted = subjectsService.DeleteSubject(id);
+            return Ok(subjectDeleted);
+            
         }
 
     }

@@ -49,6 +49,22 @@ namespace school_diary.Controllers
             GradeDTO createdGrade = gradesService.CreateGrade(newGrade);
             return Created("", createdGrade);
         }
-       
+
+        [Route("{id}")]
+        [ResponseType(typeof(GradeDTOOut))]
+        public IHttpActionResult PutSubjectToGrade(int id, GradeSubjectDTOIn newGrade)
+        {
+            GradeDTOOut createdGrade = gradesService.AddSubjectToGrade(id, newGrade);
+            return Created("", createdGrade);
+        }
+
+        [Route("{id}")]
+        [ResponseType(typeof(GradeDTO))]
+        public IHttpActionResult DeleteGrade(int id)
+        {
+            GradeDTO deletedGrade = gradesService.DeleteGrade(id);
+            return Created("", deletedGrade);
+        }
+
     }
 }

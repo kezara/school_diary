@@ -12,9 +12,11 @@ namespace school_diary.Services
     public class GradeService : IGradeService
     {
         IUnitOfWork db;
-        public GradeService(IUnitOfWork db)
+        ISubjectsService subjectsService;
+        public GradeService(IUnitOfWork db, ISubjectsService subjectsService)
         {
             this.db = db;
+            this.subjectsService = subjectsService;
         }
 
         public IEnumerable<GradeDTOOutGet> GetGrades()
@@ -58,6 +60,45 @@ namespace school_diary.Services
             }
 
             return grade;
+        }
+
+        public GradeDTOOut AddSubjectToGrade(int id, GradeSubjectDTOIn gradeSubject)
+        {
+            Grade grade = GetGradeId(id);
+            HashSet<Subject> subjects = new HashSet<Subject>();
+            foreach (var ID in gradeSubject.SubjectID)
+            {
+                var subject = subjectsService.GetSubjectByID(ID);
+                subjects.Add(subject);
+            }
+
+            grade.Subjects = subjects;
+            db.GradesRepository.Update(grade);
+
+            IEnumerable<SubjectDTO> subjectDTO = subjects.Select(x => Utilities.ConverterDTO.SimpleDTOConverter<SubjectDTO>(x));
+
+            GradeDTOOut gradeDTO = new GradeDTOOut()
+            {
+                Id = grade.Id,
+                GradeYear = grade.GradeYear,
+                Subjects = subjectDTO
+            };
+            return gradeDTO;
+        }
+
+        public GradeDTO DeleteGrade(int id)
+        {
+            Grade grade = db.GradesRepository.GetByID(id);
+            if (grade == null)
+            {
+                throw new GradesNotFoundException($"No grade wuth id {id}");
+            }
+            db.GradesRepository.Delete(id);
+            db.Save();
+
+            GradeDTO gradeDTO = Utilities.ConverterDTO.SimpleDTOConverter<GradeDTO>(grade);
+
+            return gradeDTO;
         }
     }
 }

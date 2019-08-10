@@ -6,10 +6,10 @@ namespace school_diary.Services
 {
     public interface ISubjectsService
     {
-        Subject CreateSubject(Subject newSubject);
-        Subject DeleteSubject(int id);
+        SubjectDTO CreateSubject(SubjectDTO newSubject);
+        SubjectDTO DeleteSubject(int id);
         IEnumerable<SubjectTeacherDTOOut> GetAllSubjects();
         Subject GetSubjectByID(int id);
-        Subject UpdateSubject(int id, Subject subjectToUpdt);
+        SubjectTeacherDTOOut AddTeacherToSubject(int id, SubjectTEacherDTOIn subjectTeacher);
     }
 }

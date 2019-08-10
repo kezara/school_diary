@@ -14,5 +14,8 @@ namespace school_diary.Services
         GradeDTOOutGet GetGradesById(int id);
         Grade GetGradeId(int id);
         GradeDTO CreateGrade(GradeDTO newGrade);
+        GradeDTOOut AddSubjectToGrade(int id, GradeSubjectDTOIn gradeSubject);
+
+        GradeDTO DeleteGrade(int id);
     }
 }

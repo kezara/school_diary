@@ -227,5 +227,28 @@ namespace school_diary.Services
             }
             return student;
         }
+
+        public StudentDTOOutSingle AddParentToStudent(string id, StudentDTOInAddParent student)
+        {
+            Student studentToUp = GetStudent(student.StudentID);
+            HashSet<Parent> parents = new HashSet<Parent>();
+            foreach (var ID in student.ParentID)
+            {
+                var parent = parentsService.GetParentID(ID);
+                parents.Add(parent);
+            }
+
+            studentToUp.Parents = parents;
+
+            db.StudentsRepository.Update(studentToUp);
+            db.Save();
+            IEnumerable<ParentDTOOut> parentsDTO = parents.Select(x => Utilities.ConverterDTO.SimpleDTOConverter<ParentDTOOut>(x));
+
+            StudentDTOOutSingle studentDTO = new StudentDTOOutSingle()
+            {
+                Parents = parentsDTO
+            };
+            return studentDTO;
+        }
     }
 }

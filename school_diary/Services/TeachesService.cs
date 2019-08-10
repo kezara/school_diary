@@ -43,7 +43,7 @@ namespace school_diary.Services
             IEnumerable<Teach> teach = GetAllTeach();
             //Check if subject is for students grade
             logger.Info("Checking if subject is for the selected grade, create teaches, teaches service");
-            var isGradeOk = subject.Grades.Contains(studentDepartment.Departments.Grades);
+            var isGradeOk = subject.Grades.Any(x => x.Id == studentDepartment.Departments.Grades.Id);
             if (!isGradeOk)
             {
                 throw new SubjectIsNotForThisGrade("Wrong subject");
@@ -110,17 +110,17 @@ namespace school_diary.Services
             return teachDTOOut;
         }
 
-        public Teach DeleteTeach(int id)
-        {
-            Teach teach = GetTeachByID(id);
-            if (teach == null)
-            {
-                throw new UserNotFoundException($"Theach with ID {id} does not exists!!!");
-            }
-            db.TeachesRepository.Delete(id);
-            db.Save();
-            return teach;
-        }
+        //public Teach DeleteTeach(int id)
+        //{
+        //    Teach teach = GetTeachByID(id);
+        //    if (teach == null)
+        //    {
+        //        throw new UserNotFoundException($"Theach with ID {id} does not exists!!!");
+        //    }
+        //    db.TeachesRepository.Delete(id);
+        //    db.Save();
+        //    return teach;
+        //}
 
         public IEnumerable<Teach> GetAllTeach()
         {
@@ -132,20 +132,20 @@ namespace school_diary.Services
             return teach;
         }
 
-        public Teach GetTeachByID(int id)
-        {
-            return db.TeachesRepository.GetByID(id);
-        }
+        //public Teach GetTeachByID(int id)
+        //{
+        //    return db.TeachesRepository.GetByID(id);
+        //}
 
-        public Teach UpdateTeach(int id, Teach teachToUpdt)
-        {
-            Teach teach = GetTeachByID(id);
+        //public Teach UpdateTeach(int id, Teach teachToUpdt)
+        //{
+        //    Teach teach = GetTeachByID(id);
 
-           // teach.Id = teachToUpdt.Id;
-            //teach.Fond = teachToUpdt.Fond;
-            db.TeachesRepository.Update(teach);
-            db.Save();
-            return teachToUpdt;
-        }
+        //   // teach.Id = teachToUpdt.Id;
+        //    //teach.Fond = teachToUpdt.Fond;
+        //    db.TeachesRepository.Update(teach);
+        //    db.Save();
+        //    return teachToUpdt;
+        //}
     }
 }

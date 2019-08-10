@@ -91,7 +91,21 @@ namespace school_diary.Controllers
             return Ok(studentsService.GetStudentByUserName(username, role, userId));
         }
 
-        
+        [Authorize(Roles = "admins")]
+        [HttpPut]
+        [Route("{id}")]
+        [ResponseType(typeof(StudentDTOOutSingle))]
+        public IHttpActionResult PutParent(string id, StudentDTOInAddParent student)
+        {
+            if (id != student.StudentID)
+            {
+                return BadRequest();
+            }
+
+            StudentDTOOutSingle studentDTO = studentsService.AddParentToStudent(id, student);
+
+            return Ok(studentDTO);
+        }
         //[Route("{id}")]
         //[ResponseType(typeof(StudentDTOOut))]
         //public IHttpActionResult DeleteStudent(string id)

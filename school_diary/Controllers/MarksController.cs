@@ -24,7 +24,6 @@ namespace school_diary.Controllers
         }
 
         [Authorize(Roles = "admins, teachers")]
-        //[Authorize(Roles = "teachers")]
         [Route("")]
         [ResponseType(typeof(MarkDTOOut))]
         public IHttpActionResult PostMark(MarkDTOIn newMark)
@@ -44,5 +43,15 @@ namespace school_diary.Controllers
             return Created("", mark);
         }
 
+        [Authorize(Roles = "admins, teachers, parents, students")]
+        [Route("")]
+        [ResponseType(typeof(MarkDTOOut))]
+        public IHttpActionResult GetAllMarks()
+        {
+            string role = ((ClaimsPrincipal)RequestContext.Principal).FindFirst(x => x.Type == ClaimTypes.Role).Value;
+            string userId = ((ClaimsPrincipal)RequestContext.Principal).FindFirst(x => x.Type == "UserId").Value;
+            IEnumerable<MarkDTOOut> marks = marksService.GetAllMarks(role, userId);
+            return Ok(marks);
+        }
     }
 }

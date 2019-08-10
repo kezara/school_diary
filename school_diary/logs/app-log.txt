@@ -376,3 +376,526 @@
 2019-08-10 12:03:32.8909|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
 2019-08-10 12:03:32.8909|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
 2019-08-10 12:03:32.9069|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by id
+2019-08-10 12:46:07.2872|INFO|school_diary.Services.MarksService|User 5528530b-7fc0-470c-8fd7-12ff4adda7ad in role teachers accessing db to get all marks
+2019-08-10 12:47:23.3880|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\MarksService.cs, line which throw an exception 178
+2019-08-10 12:47:23.3880|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/marks
+2019-08-10 12:47:23.3880|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[school_diary.Models.DTOs.MarkDTOOut] GetAllMarks(System.String, System.String)
+2019-08-10 12:47:23.4060|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: No marks here
+2019-08-10 12:47:41.6187|INFO|school_diary.Repositories.AuthRepository|searching for user milosstudent find user, auth repository
+2019-08-10 12:47:41.6967|INFO|school_diary.Repositories.AuthRepository|searching for roles 6fbf2adf-aa7e-4e2e-bcef-1c700bd738db find roles, auth repository
+2019-08-10 12:47:41.7126|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 12:48:07.5064|INFO|school_diary.Repositories.AuthRepository|searching for user milosstudent find user, auth repository
+2019-08-10 12:48:07.5494|INFO|school_diary.Repositories.AuthRepository|searching for roles 6fbf2adf-aa7e-4e2e-bcef-1c700bd738db find roles, auth repository
+2019-08-10 12:48:07.5574|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 12:48:24.9648|INFO|school_diary.Services.MarksService|User 6fbf2adf-aa7e-4e2e-bcef-1c700bd738db in role students accessing db to get all marks
+2019-08-10 12:48:51.1477|INFO|school_diary.Repositories.AuthRepository|searching for user borisavadmin find user, auth repository
+2019-08-10 12:48:51.2117|INFO|school_diary.Repositories.AuthRepository|searching for roles 833f911d-9136-4c67-b5e4-670777974e7a find roles, auth repository
+2019-08-10 12:48:51.2207|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 12:49:09.1491|INFO|school_diary.Services.MarksService|User 833f911d-9136-4c67-b5e4-670777974e7a in role admins accessing db to get all marks
+2019-08-10 12:50:07.7201|INFO|school_diary.Services.MarksService|User 833f911d-9136-4c67-b5e4-670777974e7a in role admins accessing db to get all marks
+2019-08-10 13:35:19.6839|INFO|school_diary.Repositories.AuthRepository|searching for user aleksastudent find user, auth repository
+2019-08-10 13:35:26.6340|INFO|school_diary.Repositories.AuthRepository|searching for roles 7c3a1eb0-cc32-4377-a1a9-f787b5cade29 find roles, auth repository
+2019-08-10 13:35:26.6469|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 13:35:37.7620|INFO|school_diary.Services.MarksService|User 7c3a1eb0-cc32-4377-a1a9-f787b5cade29 in role students accessing db to get all marks
+2019-08-10 14:43:58.5500|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-10 14:44:15.3695|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
+2019-08-10 14:44:15.3695|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
+2019-08-10 14:44:15.3695|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
+2019-08-10 14:44:15.3865|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
+2019-08-10 14:44:28.2955|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id 04936a94-25ad-400d-9075-2982d4da411e to user manager, add role, auth repository
+2019-08-10 14:44:28.3405|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
+2019-08-10 14:44:28.3405|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
+2019-08-10 14:44:28.3895|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
+2019-08-10 14:44:28.4224|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-10 14:45:08.8039|INFO|school_diary.Controllers.StudentDepartmentsController|Enrolling student to department, studentdepartment service, Post enroll Student, studentdepartment controller
+2019-08-10 14:45:08.8039|INFO|school_diary.Services.StudentDepartmentsService|Searching for student with ID 04936a94-25ad-400d-9075-2982d4da411e over student service, create student department, student department service
+2019-08-10 14:45:08.8069|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-10 14:45:08.9168|INFO|school_diary.Services.StudentDepartmentsService|searching for department with id 1 over student service, create student department, student department service
+2019-08-10 14:45:08.9168|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 14:45:09.0448|INFO|school_diary.Services.StudentDepartmentsService|Converting from DTO, createStudent department, student department service
+2019-08-10 14:45:09.0448|INFO|school_diary.Services.StudentDepartmentsService|Sending student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-10 14:45:09.0448|INFO|school_diary.Services.StudentDepartmentsService|Saving student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-10 14:45:09.0608|INFO|school_diary.Services.StudentDepartmentsService|Converting student department to DTO, create student department, student department service
+2019-08-10 14:46:13.1061|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-10 14:46:13.1061|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-10 14:47:24.4199|INFO|school_diary.Controllers.SubjectsController|Getting all subjects
+2019-08-10 14:47:24.4199|INFO|school_diary.Services.SubjectsService|Accssesing db over subjects rep, get all subjects
+2019-08-10 14:48:59.2769|INFO|school_diary.Services.TeachesService|Get student department over student department service, create teach teaches service
+2019-08-10 14:48:59.2769|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-10 14:48:59.2929|INFO|school_diary.Services.TeachesService|Get teacher over teacher service, create teach teaches service
+2019-08-10 14:48:59.2929|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-10 14:48:59.3479|INFO|school_diary.Services.TeachesService|Get subject over subject service, create teach teaches service
+2019-08-10 14:48:59.3529|INFO|school_diary.Services.TeachesService|Get teaches over teach service, create teach teaches service
+2019-08-10 14:48:59.3689|INFO|school_diary.Services.TeachesService|Checking if subject is for the selected grade, create teaches, teaches service
+2019-08-10 14:49:10.7807|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\TeachesService.cs, line which throw an exception 49
+2019-08-10 14:49:10.7807|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/teachs
+2019-08-10 14:49:10.7807|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.TeachDTOOut CreateTeach(school_diary.Models.DTOs.TeachDTOIn)
+2019-08-10 14:49:10.7937|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Wrong subject
+2019-08-10 14:49:21.7161|INFO|school_diary.Services.TeachesService|Get student department over student department service, create teach teaches service
+2019-08-10 14:49:21.7161|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-10 14:49:21.7161|INFO|school_diary.Services.TeachesService|Get teacher over teacher service, create teach teaches service
+2019-08-10 14:49:21.7161|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-10 14:49:21.7471|INFO|school_diary.Services.TeachesService|Get subject over subject service, create teach teaches service
+2019-08-10 14:49:21.7661|INFO|school_diary.Services.TeachesService|Get teaches over teach service, create teach teaches service
+2019-08-10 14:49:21.7831|INFO|school_diary.Services.TeachesService|Checking if subject is for the selected grade, create teaches, teaches service
+2019-08-10 14:49:31.1963|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\TeachesService.cs, line which throw an exception 49
+2019-08-10 14:49:31.1983|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/teachs
+2019-08-10 14:49:31.1983|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.TeachDTOOut CreateTeach(school_diary.Models.DTOs.TeachDTOIn)
+2019-08-10 14:49:31.1983|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Wrong subject
+2019-08-10 14:50:38.0633|INFO|school_diary.Services.TeachesService|Get student department over student department service, create teach teaches service
+2019-08-10 14:50:40.0944|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-10 14:50:41.8048|INFO|school_diary.Services.TeachesService|Get teacher over teacher service, create teach teaches service
+2019-08-10 14:50:45.9438|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-10 14:50:49.3777|INFO|school_diary.Services.TeachesService|Get subject over subject service, create teach teaches service
+2019-08-10 14:51:30.3609|INFO|school_diary.Services.TeachesService|Get teaches over teach service, create teach teaches service
+2019-08-10 14:51:56.3112|INFO|school_diary.Services.TeachesService|Checking if subject is for the selected grade, create teaches, teaches service
+2019-08-10 14:56:45.6335|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
+2019-08-10 14:56:45.6725|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
+2019-08-10 14:56:45.6865|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
+2019-08-10 14:56:45.6865|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
+2019-08-10 14:56:52.8746|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id e3e233de-7934-448e-981e-bf161d5af63f to user manager, add role, auth repository
+2019-08-10 14:56:52.9325|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
+2019-08-10 14:56:52.9325|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
+2019-08-10 14:56:53.0065|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
+2019-08-10 14:56:53.0884|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-10 14:57:13.9557|INFO|school_diary.Controllers.StudentDepartmentsController|Enrolling student to department, studentdepartment service, Post enroll Student, studentdepartment controller
+2019-08-10 14:57:13.9557|INFO|school_diary.Services.StudentDepartmentsService|Searching for student with ID e3e233de-7934-448e-981e-bf161d5af63f over student service, create student department, student department service
+2019-08-10 14:57:13.9557|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-10 14:57:14.0637|INFO|school_diary.Services.StudentDepartmentsService|searching for department with id 1 over student service, create student department, student department service
+2019-08-10 14:57:14.0637|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 14:57:14.1996|INFO|school_diary.Services.StudentDepartmentsService|Converting from DTO, createStudent department, student department service
+2019-08-10 14:57:14.1996|INFO|school_diary.Services.StudentDepartmentsService|Sending student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-10 14:57:14.1996|INFO|school_diary.Services.StudentDepartmentsService|Saving student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-10 14:57:14.2176|INFO|school_diary.Services.StudentDepartmentsService|Converting student department to DTO, create student department, student department service
+2019-08-10 14:57:29.0533|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-10 14:57:29.0533|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-10 14:58:05.5872|INFO|school_diary.Services.TeachesService|Get student department over student department service, create teach teaches service
+2019-08-10 14:58:05.5872|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-10 14:58:05.5872|INFO|school_diary.Services.TeachesService|Get teacher over teacher service, create teach teaches service
+2019-08-10 14:58:05.5872|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-10 14:58:05.6112|INFO|school_diary.Services.TeachesService|Get subject over subject service, create teach teaches service
+2019-08-10 14:58:05.6112|INFO|school_diary.Services.TeachesService|Get teaches over teach service, create teach teaches service
+2019-08-10 14:58:05.6342|INFO|school_diary.Services.TeachesService|Checking if subject is for the selected grade, create teaches, teaches service
+2019-08-10 14:58:37.6185|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\TeachesService.cs, line which throw an exception 49
+2019-08-10 14:58:37.6185|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/teachs
+2019-08-10 14:58:37.6185|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.TeachDTOOut CreateTeach(school_diary.Models.DTOs.TeachDTOIn)
+2019-08-10 14:58:37.6185|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Wrong subject
+2019-08-10 14:59:09.6818|INFO|school_diary.Services.TeachesService|Get student department over student department service, create teach teaches service
+2019-08-10 14:59:09.6818|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-10 14:59:09.6818|INFO|school_diary.Services.TeachesService|Get teacher over teacher service, create teach teaches service
+2019-08-10 14:59:09.6818|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-10 14:59:09.6978|INFO|school_diary.Services.TeachesService|Get subject over subject service, create teach teaches service
+2019-08-10 14:59:18.0510|INFO|school_diary.Services.TeachesService|Get teaches over teach service, create teach teaches service
+2019-08-10 15:03:03.3097|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-10 15:03:03.3756|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-10 15:08:04.9444|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
+2019-08-10 15:08:04.9883|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
+2019-08-10 15:08:04.9883|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
+2019-08-10 15:08:04.9963|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
+2019-08-10 15:08:12.8304|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id 32d6c8f7-2996-4b42-a2a5-992296d5a28c to user manager, add role, auth repository
+2019-08-10 15:08:12.9304|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
+2019-08-10 15:08:12.9314|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
+2019-08-10 15:08:12.9713|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
+2019-08-10 15:08:13.0463|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-10 15:08:36.7611|INFO|school_diary.Controllers.StudentDepartmentsController|Enrolling student to department, studentdepartment service, Post enroll Student, studentdepartment controller
+2019-08-10 15:08:36.7611|INFO|school_diary.Services.StudentDepartmentsService|Searching for student with ID 32d6c8f7-2996-4b42-a2a5-992296d5a28c over student service, create student department, student department service
+2019-08-10 15:08:36.7611|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-10 15:08:36.8260|INFO|school_diary.Services.StudentDepartmentsService|searching for department with id 1 over student service, create student department, student department service
+2019-08-10 15:08:36.8260|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 15:08:36.8570|INFO|school_diary.Services.StudentDepartmentsService|Converting from DTO, createStudent department, student department service
+2019-08-10 15:08:36.8570|INFO|school_diary.Services.StudentDepartmentsService|Sending student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-10 15:08:36.8570|INFO|school_diary.Services.StudentDepartmentsService|Saving student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-10 15:08:36.8570|INFO|school_diary.Services.StudentDepartmentsService|Converting student department to DTO, create student department, student department service
+2019-08-10 15:08:46.1066|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-10 15:08:46.1066|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-10 15:09:20.6540|INFO|school_diary.Services.TeachesService|Get student department over student department service, create teach teaches service
+2019-08-10 15:09:20.6540|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-10 15:09:20.6690|INFO|school_diary.Services.TeachesService|Get teacher over teacher service, create teach teaches service
+2019-08-10 15:09:20.6690|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-10 15:09:20.7319|INFO|school_diary.Services.TeachesService|Get subject over subject service, create teach teaches service
+2019-08-10 15:09:20.7319|INFO|school_diary.Services.TeachesService|Get teaches over teach service, create teach teaches service
+2019-08-10 15:09:20.7459|INFO|school_diary.Services.TeachesService|Checking if subject is for the selected grade, create teaches, teaches service
+2019-08-10 15:09:20.7459|INFO|school_diary.Services.TeachesService|Checking if teacher is teaching subject
+2019-08-10 15:09:20.8519|INFO|school_diary.Services.TeachesService|Checking if subject is already added to student
+2019-08-10 15:09:20.8979|INFO|school_diary.Services.TeachesService|Checking if theacher is teach in department
+2019-08-10 15:09:20.8999|INFO|school_diary.Services.TeachesService|Preparing teach for save in db
+2019-08-10 15:09:20.8999|INFO|school_diary.Services.TeachesService|Access to teaches repository for insert new teach
+2019-08-10 15:09:20.8999|INFO|school_diary.Services.TeachesService|db save new teach
+2019-08-10 15:09:20.9268|INFO|school_diary.Services.TeachesService|Converting to dto for output
+2019-08-10 15:11:04.9780|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
+2019-08-10 15:11:05.0240|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
+2019-08-10 15:11:05.0360|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
+2019-08-10 15:11:05.0360|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
+2019-08-10 15:11:12.7559|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id b8af4de0-95cc-4e6c-86fc-e7f3b586ab0b to user manager, add role, auth repository
+2019-08-10 15:11:12.8219|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
+2019-08-10 15:11:12.8219|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
+2019-08-10 15:11:12.8838|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
+2019-08-10 15:11:12.9858|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-10 15:11:36.4810|INFO|school_diary.Controllers.StudentDepartmentsController|Enrolling student to department, studentdepartment service, Post enroll Student, studentdepartment controller
+2019-08-10 15:11:36.4810|INFO|school_diary.Services.StudentDepartmentsService|Searching for student with ID b8af4de0-95cc-4e6c-86fc-e7f3b586ab0b over student service, create student department, student department service
+2019-08-10 15:11:36.4810|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-10 15:11:36.5640|INFO|school_diary.Services.StudentDepartmentsService|searching for department with id 1 over student service, create student department, student department service
+2019-08-10 15:11:36.5640|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 15:11:36.6050|INFO|school_diary.Services.StudentDepartmentsService|Converting from DTO, createStudent department, student department service
+2019-08-10 15:11:36.6050|INFO|school_diary.Services.StudentDepartmentsService|Sending student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-10 15:11:36.6050|INFO|school_diary.Services.StudentDepartmentsService|Saving student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-10 15:11:36.6219|INFO|school_diary.Services.StudentDepartmentsService|Converting student department to DTO, create student department, student department service
+2019-08-10 15:11:44.3471|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-10 15:11:44.3471|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-10 15:12:20.4048|INFO|school_diary.Services.TeachesService|Get student department over student department service, create teach teaches service
+2019-08-10 15:12:20.4048|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-10 15:12:20.4048|INFO|school_diary.Services.TeachesService|Get teacher over teacher service, create teach teaches service
+2019-08-10 15:12:20.4168|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-10 15:12:20.4338|INFO|school_diary.Services.TeachesService|Get subject over subject service, create teach teaches service
+2019-08-10 15:12:20.4338|INFO|school_diary.Services.TeachesService|Get teaches over teach service, create teach teaches service
+2019-08-10 15:12:20.4558|INFO|school_diary.Services.TeachesService|Checking if subject is for the selected grade, create teaches, teaches service
+2019-08-10 15:12:20.4667|INFO|school_diary.Services.TeachesService|Checking if teacher is teaching subject
+2019-08-10 15:12:20.4857|INFO|school_diary.Services.TeachesService|Checking if subject is already added to student
+2019-08-10 15:12:20.5247|INFO|school_diary.Services.TeachesService|Checking if theacher is teach in department
+2019-08-10 15:12:20.5247|INFO|school_diary.Services.TeachesService|Preparing teach for save in db
+2019-08-10 15:12:20.5247|INFO|school_diary.Services.TeachesService|Access to teaches repository for insert new teach
+2019-08-10 15:12:20.5247|INFO|school_diary.Services.TeachesService|db save new teach
+2019-08-10 15:12:20.5497|INFO|school_diary.Services.TeachesService|Converting to dto for output
+2019-08-10 15:12:49.5947|INFO|school_diary.Controllers.ParentsController|Getting all parents, controller
+2019-08-10 15:12:49.5947|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get all parents
+2019-08-10 15:18:20.5196|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
+2019-08-10 15:18:20.5796|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
+2019-08-10 15:18:20.5876|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
+2019-08-10 15:18:20.5876|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
+2019-08-10 15:18:28.5271|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id fdea32f7-2d1d-4f25-8ff8-17483a6b5e3e to user manager, add role, auth repository
+2019-08-10 15:18:28.5841|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
+2019-08-10 15:18:28.5841|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
+2019-08-10 15:18:28.6290|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
+2019-08-10 15:18:28.7290|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-10 15:18:46.4236|INFO|school_diary.Controllers.StudentDepartmentsController|Enrolling student to department, studentdepartment service, Post enroll Student, studentdepartment controller
+2019-08-10 15:18:46.4236|INFO|school_diary.Services.StudentDepartmentsService|Searching for student with ID fdea32f7-2d1d-4f25-8ff8-17483a6b5e3e over student service, create student department, student department service
+2019-08-10 15:18:46.4236|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-10 15:18:46.5136|INFO|school_diary.Services.StudentDepartmentsService|searching for department with id 1 over student service, create student department, student department service
+2019-08-10 15:18:46.5136|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 15:18:46.5666|INFO|school_diary.Services.StudentDepartmentsService|Converting from DTO, createStudent department, student department service
+2019-08-10 15:18:46.5666|INFO|school_diary.Services.StudentDepartmentsService|Sending student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-10 15:18:46.5785|INFO|school_diary.Services.StudentDepartmentsService|Saving student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-10 15:18:46.6835|INFO|school_diary.Services.StudentDepartmentsService|Converting student department to DTO, create student department, student department service
+2019-08-10 15:18:50.0255|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-10 15:18:50.0255|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-10 15:19:15.3754|INFO|school_diary.Services.TeachesService|Get student department over student department service, create teach teaches service
+2019-08-10 15:19:15.3754|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-10 15:19:15.4104|INFO|school_diary.Services.TeachesService|Get teacher over teacher service, create teach teaches service
+2019-08-10 15:19:15.4104|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-10 15:19:15.4684|INFO|school_diary.Services.TeachesService|Get subject over subject service, create teach teaches service
+2019-08-10 15:19:15.4684|INFO|school_diary.Services.TeachesService|Get teaches over teach service, create teach teaches service
+2019-08-10 15:19:15.4874|INFO|school_diary.Services.TeachesService|Checking if subject is for the selected grade, create teaches, teaches service
+2019-08-10 15:19:15.5034|INFO|school_diary.Services.TeachesService|Checking if teacher is teaching subject
+2019-08-10 15:19:15.5174|INFO|school_diary.Services.TeachesService|Checking if subject is already added to student
+2019-08-10 15:19:15.5523|INFO|school_diary.Services.TeachesService|Checking if theacher is teach in department
+2019-08-10 15:19:15.5523|INFO|school_diary.Services.TeachesService|Preparing teach for save in db
+2019-08-10 15:19:15.5523|INFO|school_diary.Services.TeachesService|Access to teaches repository for insert new teach
+2019-08-10 15:19:15.5573|INFO|school_diary.Services.TeachesService|db save new teach
+2019-08-10 15:19:15.5573|INFO|school_diary.Services.TeachesService|Converting to dto for output
+2019-08-10 15:19:26.0224|INFO|school_diary.Controllers.ParentsController|Getting all parents, controller
+2019-08-10 15:19:26.0224|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get all parents
+2019-08-10 15:25:34.7738|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
+2019-08-10 15:25:34.7768|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
+2019-08-10 15:25:34.7768|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by id
+2019-08-10 15:28:02.1524|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
+2019-08-10 15:28:02.1884|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
+2019-08-10 15:28:02.1884|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
+2019-08-10 15:28:02.1884|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
+2019-08-10 15:28:09.3443|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id dd84ff14-8e32-40c0-b746-8d2a9ce72ef8 to user manager, add role, auth repository
+2019-08-10 15:28:09.3922|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
+2019-08-10 15:28:09.3922|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
+2019-08-10 15:28:09.4412|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
+2019-08-10 15:28:09.5131|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-10 15:28:40.3768|INFO|school_diary.Controllers.StudentDepartmentsController|Enrolling student to department, studentdepartment service, Post enroll Student, studentdepartment controller
+2019-08-10 15:28:40.3768|INFO|school_diary.Services.StudentDepartmentsService|Searching for student with ID dd84ff14-8e32-40c0-b746-8d2a9ce72ef8 over student service, create student department, student department service
+2019-08-10 15:28:40.3768|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-10 15:28:40.4418|INFO|school_diary.Services.StudentDepartmentsService|searching for department with id 1 over student service, create student department, student department service
+2019-08-10 15:28:40.4418|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 15:28:40.4847|INFO|school_diary.Services.StudentDepartmentsService|Converting from DTO, createStudent department, student department service
+2019-08-10 15:28:40.4847|INFO|school_diary.Services.StudentDepartmentsService|Sending student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-10 15:28:40.4847|INFO|school_diary.Services.StudentDepartmentsService|Saving student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-10 15:28:40.5377|INFO|school_diary.Services.StudentDepartmentsService|Converting student department to DTO, create student department, student department service
+2019-08-10 15:28:48.2028|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-10 15:28:48.2028|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-10 15:29:09.2397|INFO|school_diary.Services.TeachesService|Get student department over student department service, create teach teaches service
+2019-08-10 15:29:09.2397|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-10 15:29:09.2577|INFO|school_diary.Services.TeachesService|Get teacher over teacher service, create teach teaches service
+2019-08-10 15:29:09.2597|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-10 15:29:09.3066|INFO|school_diary.Services.TeachesService|Get subject over subject service, create teach teaches service
+2019-08-10 15:29:09.3066|INFO|school_diary.Services.TeachesService|Get teaches over teach service, create teach teaches service
+2019-08-10 15:29:09.3066|INFO|school_diary.Services.TeachesService|Checking if subject is for the selected grade, create teaches, teaches service
+2019-08-10 15:29:09.3306|INFO|school_diary.Services.TeachesService|Checking if teacher is teaching subject
+2019-08-10 15:29:09.3406|INFO|school_diary.Services.TeachesService|Throwing exception, wrong teacher subject pair
+2019-08-10 15:29:35.9287|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\TeachesService.cs, line which throw an exception 58
+2019-08-10 15:29:35.9287|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/teachs
+2019-08-10 15:29:35.9316|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.TeachDTOOut CreateTeach(school_diary.Models.DTOs.TeachDTOIn)
+2019-08-10 15:29:35.9316|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Teacher - subject pair does not match
+2019-08-10 15:29:45.1179|INFO|school_diary.Services.TeachesService|Get student department over student department service, create teach teaches service
+2019-08-10 15:29:45.1189|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-10 15:29:45.1189|INFO|school_diary.Services.TeachesService|Get teacher over teacher service, create teach teaches service
+2019-08-10 15:29:45.1189|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-10 15:29:45.1349|INFO|school_diary.Services.TeachesService|Get subject over subject service, create teach teaches service
+2019-08-10 15:29:45.1349|INFO|school_diary.Services.TeachesService|Get teaches over teach service, create teach teaches service
+2019-08-10 15:29:45.1519|INFO|school_diary.Services.TeachesService|Checking if subject is for the selected grade, create teaches, teaches service
+2019-08-10 15:29:45.1519|INFO|school_diary.Services.TeachesService|Checking if teacher is teaching subject
+2019-08-10 15:29:45.1519|INFO|school_diary.Services.TeachesService|Checking if subject is already added to student
+2019-08-10 15:29:45.1759|INFO|school_diary.Services.TeachesService|Checking if theacher is teach in department
+2019-08-10 15:29:45.1759|INFO|school_diary.Services.TeachesService|Preparing teach for save in db
+2019-08-10 15:29:45.1759|INFO|school_diary.Services.TeachesService|Access to teaches repository for insert new teach
+2019-08-10 15:29:45.1838|INFO|school_diary.Services.TeachesService|db save new teach
+2019-08-10 15:29:45.2218|INFO|school_diary.Services.TeachesService|Converting to dto for output
+2019-08-10 15:29:56.4334|INFO|school_diary.Controllers.ParentsController|Getting all parents, controller
+2019-08-10 15:29:56.4334|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get all parents
+2019-08-10 15:31:15.2664|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-10 15:31:15.2784|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
+2019-08-10 15:31:15.2784|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
+2019-08-10 15:31:28.3824|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
+2019-08-10 15:31:28.3854|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
+2019-08-10 15:31:28.4044|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by id
+2019-08-10 15:32:04.6806|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-10 15:32:35.3722|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
+2019-08-10 15:32:51.0634|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
+2019-08-10 15:35:03.8824|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
+2019-08-10 15:35:03.9194|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
+2019-08-10 15:35:03.9194|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
+2019-08-10 15:35:03.9194|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
+2019-08-10 15:35:11.1396|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id 922ae076-600a-4197-bc24-93d62a7292c8 to user manager, add role, auth repository
+2019-08-10 15:35:11.2076|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
+2019-08-10 15:35:11.2076|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
+2019-08-10 15:35:11.2476|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
+2019-08-10 15:35:11.3175|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-10 15:35:31.8818|INFO|school_diary.Controllers.StudentDepartmentsController|Enrolling student to department, studentdepartment service, Post enroll Student, studentdepartment controller
+2019-08-10 15:35:31.8818|INFO|school_diary.Services.StudentDepartmentsService|Searching for student with ID 922ae076-600a-4197-bc24-93d62a7292c8 over student service, create student department, student department service
+2019-08-10 15:35:31.8858|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-10 15:35:31.9808|INFO|school_diary.Services.StudentDepartmentsService|searching for department with id 1 over student service, create student department, student department service
+2019-08-10 15:35:31.9808|INFO|school_diary.Services.DepartmentsService|Accessing department repo, getdepartmentbyid, departments service
+2019-08-10 15:35:32.0307|INFO|school_diary.Services.StudentDepartmentsService|Converting from DTO, createStudent department, student department service
+2019-08-10 15:35:32.0307|INFO|school_diary.Services.StudentDepartmentsService|Sending student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-10 15:35:32.0477|INFO|school_diary.Services.StudentDepartmentsService|Saving student mitarstudent V-1 to db over student department repository, studentdepartment service, create student department
+2019-08-10 15:35:32.0807|INFO|school_diary.Services.StudentDepartmentsService|Converting student department to DTO, create student department, student department service
+2019-08-10 15:35:37.8191|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-10 15:35:37.8191|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-10 15:36:06.4567|INFO|school_diary.Services.TeachesService|Get student department over student department service, create teach teaches service
+2019-08-10 15:36:06.4567|INFO|school_diary.Services.StudentDepartmentsService|accessing db over student department service, find student department by ID 17
+2019-08-10 15:36:06.4697|INFO|school_diary.Services.TeachesService|Get teacher over teacher service, create teach teaches service
+2019-08-10 15:36:06.4697|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-10 15:36:06.4917|INFO|school_diary.Services.TeachesService|Get subject over subject service, create teach teaches service
+2019-08-10 15:36:06.4997|INFO|school_diary.Services.TeachesService|Get teaches over teach service, create teach teaches service
+2019-08-10 15:36:06.4997|INFO|school_diary.Services.TeachesService|Checking if subject is for the selected grade, create teaches, teaches service
+2019-08-10 15:36:06.5157|INFO|school_diary.Services.TeachesService|Checking if teacher is teaching subject
+2019-08-10 15:36:06.6096|INFO|school_diary.Services.TeachesService|Checking if subject is already added to student
+2019-08-10 15:36:06.6276|INFO|school_diary.Services.TeachesService|Checking if theacher is teach in department
+2019-08-10 15:36:06.6276|INFO|school_diary.Services.TeachesService|Preparing teach for save in db
+2019-08-10 15:36:06.6276|INFO|school_diary.Services.TeachesService|Access to teaches repository for insert new teach
+2019-08-10 15:36:06.6366|INFO|school_diary.Services.TeachesService|db save new teach
+2019-08-10 15:36:06.6366|INFO|school_diary.Services.TeachesService|Converting to dto for output
+2019-08-10 15:36:14.9983|INFO|school_diary.Controllers.ParentsController|Getting all parents, controller
+2019-08-10 15:36:14.9983|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get all parents
+2019-08-10 15:37:27.1207|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-10 15:37:27.1207|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
+2019-08-10 15:37:27.1497|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
+2019-08-10 15:37:39.7490|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
+2019-08-10 15:37:39.7490|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
+2019-08-10 15:37:39.7590|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by id
+2019-08-10 16:39:56.8153|INFO|school_diary.Repositories.AuthRepository|searching for user aleksastudent find user, auth repository
+2019-08-10 16:40:03.8988|INFO|school_diary.Repositories.AuthRepository|searching for roles 2447bd4d-f5c5-4322-b554-0b02cff7e4df find roles, auth repository
+2019-08-10 16:40:03.9148|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 16:40:42.1682|INFO|school_diary.Repositories.AuthRepository|searching for user ivanadmin find user, auth repository
+2019-08-10 16:40:42.2522|INFO|school_diary.Repositories.AuthRepository|searching for roles 01974aed-17ce-485f-9550-06f947e0f376 find roles, auth repository
+2019-08-10 16:40:42.2602|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 16:40:46.6453|INFO|school_diary.Controllers.SubjectsController|Getting all subjects
+2019-08-10 16:40:46.6453|INFO|school_diary.Services.SubjectsService|Accssesing db over subjects rep, get all subjects
+2019-08-10 16:41:25.1734|INFO|school_diary.Repositories.AuthRepository|searching for user ivanadmin find user, auth repository
+2019-08-10 16:41:25.2214|INFO|school_diary.Repositories.AuthRepository|searching for roles 01974aed-17ce-485f-9550-06f947e0f376 find roles, auth repository
+2019-08-10 16:41:25.2294|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 16:41:29.7675|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-10 16:41:29.7675|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-10 16:43:35.0208|INFO|school_diary.Repositories.AuthRepository|searching for user ivanadmin find user, auth repository
+2019-08-10 16:43:35.0887|INFO|school_diary.Repositories.AuthRepository|searching for roles 01974aed-17ce-485f-9550-06f947e0f376 find roles, auth repository
+2019-08-10 16:43:35.0887|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 16:43:41.8476|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get by id
+2019-08-10 16:43:59.5773|INFO|school_diary.Controllers.SubjectsController|Getting all subjects
+2019-08-10 16:43:59.5773|INFO|school_diary.Services.SubjectsService|Accssesing db over subjects rep, get all subjects
+2019-08-10 17:26:09.6155|INFO|school_diary.Controllers.AppUsersController|Admin 974d7c6c-e9df-48a7-a065-5d443a0338e8 deletes user
+2019-08-10 17:26:09.6155|INFO|school_diary.Services.AppUsersService|Getting user by ID, appusersservice, delete user
+2019-08-10 17:26:09.6195|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get user by id
+2019-08-10 17:26:09.6795|INFO|school_diary.Services.AppUsersService|Sending admin to user repo for delete
+2019-08-10 17:26:09.6835|INFO|school_diary.Services.AppUsersService|saving delete to db
+2019-08-10 17:26:09.7595|INFO|school_diary.Services.AppUsersService|returning deleted user. delete user
+2019-08-10 17:26:48.3788|INFO|school_diary.Controllers.TeachersController|Getting teacher by id, controller
+2019-08-10 17:26:48.3788|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get teacher by id
+2019-08-10 17:26:56.8168|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\TeachersService.cs, line which throw an exception 96
+2019-08-10 17:26:56.8168|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/teachers/78fee6fa-8c36-4014-94c2-a85827ee54cd
+2019-08-10 17:26:56.8168|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.TeacherDTOOut GetTeacherById(System.String)
+2019-08-10 17:26:56.8288|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: No teacher with id 78fee6fa-8c36-4014-94c2-a85827ee54cd here!
+2019-08-10 17:28:04.7396|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-10 17:28:13.6389|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-10 17:28:19.3762|INFO|school_diary.Controllers.AccountController|Id does not match, put teacher, account controller
+2019-08-10 17:28:19.3922|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-10 17:29:00.7498|INFO|school_diary.Controllers.AccountController|Admin abf4896d-c47a-43d7-82a8-693ae590c7a6 sent duleteacher to user service, put teacher
+2019-08-10 17:29:00.7498|INFO|school_diary.Services.UserService|Converting teacher duleteacher with simple dto converter, user service update teacher
+2019-08-10 17:29:00.7498|INFO|school_diary.Services.UserService|getting user with id af7f6c54-a8f1-465a-99cf-ffd0fb3fef3a, with db.authreposito, update teacher, user service 
+2019-08-10 17:29:00.7498|INFO|school_diary.Repositories.AuthRepository|Searching for user with id af7f6c54-a8f1-465a-99cf-ffd0fb3fef3a find user by id async, auth repository
+2019-08-10 17:29:01.0031|INFO|school_diary.Services.UserService|Updating user duleteacher
+2019-08-10 17:29:01.0031|INFO|school_diary.Services.UserService|waiting for result from auth repository, update user, user service
+2019-08-10 17:29:01.0031|INFO|school_diary.Repositories.AuthRepository|sending user duleteacher to user manager, update user auth repository
+2019-08-10 17:29:01.0271|INFO|school_diary.Services.UserService|Getting updated user with auth repository
+2019-08-10 17:29:01.0271|INFO|school_diary.Repositories.AuthRepository|Searching for user with id af7f6c54-a8f1-465a-99cf-ffd0fb3fef3a find user by id async, auth repository
+2019-08-10 17:29:01.0271|INFO|school_diary.Services.UserService|Converting user to teacher dto
+2019-08-10 17:29:01.0271|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-10 17:29:13.3244|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-10 17:29:52.0917|INFO|school_diary.Controllers.AppUsersController|Admin gets user by id, appuserscontroller
+2019-08-10 17:29:52.0917|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get user by id
+2019-08-10 17:30:53.1716|INFO|school_diary.Controllers.ValuesController|getting files, api value controller
+2019-08-10 17:30:53.1716|INFO|school_diary.Controllers.ValuesController|getting directories, api values controller
+2019-08-10 17:30:53.1716|INFO|school_diary.Controllers.ValuesController|creating list of archive files
+2019-08-10 17:30:53.2356|INFO|school_diary.Controllers.ValuesController|creating list of files
+2019-08-10 17:31:22.4090|INFO|school_diary.Controllers.ValuesController|Preparing filepath for download
+2019-08-10 18:06:36.3570|INFO|school_diary.Controllers.GradesController|Getting all grades
+2019-08-10 18:35:25.0104|INFO|school_diary.Controllers.GradesController|Getting all grades
+2019-08-10 18:36:07.3892|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception , line which throw an exception 0
+2019-08-10 18:36:07.3892|INFO|school_diary.Utilities.NLogExceptionLogger|DELETE http://localhost:51055/api/grades/4
+2019-08-10 18:36:07.3892|INFO|school_diary.Utilities.NLogExceptionLogger|Int32 SaveChanges()
+2019-08-10 18:36:07.4140|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: An error occurred while updating the entries. See the inner exception for details.
+2019-08-10 18:47:40.9252|INFO|school_diary.Repositories.AuthRepository|searching for user aleksastudent find user, auth repository
+2019-08-10 18:47:48.0244|INFO|school_diary.Repositories.AuthRepository|searching for roles caf6ceb1-12e7-4c97-9861-db25a3735e74 find roles, auth repository
+2019-08-10 18:47:48.0364|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 18:48:41.1087|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 18:48:41.1087|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 18:48:41.1967|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get all students
+2019-08-10 18:50:55.6080|INFO|school_diary.Controllers.AppUsersController|Admin gets user by id, appuserscontroller
+2019-08-10 18:50:55.6080|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get user by id
+2019-08-10 18:51:21.5606|INFO|school_diary.Repositories.AuthRepository|searching for user aleksastudent find user, auth repository
+2019-08-10 18:51:21.6046|INFO|school_diary.Repositories.AuthRepository|searching for roles caf6ceb1-12e7-4c97-9861-db25a3735e74 find roles, auth repository
+2019-08-10 18:51:21.6046|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 18:52:32.7557|INFO|school_diary.Controllers.AppUsersController|Admin gets user by id, appuserscontroller
+2019-08-10 18:52:32.7557|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get user by id
+2019-08-10 18:53:23.5265|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
+2019-08-10 18:53:23.5265|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
+2019-08-10 18:53:23.5505|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by id
+2019-08-10 18:54:26.1080|INFO|school_diary.Repositories.AuthRepository|searching for user cabateacher find user, auth repository
+2019-08-10 18:54:26.1879|INFO|school_diary.Repositories.AuthRepository|searching for roles 4de9ec44-333e-41df-8e51-cf5f42cd057f find roles, auth repository
+2019-08-10 18:54:26.1879|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 18:54:37.1504|INFO|school_diary.Services.MarksService|Getting student 03ce43a5-b441-4d08-b790-35725233599c over student service, from Create mark teacher, mark service
+2019-08-10 18:54:37.1504|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-10 18:54:37.1664|INFO|school_diary.Services.MarksService|Getting subject 1 over subject service, from create mark teacher, mark service
+2019-08-10 18:54:37.1664|INFO|school_diary.Services.MarksService|Getting teach for student teastudent, subject Matematika and teacher with Id 4de9ec44-333e-41df-8e51-cf5f42cd057f
+2019-08-10 18:54:37.2223|INFO|school_diary.Services.MarksService|Preparing mark for storing in db
+2019-08-10 18:54:37.2223|INFO|school_diary.Services.MarksService|Storing mark 0 in mark repo
+2019-08-10 18:54:37.2223|INFO|school_diary.Services.MarksService|Saving marl with id 0 in db
+2019-08-10 18:54:37.2343|INFO|school_diary.Services.MarksService|Preparing student's teastudent parent's for mail sending
+2019-08-10 18:54:37.2343|INFO|school_diary.Services.MarksService|Converting mark with id 17 to DTO
+2019-08-10 18:54:37.2463|INFO|school_diary.Services.MarksService|Sending parent cicaparent to mail service
+2019-08-10 18:54:37.2823|INFO|school_diary.Services.EmailService|Sending email to cica@example.com
+2019-08-10 18:54:40.2033|INFO|school_diary.Services.MarksService|Sending parent stanislavparent to mail service
+2019-08-10 18:54:40.2033|INFO|school_diary.Services.EmailService|Sending email to stanislav@email.com
+2019-08-10 18:58:57.1021|INFO|school_diary.Controllers.TeachersController|Getting all teachers, controller
+2019-08-10 18:58:57.1021|INFO|school_diary.Services.TeachersService|Accssesing db over TEacher rep, get all teachers
+2019-08-10 19:00:24.9028|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 19:00:24.9028|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 19:00:33.9824|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 51
+2019-08-10 19:00:33.9824|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/students/
+2019-08-10 19:00:33.9824|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[school_diary.Models.DTOs.StudentDTOOut] GetAllStudents(System.String, System.String)
+2019-08-10 19:00:33.9943|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: No students here!
+2019-08-10 19:01:07.5063|INFO|school_diary.Repositories.AuthRepository|searching for user cabateacher find user, auth repository
+2019-08-10 19:01:07.5702|INFO|school_diary.Repositories.AuthRepository|searching for roles 4de9ec44-333e-41df-8e51-cf5f42cd057f find roles, auth repository
+2019-08-10 19:01:07.5822|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 19:01:12.6504|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 19:01:12.6504|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 19:01:12.7223|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get all students
+2019-08-10 19:13:28.7512|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 19:13:28.7832|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 19:13:57.1392|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 51
+2019-08-10 19:13:57.1392|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/students/
+2019-08-10 19:13:57.1392|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[school_diary.Models.DTOs.StudentDTOOut] GetAllStudents(System.String, System.String)
+2019-08-10 19:13:57.1538|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: No students here!
+2019-08-10 19:15:24.6418|INFO|school_diary.Repositories.AuthRepository|searching for user cabateacher find user, auth repository
+2019-08-10 19:15:24.7217|INFO|school_diary.Repositories.AuthRepository|searching for roles ba0907b0-ead2-48e4-a98d-ccb95ddbfb13 find roles, auth repository
+2019-08-10 19:15:24.7417|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 19:15:28.9077|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 19:15:28.9077|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 19:15:28.9877|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get all students
+2019-08-10 19:16:40.6295|INFO|school_diary.Repositories.AuthRepository|searching for user cabateacher find user, auth repository
+2019-08-10 19:16:40.7414|INFO|school_diary.Repositories.AuthRepository|searching for roles ba0907b0-ead2-48e4-a98d-ccb95ddbfb13 find roles, auth repository
+2019-08-10 19:16:40.7494|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 19:17:03.7443|INFO|school_diary.Repositories.AuthRepository|searching for user borisavadmin find user, auth repository
+2019-08-10 19:17:03.7882|INFO|school_diary.Repositories.AuthRepository|searching for roles 7105e8d1-30b1-4405-82e9-bd67a8a65984 find roles, auth repository
+2019-08-10 19:17:03.7962|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 19:17:08.5285|INFO|school_diary.Controllers.SubjectsController|Getting all subjects
+2019-08-10 19:17:08.5285|INFO|school_diary.Services.SubjectsService|Accssesing db over subjects rep, get all subjects
+2019-08-10 19:21:41.5545|INFO|school_diary.Repositories.AuthRepository|searching for user borisavadmin find user, auth repository
+2019-08-10 19:21:52.6180|INFO|school_diary.Repositories.AuthRepository|searching for user borisavadmin find user, auth repository
+2019-08-10 19:22:06.5871|INFO|school_diary.Repositories.AuthRepository|searching for roles a786e4a8-41df-4461-8ac9-95915c0aae84 find roles, auth repository
+2019-08-10 19:22:06.6171|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 19:22:07.0328|INFO|school_diary.Repositories.AuthRepository|searching for user borisavadmin find user, auth repository
+2019-08-10 19:22:07.0548|INFO|school_diary.Repositories.AuthRepository|searching for roles a786e4a8-41df-4461-8ac9-95915c0aae84 find roles, auth repository
+2019-08-10 19:22:07.0608|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 19:22:12.6509|INFO|school_diary.Repositories.AuthRepository|searching for user borisavadmin find user, auth repository
+2019-08-10 19:22:12.7229|INFO|school_diary.Repositories.AuthRepository|searching for roles a786e4a8-41df-4461-8ac9-95915c0aae84 find roles, auth repository
+2019-08-10 19:22:12.7339|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 19:22:52.0169|INFO|school_diary.Controllers.AccountController|Accessing user service, register student mitarstudent, controller
+2019-08-10 19:22:52.0169|INFO|school_diary.Services.UserService|Converting student mitarstudent to model, user service, register student
+2019-08-10 19:22:52.0169|INFO|school_diary.Services.UserService|sending model to auth repository, register student mitarstudent
+2019-08-10 19:22:52.0169|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent to user manager, create async, auth repository
+2019-08-10 19:22:52.1268|INFO|school_diary.Repositories.AuthRepository|sending student mitarstudent id 86d63ae8-0146-4263-81c6-aba155545ef6 to user manager, add role, auth repository
+2019-08-10 19:22:52.2002|INFO|school_diary.Services.UserService|Searching for registered student mitarstudent
+2019-08-10 19:22:52.2002|INFO|school_diary.Repositories.AuthRepository|searching for user mitarstudent find user, auth repository
+2019-08-10 19:22:52.2212|INFO|school_diary.Services.UserService|Converting student mitarstudent to DTO with simple dto converter
+2019-08-10 19:22:52.2662|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-10 19:23:19.3132|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 19:23:19.3132|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 19:23:19.3841|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get all students
+2019-08-10 19:23:42.4052|INFO|school_diary.Controllers.StudentsController|Get student by username, students controller
+2019-08-10 19:23:42.4052|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by username
+2019-08-10 19:23:42.4312|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by username
+2019-08-10 19:25:12.3298|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-10 19:25:18.4224|INFO|school_diary.Controllers.AccountController|Admin a786e4a8-41df-4461-8ac9-95915c0aae84 sent mitarstudent  to user service, put student
+2019-08-10 19:25:18.4224|INFO|school_diary.Services.UserService|Converting student mitarstudent with simple dto converter, user service update student
+2019-08-10 19:25:18.4224|INFO|school_diary.Services.UserService|getting user with id 86d63ae8-0146-4263-81c6-aba155545ef6, with db.authreposito, update student, user service 
+2019-08-10 19:25:18.4224|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 86d63ae8-0146-4263-81c6-aba155545ef6 find user by id async, auth repository
+2019-08-10 19:25:18.4864|INFO|school_diary.Services.UserService|Updating user mitarstudent
+2019-08-10 19:25:18.4864|INFO|school_diary.Services.UserService|waiting for result from auth repository, update user, user service
+2019-08-10 19:25:18.4864|INFO|school_diary.Repositories.AuthRepository|sending user mitarstudent to user manager, update user auth repository
+2019-08-10 19:25:18.5543|INFO|school_diary.Services.UserService|Getting updated user with auth repository
+2019-08-10 19:25:18.5543|INFO|school_diary.Repositories.AuthRepository|Searching for user with id 86d63ae8-0146-4263-81c6-aba155545ef6 find user by id async, auth repository
+2019-08-10 19:25:18.5603|INFO|school_diary.Services.UserService|Converting user to student dto
+2019-08-10 19:25:18.5603|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-10 19:25:32.8676|INFO|school_diary.Controllers.StudentsController|Get student by username, students controller
+2019-08-10 19:25:32.8676|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by username
+2019-08-10 19:25:32.8805|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by username
+2019-08-10 19:26:04.0064|INFO|school_diary.Controllers.AppUsersController|Admin 974d7c6c-e9df-48a7-a065-5d443a0338e8 deletes user
+2019-08-10 19:26:04.0064|INFO|school_diary.Services.AppUsersService|Getting user by ID, appusersservice, delete user
+2019-08-10 19:26:04.0064|INFO|school_diary.Services.AppUsersService|Accessing db over users repository, get user by id
+2019-08-10 19:26:04.0593|INFO|school_diary.Services.AppUsersService|Sending admin to user repo for delete
+2019-08-10 19:26:04.0593|INFO|school_diary.Services.AppUsersService|saving delete to db
+2019-08-10 19:26:04.2489|INFO|school_diary.Services.AppUsersService|returning deleted user. delete user
+2019-08-10 19:26:19.6699|INFO|school_diary.Controllers.StudentsController|Get student by username, students controller
+2019-08-10 19:26:19.6699|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by username
+2019-08-10 19:26:24.3151|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 211
+2019-08-10 19:26:24.3151|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/students/by-username/mitarstudent
+2019-08-10 19:26:24.3151|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.StudentDTOOutSingle GetStudentByUserName(System.String, System.String, System.String)
+2019-08-10 19:26:24.3271|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Student with username mitarstudent doesn't exists
+2019-08-10 19:27:11.4947|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
+2019-08-10 19:27:11.4947|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
+2019-08-10 19:27:11.5097|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by id
+2019-08-10 19:27:32.6218|INFO|school_diary.Controllers.StudentsController|Get student by username, students controller
+2019-08-10 19:27:32.6218|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by username
+2019-08-10 19:27:32.6218|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by username
+2019-08-10 19:28:16.9891|INFO|school_diary.Repositories.AuthRepository|searching for user aleksast find user, auth repository
+2019-08-10 19:28:25.1792|INFO|school_diary.Repositories.AuthRepository|searching for user aleksastudent find user, auth repository
+2019-08-10 19:28:25.2261|INFO|school_diary.Repositories.AuthRepository|searching for roles 56fa4967-670e-482e-8e2a-6ea9755bf445 find roles, auth repository
+2019-08-10 19:28:25.2351|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 19:28:34.2697|INFO|school_diary.Controllers.AccountController|Disposing, Account controller
+2019-08-10 19:29:24.7219|INFO|school_diary.Repositories.AuthRepository|searching for user borisavadmin find user, auth repository
+2019-08-10 19:29:24.7719|INFO|school_diary.Repositories.AuthRepository|searching for roles a786e4a8-41df-4461-8ac9-95915c0aae84 find roles, auth repository
+2019-08-10 19:29:24.7819|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 19:29:29.9468|INFO|school_diary.Controllers.ValuesController|getting files, api value controller
+2019-08-10 19:29:29.9468|INFO|school_diary.Controllers.ValuesController|getting directories, api values controller
+2019-08-10 19:29:29.9468|INFO|school_diary.Controllers.ValuesController|creating list of archive files
+2019-08-10 19:29:29.9468|INFO|school_diary.Controllers.ValuesController|creating list of files
+2019-08-10 19:29:51.5401|INFO|school_diary.Controllers.ValuesController|Preparing filepath for download
+2019-08-10 19:32:21.6630|INFO|school_diary.Controllers.ParentsController|Getting all parents, controller
+2019-08-10 19:32:21.6630|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get all parents
+2019-08-10 19:32:56.2727|INFO|school_diary.Controllers.ParentsController|Getting parent by parent ID, controller
+2019-08-10 19:32:56.2757|INFO|school_diary.Services.ParentsService|Accssesing db over Parent rep, get parent by id
+2019-08-10 19:32:56.5306|INFO|school_diary.Services.ParentsService|converting parent with SimpleDTOConverter, get parent by id

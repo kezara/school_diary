@@ -10,7 +10,7 @@ namespace school_diary.Services
 {
     public interface IMarksService
     {
-        IEnumerable<Mark> GetAllMarks();
+        IEnumerable<MarkDTOOut> GetAllMarks(string role, string userId);
         IEnumerable<MarkDTO> GetMarkByStudentUserName(string username);
         //IEnumerable<Grade> GetGradeByStudentName(string name);
         //IEnumerable<Grade> GetGradeByStudentLastName(string lastName);

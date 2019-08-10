@@ -16,6 +16,7 @@ namespace school_diary.Services
         IEnumerable<ParentDTOOutAll> GetParentsByNameLastName(string name, string lastName);
         ParentDTOHelper GetParentById(string id);
         ParentDTOHelper GetParentByUserName(string username);
+        Parent GetParentID(string id);
         //ParentDTOOut GetParentByUserName(string username);
         //Parent CreateParent(Parent newParent);
         //Parent UpdateParent(int id, Parent parentToUpdt);

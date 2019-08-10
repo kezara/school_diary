@@ -14,26 +14,31 @@ namespace school_diary.Services
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
         IUnitOfWork db;
-        public SubjectsService(IUnitOfWork db)
+        ITeachersService teachersService;
+        public SubjectsService(IUnitOfWork db, ITeachersService teachersService)
         {
             this.db = db;
+            this.teachersService = teachersService;
         }
 
-        public Subject CreateSubject(Subject newSubject)
+        public SubjectDTO CreateSubject(SubjectDTO newSubject)
         {
-            //ClassRoom newClass = ConverterDTO.SimpleDTOConverter<ClassRoom>(newClassDTO);
-            db.SubjectsRepository.Insert(newSubject);
+            Subject subject = Utilities.ConverterDTO.SimpleDTOConverter<Subject>(newSubject);
+            db.SubjectsRepository.Insert(subject);
             db.Save();
-            return newSubject;
+            SubjectDTO subjectDTO = Utilities.ConverterDTO.SimpleDTOConverter<SubjectDTO>(subject);
+            return subjectDTO;
         }
 
-        public Subject DeleteSubject(int id)
+        public SubjectDTO DeleteSubject(int id)
         {
             Subject subject = GetSubjectByID(id);
-            
+
             db.SubjectsRepository.Delete(id);
             db.Save();
-            return subject;
+            SubjectDTO subjectDTO = Utilities.ConverterDTO.SimpleDTOConverter<SubjectDTO>(subject);
+            
+            return subjectDTO;
         }
 
         public IEnumerable<SubjectTeacherDTOOut> GetAllSubjects()
@@ -52,22 +57,40 @@ namespace school_diary.Services
             return subjectTeacherDTOOuts;
         }
 
-            //public IEnumerable<Subject> GetGradesOfSubject(fillter: x => x.Subject.Name)
 
-            public Subject GetSubjectByID(int id)
+        public Subject GetSubjectByID(int id)
         {
-            return db.SubjectsRepository.GetByID(id);
+            Subject subject = db.SubjectsRepository.GetByID(id);
+            if (subject == null)
+            {
+                throw new SubjectNotFoundException($"No subject with id {id}");
+            }
+
+            return subject;
         }
 
-        public Subject UpdateSubject(int id, Subject subjectToUpdt)
+        public SubjectTeacherDTOOut AddTeacherToSubject(int id, SubjectTEacherDTOIn subjectToUpdt)
         {
             Subject subject = GetSubjectByID(id);
+            HashSet<Teacher> teachers = new HashSet<Teacher>();
+            foreach (var ID in subjectToUpdt.TeacherID)
+            {
+                Teacher teacher = teachersService.GetById(ID);
+                teachers.Add(teacher);
+            }
 
-            subject.Id = subjectToUpdt.Id;
-            subject.SubjectName = subjectToUpdt.SubjectName;
+            subject.Teachers = teachers;
+
             db.SubjectsRepository.Update(subject);
             db.Save();
-            return subjectToUpdt;
+
+            IEnumerable<TeacherDTOOutReg> teachersUpdate = teachers.Select(x => Utilities.ConverterDTO.SimpleDTOConverter<TeacherDTOOutReg>(x));
+            SubjectTeacherDTOOut updatedSubject = new SubjectTeacherDTOOut()
+            {
+                Subject = Utilities.ConverterDTO.SimpleDTOConverter<SubjectDTO>(subject),
+                Teachers = teachersUpdate
+            };
+            return updatedSubject;
         }
     }
 }
