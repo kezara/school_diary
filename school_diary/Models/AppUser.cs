@@ -18,5 +18,6 @@ namespace school_diary.Models
         [Required]
         [MaxLength(100)]
         public string LastName { get; set; }
+       
     }
 }

@@ -209,3 +209,170 @@
 2019-08-10 10:11:03.5325|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
 2019-08-10 10:11:08.1365|INFO|school_diary.Controllers.GradesController|Getting all grades
 2019-08-10 10:11:47.8842|INFO|school_diary.Controllers.GradesController|Getting grade byId
+2019-08-10 10:32:17.5150|INFO|school_diary.Repositories.AuthRepository|searching for user nikolateacher find user, auth repository
+2019-08-10 10:32:24.1728|INFO|school_diary.Repositories.AuthRepository|searching for roles 5528530b-7fc0-470c-8fd7-12ff4adda7ad find roles, auth repository
+2019-08-10 10:32:24.1848|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 10:35:41.3173|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 10:35:41.3173|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 10:35:41.4162|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get all students
+2019-08-10 10:36:13.1282|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
+2019-08-10 10:36:13.1282|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
+2019-08-10 10:36:28.3993|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 109
+2019-08-10 10:36:28.4003|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/students/06c1edc2-e9b3-4159-94ca-c289d2fa1536
+2019-08-10 10:36:28.4003|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.StudentDTOOutSingle GetStudentById(System.String)
+2019-08-10 10:36:28.4003|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Student with ID 06c1edc2-e9b3-4159-94ca-c289d2fa1536 doesn't exists
+2019-08-10 10:36:37.0944|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
+2019-08-10 10:36:37.0944|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
+2019-08-10 10:36:37.1044|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by id
+2019-08-10 10:38:11.1872|INFO|school_diary.Services.MarksService|Getting student 25b0905f-154b-4798-b451-3504885a72d3 over student service, from Create mark teacher, mark service
+2019-08-10 10:38:11.1972|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-10 10:38:11.2142|INFO|school_diary.Services.MarksService|Getting subject 1 over subject service, from create mark teacher, mark service
+2019-08-10 10:38:11.2342|INFO|school_diary.Services.MarksService|Getting teach for student vukasinzstudent, subject Matematika and teacher with Id 5528530b-7fc0-470c-8fd7-12ff4adda7ad
+2019-08-10 10:38:11.2671|INFO|school_diary.Services.MarksService|Preparing mark for storing in db
+2019-08-10 10:38:11.2671|INFO|school_diary.Services.MarksService|Storing mark 0 in mark repo
+2019-08-10 10:38:11.2671|INFO|school_diary.Services.MarksService|Saving marl with id 0 in db
+2019-08-10 10:38:11.2771|INFO|school_diary.Services.MarksService|Preparing student's vukasinzstudent parent's for mail sending
+2019-08-10 10:38:11.2771|INFO|school_diary.Services.MarksService|Converting mark with id 17 to DTO
+2019-08-10 10:38:11.2771|INFO|school_diary.Services.MarksService|Sending parent stanislavparent to mail service
+2019-08-10 10:38:11.3241|INFO|school_diary.Services.EmailService|Sending email to stanislav@email.com
+2019-08-10 10:38:20.9508|INFO|school_diary.Services.MarksService|Sending parent cicaparent to mail service
+2019-08-10 10:38:20.9508|INFO|school_diary.Services.EmailService|Sending email to cica@example.com
+2019-08-10 10:39:36.4779|INFO|school_diary.Services.MarksService|Getting student 4fdb2388-e560-45f8-8185-260013e3e70d over student service, from Create mark teacher, mark service
+2019-08-10 10:39:36.4779|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-10 10:39:36.4779|INFO|school_diary.Services.MarksService|Getting subject 1 over subject service, from create mark teacher, mark service
+2019-08-10 10:39:36.4779|INFO|school_diary.Services.MarksService|Getting teach for student filipstudent, subject Matematika and teacher with Id 5528530b-7fc0-470c-8fd7-12ff4adda7ad
+2019-08-10 10:39:37.0326|INFO|school_diary.Services.MarksService|Teacher with id 5528530b-7fc0-470c-8fd7-12ff4adda7ad tried to enter the mark to wrong student or subject
+2019-08-10 10:39:40.4899|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\MarksService.cs, line which throw an exception 43
+2019-08-10 10:39:40.4899|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/marks
+2019-08-10 10:39:40.4939|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.MarkDTOOut CreateMarkTeacher(System.String, school_diary.Models.DTOs.MarkDTOIn)
+2019-08-10 10:39:40.4939|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Wrong student or subject
+2019-08-10 10:40:05.9145|INFO|school_diary.Services.MarksService|Getting student 25b0905f-154b-4798-b451-3504885a72d3 over student service, from Create mark teacher, mark service
+2019-08-10 10:40:05.9155|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-10 10:40:05.9474|INFO|school_diary.Services.MarksService|Getting subject 1 over subject service, from create mark teacher, mark service
+2019-08-10 10:40:05.9664|INFO|school_diary.Services.MarksService|Getting teach for student vukasinzstudent, subject Matematika and teacher with Id 5528530b-7fc0-470c-8fd7-12ff4adda7ad
+2019-08-10 10:40:05.9854|INFO|school_diary.Services.MarksService|Preparing mark for storing in db
+2019-08-10 10:40:05.9854|INFO|school_diary.Services.MarksService|Storing mark 0 in mark repo
+2019-08-10 10:40:05.9854|INFO|school_diary.Services.MarksService|Saving marl with id 0 in db
+2019-08-10 10:40:05.9974|INFO|school_diary.Services.MarksService|Preparing student's vukasinzstudent parent's for mail sending
+2019-08-10 10:40:05.9974|INFO|school_diary.Services.MarksService|Converting mark with id 18 to DTO
+2019-08-10 10:40:05.9974|INFO|school_diary.Services.MarksService|Sending parent stanislavparent to mail service
+2019-08-10 10:40:05.9974|INFO|school_diary.Services.EmailService|Sending email to stanislav@email.com
+2019-08-10 10:40:08.2606|INFO|school_diary.Services.MarksService|Sending parent cicaparent to mail service
+2019-08-10 10:40:08.2606|INFO|school_diary.Services.EmailService|Sending email to cica@example.com
+2019-08-10 10:40:15.6566|INFO|school_diary.Services.MarksService|Getting student 25b0905f-154b-4798-b451-3504885a72d3 over student service, from Create mark teacher, mark service
+2019-08-10 10:40:15.6566|INFO|school_diary.Services.StudentsService|Accsessing db over student repo, get student
+2019-08-10 10:40:15.6566|INFO|school_diary.Services.MarksService|Getting subject 2 over subject service, from create mark teacher, mark service
+2019-08-10 10:40:15.6566|INFO|school_diary.Services.MarksService|Getting teach for student vukasinzstudent, subject Srpski jezik i knjizevnost and teacher with Id 5528530b-7fc0-470c-8fd7-12ff4adda7ad
+2019-08-10 10:40:15.6686|INFO|school_diary.Services.MarksService|Teacher with id 5528530b-7fc0-470c-8fd7-12ff4adda7ad tried to enter the mark to wrong student or subject
+2019-08-10 10:40:20.5197|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\MarksService.cs, line which throw an exception 43
+2019-08-10 10:40:20.5197|INFO|school_diary.Utilities.NLogExceptionLogger|POST http://localhost:51055/api/marks
+2019-08-10 10:40:20.5197|INFO|school_diary.Utilities.NLogExceptionLogger|school_diary.Models.DTOs.MarkDTOOut CreateMarkTeacher(System.String, school_diary.Models.DTOs.MarkDTOIn)
+2019-08-10 10:40:20.5197|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Wrong student or subject
+2019-08-10 11:24:17.4837|INFO|school_diary.Repositories.AuthRepository|searching for user borisavadmin find user, auth repository
+2019-08-10 11:24:25.0360|INFO|school_diary.Repositories.AuthRepository|searching for roles abf4896d-c47a-43d7-82a8-693ae590c7a6 find roles, auth repository
+2019-08-10 11:24:25.0540|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 11:24:34.8639|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 11:24:34.8639|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 11:24:34.9408|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get all students
+2019-08-10 11:25:10.5320|INFO|school_diary.Repositories.AuthRepository|searching for user sandraparent find user, auth repository
+2019-08-10 11:25:10.5880|INFO|school_diary.Repositories.AuthRepository|searching for roles 9ba670fb-3a98-4e17-ad88-a325c1db5b0d find roles, auth repository
+2019-08-10 11:25:10.5880|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 11:25:17.4338|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 11:25:17.4338|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 11:25:17.4767|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get all students
+2019-08-10 11:25:55.3218|INFO|school_diary.Repositories.AuthRepository|searching for user nikolateacher find user, auth repository
+2019-08-10 11:25:55.3807|INFO|school_diary.Repositories.AuthRepository|searching for roles 612bfd65-afec-4d7a-8ae7-98fe1e94c04d find roles, auth repository
+2019-08-10 11:25:55.3897|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 11:26:02.6656|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 11:26:02.6656|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 11:26:02.8375|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get all students
+2019-08-10 11:31:35.1001|INFO|school_diary.Controllers.StudentsController|Getting students by name, Student controller
+2019-08-10 11:31:35.1451|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get students by name
+2019-08-10 11:31:42.2238|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get students by name
+2019-08-10 11:32:00.2547|INFO|school_diary.Controllers.StudentsController|Getting students by name, Student controller
+2019-08-10 11:32:00.2547|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get students by name
+2019-08-10 11:32:10.4195|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 76
+2019-08-10 11:32:10.4195|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/students/by-name/filip
+2019-08-10 11:32:10.4195|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[school_diary.Models.DTOs.StudentDTOOut] GetStudentsByName(System.String, System.String, System.String)
+2019-08-10 11:32:10.4195|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Student with name filip does not exist!
+2019-08-10 11:33:31.8485|INFO|school_diary.Repositories.AuthRepository|searching for user jelenaparent find user, auth repository
+2019-08-10 11:33:31.9655|INFO|school_diary.Repositories.AuthRepository|searching for roles ee791027-a2a3-4904-a9f0-321d7572edf7 find roles, auth repository
+2019-08-10 11:33:31.9785|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 11:33:38.3630|INFO|school_diary.Controllers.StudentsController|Getting students by name, Student controller
+2019-08-10 11:33:38.3630|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get students by name
+2019-08-10 11:33:38.4130|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get students by name
+2019-08-10 11:34:36.8716|INFO|school_diary.Controllers.StudentsController|Getting students by name, Student controller
+2019-08-10 11:34:36.8716|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get students by name
+2019-08-10 11:34:39.8116|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 76
+2019-08-10 11:34:39.8116|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/students/by-name/filip
+2019-08-10 11:34:39.8116|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[school_diary.Models.DTOs.StudentDTOOut] GetStudentsByName(System.String, System.String, System.String)
+2019-08-10 11:34:39.8116|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: Student with name filip does not exist!
+2019-08-10 11:50:57.4205|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 11:50:57.4725|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 11:51:22.7037|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 47
+2019-08-10 11:51:22.7037|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/students/
+2019-08-10 11:51:22.7037|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[school_diary.Models.DTOs.StudentDTOOut] GetAllStudents(System.String, System.String)
+2019-08-10 11:51:22.7127|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: No students here!
+2019-08-10 11:51:50.2762|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 11:51:50.2762|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 11:51:56.9290|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 47
+2019-08-10 11:51:56.9290|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/students/
+2019-08-10 11:51:56.9290|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[school_diary.Models.DTOs.StudentDTOOut] GetAllStudents(System.String, System.String)
+2019-08-10 11:51:56.9310|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: No students here!
+2019-08-10 11:52:19.4385|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 11:52:19.4385|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 11:52:19.4385|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get all students
+2019-08-10 11:53:01.6431|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 11:53:01.6431|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 11:53:07.9516|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 47
+2019-08-10 11:53:07.9516|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/students/
+2019-08-10 11:53:07.9516|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[school_diary.Models.DTOs.StudentDTOOut] GetAllStudents(System.String, System.String)
+2019-08-10 11:53:07.9516|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: No students here!
+2019-08-10 11:53:26.2015|INFO|school_diary.Repositories.AuthRepository|searching for user jelenaparent find user, auth repository
+2019-08-10 11:53:26.2975|INFO|school_diary.Repositories.AuthRepository|searching for roles 67db7f99-b4ac-425c-9dc9-917aa38ab80e find roles, auth repository
+2019-08-10 11:53:26.3185|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 11:53:33.7547|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 11:53:33.7547|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 11:53:33.7927|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get all students
+2019-08-10 11:54:20.1318|INFO|school_diary.Repositories.AuthRepository|searching for user ikonovteacher find user, auth repository
+2019-08-10 11:54:20.1887|INFO|school_diary.Repositories.AuthRepository|searching for roles ebf8bc64-f784-42a2-b1b2-5c43a4f925d1 find roles, auth repository
+2019-08-10 11:54:20.1977|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 11:54:26.3159|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 11:54:26.3159|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 11:54:29.0948|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 47
+2019-08-10 11:54:29.0948|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/students/
+2019-08-10 11:54:29.0948|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[school_diary.Models.DTOs.StudentDTOOut] GetAllStudents(System.String, System.String)
+2019-08-10 11:54:29.0948|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: No students here!
+2019-08-10 11:54:48.3002|INFO|school_diary.Repositories.AuthRepository|searching for user cabateacher find user, auth repository
+2019-08-10 11:54:48.3602|INFO|school_diary.Repositories.AuthRepository|searching for roles 8bff82f0-1a07-4628-b86c-228c4f4f2af2 find roles, auth repository
+2019-08-10 11:54:48.3701|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 11:54:54.3642|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 11:54:54.3642|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 11:54:54.4291|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get all students
+2019-08-10 11:55:43.6582|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
+2019-08-10 11:55:43.6582|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
+2019-08-10 11:55:43.6852|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by id
+2019-08-10 11:55:59.3719|INFO|school_diary.Repositories.AuthRepository|searching for user vukasinpstudent find user, auth repository
+2019-08-10 11:55:59.4319|INFO|school_diary.Repositories.AuthRepository|searching for roles 5bbf3fce-796c-42b0-a909-9d5d96f84438 find roles, auth repository
+2019-08-10 11:55:59.4319|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 12:01:00.2444|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 12:01:00.2863|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 12:01:07.5129|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get all students
+2019-08-10 12:01:31.7470|INFO|school_diary.Repositories.AuthRepository|searching for user milosstudent find user, auth repository
+2019-08-10 12:01:31.8420|INFO|school_diary.Repositories.AuthRepository|searching for roles 08838a34-4a8f-4fa8-9f63-93f9077c04c0 find roles, auth repository
+2019-08-10 12:01:31.8579|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 12:02:32.5576|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 12:02:32.5925|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 12:02:46.7806|INFO|school_diary.Utilities.NLogExceptionLogger|File throwing an exception D:\Users\PC\source\repos\school_diary\school_diary\Services\StudentsService.cs, line which throw an exception 51
+2019-08-10 12:02:46.7806|INFO|school_diary.Utilities.NLogExceptionLogger|GET http://localhost:51055/api/students/
+2019-08-10 12:02:46.7806|INFO|school_diary.Utilities.NLogExceptionLogger|System.Collections.Generic.IEnumerable`1[school_diary.Models.DTOs.StudentDTOOut] GetAllStudents(System.String, System.String)
+2019-08-10 12:02:46.7806|ERROR|school_diary.Utilities.NLogExceptionLogger|Exception message: No students here!
+2019-08-10 12:03:01.4719|INFO|school_diary.Repositories.AuthRepository|searching for user milosstudent find user, auth repository
+2019-08-10 12:03:05.8486|INFO|school_diary.Repositories.AuthRepository|searching for roles 473d6d4a-6b8a-4e23-92d7-e02dd555b87e find roles, auth repository
+2019-08-10 12:03:05.8686|INFO|school_diary.Repositories.AuthRepository|dispose, auth repository
+2019-08-10 12:03:13.5391|INFO|school_diary.Controllers.StudentsController|Getting all students, Student controller
+2019-08-10 12:03:13.5391|INFO|school_diary.Services.StudentsService|Accssesing db over Students rep, get all students
+2019-08-10 12:03:13.5501|INFO|school_diary.Services.StudentsService|converting student with AllStudentsDTOConverter, get all students
+2019-08-10 12:03:32.8909|INFO|school_diary.Controllers.StudentsController|Get student by id, students controller
+2019-08-10 12:03:32.8909|INFO|school_diary.Services.StudentsService|Accssesing db over Student rep, get student by id
+2019-08-10 12:03:32.9069|INFO|school_diary.Services.StudentsService|converting student with StudentDTOConverter, get student by id

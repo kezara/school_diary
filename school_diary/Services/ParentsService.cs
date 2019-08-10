@@ -102,7 +102,8 @@ namespace school_diary.Services
         public ParentDTOHelper GetParentById(string id)
         {
             logger.Info("Accssesing db over Parent rep, get parent by id");
-            Parent parent = db.ParentsRepository.Get(filter: x => x.Id == id).FirstOrDefault();
+            Parent parent = new Parent();
+            parent = db.ParentsRepository.Get(filter: x => x.Id == id).FirstOrDefault();
             if (parent == null)
             {
                 throw new ParentNotFoundException($"Parent with ID {id} doesn't exists");

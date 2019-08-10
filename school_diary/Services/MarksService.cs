@@ -152,26 +152,6 @@ namespace school_diary.Services
             return markDTO;
         }
 
-        //public Mark CreateMarkTeacher(Mark newMark)
-        //{
-
-        //    db.MarksRepository.Insert(newMark);
-        //    db.Save();
-        //    return newMark;
-        //}
-
-        //public Grade DeleteGrade(string username)
-        //{
-        //    Grade mark = GetMarkByStudentUserName(username);
-        //    if (mark == null)
-        //    {
-        //        throw new UserNotFoundException();
-        //    }
-        //    db.MarksRepository.Delete(username);
-        //    db.Save();
-        //    return mark;
-        //}
-
         public IEnumerable<Mark> GetAllMarks()
         {
             return db.MarksRepository.Get();

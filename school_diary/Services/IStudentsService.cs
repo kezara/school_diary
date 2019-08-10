@@ -8,15 +8,15 @@ namespace school_diary.Services
     {
         //Student CreateStudent(Student newStudent);
        // StudentDTOOut DeleteStudent(string id);
-        IEnumerable<StudentDTOOut> GetAllStudents();
-        IEnumerable<StudentDTOOut> GetStudentsByName(string name);
-        IEnumerable<StudentDTOOut> GetStudentsByLastName(string lastName);
-        IEnumerable<StudentDTOOut> GetStudentsByNameLastName(string name, string lastName);
-        StudentDTOOutSingle GetStudentById(string id);
+        IEnumerable<StudentDTOOut> GetAllStudents(string role, string userId);
+        IEnumerable<StudentDTOOut> GetStudentsByName(string name, string role, string userId);
+        IEnumerable<StudentDTOOut> GetStudentsByLastName(string lastName, string role, string userId);
+        IEnumerable<StudentDTOOut> GetStudentsByNameLastName(string name, string lastName, string role, string userId);
+        StudentDTOOutSingle GetStudentById(string id, string role, string userId);
 
         //Student AddStudentToClass(string id, StudentDTOIn studentToUpdt);
         Student GetStudent(string id);
-        StudentDTOOutSingle GetStudentByUserName(string username);
+        StudentDTOOutSingle GetStudentByUserName(string username, string role, string userId);
         //Student GetStudentByUserName(string username);
         //StudentDTOOut AddStudentToClass(string username, StudentDTOIn studentToUpdt);
     }

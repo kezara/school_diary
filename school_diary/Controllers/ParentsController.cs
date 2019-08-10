@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Security.Claims;
 using System.Web.Http;
 using System.Web.Http.Description;
 
@@ -28,7 +29,6 @@ namespace school_diary.Controllers
         [ResponseType(typeof(ParentDTOHelper))]
         public IHttpActionResult GetParentById(string id)
         {
-
             logger.Info("Getting parent by parent ID, controller");
             ParentDTOHelper parent = parentsService.GetParentById(id);
             return Ok(parent);

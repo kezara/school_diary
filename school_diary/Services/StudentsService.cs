@@ -23,27 +23,28 @@ namespace school_diary.Services
             this.parentsService = parentsService;
         }
 
-        //public Student CreateStudent(Student newStudent)
-        //{
-        //    //ClassRoom newClass = ConverterDTO.SimpleDTOConverter<ClassRoom>(newClassDTO);
-        //    db.StudentsRepository.Insert(newStudent);
-        //    db.Save();
-        //    return newStudent;
-        //}
-
-        //public StudentDTOOut DeleteStudent(string id)
-        //{
-        //    StudentDTOOut student = GetStudentById(id);
-
-        //    db.StudentsRepository.Delete(id);
-        //    db.Save();
-        //    return student;
-        //}
-
-        public IEnumerable<StudentDTOOut> GetAllStudents()
+        
+        public IEnumerable<StudentDTOOut> GetAllStudents(string role, string userId)
         {
             logger.Info("Accssesing db over Students rep, get all students");
-            IEnumerable<Student> students = db.StudentsRepository.Get();
+            IEnumerable<Student> students = new HashSet<Student>();
+            if (role == "parents")
+            {
+                students = db.StudentsRepository.Get().Where(x => x.Parents.Any(y => y.Id == userId));
+            }
+            else if (role == "teachers")
+            {
+                students = db.StudentsRepository.Get().Where(x => x.StudentDepartments.Teaches.Any(y => y.Teachers.Id==userId));
+            }
+            else if (role == "students")
+            {
+                students = db.StudentsRepository.Get().Where(x => x.Id == userId);
+            }
+            else
+            {
+                students = db.StudentsRepository.Get();
+            }
+            
 
             if (students.Count() < 1)
             {
@@ -55,10 +56,28 @@ namespace school_diary.Services
             return studentsDTO;
         }
 
-        public IEnumerable<StudentDTOOut> GetStudentsByName(string name)
+        public IEnumerable<StudentDTOOut> GetStudentsByName(string name, string role, string userId)
         {
             logger.Info("Accssesing db over Students rep, get students by name");
-            IEnumerable<Student> students = db.StudentsRepository.Get(filter: x => x.FirstName == name);
+            IEnumerable<Student> students = new HashSet<Student>();
+            if (role == "parents")
+            {
+                students = db.StudentsRepository.Get(filter: x => x.FirstName == name).Where(x => x.Parents.Any(y => y.Id == userId));
+            }
+            else if (role == "teachers")
+            {
+                students = db.StudentsRepository.Get(filter: x => x.FirstName == name).Where(x => x.StudentDepartments.Teaches.Any(y => y.Teachers.Id == userId));
+            }
+            else if (role == "students")
+            {
+                students = db.StudentsRepository.Get(filter: x => x.FirstName == name).Where(x => x.Id == userId);
+            }
+            else
+            {
+                students = db.StudentsRepository.Get(filter: x => x.FirstName == name);
+            }
+
+            //IEnumerable<Student> students = db.StudentsRepository.Get(filter: x => x.FirstName == name);
 
             if (students.Count() < 1)
             {
@@ -70,10 +89,27 @@ namespace school_diary.Services
             return studentsDTO;
         }
 
-        public IEnumerable<StudentDTOOut> GetStudentsByLastName(string lastName)
+        public IEnumerable<StudentDTOOut> GetStudentsByLastName(string lastName, string role, string userId)
         {
             logger.Info("Accssesing db over Students rep, get students by lastname");
-            IEnumerable<Student> students = db.StudentsRepository.Get(filter: x => x.LastName == lastName);
+            IEnumerable<Student> students = new HashSet<Student>();
+            if (role == "parents")
+            {
+                students = db.StudentsRepository.Get(filter: x => x.LastName == lastName).Where(x => x.Parents.Any(y => y.Id == userId));
+            }
+            else if (role == "teachers")
+            {
+                students = db.StudentsRepository.Get(filter: x => x.LastName == lastName).Where(x => x.StudentDepartments.Teaches.Any(y => y.Teachers.Id == userId));
+            }
+            else if (role == "students")
+            {
+                students = db.StudentsRepository.Get(filter: x => x.LastName == lastName).Where(x => x.Id == userId);
+            }
+            else
+            {
+                students = db.StudentsRepository.Get(filter: x => x.LastName == lastName);
+            }
+            //IEnumerable<Student> students = db.StudentsRepository.Get(filter: x => x.LastName == lastName);
 
             if (students.Count() < 1)
             {
@@ -85,10 +121,27 @@ namespace school_diary.Services
             return studentsDTO;
         }
 
-        public IEnumerable<StudentDTOOut> GetStudentsByNameLastName(string name, string lastName)
+        public IEnumerable<StudentDTOOut> GetStudentsByNameLastName(string name, string lastName, string role, string userId)
         {
             logger.Info("Accssesing db over Students rep, get students by name and lastname");
-            IEnumerable<Student> students = db.StudentsRepository.Get(filter: x => x.FirstName == name && x.LastName == lastName);
+            IEnumerable<Student> students = new HashSet<Student>();
+            if (role == "parents")
+            {
+                students = db.StudentsRepository.Get(filter: x => x.FirstName == name && x.LastName == lastName).Where(x => x.Parents.Any(y => y.Id == userId));
+            }
+            else if (role == "teachers")
+            {
+                students = db.StudentsRepository.Get(filter: x => x.FirstName == name && x.LastName == lastName).Where(x => x.StudentDepartments.Teaches.Any(y => y.Teachers.Id == userId));
+            }
+            else if (role == "students")
+            {
+                students = db.StudentsRepository.Get(filter: x => x.FirstName == name && x.LastName == lastName).Where(x => x.Id == userId);
+            }
+            else
+            {
+                students = db.StudentsRepository.Get(filter: x => x.FirstName == name && x.LastName == lastName);
+            }
+            //IEnumerable<Student> students = db.StudentsRepository.Get(filter: x => x.FirstName == name && x.LastName == lastName);
 
             if (students.Count() < 1)
             {
@@ -100,10 +153,27 @@ namespace school_diary.Services
             return studentsDTO;
         }
 
-        public StudentDTOOutSingle GetStudentById(string id)
+        public StudentDTOOutSingle GetStudentById(string id, string role, string userId)
         {
             logger.Info("Accssesing db over Student rep, get student by id");
-            Student student = db.StudentsRepository.Get(filter: x => x.Id == id).FirstOrDefault();
+            Student student = new Student();
+            if (role == "parents")
+            {
+                student = db.StudentsRepository.Get(filter: x => x.Id == id).Where(x => x.Parents.Any(y => y.Id == userId)).FirstOrDefault();
+            }
+            else if (role == "teachers")
+            {
+                student = db.StudentsRepository.Get(filter: x => x.Id == id).Where(x => x.StudentDepartments.Teaches.Any(y => y.Teachers.Id == userId)).FirstOrDefault();
+            }
+            else if (role == "students")
+            {
+                student = db.StudentsRepository.Get(filter: x => x.Id == id).Where(x => x.Id == userId).FirstOrDefault();
+            }
+            else
+            {
+                student = db.StudentsRepository.Get(filter: x => x.Id == id).FirstOrDefault();
+            }
+            //Student student = db.StudentsRepository.Get(filter: x => x.Id == id).FirstOrDefault();
             if (student == null)
             {
                 throw new StudentNotFoundException($"Student with ID {id} doesn't exists");
@@ -114,10 +184,28 @@ namespace school_diary.Services
             return studentDTO;
         }
 
-        public StudentDTOOutSingle GetStudentByUserName(string username)
+        public StudentDTOOutSingle GetStudentByUserName(string username, string role, string userId)
         {
             logger.Info("Accssesing db over Student rep, get student by username");
-            Student student = db.StudentsRepository.Get(filter: x => x.UserName == username).FirstOrDefault();
+            Student student = new Student();
+            if (role == "parents")
+            {
+                student = db.StudentsRepository.Get(filter: x => x.UserName == username).Where(x => x.Parents.Any(y => y.Id == userId)).FirstOrDefault();
+            }
+            else if (role == "teachers")
+            {
+                student = db.StudentsRepository.Get(filter: x => x.UserName == username).Where(x => x.StudentDepartments.Teaches.Any(y => y.Teachers.Id == userId)).FirstOrDefault();
+            }
+            else if (role == "students")
+            {
+                student = db.StudentsRepository.Get(filter: x => x.UserName == username).Where(x => x.Id == userId).FirstOrDefault();
+            }
+            else
+            {
+                student = db.StudentsRepository.Get(filter: x => x.UserName == username).FirstOrDefault();
+            }
+
+            //Student student = db.StudentsRepository.Get(filter: x => x.UserName == username).FirstOrDefault();
             if (student == null)
             {
                 throw new StudentNotFoundException($"Student with username {username} doesn't exists");
